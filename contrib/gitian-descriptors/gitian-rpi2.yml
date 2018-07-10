@@ -1,5 +1,5 @@
 ---
-name: "smrtc-rpi2-2.1.7"
+name: "smrtc-rpi2-1.0.0.1"
 enable_cache: true
 suites:
 - "trusty"
