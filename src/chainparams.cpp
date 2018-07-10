@@ -159,7 +159,7 @@ public:
 
 				
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000cd39b2c72c83084deb557a995e77065684e9fa79438976dfb5a7bc9416"));
+        assert(hashGenesisBlock == uint256("0x00000cd39b2c72c83084deb557a995e77065684e9fa79438976dfb5a7bc94160"));
         assert(genesis.hashMerkleRoot == uint256("0x3a32989d62d1811f21263ae3426434d40164ee7ba26a8e10392807d3a1743ca1"));
 
         vSeeds.clear();
