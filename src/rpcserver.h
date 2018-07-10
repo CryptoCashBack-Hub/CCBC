@@ -96,7 +96,7 @@ public:
 };
 
 /**
- * AdultChain RPC command dispatcher.
+ * Smrtc RPC command dispatcher.
  */
 class CRPCTable
 {

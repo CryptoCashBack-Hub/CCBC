@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between adultchain-cli and adultchaind)
- * of a given instance of the AdultChain system.
+ * CBaseChainParams defines the base parameters (shared between smrtc-cli and smrtcd)
+ * of a given instance of the Smrtc system.
  */
 class CBaseChainParams
 {

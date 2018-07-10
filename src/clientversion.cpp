@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both adultchaind and adultchain-qt, to make it harder for attackers to
+ * for both smrtcd and smrtc-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("AdultChain Core");
+const std::string CLIENT_NAME("Smrtc Core");
 
 /**
  * Client version number

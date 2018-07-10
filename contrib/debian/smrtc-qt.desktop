@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Smrtc
+Comment=Smrtc P2P Cryptocurrency
+Comment[fr]=Smrtc, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Smrtc, eşten eşe kriptografik sanal para birimi
+Exec=smrtc-qt %u
+Terminal=false
+Type=Application
+Icon=smrtc128
+MimeType=x-scheme-handler/smrtc;
+Categories=Office;Finance;

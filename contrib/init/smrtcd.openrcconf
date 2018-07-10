@@ -1,0 +1,26 @@
+# /etc/conf.d/smrtcd: config file for /etc/init.d/smrtcd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/smrtc/smrtc.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/smrtcd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/smrtcd.pid"
+
+# Where to write smrtcd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/smrtcd"
+
+# User and group to own smrtcd process
+#BITCOIND_USER="smrtc"
+#BITCOIND_GROUP="smrtc"
+
+# Path to smrtcd executable
+#BITCOIND_BIN="/usr/bin/smrtcd"
+
+# Nice value to run smrtcd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -848,12 +848,12 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About AdultChain Dialog */
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About AdultChain Contents */
+/* About Smrtc Dialog */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Smrtc Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About AdultChain text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About Smrtc text */
 margin-right:10px;
 }
 
@@ -1213,7 +1213,7 @@ min-height:100px;
 margin-right:20px;
 margin-left:0;
 margin-top:0;
-background-image: url(':/images/adultchain_logo_horizontal');
+background-image: url(':/images/smrtc_logo_horizontal');
 background-repeat:none;
 }
 

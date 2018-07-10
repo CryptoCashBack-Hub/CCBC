@@ -17,7 +17,7 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/adultchainproject/adultchain
+url=https://github.com/smrtcproject/smrtc
 proc=2
 mem=2000
 lxc=true
@@ -31,7 +31,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the adultchain, gitian-builder, gitian.sigs, and adultchain-detached-sigs.
+Run this script from the directory containing the smrtc, gitian-builder, gitian.sigs, and smrtc-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -39,7 +39,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/adultchainproject/adultchain
+-u|--url	Specify the URL of the repository. Default is https://github.com/smrtcproject/smrtc
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -252,7 +252,7 @@ then
 fi
 
 # Set up build
-pushd ./adultchain
+pushd ./smrtc
 git fetch
 git checkout ${COMMIT}
 popd
@@ -261,7 +261,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./adultchain-binaries/${VERSION}
+	mkdir -p ./smrtc-binaries/${VERSION}
 
 	# Build Dependencies
 	echo ""
@@ -271,7 +271,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../adultchain/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../smrtc/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -279,9 +279,9 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit adultchain=${COMMIT} --url adultchain=${url} ../adultchain/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../adultchain/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/adultchain-*.tar.gz build/out/src/adultchain-*.tar.gz ../adultchain-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit smrtc=${COMMIT} --url smrtc=${url} ../smrtc/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../smrtc/contrib/gitian-descriptors/gitian-linux.yml
+	    mv build/out/smrtc-*.tar.gz build/out/src/smrtc-*.tar.gz ../smrtc-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -289,10 +289,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit adultchain=${COMMIT} --url adultchain=${url} ../adultchain/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../adultchain/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/adultchain-*-win-unsigned.tar.gz inputs/adultchain-win-unsigned.tar.gz
-	    mv build/out/adultchain-*.zip build/out/adultchain-*.exe ../adultchain-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit smrtc=${COMMIT} --url smrtc=${url} ../smrtc/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../smrtc/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/smrtc-*-win-unsigned.tar.gz inputs/smrtc-win-unsigned.tar.gz
+	    mv build/out/smrtc-*.zip build/out/smrtc-*.exe ../smrtc-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -300,10 +300,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit adultchain=${COMMIT} --url adultchain=${url} ../adultchain/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../adultchain/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/adultchain-*-osx-unsigned.tar.gz inputs/adultchain-osx-unsigned.tar.gz
-	    mv build/out/adultchain-*.tar.gz build/out/adultchain-*.dmg ../adultchain-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit smrtc=${COMMIT} --url smrtc=${url} ../smrtc/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../smrtc/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/smrtc-*-osx-unsigned.tar.gz inputs/smrtc-osx-unsigned.tar.gz
+	    mv build/out/smrtc-*.tar.gz build/out/smrtc-*.dmg ../smrtc-binaries/${VERSION}
 	fi
 	# AArch64
 	if [[ $aarch64 = true ]]
@@ -311,9 +311,9 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} AArch64"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit adultchain=${COMMIT} --url adultchain=${url} ../adultchain/contrib/gitian-descriptors/gitian-aarch64.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-aarch64 --destination ../gitian.sigs/ ../adultchain/contrib/gitian-descriptors/gitian-aarch64.yml
-	    mv build/out/adultchain-*.tar.gz build/out/src/adultchain-*.tar.gz ../adultchain-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit smrtc=${COMMIT} --url smrtc=${url} ../smrtc/contrib/gitian-descriptors/gitian-aarch64.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-aarch64 --destination ../gitian.sigs/ ../smrtc/contrib/gitian-descriptors/gitian-aarch64.yml
+	    mv build/out/smrtc-*.tar.gz build/out/src/smrtc-*.tar.gz ../smrtc-binaries/${VERSION}
 	popd
 
         if [[ $commitFiles = true ]]
@@ -340,32 +340,32 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../adultchain/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../smrtc/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../adultchain/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../smrtc/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../adultchain/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../smrtc/contrib/gitian-descriptors/gitian-osx.yml
 	# AArch64
 	echo ""
 	echo "Verifying v${VERSION} AArch64"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-aarch64 ../adultchain/contrib/gitian-descriptors/gitian-aarch64.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-aarch64 ../smrtc/contrib/gitian-descriptors/gitian-aarch64.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../adultchain/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../smrtc/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../adultchain/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../smrtc/contrib/gitian-descriptors/gitian-osx-signer.yml
 	popd
 fi
 
@@ -380,10 +380,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../adultchain/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../adultchain/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/adultchain-*win64-setup.exe ../adultchain-binaries/${VERSION}
-	    mv build/out/adultchain-*win32-setup.exe ../adultchain-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../smrtc/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../smrtc/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/smrtc-*win64-setup.exe ../smrtc-binaries/${VERSION}
+	    mv build/out/smrtc-*win32-setup.exe ../smrtc-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -391,9 +391,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../adultchain/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../adultchain/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/adultchain-osx-signed.dmg ../adultchain-binaries/${VERSION}/adultchain-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../smrtc/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../smrtc/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/smrtc-osx-signed.dmg ../smrtc-binaries/${VERSION}/smrtc-${VERSION}-osx.dmg
 	fi
 	popd
 

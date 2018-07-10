@@ -1,5 +1,5 @@
 // Copyright (c) 2017 The PIVX Core developers
-// Copyright (c) 2017 The AdultChain developers
+// Copyright (c) 2017 The Smrtc developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

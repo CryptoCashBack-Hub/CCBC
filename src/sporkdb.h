@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ADULTCHAIN_CSPORKDB_H
-#define ADULTCHAIN_CSPORKDB_H
+#ifndef SMRTC_CSPORKDB_H
+#define SMRTC_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //ADULTCHAIN_CSPORKDB_H
+#endif //SMRTC_CSPORKDB_H

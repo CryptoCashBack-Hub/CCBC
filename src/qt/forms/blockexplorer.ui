@@ -168,7 +168,7 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../adultchain.qrc"/>
+  <include location="../smrtc.qrc"/>
  </resources>
  <connections/>
 </ui>

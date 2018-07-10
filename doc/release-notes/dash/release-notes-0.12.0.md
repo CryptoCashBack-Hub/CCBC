@@ -100,4 +100,4 @@ AlexMomo
 snogcel
 bertlebbert
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/adultchain-project/adultchain-project-translations).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/smrtc-project/smrtc-project-translations).

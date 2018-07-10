@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/adultchain-config.h"
+#include "config/smrtc-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -79,10 +79,10 @@ void OptionsModel::Init()
         settings.setValue("nZeromintPercentage", 10);
     nZeromintPercentage = settings.value("nZeromintPercentage").toLongLong();
 
-    if (!settings.contains("nAnonymizeAdultChainAmount"))
-        settings.setValue("nAnonymizeAdultChainAmount", 1000);
+    if (!settings.contains("nAnonymizeSmrtcAmount"))
+        settings.setValue("nAnonymizeSmrtcAmount", 1000);
 
-    nAnonymizeAdultChainAmount = settings.value("nAnonymizeAdultChainAmount").toLongLong();
+    nAnonymizeSmrtcAmount = settings.value("nAnonymizeSmrtcAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -151,8 +151,8 @@ void OptionsModel::Init()
         SoftSetArg("-zeromintpercentage", settings.value("nZeromintPercentage").toString().toStdString());
     if (settings.contains("nPreferredDenom"))
         SoftSetArg("-preferredDenom", settings.value("nPreferredDenom").toString().toStdString());
-    if (settings.contains("nAnonymizeAdultChainAmount"))
-        SoftSetArg("-anonymizeadultchainamount", settings.value("nAnonymizeAdultChainAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeSmrtcAmount"))
+        SoftSetArg("-anonymizesmrtcamount", settings.value("nAnonymizeSmrtcAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -163,7 +163,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in adultchain.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in smrtc.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())
@@ -234,8 +234,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return QVariant(nZeromintPercentage);
         case ZeromintPrefDenom:
             return QVariant(nPreferredDenom);
-        case AnonymizeAdultChainAmount:
-            return QVariant(nAnonymizeAdultChainAmount);
+        case AnonymizeSmrtcAmount:
+            return QVariant(nAnonymizeSmrtcAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -350,10 +350,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             emit preferredDenomChanged(nPreferredDenom);
             break;
 
-        case AnonymizeAdultChainAmount:
-            nAnonymizeAdultChainAmount = value.toInt();
-            settings.setValue("nAnonymizeAdultChainAmount", nAnonymizeAdultChainAmount);
-            emit anonymizeAdultChainAmountChanged(nAnonymizeAdultChainAmount);
+        case AnonymizeSmrtcAmount:
+            nAnonymizeSmrtcAmount = value.toInt();
+            settings.setValue("nAnonymizeSmrtcAmount", nAnonymizeSmrtcAmount);
+            emit anonymizeSmrtcAmountChanged(nAnonymizeSmrtcAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

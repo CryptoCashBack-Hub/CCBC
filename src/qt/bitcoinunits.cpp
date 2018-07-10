@@ -41,11 +41,11 @@ QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
     case XXX:
-        return QString("adultchain");
+        return QString("smrtc");
     case mXXX:
-        return QString("madultchain");
+        return QString("msmrtc");
     case uXXX:
-        return QString::fromUtf8("uadultchain");
+        return QString::fromUtf8("usmrtc");
     default:
         return QString("???");
     }

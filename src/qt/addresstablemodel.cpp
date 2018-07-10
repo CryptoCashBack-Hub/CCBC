@@ -346,7 +346,7 @@ void AddressTableModel::updateEntry(const QString& address,
     const QString& purpose,
     int status)
 {
-    // Update address book model from AdultChain core
+    // Update address book model from Smrtc core
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

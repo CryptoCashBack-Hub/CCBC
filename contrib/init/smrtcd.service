@@ -1,0 +1,26 @@
+[Unit]
+Description=Smrtc's distributed currency daemon
+After=network.target
+
+[Service]
+User=smrtc
+Group=smrtc
+
+Type=forking
+PIDFile=/var/lib/smrtcd/smrtcd.pid
+
+ExecStart=/usr/bin/smrtcd -daemon -pid=/var/lib/smrtcd/smrtcd.pid \
+          -conf=/etc/smrtc/smrtc.conf -datadir=/var/lib/smrtcd
+
+ExecStop=-/usr/bin/smrtc-cli -conf=/etc/smrtc/smrtc.conf \
+         -datadir=/var/lib/smrtcd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

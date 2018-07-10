@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: adultchaind.service
-Upstart: adultchaind.conf
-OpenRC:  adultchaind.openrc
-         adultchaind.openrcconf
-CentOS:  adultchaind.init
+SystemD: smrtcd.service
+Upstart: smrtcd.conf
+OpenRC:  smrtcd.openrc
+         smrtcd.openrcconf
+CentOS:  smrtcd.init
 
 have been made available to assist packagers in creating node packages here.
 

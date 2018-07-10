@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017 The AdultChain developers
+// Copyright (c) 2017 The Smrtc developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -238,10 +238,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop AdultChain server.");
+            "\nStop Smrtc server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "AdultChain server stopping";
+    return "Smrtc server stopping";
 }
 
 
@@ -318,36 +318,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* AdultChain features */
-        {"adultchain", "masternode", &masternode, true, true, false},
-        {"adultchain", "listmasternodes", &listmasternodes, true, true, false},
-        {"adultchain", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"adultchain", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"adultchain", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"adultchain", "masternodedebug", &masternodedebug, true, true, false},
-        {"adultchain", "startmasternode", &startmasternode, true, true, false},
-        {"adultchain", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"adultchain", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"adultchain", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"adultchain", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"adultchain", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"adultchain", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"adultchain", "mnbudget", &mnbudget, true, true, false},
-        {"adultchain", "preparebudget", &preparebudget, true, true, false},
-        {"adultchain", "submitbudget", &submitbudget, true, true, false},
-        {"adultchain", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"adultchain", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"adultchain", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"adultchain", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"adultchain", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"adultchain", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"adultchain", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"adultchain", "checkbudgets", &checkbudgets, true, true, false},
-        {"adultchain", "mnsync", &mnsync, true, true, false},
-        {"adultchain", "spork", &spork, true, true, false},
-        {"adultchain", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* Smrtc features */
+        {"smrtc", "masternode", &masternode, true, true, false},
+        {"smrtc", "listmasternodes", &listmasternodes, true, true, false},
+        {"smrtc", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"smrtc", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"smrtc", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"smrtc", "masternodedebug", &masternodedebug, true, true, false},
+        {"smrtc", "startmasternode", &startmasternode, true, true, false},
+        {"smrtc", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"smrtc", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"smrtc", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"smrtc", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"smrtc", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"smrtc", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"smrtc", "mnbudget", &mnbudget, true, true, false},
+        {"smrtc", "preparebudget", &preparebudget, true, true, false},
+        {"smrtc", "submitbudget", &submitbudget, true, true, false},
+        {"smrtc", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"smrtc", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"smrtc", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"smrtc", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"smrtc", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"smrtc", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"smrtc", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"smrtc", "checkbudgets", &checkbudgets, true, true, false},
+        {"smrtc", "mnsync", &mnsync, true, true, false},
+        {"smrtc", "spork", &spork, true, true, false},
+        {"smrtc", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"adultchain", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"smrtc", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -626,16 +626,16 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use adultchaind, or the -server option to adultchain-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use smrtcd, or the -server option to smrtc-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=adultchainrpc\n"
+                                               "rpcuser=smrtcrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
                                                "If the file does not exist, create it with owner-readable-only file permissions.\n"
                                                "It is also recommended to set alertnotify so you are notified of problems;\n"
-                                               "for example: alertnotify=echo %%s | mail -s \"AdultChain Alert\" admin@foo.com\n"),
+                                               "for example: alertnotify=echo %%s | mail -s \"Smrtc Alert\" admin@foo.com\n"),
                                              GetConfigFile().string(),
                                              EncodeBase58(&rand_pwd[0], &rand_pwd[0] + 32)),
             "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1086,7 +1086,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> adultchain-cli " + methodname + " " + args + "\n";
+    return "> smrtc-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

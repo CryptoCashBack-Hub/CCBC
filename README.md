@@ -1,17 +1,17 @@
-### AdultChain is a fork of [PIVX](https://github.com/PIVX-Project/PIVX) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
+### Smrtc is a fork of [PIVX](https://github.com/PIVX-Project/PIVX) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
 
 
-# AdultChain Core integration/staging repository
+# Smrtc Core integration/staging repository
 
 
-AdultChain is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.
+Smrtc is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.
 - Anonymized transactions using zerocoin technology.
 - Fast transactions featuring guaranteed zero confirmation transactions, PIVX named it _SwiftX_.
 - Decentralized blockchain voting providing for consensus based advancement of the current Masternode
   technology used to secure the network and provide the above features, each Masternode is secured
   with a collateral of 20K XXX.
 
-More information at [AdultChain.xxx](https://www.adultchaincoin.xxx) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
+More information at [Smrtc.xxx](https://www.smrtccoin.xxx) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
 
 
 ### Coin Specs
