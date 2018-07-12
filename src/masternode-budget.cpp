@@ -564,12 +564,12 @@ void CBudgetManager::FillTreasuryBlockPayee(CMutableTransaction& txNew, CAmount 
     CAmount treasurePayment = blockValue - 10 * COIN;
     if (fProofOfStake)
     {
-        +/**For Proof Of Stake vout[0] must be null
+        /**For Proof Of Stake vout[0] must be null
 		 * Stake reward can be split into many different outputs, so we must
 		 * use vout.size() to align with several different cases.
 		 * An additional output is appended as the masternode payment
 		 */
-            unsigned int i = txNew.vout.size();
+        unsigned int i = txNew.vout.size();
         txNew.vout.resize(i + 1);
         txNew.vout[i].scriptPubKey = payee;
         txNew.vout[i].nValue = treasurePayment;
