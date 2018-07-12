@@ -11,6 +11,8 @@
 #include "random.h"
 #include "util.h"
 #include "utilstrencodings.h"
+#include "net.h"
+#include "base58.h"
 
 #include <assert.h>
 
@@ -96,6 +98,7 @@ public:
     CMainParams()
     {
         networkID = CBaseChainParams::MAIN;
+        vTreasuryRewardAddress = ""; //Fill in address once wallet generated
         strNetworkID = "main";
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -116,10 +119,10 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Smrtc: 1 day
-        nTargetSpacing = 1 * 120;  // Smrtc: 2 minutes
+        nTargetSpacing = 1 * 60;  // Smrtc: 1 minutes
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 100000000 * COIN;
+        nMaxMoneyOut = 100000000 * COIN; //100m coins minted
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
@@ -209,6 +212,22 @@ public:
         return data;
     }
 };
+
+ std::string CChainParams::GetTreasuryRewardAddressAtHeight(int nHeight) const
+{
+    return vTreasuryRewardAddress;
+    
+}
+
+     CScript CChainParams::GetTreasuryRewardScriptAtHeight(int nHeight) const
+{
+    CBitcoinAddress address(GetTreasuryRewardAddressAtHeight(nHeight).c_str());
+    assert(address.IsValid());
+    CScript script = GetScriptForDestination(address.Get());
+    return script;
+    
+}
+
 static CMainParams mainParams;
 
 /**

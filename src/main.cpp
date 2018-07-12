@@ -2126,9 +2126,18 @@ int64_t GetBlockValue(int nHeight)
             return 250000 * COIN;
     }
 
+	if (IsTreasuryBlock(nHeight)) {
+        +LogPrintf("GetBlockValue(): this is a treasury block\n");
+        +nSubsidy = GetTreasuryAward(nHeight);
+
+    } else {
     if (nHeight == 0) {
-        nSubsidy = 4000000000 * COIN; //4 million for swap and premine
-    } else if (nHeight > 1 && nHeight < 25000) {
+        nSubsidy = 250 * COIN; //Genesis
+    }else if (nHeight == 1) {
+        nSubsidy = 4000000 * COIN; //Coin Swap / premine
+    } else if (nHeight > 1 && nHeight < 200) { //POW phase
+        nSubsidy = 30 * COIN;
+    } else if (nHeight > 200 && nHeight < 25000) { //Public pos and mn phase
         nSubsidy = 1 * COIN;
     } else if (nHeight < 25000 && nHeight > 50000) {
         nSubsidy = 25 * COIN;
@@ -2143,7 +2152,7 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight < 150000 && nHeight > 175000) {
         nSubsidy = 25 * COIN;
     } else {
-        nSubsidy = 0 * COIN;
+        nSubsidy = 25 * COIN;
     }
     return nSubsidy;
 }
@@ -2429,6 +2438,31 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     }
 
     return ret;
+}
+
+//Treasury blocks start from 70,000 and then each block after
+	int nStartTreasuryBlock = 70000; 
+	int nTreasuryBlockStep = 1;
+bool IsTreasuryBlock(int nHeight) 
+{
+    if (nHeight < nStartTreasuryBlock) 
+		return false;
+    else if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0) 
+		return true;
+    else 
+		return false;    
+}
+int64_t GetTreasuryAward(int nHeight, int64_t blockValue)
+{
+    if (IsTreasuryBlock(nHeight))
+    {
+        if (nHeight == nStartTreasuryBlock) 
+			return 10000 * COIN; //10,000 for the first treasury block, 10 - reward to PoS
+        else 
+			return blockValue * .10 * COIN; //10% for each next block        
+    }
+    else 
+		return 0;    
 }
 
 bool IsInitialBlockDownload()
