@@ -2458,7 +2458,7 @@ bool IsTreasuryBlock(int nHeight)
     else 
 		return false;    
 }
-int64_t GetTreasuryAward(int nHeight, int64_t blockValue)
+int64_t GetTreasuryAward(int nHeight, int blockValue)
 {
     if (IsTreasuryBlock(nHeight))
     {
