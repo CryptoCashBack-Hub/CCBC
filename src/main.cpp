@@ -2121,7 +2121,8 @@ int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
 
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
+    if (Params().NetworkID() == CBaseChainParams::TESTNET) 
+	{
         if (nHeight < 200 && nHeight > 0)
             return 250000 * COIN;
     }
@@ -2130,38 +2131,43 @@ int64_t GetBlockValue(int nHeight)
         LogPrintf("GetBlockValue(): this is a treasury block\n");
         nSubsidy = GetTreasuryAward(nHeight);
 
-    } else {
-    if (nHeight == 0) {
-        nSubsidy = 250 * COIN; //Genesis
-    }else if (nHeight == 1) {
-        nSubsidy = 4000000 * COIN; //Coin Swap / premine
-    } else if (nHeight > 1 && nHeight < 200) { //POW phase
-        nSubsidy = 30 * COIN;
-    } else if (nHeight > 200 && nHeight < 25000) { //Public pos and mn phase
-        nSubsidy = 1 * COIN;
-    } else if (nHeight < 25000 && nHeight > 50000) {
-        nSubsidy = 25 * COIN;
-    } else if (nHeight < 50000 && nHeight > 75000) {
-        nSubsidy = 50 * COIN;
-    } else if (nHeight < 75000 && nHeight > 100000) {
-        nSubsidy = 100 * COIN;
-    } else if (nHeight < 100000 && nHeight > 125000) {
-        nSubsidy = 75 * COIN;
-    } else if (nHeight < 125000 && nHeight > 150000) {
-        nSubsidy = 50 * COIN;
-    } else if (nHeight < 150000 && nHeight > 175000) {
-        nSubsidy = 25 * COIN;
-    } else {
-        nSubsidy = 25 * COIN;
-    }
-    return nSubsidy;
+    } 
+	else
+	{
+    	if (nHeight == 0)
+		{
+			nSubsidy = 250 * COIN; //Genesis
+		}else if (nHeight == 1) {
+			nSubsidy = 4000000 * COIN; //Coin Swap / premine
+		} else if (nHeight > 1 && nHeight < 200) { //POW phase
+			nSubsidy = 30 * COIN;
+		} else if (nHeight > 200 && nHeight < 25000) { //Public pos and mn phase
+			nSubsidy = 1 * COIN;
+		} else if (nHeight < 25000 && nHeight > 50000) {
+			nSubsidy = 25 * COIN;
+		} else if (nHeight < 50000 && nHeight > 75000) {
+			nSubsidy = 50 * COIN;
+		} else if (nHeight < 75000 && nHeight > 100000) {
+			nSubsidy = 100 * COIN;
+		} else if (nHeight < 100000 && nHeight > 125000) {
+			nSubsidy = 75 * COIN;
+		} else if (nHeight < 125000 && nHeight > 150000) {
+			nSubsidy = 50 * COIN;
+		} else if (nHeight < 150000 && nHeight > 175000) {
+			nSubsidy = 25 * COIN;
+		} else {
+			nSubsidy = 25 * COIN;
+		}
+		return nSubsidy;
+	}	
 }
 
 
 CAmount GetSeeSaw(const CAmount& blockValue, int nMasternodeCount, int nHeight)
 {
     //if a mn count is inserted into the function we are looking for a specific result for a masternode count
-    if (nMasternodeCount < 1) {
+    if (nMasternodeCount < 1) 
+	{
         if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
             nMasternodeCount = mnodeman.stable_size();
         else
