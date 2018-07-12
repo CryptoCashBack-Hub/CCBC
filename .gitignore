@@ -128,3 +128,7 @@ CMakeLists.txt
 cmake-build-debug
 config.log
 config.status
+/.vs/smrtc/v15/Browse.VC.db
+/.vs/smrtc/v15/Browse.VC.opendb
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
