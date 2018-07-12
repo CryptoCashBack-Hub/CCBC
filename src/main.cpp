@@ -2158,8 +2158,8 @@ int64_t GetBlockValue(int nHeight)
 		} else {
 			nSubsidy = 25 * COIN;
 		}
-		return nSubsidy;
 	}	
+	return nSubsidy;
 }
 
 
@@ -2449,7 +2449,8 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 //Treasury blocks start from 70,000 and then each block after
 	int nStartTreasuryBlock = 70000; 
 	int nTreasuryBlockStep = 1;
-bool IsTreasuryBlock(int nHeight) 
+//Checks to see if block count above is correct if not then no Treasury
+ bool IsTreasuryBlock(int nHeight) 
 {
     if (nHeight < nStartTreasuryBlock) 
 		return false;
@@ -2458,14 +2459,23 @@ bool IsTreasuryBlock(int nHeight)
     else 
 		return false;    
 }
-int64_t GetTreasuryAward(int nHeight, int blockValue)
+int64_t GetTreasuryAward(int nHeight)
 {
     if (IsTreasuryBlock(nHeight))
     {
-        if (nHeight == nStartTreasuryBlock) 
-			return 10000 * COIN; //10,000 for the first treasury block, 10 - reward to PoS
-        else 
-			return blockValue * .10 * COIN; //10% for each next block        
+        return 10000 * COIN;     //10k on very first block
+        else if (nHeight > 70001 && nHeight <= 75000) 
+			return 5 * COIN;	//5 on start 10%
+        else if (nHeight > 75000 && nHeight <= 100000) 
+			return 10 * COIN; //10 coins at 10%
+        else if (nHeight > 100000 && nHeight <= 125000) 
+			return 7.5 * COIN; //7.5 coins at 10%
+        else if (nHeight > 125000 && nHeight <= 150000) 
+			return 5 * COIN; //5 coins at 10%
+        else if (nHeight > 150000 && nHeight <= 175000) 
+			return 2.5 * COIN; //2.5 coins at 10%
+        else if (nHeight >= 175000) 
+			return 2.5 * COIN; //2.5 coins till end at 10%       		       
     }
     else 
 		return 0;    
