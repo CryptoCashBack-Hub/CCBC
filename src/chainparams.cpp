@@ -56,30 +56,30 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000cd39b2c72c83084deb557a995e77065684e9fa79438976dfb5a7bc94160"));
+    (0, uint256("0x000004deb2731141b6e46a0c35295258e5d204a33524e5c5b82ec420505a1cc5"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1531260000, // * UNIX timestamp of last checkpoint block
+    1531501796, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2000        // * estimated number of transactions per day after checkpoint
+    1440        // * estimated number of transactions per day after checkpoint, was 2000
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-	(0, uint256("0x000000865b2c15fc97a1fe9056c0ff0aba886d30240af4b60d7f764258c0d1659"));
+	(0, uint256("0x00000de9d1b884e91839fa73bdc61567292b4b186f404dd61f5d3ad3c65847d2"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1531260001,
+    1531501797,
     0,
-    250};
+    5000}; //Was 250
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-	(0, uint256("0x1c1b744e234adb5846f398d747c3af28cb70d1a84b9a14d74392ba380d116fac"));
+	(0, uint256("0x00000de9d1b884e91839fa73bdc61567292b4b186f404dd61f5d3ad3c65847d2"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1531260001,
+    1531501797,
     0,
     100};
 
@@ -109,7 +109,7 @@ public:
         pchMessageStart[1] = 0xbd;
         pchMessageStart[2] = 0xcb;
         pchMessageStart[3] = 0x4f;
-        vAlertPubKey = ParseHex("044385af68b36ba09d7111117de22bee2a1b8ffe4e9526fa7232d144cd3706fa93b0846ea76d88478675a5bedc489cb85264ff50f6419735286f9feaa6c898685d");
+        vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
         nDefaultPort = 9887;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Smrtc starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -165,8 +165,8 @@ public:
 	printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0xf94350cdac1845bcda72d651d6863e481a1653faf45d97def3521dce20ddd479"));
-        assert(genesis.hashMerkleRoot == uint256("0x3a32989d62d1811f21263ae3426434d40164ee7ba26a8e10392807d3a1743ca1"));
+        assert(hashGenesisBlock == uint256("0x000004deb2731141b6e46a0c35295258e5d204a33524e5c5b82ec420505a1cc5"));
+        assert(genesis.hashMerkleRoot == uint256("0x26f31a72cb4a7b97caeeb49a9177e40d71f09de7a04f0380f7889a8c2494973a"));
 
         vSeeds.clear();
 		
