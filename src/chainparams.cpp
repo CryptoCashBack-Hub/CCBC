@@ -145,7 +145,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "Lets make this coin rolling. I hope it will work";
+        const char* pszTimestamp = "The Times 18/Jan/2018. Don't work for weekends, work for our goals.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
