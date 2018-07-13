@@ -62,7 +62,7 @@ static const Checkpoints::CCheckpointData data = {
     1531501796, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    1440        // * estimated number of transactions per day after checkpoint, was 2000
+    2000        // * estimated number of transactions per day after checkpoint, was 2000
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -72,7 +72,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1531501797,
     0,
-    5000}; //Was 250
+    250}; //Was 250
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
@@ -151,7 +151,7 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("045abc4fc289ad06126748c04be9c031cf5ab7b0ed221c1c8f22d4793d06df18edc09101ebafd55a4ddbcf14f1b1179dd61b96880d53b47f6a88952cccaf50305b") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
