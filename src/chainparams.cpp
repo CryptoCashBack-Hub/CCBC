@@ -56,10 +56,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000bfac6fe632c5cb97c0b31d13bbc1fa7b840e94700b22b07229eaa501a5f"));
+    (0, uint256("0x00000a2fe7e0721868e66a8b5a06836c2eb5fbc353690a53b34901b95677d4a1"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1531527773, // * UNIX timestamp of last checkpoint block
+    1531597961, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint, was 2000
@@ -145,7 +145,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "Wursty is lame.";
+        const char* pszTimestamp = "The Times 18/Jan/2018. Don't work for weekends, work for our goals.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -156,17 +156,17 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1531527773;
+        genesis.nTime = 1531597961;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 436404;
+        genesis.nNonce = 4300237;
 
 				
         hashGenesisBlock = genesis.GetHash();
 	printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         //printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x00000bfac6fe632c5cb97c0b31d13bbc1fa7b840e94700b22b07229eaa501a5f"));
-        assert(genesis.hashMerkleRoot == uint256("0x63dea97faf4924420e6a832a4ded9c8a055d973a3eb4ed9713a118a8e57050fc"));
+        assert(hashGenesisBlock == uint256("0x00000a2fe7e0721868e66a8b5a06836c2eb5fbc353690a53b34901b95677d4a1"));
+        assert(genesis.hashMerkleRoot == uint256("0x26f31a72cb4a7b97caeeb49a9177e40d71f09de7a04f0380f7889a8c2494973a"));
 
         vSeeds.clear();
 		
