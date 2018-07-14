@@ -9,7 +9,7 @@
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply </td><td>100,000,000 XXX</td></tr>
+<tr><td>Max Coin Supply </td><td>100,000,000 SMRTC</td></tr>
 <tr><td>Premine</td><td>4,000,000 SMRTC</td></tr>
 </table>
 
@@ -19,8 +19,9 @@
 <table>
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
+ <tr><td>0</td><td>250 SMRTC</td><td>Genesis Block</td><td>0 Days</td></tr>
 <tr><td>1</td><td>4,000,000 SMRTC</td><td>Initial Premine</td><td>0 Days</td></tr>
-<tr><td>2-200</td><td>100 SMRTC</td><td rowspan=1>Open Mining</td><td rowspan=1> Approx 1 Day</td></tr>
+<tr><td>2-200</td><td>30 SMRTC</td><td rowspan=1>Closed Mining</td></tr>
 <tr><th colspan=4>PoS Phase</th></tr>
 <tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
 <tr><td>201-</td><td colspan=2>Masternodes: 75%</td><td>Stakers: 25%</td></tr>
