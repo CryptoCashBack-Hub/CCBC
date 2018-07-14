@@ -56,10 +56,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000a2fe7e0721868e66a8b5a06836c2eb5fbc353690a53b34901b95677d4a1"));
+    (0, uint256("0x0xeada217264ddf83bd191cee18a2f9915e3146124aa2211dff961c1b1c003dd0f"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1531597961, // * UNIX timestamp of last checkpoint block
+    1531597126, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint, was 2000
@@ -67,19 +67,19 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-	(0, uint256("0x000006f03f58c334da250422bf68b7b6088482188f0cdf6fcec602fbd4cab20b"));
+	(0, uint256("0x0xeada217264ddf83bd191cee18a2f9915e3146124aa2211dff961c1b1c003dd0f"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1531527774,
+    1531597126,
     0,
     250}; //Was 250
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-	(0, uint256("0x000006f03f58c334da250422bf68b7b6088482188f0cdf6fcec602fbd4cab20b"));
+	(0, uint256("0x0xeada217264ddf83bd191cee18a2f9915e3146124aa2211dff961c1b1c003dd0f"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1531527774,
+    1531597126,
     0,
     100};
 
@@ -145,7 +145,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "The Times 18/Jan/2018. Don't work for weekends, work for our goals.";
+        const char* pszTimestamp = "Wursty is lame.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -156,17 +156,18 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1531597961;
-        genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 4300237;
+        genesis.nTime = 1531597126;
+        genesis.nBits = 504365040;
+        genesis.nNonce = 96488;
 
 				
         hashGenesisBlock = genesis.GetHash();
-	printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+		
         //printf("%s\n", hashGenesisBlock.ToString().c_str());
-        printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x00000a2fe7e0721868e66a8b5a06836c2eb5fbc353690a53b34901b95677d4a1"));
-        assert(genesis.hashMerkleRoot == uint256("0x26f31a72cb4a7b97caeeb49a9177e40d71f09de7a04f0380f7889a8c2494973a"));
+		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+        assert(hashGenesisBlock == uint256("0xeada217264ddf83bd191cee18a2f9915e3146124aa2211dff961c1b1c003dd0f"));
+        assert(genesis.hashMerkleRoot == uint256("0x800e4034c243479e7d241aa91ae432445277415cfae3f7f2660f5615a0efc7b4"));
 
         vSeeds.clear();
 		
@@ -265,14 +266,14 @@ public:
         nBlockLastGoodCheckpoint = 9891730; //Last valid accumulator checkpoint
         
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1531527774;
-        genesis.nNonce = 151287;
+        genesis.nTime = 1531597126;
+        genesis.nNonce = 96488;
 
-	hashGenesisBlock = genesis.GetHash();
+	    hashGenesisBlock = genesis.GetHash();
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("%s\n", hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x000006f03f58c334da250422bf68b7b6088482188f0cdf6fcec602fbd4cab20b"));
-	assert(genesis.hashMerkleRoot == uint256("0x1eddb5de8dcb022094e02034ef8a4833ea41ffa3cdaf97443060e371d7f5b35f"));
+        printf("%s\n", hashGenesisBlock.ToString().c_str());
+        assert(hashGenesisBlock == uint256("0xeada217264ddf83bd191cee18a2f9915e3146124aa2211dff961c1b1c003dd0f"));
+		assert(genesis.hashMerkleRoot == uint256("0x800e4034c243479e7d241aa91ae432445277415cfae3f7f2660f5615a0efc7b4"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -336,16 +337,16 @@ public:
         nTargetTimespan = 24 * 60 * 60; // Smrtc: 1 day
         nTargetSpacing = 1 * 60;        // Smrtc: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-	nDefaultPort = 19883;
-        genesis.nTime = 1531527774;
-        genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 151287;	
+        genesis.nTime = 1531597126;
+        genesis.nBits = 504365040;
+        genesis.nNonce = 96488;
 
         hashGenesisBlock = genesis.GetHash();
+        nDefaultPort = 19883;
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("%s\n", hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x000006f03f58c334da250422bf68b7b6088482188f0cdf6fcec602fbd4cab20b"));
-	assert(genesis.hashMerkleRoot == uint256("0x1eddb5de8dcb022094e02034ef8a4833ea41ffa3cdaf97443060e371d7f5b35f"));
+        printf("%s\n", hashGenesisBlock.ToString().c_str());
+        assert(hashGenesisBlock == uint256("0xeada217264ddf83bd191cee18a2f9915e3146124aa2211dff961c1b1c003dd0f"));
+		assert(genesis.hashMerkleRoot == uint256("0x800e4034c243479e7d241aa91ae432445277415cfae3f7f2660f5615a0efc7b4"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
