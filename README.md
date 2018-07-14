@@ -34,7 +34,7 @@
 </table>
 
 
-### Masternode Rewards Per Block
+### Masternode Rewards Per Block, 5000 Smrtc Collateral
 
 <table>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Duration (Days)</th><th>Development Fee</th></tr>
