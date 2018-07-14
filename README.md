@@ -26,31 +26,31 @@
 <tr><td>25000-50000</td><td>25 SMRTC</td><td rowspan=1>First Increase </td><td>17.3 Days</td></tr>
 <tr><td>50000-75000</td><td>50 SMRTC</td><td rowspan=1>Second Increase </td><td>17.3 Days</td></tr>
 <tr><td>75000-100000</td><td>100 SMRTC</td><td rowspan=1>Final Increase </td><td>17.3 Days</td></tr>
-<tr><td>100000-125000</td><td>100 SMRTC</td><td rowspan=1>Final Increase </td><td>17.3 Days</td></tr>
-<tr><td>125000-150000</td><td>75 SMRTC</td><td rowspan=1>First Reduction </td><td>17.3 Days</td></tr>
-<tr><td>150000-175000</td><td>50 SMRTC</td><td rowspan=1>Second Reduction </td><td>17.3 Days</td></tr>
-<tr><td>175000-200000</td><td>25 SMRTC</td><td rowspan=1>Final Reduction </td><td>17.3 Days</td></tr>
+<tr><td>100000-125000</td><td>75 SMRTC</td><td rowspan=1>First Reduction </td><td>17.3 Days</td></tr>
+<tr><td>125000-150000</td><td>50 SMRTC</td><td rowspan=1>Second Reduction </td><td>17.3 Days</td></tr>
+<tr><td>150000-175000</td><td>25 SMRTC</td><td rowspan=1>Final Reduction </td><td>17.3 Days</td></tr>
+
 </table>
 
 
 ### Masternode Rewards Per Block
 
 <table>
-<tr><th>Block Height</th><th>Reward Amount</th></tr>
-<tr><td>201-25000</td><td>80%</td></tr>
-<tr><td>25000-60000 </td><td>40%</td></tr>
-<tr><td>60000-65000 </td><td>42%</td></tr>
-<tr><td>65000-70000 </td><td>44%</td></tr>
-<tr><td>70000-75000 </td><td>46%</td></tr>
-<tr><td>75000-80000 </td><td>48%</td></tr>
-<tr><td>80000-85000 </td><td>50%</td></tr>
-<tr><td>85000-88000 </td><td>53%</td></tr>
-<tr><td>88000-91000 </td><td>56%</td></tr>
-<tr><td>91000-94000 </td><td>59%</td></tr>
-<tr><td>94000-97000 </td><td>62%</td></tr>
-<tr><td>97000-100000 </td><td>65%</td></tr>
-<tr><td>100000-125000 </td><td>70%</td></tr>
-<tr><td>125000-150000 </td><td>75%</td></tr>
-<tr><td>150000-175000 </td><td>80%</td></tr>
+<tr><th>Block Height</th><th>Reward Amount</th><th>Duration (Days)</th></tr>
+<tr><td>201-25000</td><td>80%</td><td>17.2 Days</td></tr>
+<tr><td>25000-60000 </td><td>40%</td><td>17.22 Days</td></tr>
+<tr><td>60000-65000 </td><td>42%</td><td>3.47 Days</td></tr>
+<tr><td>65000-70000 </td><td>44%</td><td>3.47 Days</td></tr>
+<tr><td>70000-75000 </td><td>46%</td><td>3.47 Days</td></tr>
+<tr><td>75000-80000 </td><td>48%</td><td>3.47 Days</td></tr>
+<tr><td>80000-85000 </td><td>50%</td><td>2.08 Days</td></tr>
+<tr><td>85000-88000 </td><td>53%</td><td>2.08 Days</td></tr>
+<tr><td>88000-91000 </td><td>56%</td><td>2.08 Days</td></tr>
+<tr><td>91000-94000 </td><td>59%</td><td>2.08 Days</td></tr>
+<tr><td>94000-97000 </td><td>62%</td><td>2.08 Days</td></tr>
+<tr><td>97000-100000 </td><td>65%</td><td>2.08 Days</td></tr>
+<tr><td>100000-125000 </td><td>70%</td><td>17.36 Days</td></tr>
+<tr><td>125000-150000 </td><td>75%</td><td>17.36 Days</td></tr>
+<tr><td>150000-175000 </td><td>80%</td><td>17.36 Days</td></tr>
 <tr><td>SeeSaw Rewards from this point on</td></tr>
 </table>
