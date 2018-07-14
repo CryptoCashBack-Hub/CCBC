@@ -172,16 +172,16 @@
         <translation>Confirmar criptografia de carteira</translation>
     </message>
     <message>
-        <source>Smrtc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
-        <translation>Smrtc vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas XXXs de serem roubadas por malwares infectando seu computador.</translation>
+        <source>Smrtc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SMRTCs from being stolen by malware infecting your computer.</source>
+        <translation>Smrtc vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas SMRTCs de serem roubadas por malwares infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Você tem certeza que deseja criptografar sua carteira?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR XXX&lt;/b&gt;!</source>
-        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS XXX&lt;b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
+        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS SMRTC&lt;b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1448,32 +1448,32 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>Favor selecionar o nível de privacidade.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 XXX</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 SMRTC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 XXX</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 SMRTC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 masternodes separados</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 XXX to anonymize 10000 XXX</source>
-        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 XXX para anonimizar 10000 XXX</translation>
+        <source>This option is the quickest and will cost about ~0.025 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 SMRTC para anonimizar 10000 SMRTC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 XXX to anonymize 10000 XXX</source>
-        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 XXX para anonimizar 10000 XXX</translation>
+        <source>This option is moderately fast and will cost about 0.05 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 SMRTC para anonimizar 10000 SMRTC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Esta é a opção mais lenta e mais segura. Usando a anonimização máxima vai custar</translation>
     </message>
     <message>
-        <source>0.1 XXX per 10000 XXX you anonymize.</source>
-        <translation>0.1 XXX por 10000 XXX que deixar anônima.</translation>
+        <source>0.1 SMRTC per 10000 SMRTC you anonymize.</source>
+        <translation>0.1 SMRTC por 10000 SMRTC que deixar anônima.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -2425,8 +2425,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Tamanho UTXO:</translation>
     </message>
     <message>
-        <source>0 XXX</source>
-        <translation>0 XXX</translation>
+        <source>0 SMRTC</source>
+        <translation>0 SMRTC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2465,8 +2465,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Tempo de confirmação:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uXXXs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uXXXs in fee,&lt;br /&gt;while "at least" pays 1000 uXXXs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Se a taxa padrão estiver definida para 1000 uXXXs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uXXXs em taxa,&lt;br /&gt; pagará pelo menos 1000 uXXXs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uSMRTCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uSMRTCs in fee,&lt;br /&gt;while "at least" pays 1000 uSMRTCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Se a taxa padrão estiver definida para 1000 uSMRTCs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uSMRTCs em taxa,&lt;br /&gt; pagará pelo menos 1000 uSMRTCs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Smrtc transactions than the network can process.</source>
@@ -3357,8 +3357,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Enviar Moedas</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 XXX.</source>
-        <translation>SwiftTX ainda não suporta o envio de valores altos assim. As transações atualmente são limitadas a %1 XXX.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 SMRTC.</source>
+        <translation>SwiftTX ainda não suporta o envio de valores altos assim. As transações atualmente são limitadas a %1 SMRTC.</translation>
     </message>
 </context>
 <context>
@@ -3430,12 +3430,12 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Executar o comando quando uma transação da carteira mudar (%s no cmd será substituído pela TxID)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Taxas (em XXX/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Taxas (em SMRTC/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Taxas (em XXX/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Taxas (em SMRTC/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
     </message>
     <message>
         <source>In this mode -genproclimit controls how many blocks are generated immediately.</source>
@@ -3458,8 +3458,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SwiftTX requer inputs com pelo menos 6 confirmações, você precisar aguardar alguns minutos e tentar novamente.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 XXX.</source>
-        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 10000 XXX.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 SMRTC.</source>
+        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 10000 SMRTC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3646,8 +3646,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Falhou em ler o bloco</translation>
     </message>
     <message>
-        <source>Fee (in XXX/kB) to add to transactions you send (default: %s)</source>
-        <translation>Taxa (em XXX/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
+        <source>Fee (in SMRTC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Taxa (em SMRTC/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
