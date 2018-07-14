@@ -37,21 +37,21 @@
 ### Masternode Rewards Per Block
 
 <table>
-<tr><th>Block Height</th><th>Reward Amount</th><th>Duration (Days)</th></tr>
-<tr><td>201-25000</td><td>80%</td><td>17.2 Days</td></tr>
-<tr><td>25000-60000 </td><td>40%</td><td>17.22 Days</td></tr>
-<tr><td>60000-65000 </td><td>42%</td><td>3.47 Days</td></tr>
-<tr><td>65000-70000 </td><td>44%</td><td>3.47 Days</td></tr>
-<tr><td>70000-75000 </td><td>46%</td><td>3.47 Days</td></tr>
-<tr><td>75000-80000 </td><td>48%</td><td>3.47 Days</td></tr>
-<tr><td>80000-85000 </td><td>50%</td><td>2.08 Days</td></tr>
-<tr><td>85000-88000 </td><td>53%</td><td>2.08 Days</td></tr>
-<tr><td>88000-91000 </td><td>56%</td><td>2.08 Days</td></tr>
-<tr><td>91000-94000 </td><td>59%</td><td>2.08 Days</td></tr>
-<tr><td>94000-97000 </td><td>62%</td><td>2.08 Days</td></tr>
-<tr><td>97000-100000 </td><td>65%</td><td>2.08 Days</td></tr>
-<tr><td>100000-125000 </td><td>70%</td><td>17.36 Days</td></tr>
-<tr><td>125000-150000 </td><td>75%</td><td>17.36 Days</td></tr>
-<tr><td>150000-175000 </td><td>80%</td><td>17.36 Days</td></tr>
+<tr><th>Block Height</th><th>Reward Amount</th><th>Duration (Days)</th><th>Development Fee</th></tr>
+<tr><td>201-25000</td><td>80%</td><td>17.2 Days</td><td>0%</td></tr>
+<tr><td>25000-60000 </td><td>40%</td><td>17.22 Days</td><td>0%</td></tr>
+<tr><td>60000-65000 </td><td>42%</td><td>3.47 Days</td><td>0%</td></tr>
+<tr><td>65000-70000 </td><td>44%</td><td>3.47 Days</td><td>0%</td></tr>
+<tr><td>70000-75000 </td><td>46%</td><td>3.47 Days</td><td>10K Initial Dev Fee Then 10% Every Block</td></tr>
+<tr><td>75000-80000 </td><td>48%</td><td>3.47 Days</td><td>10%</td></tr>
+<tr><td>80000-85000 </td><td>50%</td><td>2.08 Days</td><td>10%</td></tr>
+<tr><td>85000-88000 </td><td>53%</td><td>2.08 Days</td><td>10%</td></tr>
+<tr><td>88000-91000 </td><td>56%</td><td>2.08 Days</td><td>10%</td></tr>
+<tr><td>91000-94000 </td><td>59%</td><td>2.08 Days</td><td>10%</td></tr>
+<tr><td>94000-97000 </td><td>62%</td><td>2.08 Days</td><td>10%</td></tr>
+<tr><td>97000-100000 </td><td>65%</td><td>2.08 Days</td><td>10%</td></tr>
+<tr><td>100000-125000 </td><td>70%</td><td>17.36 Days</td><td>10%</td></tr>
+<tr><td>125000-150000 </td><td>75%</td><td>17.36 Days</td><td>10%</td></tr>
+<tr><td>150000-175000 </td><td>80%</td><td>17.36 Days</td><td>10%</td></tr>
 <tr><td>SeeSaw Rewards from this point on</td></tr>
 </table>
