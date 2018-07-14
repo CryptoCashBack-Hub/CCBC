@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ZXxxControlDialog</class>
- <widget class="QDialog" name="ZXxxControlDialog">
+ <class>ZSMRTCControlDialog</class>
+ <widget class="QDialog" name="ZSMRTCControlDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Select zXxx to Spend</string>
+   <string>Select zSMRTC to Spend</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -40,14 +40,14 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="labelZXxx">
+      <widget class="QLabel" name="labelZSMRTC">
        <property name="text">
-        <string>zXxx</string>
+        <string>zSMRTC</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLabel" name="labelZXxx_int">
+      <widget class="QLabel" name="labelZSMRTC_int">
        <property name="text">
         <string>0</string>
        </property>
@@ -96,7 +96,7 @@
        </column>
        <column>
         <property name="text">
-         <string notr="true">zXxx Public ID</string>
+         <string notr="true">zSMRTC Public ID</string>
         </property>
        </column>
        <column>
@@ -130,7 +130,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>ZXxxControlDialog</receiver>
+   <receiver>ZSMRTCControlDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -146,7 +146,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>ZXxxControlDialog</receiver>
+   <receiver>ZSMRTCControlDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

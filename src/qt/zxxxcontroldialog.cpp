@@ -3,20 +3,20 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "zxxxcontroldialog.h"
-#include "ui_zxxxcontroldialog.h"
+#include "zSMRTCcontroldialog.h"
+#include "ui_zSMRTCcontroldialog.h"
 
 #include "main.h"
 #include "walletmodel.h"
 
 using namespace std;
 
-std::list<std::string> ZXxxControlDialog::listSelectedMints;
-std::list<CZerocoinMint> ZXxxControlDialog::listMints;
+std::list<std::string> ZSMRTCControlDialog::listSelectedMints;
+std::list<CZerocoinMint> ZSMRTCControlDialog::listMints;
 
-ZXxxControlDialog::ZXxxControlDialog(QWidget *parent) :
+ZSMRTCControlDialog::ZSMRTCControlDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::ZXxxControlDialog),
+    ui(new Ui::ZSMRTCControlDialog),
     model(0)
 {
     ui->setupUi(this);
@@ -30,19 +30,19 @@ ZXxxControlDialog::ZXxxControlDialog(QWidget *parent) :
     connect(ui->pushButtonAll, SIGNAL(clicked()), this, SLOT(ButtonAllClicked()));
 }
 
-ZXxxControlDialog::~ZXxxControlDialog()
+ZSMRTCControlDialog::~ZSMRTCControlDialog()
 {
     delete ui;
 }
 
-void ZXxxControlDialog::setModel(WalletModel *model)
+void ZSMRTCControlDialog::setModel(WalletModel *model)
 {
     this->model = model;
     updateList();
 }
 
 //Update the tree widget
-void ZXxxControlDialog::updateList()
+void ZSMRTCControlDialog::updateList()
 {
     // need to prevent the slot from being called each time something is changed
     ui->treeWidget->blockSignals(true);
@@ -134,7 +134,7 @@ void ZXxxControlDialog::updateList()
 }
 
 // Update the list when a checkbox is clicked
-void ZXxxControlDialog::updateSelection(QTreeWidgetItem* item, int column)
+void ZSMRTCControlDialog::updateSelection(QTreeWidgetItem* item, int column)
 {
     // only want updates from non top level items that are available to spend
     if (item->parent() && column == COLUMN_CHECKBOX && !item->isDisabled()){
@@ -157,7 +157,7 @@ void ZXxxControlDialog::updateSelection(QTreeWidgetItem* item, int column)
 }
 
 // Update the Quantity and Amount display
-void ZXxxControlDialog::updateLabels()
+void ZSMRTCControlDialog::updateLabels()
 {
     int64_t nAmount = 0;
     for (const CZerocoinMint mint : listMints) {
@@ -167,14 +167,14 @@ void ZXxxControlDialog::updateLabels()
     }
 
     //update this dialog's labels
-    ui->labelZXxx_int->setText(QString::number(nAmount));
+    ui->labelZSMRTC_int->setText(QString::number(nAmount));
     ui->labelQuantity_int->setText(QString::number(listSelectedMints.size()));
 
     //update PrivacyDialog labels
-    privacyDialog->setZXxxControlLabels(nAmount, listSelectedMints.size());
+    privacyDialog->setZSMRTCControlLabels(nAmount, listSelectedMints.size());
 }
 
-std::vector<CZerocoinMint> ZXxxControlDialog::GetSelectedMints()
+std::vector<CZerocoinMint> ZSMRTCControlDialog::GetSelectedMints()
 {
     std::vector<CZerocoinMint> listReturn;
     for (const CZerocoinMint mint : listMints) {
@@ -187,7 +187,7 @@ std::vector<CZerocoinMint> ZXxxControlDialog::GetSelectedMints()
 }
 
 // select or deselect all of the mints
-void ZXxxControlDialog::ButtonAllClicked()
+void ZSMRTCControlDialog::ButtonAllClicked()
 {
     ui->treeWidget->blockSignals(true);
     Qt::CheckState state = Qt::Checked;
