@@ -134,11 +134,3 @@ config.status
 /.vs/slnx.sqlite
 /.vs/smrtc/v15/.suo
 /.vs/VSWorkspaceState.json
-.vs/smrtc/v15/ipch/AutoPCH/1d035a8f10d89ed6/RPCNET.ipch
-.vs/smrtc/v15/ipch/AutoPCH/408eb703fba66582/INIT.ipch
-.vs/smrtc/v15/ipch/AutoPCH/6616838742ec283d/RPCMASTERNODE-BUDGET.ipch
-.vs/smrtc/v15/ipch/AutoPCH/6fd9ff2b7ceb43bd/RPCMASTERNODE.ipch
-.vs/smrtc/v15/ipch/AutoPCH/94dcd737560cebe/MASTERNODEMAN.ipch
-.vs/smrtc/v15/ipch/AutoPCH/9f841ad137d7a7fb/RPCMINING.ipch
-.vs/smrtc/v15/ipch/AutoPCH/aa807e64b988e984/AMOUNT.ipch
-.vs/smrtc/v15/ipch/AutoPCH/f94ea940dcd10435/RPCBLOCKCHAIN.ipch
