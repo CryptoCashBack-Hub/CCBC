@@ -6,7 +6,7 @@ Smrtc Core version *version* is now available from:
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/eastcoastcrypto/SMRTCita/issues>
+  <https://github.com/eastcoastcrypto/Xxxita/issues>
 
 Mandatory Update
 ==============
