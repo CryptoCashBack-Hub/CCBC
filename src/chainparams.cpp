@@ -163,7 +163,7 @@ public:
 				
         hashGenesisBlock = genesis.GetHash();
 	printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
+        //printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x00000bfac6fe632c5cb97c0b31d13bbc1fa7b840e94700b22b07229eaa501a5f"));
         assert(genesis.hashMerkleRoot == uint256("0x63dea97faf4924420e6a832a4ded9c8a055d973a3eb4ed9713a118a8e57050fc"));
@@ -268,11 +268,11 @@ public:
         genesis.nTime = 1531527774;
         genesis.nNonce = 151287;
 
-	    hashGenesisBlock = genesis.GetHash();
+	hashGenesisBlock = genesis.GetHash();
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
+        printf("%s\n", hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x000006f03f58c334da250422bf68b7b6088482188f0cdf6fcec602fbd4cab20b"));
-		assert(genesis.hashMerkleRoot == uint256("0x1eddb5de8dcb022094e02034ef8a4833ea41ffa3cdaf97443060e371d7f5b35f"));
+	assert(genesis.hashMerkleRoot == uint256("0x1eddb5de8dcb022094e02034ef8a4833ea41ffa3cdaf97443060e371d7f5b35f"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -336,16 +336,16 @@ public:
         nTargetTimespan = 24 * 60 * 60; // Smrtc: 1 day
         nTargetSpacing = 1 * 60;        // Smrtc: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
+	nDefaultPort = 19883;
         genesis.nTime = 1531527774;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 151287;
+        genesis.nNonce = 151287;	
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 19883;
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
+        printf("%s\n", hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x000006f03f58c334da250422bf68b7b6088482188f0cdf6fcec602fbd4cab20b"));
-		assert(genesis.hashMerkleRoot == uint256("0x1eddb5de8dcb022094e02034ef8a4833ea41ffa3cdaf97443060e371d7f5b35f"));
+	assert(genesis.hashMerkleRoot == uint256("0x1eddb5de8dcb022094e02034ef8a4833ea41ffa3cdaf97443060e371d7f5b35f"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
