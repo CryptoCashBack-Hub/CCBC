@@ -91,12 +91,12 @@ Object blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool txDe
 
     result.push_back(Pair("moneysupply",ValueFromAmount(blockindex->nMoneySupply)));
 
-    Object zxxxObj;
+    Object zSMRTCObj;
     for (auto denom : libzerocoin::zerocoinDenomList) {
-        zxxxObj.push_back(Pair(to_string(denom), ValueFromAmount(blockindex->mapZerocoinSupply.at(denom) * (denom*COIN))));
+        zSMRTCObj.push_back(Pair(to_string(denom), ValueFromAmount(blockindex->mapZerocoinSupply.at(denom) * (denom*COIN))));
     }
-    zxxxObj.emplace_back(Pair("total", ValueFromAmount(blockindex->GetZerocoinSupply())));
-    result.emplace_back(Pair("zXXXsupply", zxxxObj));
+    zSMRTCObj.emplace_back(Pair("total", ValueFromAmount(blockindex->GetZerocoinSupply())));
+    result.emplace_back(Pair("zSMRTCsupply", zSMRTCObj));
 
     return result;
 }
@@ -279,17 +279,17 @@ Value getblock(const Array& params, bool fHelp)
             "  \"previousblockhash\" : \"hash\",  (string) The hash of the previous block\n"
             "  \"nextblockhash\" : \"hash\"       (string) The hash of the next block\n"
             "  \"moneysupply\" : \"supply\"       (numeric) The money supply when this block was added to the blockchain\n"
-            "  \"zXXXsupply\" :\n"
+            "  \"zSMRTCsupply\" :\n"
             "  {\n"
-            "     \"1\" : n,            (numeric) supply of 1 zXXX denomination\n"
-            "     \"5\" : n,            (numeric) supply of 5 zXXX denomination\n"
-            "     \"10\" : n,           (numeric) supply of 10 zXXX denomination\n"
-            "     \"50\" : n,           (numeric) supply of 50 zXXX denomination\n"
-            "     \"100\" : n,          (numeric) supply of 100 zXXX denomination\n"
-            "     \"500\" : n,          (numeric) supply of 500 zXXX denomination\n"
-            "     \"1000\" : n,         (numeric) supply of 1000 zXXX denomination\n"
-            "     \"5000\" : n,         (numeric) supply of 5000 zXXX denomination\n"
-            "     \"total\" : n,        (numeric) The total supply of all zXXX denominations\n"
+            "     \"1\" : n,            (numeric) supply of 1 zSMRTC denomination\n"
+            "     \"5\" : n,            (numeric) supply of 5 zSMRTC denomination\n"
+            "     \"10\" : n,           (numeric) supply of 10 zSMRTC denomination\n"
+            "     \"50\" : n,           (numeric) supply of 50 zSMRTC denomination\n"
+            "     \"100\" : n,          (numeric) supply of 100 zSMRTC denomination\n"
+            "     \"500\" : n,          (numeric) supply of 500 zSMRTC denomination\n"
+            "     \"1000\" : n,         (numeric) supply of 1000 zSMRTC denomination\n"
+            "     \"5000\" : n,         (numeric) supply of 5000 zSMRTC denomination\n"
+            "     \"total\" : n,        (numeric) The total supply of all zSMRTC denominations\n"
             "  }\n"
             "}\n"
             "\nResult (for verbose=false):\n"
