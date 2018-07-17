@@ -168,8 +168,7 @@ public:
         printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0xeada217264ddf83bd191cee18a2f9915e3146124aa2211dff961c1b1c003dd0f"));
         assert(genesis.hashMerkleRoot == uint256("0x800e4034c243479e7d241aa91ae432445277415cfae3f7f2660f5615a0efc7b4"));
-
-	vSeeds.push_back(CDNSSeedData("220.233.78.249", "220.233.78.249"));
+	
         vSeeds.clear();
 		
 
