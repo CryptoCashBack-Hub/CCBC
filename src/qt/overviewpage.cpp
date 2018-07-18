@@ -2,7 +2,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017 The Smrtc developers
-// Distributed under the MIT/X11 software license, see the accompanying
+// Distributed under the MIT/X11 software license, see the accompanyingF
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "overviewpage.h"
@@ -35,7 +35,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::XXX)
+    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::SMRTC)
     {
     }
 
@@ -151,7 +151,7 @@ OverviewPage::~OverviewPage()
     delete ui;
 }
 
-void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sXXXPercentage, QString& szXXXPercentage)
+void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sSMRTCPercentage, QString& szSMRTCPercentage)
 {
     int nPrecision = 2;
     double dzPercentage = 0.0;
@@ -170,8 +170,8 @@ void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBala
 
     double dPercentage = 100.0 - dzPercentage;
     
-    szXXXPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
-    sXXXPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
+    szSMRTCPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
+    sSMRTCPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
     
 }
 
@@ -189,7 +189,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
 
-    // XXX labels
+    // SMRTC labels
     ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance, false, BitcoinUnits::separatorAlways));
     ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
     ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
@@ -202,7 +202,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelWatchImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchImmatureBalance, false, BitcoinUnits::separatorAlways));
     ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, BitcoinUnits::separatorAlways));
 
-    // zXXX labels
+    // zSMRTC labels
     QString szPercentage = "";
     QString sPercentage = "";
     CAmount nLockedBalance = 0;
@@ -223,11 +223,11 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelzBalanceMature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, matureZerocoinBalance, false, BitcoinUnits::separatorAlways));
     ui->labelTotalz->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nTotalBalance + zerocoinBalance, false, BitcoinUnits::separatorAlways));
     ui->labelUnLockedBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nUnlockedBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelXXXPercent->setText(sPercentage);
-    ui->labelzXXXPercent->setText(szPercentage);
+    ui->labelSMRTCPercent->setText(sPercentage);
+    ui->labelzSMRTCPercent->setText(szPercentage);
 
     // Adjust bubble-help according to AutoMint settings
-    QString automintHelp = tr("Current percentage of zXXX.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
+    QString automintHelp = tr("Current percentage of zSMRTC.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
     bool fEnableZeromint = GetBoolArg("-enablezeromint", false);
     int nZeromintPercentage = GetArg("-zeromintpercentage", 10);
     if (fEnableZeromint) {
@@ -237,7 +237,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     else {
         automintHelp += tr("AutoMint is currently disabled.\nTo enable AutoMint add 'enablezeromint=1' in smrtc.conf");
     }
-    ui->labelzXXXPercent->setToolTip(automintHelp);
+    ui->labelzSMRTCPercent->setToolTip(automintHelp);
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users
@@ -316,7 +316,7 @@ void OverviewPage::setWalletModel(WalletModel* model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("XXX")
+    // update the display unit, to not use the default ("SMRTC")
     updateDisplayUnit();
 }
 
