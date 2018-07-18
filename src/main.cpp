@@ -2126,9 +2126,10 @@ int64_t GetBlockValue(int nHeight)
 
     } else {
         if (nHeight == 0) {
-            nSubsidy = 250 * COIN; //Genesis
-        } else if (nHeight == 1) {
-            nSubsidy = 4000000 * COIN;             //Coin Swap / premine
+            nSubsidy = 4000000 * COIN; //Genesis
+           // nSubsidy = 250 * COIN; //Genesis
+       // } else if (nHeight == 1) {
+       //     nSubsidy = 4000000 * COIN;             //Coin Swap / premine
         } else if (nHeight > 1 && nHeight < 200) { //POW phase
             nSubsidy = 30 * COIN;
         } else if (nHeight > 200 && nHeight < 25000) { //Public pos and mn phase
@@ -2398,7 +2399,10 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     }
 
     // Changes alot and levels out to seesaw at end.
-    if (nHeight <= 25000) {
+    if (nHeight == 0) {
+	      ret = blockValue * 0;
+    } else if (nHeight > 1 && nHeight <= 25000) {
+    //if (nHeight <= 25000) {
         ret = blockValue * 0.80; //80% to get new nodes on network on swap until 60k block
     } else if (nHeight > 25000 && nHeight <= 60000) {
         ret = blockValue * 0.40; //40% to give new people a chance to stake rewards, will increase every 5k blocks 5000 / 1440 = 3.5 days
