@@ -2401,7 +2401,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     // Changes alot and levels out to seesaw at end.
     if (nHeight == 0) {
 	      ret = blockValue * 0;
-    } else if (nHeight > 1 && nHeight <= 25000) {
+    } else if (nHeight > 200 && nHeight <= 25000) {
     //if (nHeight <= 25000) {
         ret = blockValue * 0.80; //80% to get new nodes on network on swap until 60k block
     } else if (nHeight > 25000 && nHeight <= 60000) {
