@@ -38,7 +38,7 @@
 
 <table>
 <tr><th>Block Height</th><th>MN Reward Amount</th><th>PoS Reward Amount</th><th>Duration (Days)</th><th>Development Fee</th></tr>
-<tr><td>201-25000</td><td>80%</td><<td>42%</td>td>17.2 Days</td><td>0%</td></tr>
+<tr><td>201-25000</td><td>80%</td><<td>20%</td>td>17.2 Days</td><td>0%</td></tr>
 <tr><td>25000-60000 </td><td>40%</td><td>60%</td><td>17.22 Days</td><td>0%</td></tr>
 <tr><td>60000-65000 </td><td>42%</td><td>68%</td><td>3.47 Days</td><td>0%</td></tr>
 <tr><td>65000-70000 </td><td>44%</td><td>66%</td><td>3.47 Days</td><td>0%</td></tr>
