@@ -2452,7 +2452,9 @@ bool IsTreasuryBlock(int nHeight)
 int64_t GetTreasuryAward(int nHeight)
 {
     if (IsTreasuryBlock(nHeight)) {
-        return 10000 * COIN; //10k on very first block
+        return 10000 * COIN; //10k on very first block 
+    } else if (nHeight > 60000 && nHeight <= 65000) {
+	return 5 * COIN; //5 on start 10%
     } else if (nHeight > 70001 && nHeight <= 75000) {
         return 5 * COIN; //5 on start 10%
     } else if (nHeight > 75000 && nHeight <= 100000) {
