@@ -1619,7 +1619,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
             //Check that txid is not already in the chain
             int nHeightTx = 0;
             if (IsTransactionInChain(tx.GetHash(), nHeightTx))
-                return state.Invalid(error("AcceptToMemoryPool : zXxx spend tx %s already in block %d", tx.GetHash().GetHex(), nHeightTx),
+                return state.Invalid(error("AcceptToMemoryPool : zSmrtc spend tx %s already in block %d", tx.GetHash().GetHex(), nHeightTx),
                     REJECT_DUPLICATE, "bad-txns-inputs-spent");
 
             //Check for double spending of serial #'s
@@ -1629,12 +1629,12 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                 CoinSpend spend = TxInToZerocoinSpend(txIn);
                 int nHeightTx = 0;
                 if (IsSerialInBlockchain(spend.getCoinSerialNumber(), nHeightTx))
-                    return state.Invalid(error("%s : zXxx spend with serial %s is already in block %d\n",
+                    return state.Invalid(error("%s : zSmrtc spend with serial %s is already in block %d\n",
                         __func__, spend.getCoinSerialNumber().GetHex(), nHeightTx));
 
                 //Is serial in the acceptable range
                 if (!spend.HasValidSerial(Params().Zerocoin_Params()))
-                    return state.Invalid(error("%s : zXxx spend with serial %s from tx %s is not in valid range\n",
+                    return state.Invalid(error("%s : zSmrtc spend with serial %s from tx %s is not in valid range\n",
                         __func__, spend.getCoinSerialNumber().GetHex(), tx.GetHash().GetHex()));
             }
         } else {
@@ -2899,7 +2899,7 @@ void ThreadScriptCheck()
     scriptcheckqueue.Thread();
 }
 
-void RecalculateZXXXMinted()
+void RecalculateZSMRTCMinted()
 {
     CBlockIndex* pindex = chainActive[Params().Zerocoin_AccumulatorStartHeight()];
     int nHeightEnd = chainActive.Height();
@@ -2931,14 +2931,14 @@ void RecalculateZXXXMinted()
     pblocktree->Flush();
 }
 
-void RecalculateZXXXSpent()
+void RecalculateZSMRTCSpent()
 {
     CBlockIndex* pindex = chainActive[Params().Zerocoin_AccumulatorStartHeight()];
     while (true) {
         if (pindex->nHeight % 1000 == 0)
             LogPrintf("%s : block %d...\n", __func__, pindex->nHeight);
 
-        //Rewrite zXXX supply
+        //Rewrite zSMRTC supply
         CBlock block;
         assert(ReadBlockFromDisk(block, pindex));
 
@@ -2947,13 +2947,13 @@ void RecalculateZXXXSpent()
         //Reset the supply to previous block
         pindex->mapZerocoinSupply = pindex->pprev->mapZerocoinSupply;
 
-        //Add mints to zXXX supply
+        //Add mints to zSMRTC supply
         for (auto denom : libzerocoin::zerocoinDenomList) {
             long nDenomAdded = count(pindex->vMintDenominationsInBlock.begin(), pindex->vMintDenominationsInBlock.end(), denom);
             pindex->mapZerocoinSupply.at(denom) += nDenomAdded;
         }
 
-        //Remove spends from zXXX supply
+        //Remove spends from zSMRTC supply
         for (auto denom : listDenomsSpent)
             pindex->mapZerocoinSupply.at(denom)--;
 
@@ -2968,7 +2968,7 @@ void RecalculateZXXXSpent()
     pblocktree->Flush();
 }
 
-bool RecalculateXXXSupply(int nHeightStart)
+bool RecalculateSMRTCSupply(int nHeightStart)
 {
     if (nHeightStart > chainActive.Height())
         return false;
@@ -3154,7 +3154,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                 if (zerocoinDB->ReadCoinSpend(spend.getCoinSerialNumber(), hashTxFromDB)) {
                     if (IsSerialInBlockchain(spend.getCoinSerialNumber(), nHeightTxSpend)) {
                         if (!fVerifyingBlocks || (fVerifyingBlocks && pindex->nHeight > nHeightTxSpend))
-                            return state.DoS(100, error("%s : zXxx with serial %s is already in the block %d\n",
+                            return state.DoS(100, error("%s : zSmrtc with serial %s is already in the block %d\n",
                                                       __func__, spend.getCoinSerialNumber().GetHex(), nHeightTxSpend));
                     }
                 }
@@ -3204,9 +3204,9 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     std::list<libzerocoin::CoinDenomination> listSpends = ZerocoinSpendListFromBlock(block);
 
     if (!fVerifyingBlocks && pindex->nHeight == Params().Zerocoin_StartHeight() + 1) {
-        RecalculateZXXXMinted();
-        RecalculateZXXXSpent();
-        RecalculateXXXSupply(1);
+        RecalculateZSMRTCMinted();
+        RecalculateZSMRTCSpent();
+        RecalculateSMRTCSupply(1);
     }
 
     // Initialize zerocoin supply to the supply from previous block
@@ -3247,7 +3247,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     pindex->nMoneySupply = nMoneySupplyPrev + nValueOut - nValueIn;
     pindex->nMint = pindex->nMoneySupply - nMoneySupplyPrev + nFees;
 
-    //    LogPrintf("XX69----------> ConnectBlock(): nValueOut: %s, nValueIn: %s, nFees: %s, nMint: %s zXxxSpent: %s\n",
+    //    LogPrintf("XX69----------> ConnectBlock(): nValueOut: %s, nValueIn: %s, nFees: %s, nMint: %s zSmrtcSpent: %s\n",
     //              FormatMoney(nValueOut), FormatMoney(nValueIn),
     //              FormatMoney(nFees), FormatMoney(pindex->nMint), FormatMoney(nAmountZerocoinSpent));
 
@@ -3409,7 +3409,7 @@ void static UpdateTip(CBlockIndex* pindexNew)
 {
     chainActive.SetTip(pindexNew);
 
-    // If turned on AutoZeromint will automatically convert XXX to zXXX
+    // If turned on AutoZeromint will automatically convert SMRTC to zSMRTC
     if (pwalletMain->isZeromintEnabled())
         pwalletMain->AutoZeromint();
 
@@ -4261,13 +4261,13 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
         if (!CheckTransaction(tx, fZerocoinActive, chainActive.Height() + 1 >= Params().Zerocoin_StartHeight(), state))
             return error("CheckBlock() : CheckTransaction failed");
 
-        // double check that there are no double spent zXxx spends in this block
+        // double check that there are no double spent zSmrtc spends in this block
         if (tx.IsZerocoinSpend()) {
             for (const CTxIn txIn : tx.vin) {
                 if (txIn.scriptSig.IsZerocoinSpend()) {
                     libzerocoin::CoinSpend spend = TxInToZerocoinSpend(txIn);
                     if (count(vBlockSerials.begin(), vBlockSerials.end(), spend.getCoinSerialNumber()))
-                        return state.DoS(100, error("%s : Double spending of zXxx serial %s in block\n Block: %s",
+                        return state.DoS(100, error("%s : Double spending of zSmrtc serial %s in block\n Block: %s",
                                                   __func__, spend.getCoinSerialNumber().GetHex(), block.ToString()));
                     vBlockSerials.emplace_back(spend.getCoinSerialNumber());
                 }
@@ -4584,7 +4584,7 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
         }
     }
     if (nMints || nSpends)
-        LogPrintf("%s : block contains %d zXxx mints and %d zXxx spends\n", __func__, nMints, nSpends);
+        LogPrintf("%s : block contains %d zSmrtc mints and %d zSmrtc spends\n", __func__, nMints, nSpends);
 
     // ppcoin: check proof-of-stake
     // Limited duplicity on stake: prevents block flood attack

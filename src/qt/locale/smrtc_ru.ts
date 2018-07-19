@@ -172,7 +172,7 @@
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
-        <source>Smrtc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
+        <source>Smrtc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SMRTCs from being stolen by malware infecting your computer.</source>
         <translation>Smrtc сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши Smrtc от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
@@ -180,8 +180,8 @@
         <translation>Вы действительно хотите зашифровать свой кошелек?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR XXX&lt;/b&gt;!</source>
-        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ XXX&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
+        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ SMRTC&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -610,7 +610,7 @@
         <translation>&amp;Конфиденциальность</translation>
     </message>
     <message>
-        <source>Privacy Action for zXXX and Obfuscation</source>
+        <source>Privacy Action for zSMRTC and Obfuscation</source>
         <translation>Конфиденциальное действие и обфускация</translation>
     </message>
     <message>
@@ -1516,32 +1516,32 @@ Please check the address and try again.</source>
         <translation>Выберите уровень конфиденциальности.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 XXX</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 SMRTC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 XXX</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 SMRTC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Используйте 16 разных мастернод</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 XXX to anonymize 10000 XXX</source>
-        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 XXX для анонимизации 10000 XXX</translation>
+        <source>This option is the quickest and will cost about ~0.025 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 SMRTC для анонимизации 10000 SMRTC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 XXX to anonymize 10000 XXX</source>
-        <translation>Это средний по скорости вариант и он будет стоить около 0.05 XXX для анонимизации 10000 XXX</translation>
+        <source>This option is moderately fast and will cost about 0.05 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Это средний по скорости вариант и он будет стоить около 0.05 SMRTC для анонимизации 10000 SMRTC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Это самый медленный и безопасный вариант. Максимальная анонимность стоит</translation>
     </message>
     <message>
-        <source>0.1 XXX per 10000 XXX you anonymize.</source>
-        <translation>0.1 XXX за 10000 XXX которые вы собираетесь анонимизировать.</translation>
+        <source>0.1 SMRTC per 10000 SMRTC you anonymize.</source>
+        <translation>0.1 SMRTC за 10000 SMRTC которые вы собираетесь анонимизировать.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1684,16 +1684,16 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Percentage of incoming XXX which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент приходящих XXX, которые автоматически конвертируются в zXXX благодаря Zerocoin протоколу (min: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zSMRTC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент приходящих SMRTC, которые автоматически конвертируются в zSMRTC благодаря Zerocoin протоколу (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zXXX</source>
-        <translation>Процент  авточеканненых zXXX</translation>
+        <source>Percentage of autominted zSMRTC</source>
+        <translation>Процент  авточеканненых zSMRTC</translation>
     </message>
     <message>
-        <source>Preferred Automint zXXX Denomination</source>
-        <translation>Предпочитаемый номинал авточеканной  монеты  zXXX</translation>
+        <source>Preferred Automint zSMRTC Denomination</source>
+        <translation>Предпочитаемый номинал авточеканной  монеты  zSMRTC</translation>
     </message>
     <message>
         <source>Connect to the Smrtc network through a SOCKS5 proxy.</source>
@@ -1827,8 +1827,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Вид</translation>
     </message>
     <message>
-        <source>XXX Balances</source>
-        <translation>Баланс XXX</translation>
+        <source>SMRTC Balances</source>
+        <translation>Баланс SMRTC</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1891,12 +1891,12 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Расходуемый:</translation>
     </message>
     <message>
-        <source>XXX:</source>
-        <translation>XXX:</translation>
+        <source>SMRTC:</source>
+        <translation>SMRTC:</translation>
     </message>
     <message>
-        <source>zXXX:</source>
-        <translation>zXXX:</translation>
+        <source>zSMRTC:</source>
+        <translation>zSMRTC:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2020,8 +2020,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>XXX which were anonymized via Zerocin Protocol</source>
-        <translation>XXX, который был анонимно использован через Zerocoin протокол</translation>
+        <source>SMRTC which were anonymized via Zerocin Protocol</source>
+        <translation>SMRTC, который был анонимно использован через Zerocoin протокол</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2706,8 +2706,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Изменить:</translation>
     </message>
     <message>
-        <source>0 XXX</source>
-        <translation>0 XXX</translation>
+        <source>0 SMRTC</source>
+        <translation>0 SMRTC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>

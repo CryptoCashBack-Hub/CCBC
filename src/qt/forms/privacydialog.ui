@@ -31,7 +31,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
        <item>
-        <widget class="QLabel" name="zXXXLabel">
+        <widget class="QLabel" name="zSMRTCLabel">
          <property name="minimumSize">
           <size>
            <width>460</width>
@@ -52,13 +52,13 @@
           </font>
          </property>
          <property name="toolTip">
-          <string>XXX which were anonymized via Zerocin Protocol</string>
+          <string>SMRTC which were anonymized via Zerocin Protocol</string>
          </property>
          <property name="autoFillBackground">
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>Zerocoin XXX (zXXX)</string>
+          <string>Zerocoin SMRTC (zSMRTC)</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -74,7 +74,7 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
-                <widget class="QLabel" name="labelzXXXActions">
+                <widget class="QLabel" name="labelzSMRTCActions">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -83,7 +83,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>zXXX Actions:</string>
+                  <string>zSMRTC Actions:</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -91,7 +91,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXXXSyncStatus">
+                <widget class="QLabel" name="labelzSMRTCSyncStatus">
                  <property name="toolTip">
                   <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Smrtc network after a connection is established, but this process has not completed yet.</string>
                  </property>
@@ -137,7 +137,7 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
-                <widget class="QPushButton" name="pushButtonMintzXXX">
+                <widget class="QPushButton" name="pushButtonMintzSMRTC">
                  <property name="minimumSize">
                   <size>
                    <width>131</width>
@@ -145,10 +145,10 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Enter an amount of Xxx to convert (mint) to zXxx</string>
+                  <string>Enter an amount of Smrtc to convert (mint) to zSmrtc</string>
                  </property>
                  <property name="text">
-                  <string>Convert XXX to zXXX</string>
+                  <string>Convert SMRTC to zSMRTC</string>
                  </property>
                 </widget>
                </item>
@@ -169,16 +169,16 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXXX_2">
+                <widget class="QLabel" name="labelzSMRTC_2">
                  <property name="text">
-                  <string>zXXX</string>
+                  <string>zSMRTC</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXXXAmountText">
+                <widget class="QLabel" name="labelzSMRTCAmountText">
                  <property name="toolTip">
-                  <string>Available Balance are coins (Xxx) which are confirmed and not locked or Masternode collaterals.</string>
+                  <string>Available Balance are coins (Smrtc) which are confirmed and not locked or Masternode collaterals.</string>
                  </property>
                  <property name="text">
                   <string>Available Balance:</string>
@@ -189,12 +189,12 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXXXAmountValue">
+                <widget class="QLabel" name="labelzSMRTCAmountValue">
                  <property name="toolTip">
-                  <string>Enter an amount of Xxx to convert to zXxx</string>
+                  <string>Enter an amount of Smrtc to convert to zSmrtc</string>
                  </property>
                  <property name="text">
-                  <string>0.000 000 00 XXX</string>
+                  <string>0.000 000 00 SMRTC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -223,7 +223,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Reset Zerocoin (zXxx) Wallet DB. Deletes transactions that did not make it into the blockchain.</string>
+                  <string>Reset Zerocoin (zSmrtc) Wallet DB. Deletes transactions that did not make it into the blockchain.</string>
                  </property>
                  <property name="text">
                   <string>Reset</string>
@@ -370,7 +370,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 XXX</string>
+                    <string notr="true">0.00 SMRTC</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -474,21 +474,21 @@
                 <number>0</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButtonZXxxControl">
+                <widget class="QPushButton" name="pushButtonZSmrtcControl">
                  <property name="text">
-                  <string>zXxx Control</string>
+                  <string>zSmrtc Control</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXxxSelected">
+                <widget class="QLabel" name="labelzSmrtcSelected">
                  <property name="text">
-                  <string>zXxx Selected:</string>
+                  <string>zSmrtc Selected:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXxxSelected_int">
+                <widget class="QLabel" name="labelzSmrtcSelected_int">
                  <property name="text">
                   <string>0</string>
                  </property>
@@ -542,7 +542,7 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_6">
                <item>
-                <widget class="QPushButton" name="pushButtonSpendzXXX">
+                <widget class="QPushButton" name="pushButtonSpendzSMRTC">
                  <property name="minimumSize">
                   <size>
                    <width>131</width>
@@ -550,17 +550,17 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Send zXXX. Without 'Pay To:' address creates payments to yourself.</string>
+                  <string>Send zSMRTC. Without 'Pay To:' address creates payments to yourself.</string>
                  </property>
                  <property name="text">
-                  <string>Send zXXX</string>
+                  <string>Send zSMRTC</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXXXBalanceText">
+                <widget class="QLabel" name="labelzSMRTCBalanceText">
                  <property name="toolTip">
-                  <string>Available (mature and spendable) zXXX for spending</string>
+                  <string>Available (mature and spendable) zSMRTC for spending</string>
                  </property>
                  <property name="text">
                   <string>Available Balance:</string>
@@ -579,12 +579,12 @@
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Available (mature and spendable) zXXX for spending
+                  <string>Available (mature and spendable) zSMRTC for spending
 
-zXXX are mature when they have more than 20 confirmations AND more than 1 mints of the same denomination after them were minted</string>
+zSMRTC are mature when they have more than 20 confirmations AND more than 1 mints of the same denomination after them were minted</string>
                  </property>
                  <property name="text">
-                  <string>0 zXXX</string>
+                  <string>0 zSMRTC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -607,7 +607,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                <item>
                 <widget class="QLabel" name="labelSecurityLevel">
                  <property name="toolTip">
-                  <string>Security Level for Zerocoin (zXxx) Transactions. More is better, but needs more time and resources.</string>
+                  <string>Security Level for Zerocoin (zSmrtc) Transactions. More is better, but needs more time and resources.</string>
                  </property>
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
@@ -784,15 +784,15 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                  <property name="buddy">
-                  <cstring>zXXXpayAmount</cstring>
+                  <cstring>zSMRTCpayAmount</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="zXXXpayAmount"/>
+                <widget class="QLineEdit" name="zSMRTCpayAmount"/>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXXX">
+                <widget class="QLabel" name="labelzSMRTC">
                  <property name="minimumSize">
                   <size>
                    <width>55</width>
@@ -800,7 +800,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   </size>
                  </property>
                  <property name="text">
-                  <string>zXXX</string>
+                  <string>zSMRTC</string>
                  </property>
                 </widget>
                </item>
@@ -833,7 +833,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   <enum>Qt::LeftToRight</enum>
                  </property>
                  <property name="text">
-                  <string>Convert Change Back to zXXX (might cost additional fees)</string>
+                  <string>Convert Change Back to zSMRTC (might cost additional fees)</string>
                  </property>
                 </widget>
                </item>
@@ -886,7 +886,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_21">
                <item>
-                <widget class="QLabel" name="labelzXXXStats">
+                <widget class="QLabel" name="labelzSMRTCStats">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -895,10 +895,10 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Information about the available zXxx funds.</string>
+                  <string>Information about the available zSmrtc funds.</string>
                  </property>
                  <property name="text">
-                  <string>zXXX Stats:</string>
+                  <string>zSMRTC Stats:</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -960,10 +960,10 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Total Balance including unconfirmed and immature zXXX</string>
+                  <string>Total Balance including unconfirmed and immature zSMRTC</string>
                  </property>
                  <property name="text">
-                  <string>Total zXXX Balance:</string>
+                  <string>Total zSMRTC Balance:</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -998,10 +998,10 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Total Balance including unconfirmed and immature zXXX</string>
+                  <string>Total Balance including unconfirmed and immature zSMRTC</string>
                  </property>
                  <property name="text">
-                  <string>0 zXXX</string>
+                  <string>0 zSMRTC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1576,7 +1576,7 @@ Immature: confirmed, but less than 1 mints of the same denomination after it was
          <enum>Qt::ActionsContextMenu</enum>
         </property>
         <property name="text">
-         <string notr="true">0.000 000 00 XXX</string>
+         <string notr="true">0.000 000 00 SMRTC</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -1650,7 +1650,7 @@ Immature: confirmed, but less than 1 mints of the same denomination after it was
            <enum>Qt::ActionsContextMenu</enum>
           </property>
           <property name="text">
-           <string notr="true">0.00 XXX</string>
+           <string notr="true">0.00 SMRTC</string>
           </property>
           <property name="textInteractionFlags">
            <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -1847,7 +1847,7 @@ Immature: confirmed, but less than 1 mints of the same denomination after it was
          <enum>Qt::ActionsContextMenu</enum>
         </property>
         <property name="text">
-         <string notr="true">0.000 000 00 XXX</string>
+         <string notr="true">0.000 000 00 SMRTC</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>

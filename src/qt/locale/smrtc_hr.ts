@@ -535,8 +535,8 @@
         <translation>ne</translation>
     </message>
     <message>
-        <source>0 XXX</source>
-        <translation>0 XXX</translation>
+        <source>0 SMRTC</source>
+        <translation>0 SMRTC</translation>
     </message>
     <message>
         <source>Confirmation time:</source>

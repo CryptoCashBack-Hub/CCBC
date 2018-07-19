@@ -58,9 +58,9 @@ public:
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit {
-        XXX,
-        mXXX,
-        uXXX
+        SMRTC,
+        mSMRTC,
+        uSMRTC
     };
 
     enum SeparatorStyle {
