@@ -134,3 +134,8 @@ config.status
 /.vs/slnx.sqlite
 /.vs/smrtc/v15/.suo
 /.vs/VSWorkspaceState.json
+.vs/smrtc/v15/ipch/AutoPCH/265c25126fc6063c/GUIUTIL.ipch
+.vs/smrtc/v15/ipch/AutoPCH/3fc496d53ea39c11/BLOCKEXPLORER.ipch
+.vs/smrtc/v15/ipch/AutoPCH/5296bec56a7191ec/MASTERNODEMAN.ipch
+.vs/smrtc/v15/ipch/AutoPCH/6883191c1916ca26/AMOUNT.ipch
+.vs/smrtc/v15/ipch/AutoPCH/8d46eca7c6902300/INIT.ipch

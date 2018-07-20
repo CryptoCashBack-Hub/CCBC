@@ -231,7 +231,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR XXX&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1953,12 +1953,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 10000 XXX</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 10000 XXX</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1968,12 +1968,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 XXX to anonymize 10000 XXX</source>
+        <source>This option is the quickest and will cost about ~0.025 SMRTC to anonymize 10000 SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 XXX to anonymize 10000 XXX</source>
+        <source>This option is moderately fast and will cost about 0.05 SMRTC to anonymize 10000 SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1983,7 +1983,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>0.1 XXX per 10000 XXX you anonymize.</source>
+        <source>0.1 SMRTC per 10000 SMRTC you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2162,7 +2162,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
     </message>
     <message>
         <location line="-133"/>
-        <source>Percentage of incoming XXX which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2173,7 +2173,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
     <message>
         <location line="+30"/>
         <location line="+16"/>
-        <source>Wait with automatic conversion to Zerocoin until enough XXX for this denomination is available</source>
+        <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2348,7 +2348,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
     </message>
     <message>
         <location line="+43"/>
-        <source>XXX Balances</source>
+        <source>SMRTC Balances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2449,7 +2449,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
     </message>
     <message>
         <location line="+36"/>
-        <source>XXX:</source>
+        <source>SMRTC:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2472,7 +2472,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="-46"/>
         <location line="+13"/>
-        <source>Locked XXX or Masternode collaterals. These are excluded from zXXX minting.</source>
+        <source>Locked SMRTC or Masternode collaterals. These are excluded from zXXX minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2481,7 +2481,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <location line="+189"/>
         <location line="+31"/>
         <location line="+44"/>
-        <source>0.000 000 00 XXX</source>
+        <source>0.000 000 00 SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2716,12 +2716,12 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <name>PrivacyDialog</name>
     <message>
         <location filename="../forms/privacydialog.ui" line="+55"/>
-        <source>XXX which were anonymized via Zerocin Protocol</source>
+        <source>SMRTC which were anonymized via Zerocin Protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Zerocoin XXX (zXXX)</source>
+        <source>Zerocoin SMRTC (zXXX)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2771,7 +2771,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+13"/>
-        <source>0.000 000 00 XXX</source>
+        <source>0.000 000 00 SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4188,7 +4188,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+7"/>
-        <source>0 XXX</source>
+        <source>0 SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4324,7 +4324,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+35"/>
-        <source>Anonymized XXX</source>
+        <source>Anonymized SMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5611,7 +5611,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <message>
         <location line="-18"/>
         <location line="+9"/>
-        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 XXX.</source>
+        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SMRTC.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5811,12 +5811,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5966,12 +5966,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Smrtc Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 XXX.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 SMRTC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 XXX.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 SMRTC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6351,7 +6351,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Smrtc Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+2"/>
-        <source>Fee (in XXX/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in SMRTC/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

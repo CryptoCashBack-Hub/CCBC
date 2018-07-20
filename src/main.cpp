@@ -3409,7 +3409,7 @@ void static UpdateTip(CBlockIndex* pindexNew)
 {
     chainActive.SetTip(pindexNew);
 
-    // If turned on AutoZeromint will automatically convert XXX to zXXX
+    // If turned on AutoZeromint will automatically convert SMRTC to zXXX
     if (pwalletMain->isZeromintEnabled())
         pwalletMain->AutoZeromint();
 

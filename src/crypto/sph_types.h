@@ -125,7 +125,7 @@
  * structures which the function uses. For instance, MD5 has the short
  * name <code>"md5"</code>. Short names are listed in the next section,
  * for the implemented hash functions. In subsequent sections, the
- * short name will be assumed to be <code>"XXX"</code>: replace with the
+ * short name will be assumed to be <code>"SMRTC"</code>: replace with the
  * actual hash function name to get the C identifier.
  *
  * Note: some functions within the same family share the same core
@@ -137,7 +137,7 @@
  *
  * Each implemented hash fonction has its own context structure, available
  * under the type name <code>"sph_XXX_context"</code> for the hash function
- * with short name <code>"XXX"</code>. This structure holds all needed
+ * with short name <code>"SMRTC"</code>. This structure holds all needed
  * state for a running hash computation.
  *
  * The contents of these structures are meant to be opaque, and private

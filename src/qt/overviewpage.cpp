@@ -35,7 +35,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::XXX)
+    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::SMRTC)
     {
     }
 

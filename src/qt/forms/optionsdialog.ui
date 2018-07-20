@@ -135,7 +135,7 @@
          <item>
           <widget class="QLabel" name="percentage_label">
            <property name="toolTip">
-            <string>Percentage of incoming XXX which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</string>
+            <string>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</string>
            </property>
            <property name="text">
             <string>Percentage of autominted zXXX</string>
@@ -168,7 +168,7 @@
             </size>
            </property>
            <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough XXX for this denomination is available</string>
+            <string>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</string>
            </property>
            <property name="text">
             <string>Preferred Automint zXXX Denomination</string>
@@ -184,7 +184,7 @@
             </size>
            </property>
            <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough XXX for this denomination is available</string>
+            <string>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</string>
            </property>
            <property name="maxVisibleItems">
             <number>9</number>

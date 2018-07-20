@@ -184,7 +184,7 @@
         <translation>Sind Sie sich sicher, dass Sie ihre Wallet verschlüsseln möchten?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR XXX&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
         <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre XXXs verlieren&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -1539,32 +1539,32 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
         <translation>Bitte den gewünschten Privatsphäre Level auswählen.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>2 separate Masternodes verwenden um bis zu 10000 XXX zu mixen</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>2 separate Masternodes verwenden um bis zu 10000 SMRTC zu mixen</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>8 separate Masternodes verwenden um bis zu 10000 XXX zu mixen</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>8 separate Masternodes verwenden um bis zu 10000 SMRTC zu mixen</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>16 separate Masternodes verwenden</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 XXX to anonymize 10000 XXX</source>
-        <translation>Diese Option ist die schnellst und kostet ungefähr ~0.025 XXX um 10000 XXX zu anonymisieren </translation>
+        <source>This option is the quickest and will cost about ~0.025 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Diese Option ist die schnellst und kostet ungefähr ~0.025 SMRTC um 10000 SMRTC zu anonymisieren </translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 XXX to anonymize 10000 XXX</source>
-        <translation>Diese Option ist angemessen schnell und kostet ungefähr  0.05 XXX um 10000 XXX zu anonymisieren</translation>
+        <source>This option is moderately fast and will cost about 0.05 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Diese Option ist angemessen schnell und kostet ungefähr  0.05 SMRTC um 10000 SMRTC zu anonymisieren</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Diese Option ist die langsamste und sicherste Option. Die Verwendung maximaler Anonymisierung kostet</translation>
     </message>
     <message>
-        <source>0.1 XXX per 10000 XXX you anonymize.</source>
-        <translation>0.1 XXX per 10000 XXX die anonymisiert werden.</translation>
+        <source>0.1 SMRTC per 10000 SMRTC you anonymize.</source>
+        <translation>0.1 SMRTC per 10000 SMRTC die anonymisiert werden.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1707,16 +1707,16 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Port mit &amp;UPnP mappen</translation>
     </message>
     <message>
-        <source>Percentage of incoming XXX which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Anteil des eingehenden XXX, welcher automatisch zu zXXX via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
+        <translation>Anteil des eingehenden SMRTC, welcher automatisch zu zXXX via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
     </message>
     <message>
         <source>Percentage of autominted zXXX</source>
         <translation>Prozentsatz der automatisierten zXXX</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough XXX for this denomination is available</source>
-        <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend XXX für diese Stückelung verfügbar ist</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
+        <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend SMRTC für diese Stückelung verfügbar ist</translation>
     </message>
     <message>
         <source>Preferred Automint zXXX Denomination</source>
@@ -1854,8 +1854,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <source>XXX Balances</source>
-        <translation>XXX Bilanzen</translation>
+        <source>SMRTC Balances</source>
+        <translation>SMRTC Bilanzen</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1922,8 +1922,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Kombinierte Bilanz (einschließlich unreifer Coins)</translation>
     </message>
     <message>
-        <source>XXX:</source>
-        <translation>XXX:</translation>
+        <source>SMRTC:</source>
+        <translation>SMRTC:</translation>
     </message>
     <message>
         <source>zXXX:</source>
@@ -2055,12 +2055,12 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>XXX which were anonymized via Zerocin Protocol</source>
-        <translation>XXX, die über das Zerocoin-Protokoll anonymisiert wurden</translation>
+        <source>SMRTC which were anonymized via Zerocin Protocol</source>
+        <translation>SMRTC, die über das Zerocoin-Protokoll anonymisiert wurden</translation>
     </message>
     <message>
-        <source>Zerocoin XXX (zXXX)</source>
-        <translation>Zerocoin XXX (zXXX)</translation>
+        <source>Zerocoin SMRTC (zXXX)</source>
+        <translation>Zerocoin SMRTC (zXXX)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2091,8 +2091,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Verfügbar für Prägung:</translation>
     </message>
     <message>
-        <source>0.000 000 00 XXX</source>
-        <translation>0.000 000 00 XXX</translation>
+        <source>0.000 000 00 SMRTC</source>
+        <translation>0.000 000 00 SMRTC</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -3122,8 +3122,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>UTXO Größe:</translation>
     </message>
     <message>
-        <source>0 XXX</source>
-        <translation>0 XXX</translation>
+        <source>0 SMRTC</source>
+        <translation>0 SMRTC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3230,8 +3230,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Empfänge&amp;r hinzufügen</translation>
     </message>
     <message>
-        <source>Anonymized XXX</source>
-        <translation>Anonymisierte XXX</translation>
+        <source>Anonymized SMRTC</source>
+        <translation>Anonymisierte SMRTC</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -3951,7 +3951,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Converted Phr to zPhr</source>
-        <translation>Umgewandeltes XXX zu zXXX</translation>
+        <translation>Umgewandeltes SMRTC zu zXXX</translation>
     </message>
     <message>
         <source>Spent zPhr</source>
@@ -3959,7 +3959,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Empfangene XXX von zXXX</translation>
+        <translation>Empfangene SMRTC von zXXX</translation>
     </message>
     <message>
         <source>Minted Change as zPhr from zPhr Spend</source>
@@ -3967,7 +3967,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Converted zPhr to Phr</source>
-        <translation>Umgewandeltes zXXX zu XXX</translation>
+        <translation>Umgewandeltes zXXX zu SMRTC</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -4086,7 +4086,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Empfangene XXX von zXXX</translation>
+        <translation>Empfangene SMRTC von zXXX</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4222,8 +4222,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>XXXs überweisen</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 XXX.</source>
-        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 XXX begrenzt.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 SMRTC.</source>
+        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 SMRTC begrenzt.</translation>
     </message>
 </context>
 <context>
@@ -4363,12 +4363,12 @@ Bitte haben Sie Geduld...</translation>
         <translation>Befehl ausführen, wenn sich der beste Block ändert (%s in cmd wird durch Blockhash ersetzt)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Gebühren (in XXX/kB) kleiner als diese gelten für die Weiterleitung als Null-Gebühr  (default: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Gebühren (in SMRTC/kB) kleiner als diese gelten für die Weiterleitung als Null-Gebühr  (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Gebühren (in XXX/kB) kleiner als diese werden als Null-Gebühr für die Transaktionserstellung betrachtet (default: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Gebühren (in SMRTC/kB) kleiner als diese werden als Null-Gebühr für die Transaktionserstellung betrachtet (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4755,8 +4755,8 @@ Beispiel: alertnotify=echo %%s | mail -s "Smrtc Alert" admin@foo.com
         <translation>Block konnte nicht gelesen werden</translation>
     </message>
     <message>
-        <source>Fee (in XXX/kB) to add to transactions you send (default: %s)</source>
-        <translation>Gebühr (in XXX/kB) die den Transaktionen, die Sie überweisen, hinzugefügt wird (Standard: %s)</translation>
+        <source>Fee (in SMRTC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Gebühr (in SMRTC/kB) die den Transaktionen, die Sie überweisen, hinzugefügt wird (Standard: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>

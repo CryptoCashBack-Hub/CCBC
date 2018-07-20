@@ -184,8 +184,8 @@
         <translation>Сигурни ли сте, че искате да шифрирате вашия портфейл?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR XXX&lt;/b&gt;!</source>
-        <translation>&lt;b&gt;Внимание: Ако шифрирате вашия портфейл и загубите вашата парола, вие ще ЗАГУБИТЕ ВСИЧКИТЕ ВИ XXX&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
+        <translation>&lt;b&gt;Внимание: Ако шифрирате вашия портфейл и загубите вашата парола, вие ще ЗАГУБИТЕ ВСИЧКИТЕ ВИ SMRTC&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1548,32 +1548,32 @@ Please check the address and try again.</source>
         <translation>Изберете ниво на поверителност.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Използвай 2 различни мастърноуда за смесване на средства над 10000 XXX</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Използвай 2 различни мастърноуда за смесване на средства над 10000 SMRTC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Използвай 8 различни мастърноуда за да смесите средства до 10000 XXX</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Използвай 8 различни мастърноуда за да смесите средства до 10000 SMRTC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Използвай 16 различни мастърноуда</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 XXX to anonymize 10000 XXX</source>
-        <translation>Това е най-бързия метод и ще струва около 0.025 XXX за да скриете 10000 XXX</translation>
+        <source>This option is the quickest and will cost about ~0.025 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Това е най-бързия метод и ще струва около 0.025 SMRTC за да скриете 10000 SMRTC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 XXX to anonymize 10000 XXX</source>
-        <translation>Тази опция е сравнително бърза и ще струва около 0.05 XXX за да скриете 10000 XXX</translation>
+        <source>This option is moderately fast and will cost about 0.05 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Тази опция е сравнително бърза и ще струва около 0.05 SMRTC за да скриете 10000 SMRTC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
-        <translation>Това е най-бавния и най-сигурен вариант за скриване на XXX. Използването й ще струва</translation>
+        <translation>Това е най-бавния и най-сигурен вариант за скриване на SMRTC. Използването й ще струва</translation>
     </message>
     <message>
-        <source>0.1 XXX per 10000 XXX you anonymize.</source>
-        <translation>0.1 XXX за 10000 скрити XXX</translation>
+        <source>0.1 SMRTC per 10000 SMRTC you anonymize.</source>
+        <translation>0.1 SMRTC за 10000 скрити SMRTC</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1712,16 +1712,16 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
 https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
-        <source>Percentage of incoming XXX which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент от входящите XXX, който автоматично да се конвертира в zXXX посредтвом Zerocoin Протокола (мин: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент от входящите SMRTC, който автоматично да се конвертира в zXXX посредтвом Zerocoin Протокола (мин: 10%)</translation>
     </message>
     <message>
         <source>Percentage of autominted zXXX</source>
         <translation>Процент автоматично сечени zXXX</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough XXX for this denomination is available</source>
-        <translation>Не бързай с автоматичното конвертиране в zXXX докато не се съберат достатъчно XXX за тази деноминация</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
+        <translation>Не бързай с автоматичното конвертиране в zXXX докато не се съберат достатъчно SMRTC за тази деноминация</translation>
     </message>
     <message>
         <source>Preferred Automint zXXX Denomination</source>
@@ -1859,8 +1859,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>От</translation>
     </message>
     <message>
-        <source>XXX Balances</source>
-        <translation>XXX Баланс</translation>
+        <source>SMRTC Balances</source>
+        <translation>SMRTC Баланс</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1927,8 +1927,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Комбиниран общ баланс (само озрелите монети)</translation>
     </message>
     <message>
-        <source>XXX:</source>
-        <translation>XXX:</translation>
+        <source>SMRTC:</source>
+        <translation>SMRTC:</translation>
     </message>
     <message>
         <source>zXXX:</source>
@@ -2060,12 +2060,12 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>XXX which were anonymized via Zerocin Protocol</source>
-        <translation>XXX скрити посредством Зерокойн протокола</translation>
+        <source>SMRTC which were anonymized via Zerocin Protocol</source>
+        <translation>SMRTC скрити посредством Зерокойн протокола</translation>
     </message>
     <message>
-        <source>Zerocoin XXX (zXXX)</source>
-        <translation>Zerocoin XXX (zXXX)</translation>
+        <source>Zerocoin SMRTC (zXXX)</source>
+        <translation>Zerocoin SMRTC (zXXX)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2077,7 +2077,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
         <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>Въведете колко XXX  да се конвертират в zXXX</translation>
+        <translation>Въведете колко SMRTC  да се конвертират в zXXX</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -2096,8 +2096,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Налични за сечене:</translation>
     </message>
     <message>
-        <source>0.000 000 00 XXX</source>
-        <translation>0.000 000 00 XXX</translation>
+        <source>0.000 000 00 SMRTC</source>
+        <translation>0.000 000 00 SMRTC</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -3127,8 +3127,8 @@ Please be patient...</source>
         <translation>Размер на UTXO:</translation>
     </message>
     <message>
-        <source>0 XXX</source>
-        <translation>0 XXX</translation>
+        <source>0 SMRTC</source>
+        <translation>0 SMRTC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3235,8 +3235,8 @@ Please be patient...</source>
         <translation>Добави Получател</translation>
     </message>
     <message>
-        <source>Anonymized XXX</source>
-        <translation>Анонимизиран XXX</translation>
+        <source>Anonymized SMRTC</source>
+        <translation>Анонимизиран SMRTC</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -3296,7 +3296,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Warning: Invalid Smrtc address</source>
-        <translation>Предупреждение: Невалиден XXX адрес</translation>
+        <translation>Предупреждение: Невалиден SMRTC адрес</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -3956,7 +3956,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Converted Phr to zPhr</source>
-        <translation>Конвертиран XXX във zXXX</translation>
+        <translation>Конвертиран SMRTC във zXXX</translation>
     </message>
     <message>
         <source>Spent zPhr</source>
@@ -3964,7 +3964,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Получен XXX от zXXX</translation>
+        <translation>Получен SMRTC от zXXX</translation>
     </message>
     <message>
         <source>Minted Change as zPhr from zPhr Spend</source>
@@ -3972,7 +3972,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Converted zPhr to Phr</source>
-        <translation>Конвертирани zXXX в XXX</translation>
+        <translation>Конвертирани zXXX в SMRTC</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -4087,7 +4087,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Получен XXX от zXXX</translation>
+        <translation>Получен SMRTC от zXXX</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4215,8 +4215,8 @@ Please be patient...</source>
         <translation>Изпрати Монети</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 XXX.</source>
-        <translation>SwiftTX не подържа изпращането на толкова големи суми. Превода е ограничен до %1 XXX.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 SMRTC.</source>
+        <translation>SwiftTX не подържа изпращането на толкова големи суми. Превода е ограничен до %1 SMRTC.</translation>
     </message>
 </context>
 <context>
@@ -4344,12 +4344,12 @@ Please be patient...</source>
         <translation>Командата влиза в сила, когато най-добрия блок се промени (%s в cmd се замества от хаш на блока)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Такси (в XXX/Кб) по-малки от това се считат за нулеви при препращане (default: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Такси (в SMRTC/Кб) по-малки от това се считат за нулеви при препращане (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Такси (в XXX/Кб) по-малки от това се считат за нулеви при създаване на предовда (default: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Такси (в SMRTC/Кб) по-малки от това се считат за нулеви при създаване на предовда (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>

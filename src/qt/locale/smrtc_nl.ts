@@ -184,8 +184,8 @@
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR XXX&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW XXX VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW SMRTC VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1531,32 +1531,32 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>Selecteer de privacy level.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Gebruik 2 aparte masternodes om fondsen te mixen tot 10000 XXX</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Gebruik 2 aparte masternodes om fondsen te mixen tot 10000 SMRTC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 XXX</source>
-        <translation>Gebruik 8 aparte masternodes om fondsen te mixen tot 10000 XXX</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SMRTC</source>
+        <translation>Gebruik 8 aparte masternodes om fondsen te mixen tot 10000 SMRTC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Gebruik 16 aparte masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 XXX to anonymize 10000 XXX</source>
-        <translation>Deze optie is het snelst en kost ongeveer ~0,025 XXX om 10000 XXX te anonimiseren</translation>
+        <source>This option is the quickest and will cost about ~0.025 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Deze optie is het snelst en kost ongeveer ~0,025 SMRTC om 10000 SMRTC te anonimiseren</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 XXX to anonymize 10000 XXX</source>
-        <translation>Deze optie is gematigd snel en kost ongeveer 0,05 XXX om 10000 XXX te anonimiseren</translation>
+        <source>This option is moderately fast and will cost about 0.05 SMRTC to anonymize 10000 SMRTC</source>
+        <translation>Deze optie is gematigd snel en kost ongeveer 0,05 SMRTC om 10000 SMRTC te anonimiseren</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Dit is de langzaamste en veiligste optie. Het gebruik van maximale anonimiteit kost</translation>
     </message>
     <message>
-        <source>0.1 XXX per 10000 XXX you anonymize.</source>
-        <translation>je anonimiseert 0,1 XXX per 10000 XXX.</translation>
+        <source>0.1 SMRTC per 10000 SMRTC you anonymize.</source>
+        <translation>je anonimiseert 0,1 SMRTC per 10000 SMRTC.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1699,16 +1699,16 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Map poort gebruikt &amp;UPnP</translation>
     </message>
     <message>
-        <source>Percentage of incoming XXX which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Percentage inkomende XXX die automatisch wordt omgezet naar zXXX via Zerocoin Protocol (min: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
+        <translation>Percentage inkomende SMRTC die automatisch wordt omgezet naar zXXX via Zerocoin Protocol (min: 10%)</translation>
     </message>
     <message>
         <source>Percentage of autominted zXXX</source>
         <translation>Percentage autominted zXXX</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough XXX for this denomination is available</source>
-        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg XXX voor deze denominatie beschikbaar is</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
+        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg SMRTC voor deze denominatie beschikbaar is</translation>
     </message>
     <message>
         <source>Preferred Automint zXXX Denomination</source>
@@ -1846,8 +1846,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Formulier</translation>
     </message>
     <message>
-        <source>XXX Balances</source>
-        <translation>XXX Saldi</translation>
+        <source>SMRTC Balances</source>
+        <translation>SMRTC Saldi</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1914,8 +1914,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Gecombineerde Saldi (inclusief onvolwassen munten)</translation>
     </message>
     <message>
-        <source>XXX:</source>
-        <translation>XXX:</translation>
+        <source>SMRTC:</source>
+        <translation>SMRTC:</translation>
     </message>
     <message>
         <source>zXXX:</source>
@@ -2047,12 +2047,12 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>XXX which were anonymized via Zerocin Protocol</source>
-        <translation>XXX die via het Zerocin Protocol geanonimiseerd werden</translation>
+        <source>SMRTC which were anonymized via Zerocin Protocol</source>
+        <translation>SMRTC die via het Zerocin Protocol geanonimiseerd werden</translation>
     </message>
     <message>
-        <source>Zerocoin XXX (zXXX)</source>
-        <translation>Zerocoin XXX (zXXX)</translation>
+        <source>Zerocoin SMRTC (zXXX)</source>
+        <translation>Zerocoin SMRTC (zXXX)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2083,8 +2083,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Beschikbaar voor minting:</translation>
     </message>
     <message>
-        <source>0.000 000 00 XXX</source>
-        <translation>0.000 000 00 XXX</translation>
+        <source>0.000 000 00 SMRTC</source>
+        <translation>0.000 000 00 SMRTC</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -3115,8 +3115,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>UTXO grootte:</translation>
     </message>
     <message>
-        <source>0 XXX</source>
-        <translation>0 XXX</translation>
+        <source>0 SMRTC</source>
+        <translation>0 SMRTC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3223,8 +3223,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Voeg &amp;ontvanger toe</translation>
     </message>
     <message>
-        <source>Anonymized XXX</source>
-        <translation>Geanonimiseerde XXX</translation>
+        <source>Anonymized SMRTC</source>
+        <translation>Geanonimiseerde SMRTC</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -4211,8 +4211,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Verzend Munten</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 XXX.</source>
-        <translation>SwiftTX ondersteunt geen verzendwaarden die zo hoog zijn. Transacties zijn momenteel beperkt tot %1 XXX.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 SMRTC.</source>
+        <translation>SwiftTX ondersteunt geen verzendwaarden die zo hoog zijn. Transacties zijn momenteel beperkt tot %1 SMRTC.</translation>
     </message>
 </context>
 <context>
@@ -4372,12 +4372,12 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Uitvoeren commando wanneer het beste blok verandert (%s in cmd is vervangen door block hash)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Kosten (in XXX/Kb) kleiner dan dit worden beschouwd als zero fee voor heruitzending (standaard: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Kosten (in SMRTC/Kb) kleiner dan dit worden beschouwd als zero fee voor heruitzending (standaard: %s)</translation>
     </message>
     <message>
-        <source>Fees (in XXX/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Kosten (in XXX/Kb) kleiner dan dit worden beschouwd als zero fee voor transactie verrichting (standaard: %s)</translation>
+        <source>Fees (in SMRTC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Kosten (in SMRTC/Kb) kleiner dan dit worden beschouwd als zero fee voor transactie verrichting (standaard: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4508,12 +4508,12 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s "Smrtc Alert" admin@foo.com
         <translation>Kan niet genoeg verduistering gedenomineerde fondsen voor deze transactie vinden.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 XXX.</source>
-        <translation>Kan niet genoeg verduistering niet gedenomineerde fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 XXX.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 SMRTC.</source>
+        <translation>Kan niet genoeg verduistering niet gedenomineerde fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 SMRTC.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 XXX.</source>
-        <translation>Kan niet genoeg fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 XXX.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 SMRTC.</source>
+        <translation>Kan niet genoeg fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 SMRTC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4816,8 +4816,8 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s "Smrtc Alert" admin@foo.com
         <translation>Mislukt om block te lezen</translation>
     </message>
     <message>
-        <source>Fee (in XXX/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in XXX/kB) om toe te voegen aan transacties die je verzendt (standaard: %s)</translation>
+        <source>Fee (in SMRTC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in SMRTC/kB) om toe te voegen aan transacties die je verzendt (standaard: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
