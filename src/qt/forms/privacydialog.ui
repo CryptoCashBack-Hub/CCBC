@@ -145,7 +145,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Enter an amount of Xxx to convert (mint) to zXxx</string>
+                  <string>Enter an amount of Xxx to convert (mint) to zSmrtc</string>
                  </property>
                  <property name="text">
                   <string>Convert SMRTC to zSMRTC</string>
@@ -191,7 +191,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXXAmountValue">
                  <property name="toolTip">
-                  <string>Enter an amount of Xxx to convert to zXxx</string>
+                  <string>Enter an amount of Xxx to convert to zSmrtc</string>
                  </property>
                  <property name="text">
                   <string>0.000 000 00 SMRTC</string>
@@ -223,7 +223,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Reset Zerocoin (zXxx) Wallet DB. Deletes transactions that did not make it into the blockchain.</string>
+                  <string>Reset Zerocoin (zSmrtc) Wallet DB. Deletes transactions that did not make it into the blockchain.</string>
                  </property>
                  <property name="text">
                   <string>Reset</string>
@@ -476,14 +476,14 @@
                <item>
                 <widget class="QPushButton" name="pushButtonZXxxControl">
                  <property name="text">
-                  <string>zXxx Control</string>
+                  <string>zSmrtc Control</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QLabel" name="labelzXxxSelected">
                  <property name="text">
-                  <string>zXxx Selected:</string>
+                  <string>zSmrtc Selected:</string>
                  </property>
                 </widget>
                </item>
@@ -607,7 +607,7 @@ zSMRTC are mature when they have more than 20 confirmations AND more than 1 mint
                <item>
                 <widget class="QLabel" name="labelSecurityLevel">
                  <property name="toolTip">
-                  <string>Security Level for Zerocoin (zXxx) Transactions. More is better, but needs more time and resources.</string>
+                  <string>Security Level for Zerocoin (zSmrtc) Transactions. More is better, but needs more time and resources.</string>
                  </property>
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
@@ -895,7 +895,7 @@ zSMRTC are mature when they have more than 20 confirmations AND more than 1 mint
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Information about the available zXxx funds.</string>
+                  <string>Information about the available zSmrtc funds.</string>
                  </property>
                  <property name="text">
                   <string>zSMRTC Stats:</string>

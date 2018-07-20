@@ -2400,7 +2400,7 @@ Value mintzerocoin(const Array& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "mintzerocoin <amount>\n"
-            "Usage: Enter an amount of Xxx to convert to zXxx"
+            "Usage: Enter an amount of Xxx to convert to zSmrtc"
             + HelpRequiringPassphrase());
 
     int64_t nTime = GetTimeMillis();
@@ -2654,7 +2654,7 @@ Value exportzerocoins(const Array& params, bool fHelp)
 
                 "\nArguments:\n"
                 "1. \"include_spent\"        (bool, required) Include mints that have already been spent\n"
-                "2. \"denomination\"         (integer, optional) Export a specific denomination of zXxx\n"
+                "2. \"denomination\"         (integer, optional) Export a specific denomination of zSmrtc\n"
 
                 "\nResult\n"
                 "[                   (array of json object)\n"
@@ -2718,7 +2718,7 @@ Value importzerocoins(const Array& params, bool fHelp)
 
                 "\nResult:\n"
                 "\"added\"            (int) the quantity of zerocoin mints that were added\n"
-                "\"value\"            (string) the total zXxx value of zerocoin mints that were added\n"
+                "\"value\"            (string) the total zSmrtc value of zerocoin mints that were added\n"
 
                 "\nExamples\n" +
             HelpExampleCli("importzerocoins", "\'[{\"d\":100,\"p\":\"mypubcoin\",\"s\":\"myserial\",\"r\":\"randomness_hex\",\"t\":\"mytxid\",\"h\":104923, \"u\":false},{\"d\":5,...}]\'") +
@@ -2770,7 +2770,7 @@ Value reconsiderzerocoins(const Array& params, bool fHelp)
     if(fHelp || !params.empty())
         throw runtime_error(
             "reconsiderzerocoins\n"
-                "\nCheck archived zXxx list to see if any mints were added to the blockchain.\n"
+                "\nCheck archived zSmrtc list to see if any mints were added to the blockchain.\n"
 
                 "\nResult\n"
                 "[                                 (array of json objects)\n"
