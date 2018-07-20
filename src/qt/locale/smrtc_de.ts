@@ -618,8 +618,8 @@
         <translation>&amp;Privatsphäre</translation>
     </message>
     <message>
-        <source>Privacy Action for zXXX and Obfuscation</source>
-        <translation>Privatsphäre Aktion für zXXX und Verschleierung</translation>
+        <source>Privacy Action for zSMRTC and Obfuscation</source>
+        <translation>Privatsphäre Aktion für zSMRTC und Verschleierung</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1707,20 +1707,20 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Port mit &amp;UPnP mappen</translation>
     </message>
     <message>
-        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Anteil des eingehenden SMRTC, welcher automatisch zu zXXX via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zSMRTC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Anteil des eingehenden SMRTC, welcher automatisch zu zSMRTC via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zXXX</source>
-        <translation>Prozentsatz der automatisierten zXXX</translation>
+        <source>Percentage of autominted zSMRTC</source>
+        <translation>Prozentsatz der automatisierten zSMRTC</translation>
     </message>
     <message>
         <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
         <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend SMRTC für diese Stückelung verfügbar ist</translation>
     </message>
     <message>
-        <source>Preferred Automint zXXX Denomination</source>
-        <translation>Bevorzugte automatisierte zXXX Stückelung </translation>
+        <source>Preferred Automint zSMRTC Denomination</source>
+        <translation>Bevorzugte automatisierte zSMRTC Stückelung </translation>
     </message>
     <message>
         <source>Connect to the Smrtc network through a SOCKS5 proxy.</source>
@@ -1926,8 +1926,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC:</translation>
     </message>
     <message>
-        <source>zXXX:</source>
-        <translation>zXXX:</translation>
+        <source>zSMRTC:</source>
+        <translation>zSMRTC:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2059,8 +2059,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC, die über das Zerocoin-Protokoll anonymisiert wurden</translation>
     </message>
     <message>
-        <source>Zerocoin SMRTC (zXXX)</source>
-        <translation>Zerocoin SMRTC (zXXX)</translation>
+        <source>Zerocoin SMRTC (zSMRTC)</source>
+        <translation>Zerocoin SMRTC (zSMRTC)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2083,8 +2083,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zXXX</source>
-        <translation>zXXX</translation>
+        <source>zSMRTC</source>
+        <translation>zSMRTC</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
@@ -2151,8 +2151,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Verfügbare Bilanz:</translation>
     </message>
     <message>
-        <source>0 zXXX</source>
-        <translation>0 zXXX</translation>
+        <source>0 zSMRTC</source>
+        <translation>0 zSMRTC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2391,8 +2391,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Erfolgreich geprägt</translation>
     </message>
     <message>
-        <source> zXXX in </source>
-        <translation> zXXX in </translation>
+        <source> zSMRTC in </source>
+        <translation> zSMRTC in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2470,7 +2470,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>zPhr Spend #: </source>
-        <translation>zXXX Ausgeben #:</translation>
+        <translation>zSMRTC Ausgeben #:</translation>
     </message>
     <message>
         <source>denomination: </source>
@@ -3951,23 +3951,23 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Converted Phr to zPhr</source>
-        <translation>Umgewandeltes SMRTC zu zXXX</translation>
+        <translation>Umgewandeltes SMRTC zu zSMRTC</translation>
     </message>
     <message>
         <source>Spent zPhr</source>
-        <translation>Ausgeben zXXX</translation>
+        <translation>Ausgeben zSMRTC</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Empfangene SMRTC von zXXX</translation>
+        <translation>Empfangene SMRTC von zSMRTC</translation>
     </message>
     <message>
         <source>Minted Change as zPhr from zPhr Spend</source>
-        <translation>Geprägtes Wechselgeld als zXXX von zXXX Ausgabe</translation>
+        <translation>Geprägtes Wechselgeld als zSMRTC von zSMRTC Ausgabe</translation>
     </message>
     <message>
         <source>Converted zPhr to Phr</source>
-        <translation>Umgewandeltes zXXX zu SMRTC</translation>
+        <translation>Umgewandeltes zSMRTC zu SMRTC</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -3975,7 +3975,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>zPhr Accumulator</source>
-        <translation>zXXX Speicher</translation>
+        <translation>zSMRTC Speicher</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -4086,7 +4086,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Empfangene SMRTC von zXXX</translation>
+        <translation>Empfangene SMRTC von zSMRTC</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4098,7 +4098,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Zerocoin Spend, Change in zPhr</source>
-        <translation>Zerocoin Ausgabe, Wechselgeld in zXXX</translation>
+        <translation>Zerocoin Ausgabe, Wechselgeld in zSMRTC</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4269,7 +4269,7 @@ Bitte haben Sie Geduld...</translation>
     <name>ZPhrControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
-        <translation>Auswahl zXXX als Ausgabe</translation>
+        <translation>Auswahl zSMRTC als Ausgabe</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4281,7 +4281,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>zPhr</source>
-        <translation>zXXX</translation>
+        <translation>zSMRTC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>

@@ -610,7 +610,7 @@
         <translation>&amp;Конфиденциальность</translation>
     </message>
     <message>
-        <source>Privacy Action for zXXX and Obfuscation</source>
+        <source>Privacy Action for zSMRTC and Obfuscation</source>
         <translation>Конфиденциальное действие и обфускация</translation>
     </message>
     <message>
@@ -1684,16 +1684,16 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент приходящих SMRTC, которые автоматически конвертируются в zXXX благодаря Zerocoin протоколу (min: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zSMRTC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент приходящих SMRTC, которые автоматически конвертируются в zSMRTC благодаря Zerocoin протоколу (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zXXX</source>
-        <translation>Процент  авточеканненых zXXX</translation>
+        <source>Percentage of autominted zSMRTC</source>
+        <translation>Процент  авточеканненых zSMRTC</translation>
     </message>
     <message>
-        <source>Preferred Automint zXXX Denomination</source>
-        <translation>Предпочитаемый номинал авточеканной  монеты  zXXX</translation>
+        <source>Preferred Automint zSMRTC Denomination</source>
+        <translation>Предпочитаемый номинал авточеканной  монеты  zSMRTC</translation>
     </message>
     <message>
         <source>Connect to the Smrtc network through a SOCKS5 proxy.</source>
@@ -1895,8 +1895,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC:</translation>
     </message>
     <message>
-        <source>zXXX:</source>
-        <translation>zXXX:</translation>
+        <source>zSMRTC:</source>
+        <translation>zSMRTC:</translation>
     </message>
     <message>
         <source>0 %</source>

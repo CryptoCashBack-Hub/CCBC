@@ -618,8 +618,8 @@
         <translation>&amp;프라이버시</translation>
     </message>
     <message>
-        <source>Privacy Action for zXXX and Obfuscation</source>
-        <translation>zXXX와 난독화를 위한 프라이버스 작업</translation>
+        <source>Privacy Action for zSMRTC and Obfuscation</source>
+        <translation>zSMRTC와 난독화를 위한 프라이버스 작업</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1716,20 +1716,20 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>&amp;UPnp를 사용하여 포트 매핑</translation>
     </message>
     <message>
-        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>SMRTC수신시 자동변환 zXXX 퍼센트 (최소값:10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zSMRTC via Zerocoin Protocol (min: 10%)</source>
+        <translation>SMRTC수신시 자동변환 zSMRTC 퍼센트 (최소값:10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zXXX</source>
-        <translation>자동 변환되는 zXXX 퍼센트</translation>
+        <source>Percentage of autominted zSMRTC</source>
+        <translation>자동 변환되는 zSMRTC 퍼센트</translation>
     </message>
     <message>
         <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
         <translation>이 디노미네이션의 SMRTC가 충분해질 때까지 Zerocoin으로 자동전환은 보류됩니다.</translation>
     </message>
     <message>
-        <source>Preferred Automint zXXX Denomination</source>
-        <translation>선호하는 자동생성 zXXX 디노미네이션 </translation>
+        <source>Preferred Automint zSMRTC Denomination</source>
+        <translation>선호하는 자동생성 zSMRTC 디노미네이션 </translation>
     </message>
     <message>
         <source>Connect to the Smrtc network through a SOCKS5 proxy.</source>
@@ -1935,8 +1935,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC:</translation>
     </message>
     <message>
-        <source>zXXX:</source>
-        <translation>zXXX:</translation>
+        <source>zSMRTC:</source>
+        <translation>zSMRTC:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2068,8 +2068,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>제로코인 프로토콜을 통해 익명화된 SMRTC</translation>
     </message>
     <message>
-        <source>Zerocoin SMRTC (zXXX)</source>
-        <translation>제로코인 SMRTC (zXXX)</translation>
+        <source>Zerocoin SMRTC (zSMRTC)</source>
+        <translation>제로코인 SMRTC (zSMRTC)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2081,7 +2081,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
         <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>zXXX로 변환할 SMRTC 수량을 입력하세요.</translation>
+        <translation>zSMRTC로 변환할 SMRTC 수량을 입력하세요.</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -2092,8 +2092,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zXXX</source>
-        <translation>zXXX</translation>
+        <source>zSMRTC</source>
+        <translation>zSMRTC</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
@@ -2137,11 +2137,11 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
         <source>zPhr Control</source>
-        <translation>zXXX 설정</translation>
+        <translation>zSMRTC 설정</translation>
     </message>
     <message>
         <source>zPhr Selected:</source>
-        <translation>선택한 zXXX : </translation>
+        <translation>선택한 zSMRTC : </translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2160,8 +2160,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>가능한 잔액:</translation>
     </message>
     <message>
-        <source>0 zXXX</source>
-        <translation>0 zXXX</translation>
+        <source>0 zSMRTC</source>
+        <translation>0 zSMRTC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2400,8 +2400,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>성공적으로 발행됨</translation>
     </message>
     <message>
-        <source> zXXX in </source>
-        <translation> zXXX in </translation>
+        <source> zSMRTC in </source>
+        <translation> zSMRTC in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2503,7 +2503,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr Mint</source>
-        <translation>zXXX 생성</translation>
+        <translation>zSMRTC 생성</translation>
     </message>
     <message>
         <source>Sending successful, return code: </source>
@@ -3962,19 +3962,19 @@ Please be patient...</source>
     </message>
     <message>
         <source>Converted Phr to zPhr</source>
-        <translation>zXXX로 변환된 SMRTC</translation>
+        <translation>zSMRTC로 변환된 SMRTC</translation>
     </message>
     <message>
         <source>Spent zPhr</source>
-        <translation>전송된 zXXX</translation>
+        <translation>전송된 zSMRTC</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>zXXX로 전송받은 SMRTC</translation>
+        <translation>zSMRTC로 전송받은 SMRTC</translation>
     </message>
     <message>
         <source>Minted Change as zPhr from zPhr Spend</source>
-        <translation>zXXX 전송후 남은 잔돈 zXXX 생성됨</translation>
+        <translation>zSMRTC 전송후 남은 잔돈 zSMRTC 생성됨</translation>
     </message>
     <message>
         <source>Converted zPhr to Phr</source>
@@ -4097,7 +4097,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>zXXX로 전송받은 SMRTC</translation>
+        <translation>zSMRTC로 전송받은 SMRTC</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4109,7 +4109,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Zerocoin Spend, Change in zPhr</source>
-        <translation>제로코인 전송, 잔돈은 zXXX</translation>
+        <translation>제로코인 전송, 잔돈은 zSMRTC</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4280,7 +4280,7 @@ Please be patient...</source>
     <name>ZPhrControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
-        <translation>전송할 zXXX 선택</translation>
+        <translation>전송할 zSMRTC 선택</translation>
     </message>
     <message>
         <source>Quantity</source>

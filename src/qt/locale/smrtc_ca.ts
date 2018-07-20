@@ -1275,8 +1275,8 @@
         <translation>SMRTC:</translation>
     </message>
     <message>
-        <source>zXXX:</source>
-        <translation>zXXX:</translation>
+        <source>zSMRTC:</source>
+        <translation>zSMRTC:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -1304,16 +1304,16 @@
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>Zerocoin SMRTC (zXXX)</source>
-        <translation>Zerocoin SMRTC (zXXX)</translation>
+        <source>Zerocoin SMRTC (zSMRTC)</source>
+        <translation>Zerocoin SMRTC (zSMRTC)</translation>
     </message>
     <message>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <source>zXXX</source>
-        <translation>zXXX</translation>
+        <source>zSMRTC</source>
+        <translation>zSMRTC</translation>
     </message>
     <message>
         <source>0.000 000 00 SMRTC</source>
@@ -1332,8 +1332,8 @@
         <translation>Import:</translation>
     </message>
     <message>
-        <source>0 zXXX</source>
-        <translation>0 zXXX</translation>
+        <source>0 zSMRTC</source>
+        <translation>0 zSMRTC</translation>
     </message>
     <message>
         <source>Alt+A</source>

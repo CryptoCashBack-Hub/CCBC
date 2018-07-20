@@ -618,8 +618,8 @@
         <translation>&amp;Privacy</translation>
     </message>
     <message>
-        <source>Privacy Action for zXXX and Obfuscation</source>
-        <translation>Privacy Actie voor zXXX en verduistering</translation>
+        <source>Privacy Action for zSMRTC and Obfuscation</source>
+        <translation>Privacy Actie voor zSMRTC en verduistering</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1699,20 +1699,20 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Map poort gebruikt &amp;UPnP</translation>
     </message>
     <message>
-        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Percentage inkomende SMRTC die automatisch wordt omgezet naar zXXX via Zerocoin Protocol (min: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zSMRTC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Percentage inkomende SMRTC die automatisch wordt omgezet naar zSMRTC via Zerocoin Protocol (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zXXX</source>
-        <translation>Percentage autominted zXXX</translation>
+        <source>Percentage of autominted zSMRTC</source>
+        <translation>Percentage autominted zSMRTC</translation>
     </message>
     <message>
         <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
         <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg SMRTC voor deze denominatie beschikbaar is</translation>
     </message>
     <message>
-        <source>Preferred Automint zXXX Denomination</source>
-        <translation>Gewenste Automint zXXX denominatie</translation>
+        <source>Preferred Automint zSMRTC Denomination</source>
+        <translation>Gewenste Automint zSMRTC denominatie</translation>
     </message>
     <message>
         <source>Connect to the Smrtc network through a SOCKS5 proxy.</source>
@@ -1918,8 +1918,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC:</translation>
     </message>
     <message>
-        <source>zXXX:</source>
-        <translation>zXXX:</translation>
+        <source>zSMRTC:</source>
+        <translation>zSMRTC:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2051,8 +2051,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC die via het Zerocin Protocol geanonimiseerd werden</translation>
     </message>
     <message>
-        <source>Zerocoin SMRTC (zXXX)</source>
-        <translation>Zerocoin SMRTC (zXXX)</translation>
+        <source>Zerocoin SMRTC (zSMRTC)</source>
+        <translation>Zerocoin SMRTC (zSMRTC)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2075,8 +2075,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zXXX</source>
-        <translation>zXXX</translation>
+        <source>zSMRTC</source>
+        <translation>zSMRTC</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
@@ -2143,8 +2143,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Beschikbaar saldo:</translation>
     </message>
     <message>
-        <source>0 zXXX</source>
-        <translation>0 zXXX</translation>
+        <source>0 zSMRTC</source>
+        <translation>0 zSMRTC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2383,8 +2383,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Succesvol gemint</translation>
     </message>
     <message>
-        <source> zXXX in </source>
-        <translation> zXXX in </translation>
+        <source> zSMRTC in </source>
+        <translation> zSMRTC in </translation>
     </message>
     <message>
         <source> sec. Used denominations:

@@ -618,8 +618,8 @@
         <translation>&amp;P隐私</translation>
     </message>
     <message>
-        <source>Privacy Action for zXXX and Obfuscation</source>
-        <translation>zXXX和混淆的隐私操作</translation>
+        <source>Privacy Action for zSMRTC and Obfuscation</source>
+        <translation>zSMRTC和混淆的隐私操作</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>

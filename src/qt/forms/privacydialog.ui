@@ -58,7 +58,7 @@
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>Zerocoin SMRTC (zXXX)</string>
+          <string>Zerocoin SMRTC (zSMRTC)</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -83,7 +83,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>zXXX Actions:</string>
+                  <string>zSMRTC Actions:</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -148,7 +148,7 @@
                   <string>Enter an amount of Xxx to convert (mint) to zXxx</string>
                  </property>
                  <property name="text">
-                  <string>Convert SMRTC to zXXX</string>
+                  <string>Convert SMRTC to zSMRTC</string>
                  </property>
                 </widget>
                </item>
@@ -171,7 +171,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXX_2">
                  <property name="text">
-                  <string>zXXX</string>
+                  <string>zSMRTC</string>
                  </property>
                 </widget>
                </item>
@@ -550,17 +550,17 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Send zXXX. Without 'Pay To:' address creates payments to yourself.</string>
+                  <string>Send zSMRTC. Without 'Pay To:' address creates payments to yourself.</string>
                  </property>
                  <property name="text">
-                  <string>Send zXXX</string>
+                  <string>Send zSMRTC</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QLabel" name="labelzXXXBalanceText">
                  <property name="toolTip">
-                  <string>Available (mature and spendable) zXXX for spending</string>
+                  <string>Available (mature and spendable) zSMRTC for spending</string>
                  </property>
                  <property name="text">
                   <string>Available Balance:</string>
@@ -579,12 +579,12 @@
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Available (mature and spendable) zXXX for spending
+                  <string>Available (mature and spendable) zSMRTC for spending
 
-zXXX are mature when they have more than 20 confirmations AND more than 1 mints of the same denomination after them were minted</string>
+zSMRTC are mature when they have more than 20 confirmations AND more than 1 mints of the same denomination after them were minted</string>
                  </property>
                  <property name="text">
-                  <string>0 zXXX</string>
+                  <string>0 zSMRTC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -800,7 +800,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   </size>
                  </property>
                  <property name="text">
-                  <string>zXXX</string>
+                  <string>zSMRTC</string>
                  </property>
                 </widget>
                </item>
@@ -833,7 +833,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   <enum>Qt::LeftToRight</enum>
                  </property>
                  <property name="text">
-                  <string>Convert Change Back to zXXX (might cost additional fees)</string>
+                  <string>Convert Change Back to zSMRTC (might cost additional fees)</string>
                  </property>
                 </widget>
                </item>
@@ -898,7 +898,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   <string>Information about the available zXxx funds.</string>
                  </property>
                  <property name="text">
-                  <string>zXXX Stats:</string>
+                  <string>zSMRTC Stats:</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -960,10 +960,10 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Total Balance including unconfirmed and immature zXXX</string>
+                  <string>Total Balance including unconfirmed and immature zSMRTC</string>
                  </property>
                  <property name="text">
-                  <string>Total zXXX Balance:</string>
+                  <string>Total zSMRTC Balance:</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -998,10 +998,10 @@ zXXX are mature when they have more than 20 confirmations AND more than 1 mints 
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Total Balance including unconfirmed and immature zXXX</string>
+                  <string>Total Balance including unconfirmed and immature zSMRTC</string>
                  </property>
                  <property name="text">
-                  <string>0 zXXX</string>
+                  <string>0 zSMRTC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

@@ -546,7 +546,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Privacy Actions for zXXX</source>
+        <source>Privacy Actions for zSMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2162,12 +2162,12 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
     </message>
     <message>
         <location line="-133"/>
-        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming SMRTC which get automatically converted to zSMRTC via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Percentage of autominted zXXX</source>
+        <source>Percentage of autominted zSMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2178,7 +2178,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
     </message>
     <message>
         <location line="-13"/>
-        <source>Preferred Automint zXXX Denomination</source>
+        <source>Preferred Automint zSMRTC Denomination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2454,12 +2454,12 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
     </message>
     <message>
         <location line="+35"/>
-        <source>zXXX:</source>
+        <source>zSMRTC:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Current percentage of zXXX.
+        <source>Current percentage of zSMRTC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2472,7 +2472,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="-46"/>
         <location line="+13"/>
-        <source>Locked SMRTC or Masternode collaterals. These are excluded from zXXX minting.</source>
+        <source>Locked SMRTC or Masternode collaterals. These are excluded from zSMRTC minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2492,7 +2492,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="+7"/>
         <location line="+10"/>
-        <source>Unlocked XXXs. These can be used for zXXX minting.</source>
+        <source>Unlocked XXXs. These can be used for zSMRTC minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2509,7 +2509,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <location line="+14"/>
         <location line="+104"/>
         <source>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These zXXX are spendable.</source>
+These zSMRTC are spendable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2520,7 +2520,7 @@ These zXXX are spendable.</source>
     <message>
         <location line="+23"/>
         <location line="+35"/>
-        <source>All available zXXX, unconfirmed and immature zXXX included.</source>
+        <source>All available zSMRTC, unconfirmed and immature zSMRTC included.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2550,7 +2550,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <location line="+93"/>
-        <source>Current percentage of zXXX.
+        <source>Current percentage of zSMRTC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
         <translation type="unfinished"></translation>
@@ -2721,7 +2721,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+6"/>
-        <source>Zerocoin SMRTC (zXXX)</source>
+        <source>Zerocoin SMRTC (zSMRTC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2756,7 +2756,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <message>
         <location line="-349"/>
         <location line="+629"/>
-        <source>zXXX</source>
+        <source>zSMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2847,7 +2847,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+7"/>
-        <source>Available (mature and spendable) zXXX for spending</source>
+        <source>Available (mature and spendable) zSMRTC for spending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2857,15 +2857,15 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+16"/>
-        <source>Available (mature and spendable) zXXX for spending
+        <source>Available (mature and spendable) zSMRTC for spending
 
-zXXX are mature when they have more than 20 confirmations AND more than 3 mints of the same denomination after them were minted</source>
+zSMRTC are mature when they have more than 20 confirmations AND more than 3 mints of the same denomination after them were minted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+417"/>
-        <source>0 zXXX</source>
+        <source>0 zSMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2956,7 +2956,7 @@ zXXX are mature when they have more than 20 confirmations AND more than 3 mints 
     <message>
         <location line="+62"/>
         <location line="+38"/>
-        <source>Total Balance including unconfirmed and immature zXXX</source>
+        <source>Total Balance including unconfirmed and immature zSMRTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3192,7 +3192,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <location line="+0"/>
-        <source> zXXX in </source>
+        <source> zSMRTC in </source>
         <translation type="unfinished"></translation>
     </message>
     <message>

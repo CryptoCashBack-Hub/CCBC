@@ -2938,7 +2938,7 @@ void RecalculateZXXXSpent()
         if (pindex->nHeight % 1000 == 0)
             LogPrintf("%s : block %d...\n", __func__, pindex->nHeight);
 
-        //Rewrite zXXX supply
+        //Rewrite zSMRTC supply
         CBlock block;
         assert(ReadBlockFromDisk(block, pindex));
 
@@ -2947,13 +2947,13 @@ void RecalculateZXXXSpent()
         //Reset the supply to previous block
         pindex->mapZerocoinSupply = pindex->pprev->mapZerocoinSupply;
 
-        //Add mints to zXXX supply
+        //Add mints to zSMRTC supply
         for (auto denom : libzerocoin::zerocoinDenomList) {
             long nDenomAdded = count(pindex->vMintDenominationsInBlock.begin(), pindex->vMintDenominationsInBlock.end(), denom);
             pindex->mapZerocoinSupply.at(denom) += nDenomAdded;
         }
 
-        //Remove spends from zXXX supply
+        //Remove spends from zSMRTC supply
         for (auto denom : listDenomsSpent)
             pindex->mapZerocoinSupply.at(denom)--;
 
@@ -3409,7 +3409,7 @@ void static UpdateTip(CBlockIndex* pindexNew)
 {
     chainActive.SetTip(pindexNew);
 
-    // If turned on AutoZeromint will automatically convert SMRTC to zXXX
+    // If turned on AutoZeromint will automatically convert SMRTC to zSMRTC
     if (pwalletMain->isZeromintEnabled())
         pwalletMain->AutoZeromint();
 

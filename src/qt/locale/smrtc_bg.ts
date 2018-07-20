@@ -618,8 +618,8 @@
         <translation>&amp;Поверителност</translation>
     </message>
     <message>
-        <source>Privacy Action for zXXX and Obfuscation</source>
-        <translation>Поверителни действия за zXXX и Обфускация</translation>
+        <source>Privacy Action for zSMRTC and Obfuscation</source>
+        <translation>Поверителни действия за zSMRTC и Обфускация</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1712,20 +1712,20 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</source>
 https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
-        <source>Percentage of incoming SMRTC which get automatically converted to zXXX via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент от входящите SMRTC, който автоматично да се конвертира в zXXX посредтвом Zerocoin Протокола (мин: 10%)</translation>
+        <source>Percentage of incoming SMRTC which get automatically converted to zSMRTC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент от входящите SMRTC, който автоматично да се конвертира в zSMRTC посредтвом Zerocoin Протокола (мин: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zXXX</source>
-        <translation>Процент автоматично сечени zXXX</translation>
+        <source>Percentage of autominted zSMRTC</source>
+        <translation>Процент автоматично сечени zSMRTC</translation>
     </message>
     <message>
         <source>Wait with automatic conversion to Zerocoin until enough SMRTC for this denomination is available</source>
-        <translation>Не бързай с автоматичното конвертиране в zXXX докато не се съберат достатъчно SMRTC за тази деноминация</translation>
+        <translation>Не бързай с автоматичното конвертиране в zSMRTC докато не се съберат достатъчно SMRTC за тази деноминация</translation>
     </message>
     <message>
-        <source>Preferred Automint zXXX Denomination</source>
-        <translation>Предпочитани деноминации, в които да се сече автоматичен zXXX</translation>
+        <source>Preferred Automint zSMRTC Denomination</source>
+        <translation>Предпочитани деноминации, в които да се сече автоматичен zSMRTC</translation>
     </message>
     <message>
         <source>Connect to the Smrtc network through a SOCKS5 proxy.</source>
@@ -1931,8 +1931,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC:</translation>
     </message>
     <message>
-        <source>zXXX:</source>
-        <translation>zXXX:</translation>
+        <source>zSMRTC:</source>
+        <translation>zSMRTC:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2064,8 +2064,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>SMRTC скрити посредством Зерокойн протокола</translation>
     </message>
     <message>
-        <source>Zerocoin SMRTC (zXXX)</source>
-        <translation>Zerocoin SMRTC (zXXX)</translation>
+        <source>Zerocoin SMRTC (zSMRTC)</source>
+        <translation>Zerocoin SMRTC (zSMRTC)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2077,7 +2077,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
         <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>Въведете колко SMRTC  да се конвертират в zXXX</translation>
+        <translation>Въведете колко SMRTC  да се конвертират в zSMRTC</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -2088,8 +2088,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zXXX</source>
-        <translation>zXXX</translation>
+        <source>zSMRTC</source>
+        <translation>zSMRTC</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
@@ -2133,11 +2133,11 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
         <source>zPhr Control</source>
-        <translation>zXXX Контрол</translation>
+        <translation>zSMRTC Контрол</translation>
     </message>
     <message>
         <source>zPhr Selected:</source>
-        <translation>Избрани zXXX:</translation>
+        <translation>Избрани zSMRTC:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2156,8 +2156,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Налични:</translation>
     </message>
     <message>
-        <source>0 zXXX</source>
-        <translation>0 zXXX</translation>
+        <source>0 zSMRTC</source>
+        <translation>0 zSMRTC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2209,7 +2209,7 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
     </message>
     <message>
         <source>Convert Change to Zerocoin (might cost additional fees)</source>
-        <translation>Изсечи zXXX от рестото (ще струва допълнително заради таксите)</translation>
+        <translation>Изсечи zSMRTC от рестото (ще струва допълнително заради таксите)</translation>
     </message>
     <message>
         <source>If checked, the wallet tries to minimize the returning change instead of minimizing the number of spent denominations.</source>
@@ -2396,8 +2396,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Успешно изсечени</translation>
     </message>
     <message>
-        <source> zXXX in </source>
-        <translation>zXXX в</translation>
+        <source> zSMRTC in </source>
+        <translation>zSMRTC в</translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2475,7 +2475,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr Spend #: </source>
-        <translation>zXXX Похарчени #:</translation>
+        <translation>zSMRTC Похарчени #:</translation>
     </message>
     <message>
         <source>denomination: </source>
@@ -2499,7 +2499,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr Mint</source>
-        <translation>Сечене на zXXX</translation>
+        <translation>Сечене на zSMRTC</translation>
     </message>
     <message>
         <source>Sending successful, return code: </source>
@@ -3956,23 +3956,23 @@ Please be patient...</source>
     </message>
     <message>
         <source>Converted Phr to zPhr</source>
-        <translation>Конвертиран SMRTC във zXXX</translation>
+        <translation>Конвертиран SMRTC във zSMRTC</translation>
     </message>
     <message>
         <source>Spent zPhr</source>
-        <translation>Похарчени zXXX</translation>
+        <translation>Похарчени zSMRTC</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Получен SMRTC от zXXX</translation>
+        <translation>Получен SMRTC от zSMRTC</translation>
     </message>
     <message>
         <source>Minted Change as zPhr from zPhr Spend</source>
-        <translation>Исечено ресто като zXXX от похарчените zXXX</translation>
+        <translation>Исечено ресто като zSMRTC от похарчените zSMRTC</translation>
     </message>
     <message>
         <source>Converted zPhr to Phr</source>
-        <translation>Конвертирани zXXX в SMRTC</translation>
+        <translation>Конвертирани zSMRTC в SMRTC</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -3980,7 +3980,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr Accumulator</source>
-        <translation>zXXX Акумулатор</translation>
+        <translation>zSMRTC Акумулатор</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -4087,7 +4087,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Получен SMRTC от zXXX</translation>
+        <translation>Получен SMRTC от zSMRTC</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4099,7 +4099,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Zerocoin Spend, Change in zPhr</source>
-        <translation>Харчене на Zerocoin, Ресто в zXXX</translation>
+        <translation>Харчене на Zerocoin, Ресто в zSMRTC</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4262,7 +4262,7 @@ Please be patient...</source>
     <name>ZPhrControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
-        <translation>Изберете zXXX за Изпращане</translation>
+        <translation>Изберете zSMRTC за Изпращане</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4274,7 +4274,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr</source>
-        <translation>zXXX</translation>
+        <translation>zSMRTC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>

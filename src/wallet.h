@@ -85,7 +85,7 @@ enum AvailableCoinsType {
     STAKABLE_COINS = 6                          // UTXO's that are valid for staking
 };
 
-// Possible states for zXXX send
+// Possible states for zSMRTC send
 enum ZerocoinSpendStatus {
     ZXXX_SPEND_OKAY = 0,                            // No error
     ZXXX_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
