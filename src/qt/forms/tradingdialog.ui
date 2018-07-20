@@ -181,7 +181,7 @@
       <string>Asks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="SMRTCSupply">
+    <widget class="QLabel" name="XXXSupply">
      <property name="geometry">
       <rect>
        <x>540</x>
@@ -197,7 +197,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="SMRTCDemand">
+    <widget class="QLabel" name="XXXDemand">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -432,7 +432,7 @@
     <attribute name="title">
      <string>Buy</string>
     </attribute>
-    <widget class="QPushButton" name="BuySMRTC">
+    <widget class="QPushButton" name="BuyXXX">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -442,7 +442,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy SMRTC</string>
+      <string>Buy XXX</string>
      </property>
      <property name="icon">
       <iconset resource="../smrtc.qrc">
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>SMRTC</string>
+      <string>XXX</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,10 +1704,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>SMRTC</string>
+      <string>XXX</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UnitsInputSMRTC">
+    <widget class="QLineEdit" name="UnitsInputXXX">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1741,7 +1741,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="SellSMRTCBTN">
+    <widget class="QPushButton" name="SellXXXBTN">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1751,7 +1751,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell SMRTC</string>
+      <string>Sell XXX</string>
      </property>
      <property name="icon">
       <iconset resource="../smrtc">
@@ -1777,12 +1777,12 @@
          </font>
         </property>
         <property name="text">
-         <string>SMRTC Available:</string>
+         <string>XXX Available:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="SMRTCAvailableLabel">
+       <widget class="QLabel" name="XXXAvailableLabel">
         <property name="palette">
          <palette>
           <active>
@@ -2213,7 +2213,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelSMRTC">
+       <widget class="QLabel" name="labelXXX">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>SMRTC</string>
+         <string>XXX</string>
         </property>
        </widget>
       </item>
@@ -2733,7 +2733,7 @@
       <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="SMRTCBalanceLabel">
+    <widget class="QLabel" name="XXXBalanceLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>SMRTC Balance:</string>
+      <string>XXX Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2784,7 +2784,7 @@
       <string>BTC Balance:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="SMRTCAvailableLabel_2">
+    <widget class="QLabel" name="XXXAvailableLabel_2">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>SMRTC Available:</string>
+      <string>XXX Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,10 +2832,10 @@
       </font>
      </property>
      <property name="text">
-      <string>SMRTC Pending:</string>
+      <string>XXX Pending:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="SMRTCPendingLabel">
+    <widget class="QLabel" name="XXXPendingLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex SMRTC Deposit Address:</string>
+      <string>Bittrex XXX Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
