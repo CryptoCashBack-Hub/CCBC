@@ -226,10 +226,10 @@ QT_TRANSLATE_NOOP("smrtc-core", ""
 QT_TRANSLATE_NOOP("smrtc-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("smrtc-core", "(6969 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("smrtc-core", "(9887 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("smrtc-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("smrtc-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("smrtc-core", "(must be 6969 for mainnet)"),
+QT_TRANSLATE_NOOP("smrtc-core", "(must be 9887 for mainnet)"),
 QT_TRANSLATE_NOOP("smrtc-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("smrtc-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("smrtc-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

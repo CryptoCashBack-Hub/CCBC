@@ -3490,8 +3490,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(6969 could be used only on mainnet)</source>
-        <translation>(6969 could be used only on mainnet)</translation>
+        <source>(9887 could be used only on mainnet)</source>
+        <translation>(9887 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3502,8 +3502,8 @@ https://www.transifex.com/smrtc-project/smrtc-project-translations</translation>
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 6969 for mainnet)</source>
-        <translation>(deve ser 6969 para mainnet)</translation>
+        <source>(must be 9887 for mainnet)</source>
+        <translation>(deve ser 9887 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
