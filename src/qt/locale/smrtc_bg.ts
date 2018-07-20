@@ -3180,11 +3180,11 @@ Please be patient...</source>
     </message>
     <message>
         <source>If the custom fee is set to 1000 uXXXs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uXXXs in fee,&lt;br /&gt;while "at least" pays 1000 uXXXs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако собствената такса е настроена на 1000 uXXX и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uXXX входяща такса, &lt;br /&gt;докато "минимална сума" плаща 1000 uXXX. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
+        <translation>Ако собствената такса е настроена на 1000 uSMRTC и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uSMRTC входяща такса, &lt;br /&gt;докато "минимална сума" плаща 1000 uSMRTC. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
     </message>
     <message>
         <source>If the custom fee is set to 1000 uXXXs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uXXXs in fee,&lt;br /&gt;while "total at least" pays 1000 uXXXs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако собствената такса е настроена на 1000 uXXX и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uXXX входяща такса,&lt;br /&gt; докато "минимална сума" плаща 1000 uXXX. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
+        <translation>Ако собствената такса е настроена на 1000 uSMRTC и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uSMRTC входяща такса,&lt;br /&gt; докато "минимална сума" плаща 1000 uSMRTC. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Smrtc transactions than the network can process.</source>

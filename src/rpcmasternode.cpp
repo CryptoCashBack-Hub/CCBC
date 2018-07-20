@@ -391,8 +391,8 @@ Value masternodecurrent (const Array& params, bool fHelp)
             "  \"protocol\": xxxx,        (numeric) Protocol version\n"
             "  \"txhash\": \"xxxx\",      (string) Collateral transaction hash\n"
             "  \"pubkey\": \"xxxx\",      (string) MN Public key\n"
-            "  \"lastseen\": xxx,       (numeric) Time since epoch of last seen\n"
-            "  \"activeseconds\": xxx,  (numeric) Seconds MN has been active\n"
+            "  \"lastseen\": smrtc,       (numeric) Time since epoch of last seen\n"
+            "  \"activeseconds\": smrtc,  (numeric) Seconds MN has been active\n"
             "}\n"
             "\nExamples:\n" +
             HelpExampleCli("masternodecurrent", "") + HelpExampleRpc("masternodecurrent", ""));

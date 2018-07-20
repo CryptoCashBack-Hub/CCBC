@@ -879,27 +879,27 @@ haval_out(sph_haval_context *sc, void *dst)
 
 /* ====================================================================== */
 
-#define API(xxx, y) \
+#define API(smrtc, y) \
 void \
-sph_haval ## xxx ## _ ## y ## _init(void *cc) \
+sph_haval ## smrtc ## _ ## y ## _init(void *cc) \
 { \
-	haval_init(cc, xxx >> 5, y); \
+	haval_init(cc, smrtc >> 5, y); \
 } \
  \
 void \
-sph_haval ## xxx ## _ ## y (void *cc, const void *data, size_t len) \
+sph_haval ## smrtc ## _ ## y (void *cc, const void *data, size_t len) \
 { \
 	haval ## y(cc, data, len); \
 } \
  \
 void \
-sph_haval ## xxx ## _ ## y ## _close(void *cc, void *dst) \
+sph_haval ## smrtc ## _ ## y ## _close(void *cc, void *dst) \
 { \
 	haval ## y ## _close(cc, 0, 0, dst); \
 } \
  \
 void \
-sph_haval ## xxx ## _ ## y ## addbits_and_close( \
+sph_haval ## smrtc ## _ ## y ## addbits_and_close( \
 	void *cc, unsigned ub, unsigned n, void *dst) \
 { \
 	haval ## y ## _close(cc, ub, n, dst); \

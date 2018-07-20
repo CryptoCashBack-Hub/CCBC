@@ -20,8 +20,8 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
     unitlist.append(SMRTC);
-    unitlist.append(mXXX);
-    unitlist.append(uXXX);
+    unitlist.append(mSMRTC);
+    unitlist.append(uSMRTC);
     return unitlist;
 }
 
@@ -29,8 +29,8 @@ bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
     case SMRTC:
-    case mXXX:
-    case uXXX:
+    case mSMRTC:
+    case uSMRTC:
         return true;
     default:
         return false;
@@ -42,9 +42,9 @@ QString BitcoinUnits::id(int unit)
     switch (unit) {
     case SMRTC:
         return QString("smrtc");
-    case mXXX:
+    case mSMRTC:
         return QString("msmrtc");
-    case uXXX:
+    case uSMRTC:
         return QString::fromUtf8("usmrtc");
     default:
         return QString("???");
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
         switch (unit) {
         case SMRTC:
             return QString("SMRTC");
-        case mXXX:
-            return QString("mXXX");
-        case uXXX:
+        case mSMRTC:
+            return QString("mSMRTC");
+        case uSMRTC:
             return QString::fromUtf8("μSMRTC");
         default:
             return QString("???");
@@ -68,9 +68,9 @@ QString BitcoinUnits::name(int unit)
         switch (unit) {
         case SMRTC:
             return QString("tXXX");
-        case mXXX:
+        case mSMRTC:
             return QString("mtXXX");
-        case uXXX:
+        case uSMRTC:
             return QString::fromUtf8("μtXXX");
         default:
             return QString("???");
@@ -84,9 +84,9 @@ QString BitcoinUnits::description(int unit)
         switch (unit) {
         case SMRTC:
             return QString("SMRTC");
-        case mXXX:
+        case mSMRTC:
             return QString("Milli-SMRTC (1 / 1" THIN_SP_UTF8 "000)");
-        case uXXX:
+        case uSMRTC:
             return QString("Micro-SMRTC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
@@ -95,9 +95,9 @@ QString BitcoinUnits::description(int unit)
         switch (unit) {
         case SMRTC:
             return QString("TestXXXs");
-        case mXXX:
+        case mSMRTC:
             return QString("Milli-TestXXX (1 / 1" THIN_SP_UTF8 "000)");
-        case uXXX:
+        case uSMRTC:
             return QString("Micro-TestXXX (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
@@ -110,9 +110,9 @@ qint64 BitcoinUnits::factor(int unit)
     switch (unit) {
     case SMRTC:
         return 100000000;
-    case mXXX:
+    case mSMRTC:
         return 100000;
-    case uXXX:
+    case uSMRTC:
         return 100;
     default:
         return 100000000;
@@ -124,9 +124,9 @@ int BitcoinUnits::decimals(int unit)
     switch (unit) {
     case SMRTC:
         return 8;
-    case mXXX:
+    case mSMRTC:
         return 5;
-    case uXXX:
+    case uSMRTC:
         return 2;
     default:
         return 0;

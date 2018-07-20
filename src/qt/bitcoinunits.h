@@ -59,8 +59,8 @@ public:
      */
     enum Unit {
         SMRTC,
-        mXXX,
-        uXXX
+        mSMRTC,
+        uSMRTC
     };
 
     enum SeparatorStyle {

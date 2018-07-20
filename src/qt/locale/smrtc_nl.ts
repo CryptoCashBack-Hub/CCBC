@@ -3168,11 +3168,11 @@ Wees alsjeblieft geduldig...</translation>
     </message>
     <message>
         <source>If the custom fee is set to 1000 uXXXs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uXXXs in fee,&lt;br /&gt;while "at least" pays 1000 uXXXs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uXXXs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uXXX's in vergoeding,&lt;br /&gt;terwijl "minstens" 1000 uXXX's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
+        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uXXXs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uSMRTC's in vergoeding,&lt;br /&gt;terwijl "minstens" 1000 uSMRTC's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
     </message>
     <message>
         <source>If the custom fee is set to 1000 uXXXs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uXXXs in fee,&lt;br /&gt;while "total at least" pays 1000 uXXXs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uXXXs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uXXX's in vergoeding,&lt;br /&gt;terwijl "totaal minstens" 1000 uXXX's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
+        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uXXXs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uSMRTC's in vergoeding,&lt;br /&gt;terwijl "totaal minstens" 1000 uSMRTC's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Smrtc transactions than the network can process.</source>
