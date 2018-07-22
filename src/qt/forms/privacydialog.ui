@@ -145,7 +145,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Enter an amount of Xxx to convert (mint) to zSmrtc</string>
+                  <string>Enter an amount of Smrtc to convert (mint) to zSmrtc</string>
                  </property>
                  <property name="text">
                   <string>Convert SMRTC to zSMRTC</string>
@@ -178,7 +178,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXXAmountText">
                  <property name="toolTip">
-                  <string>Available Balance are coins (Xxx) which are confirmed and not locked or Masternode collaterals.</string>
+                  <string>Available Balance are coins (Smrtc) which are confirmed and not locked or Masternode collaterals.</string>
                  </property>
                  <property name="text">
                   <string>Available Balance:</string>
@@ -191,7 +191,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXXAmountValue">
                  <property name="toolTip">
-                  <string>Enter an amount of Xxx to convert to zSmrtc</string>
+                  <string>Enter an amount of Smrtc to convert to zSmrtc</string>
                  </property>
                  <property name="text">
                   <string>0.000 000 00 SMRTC</string>

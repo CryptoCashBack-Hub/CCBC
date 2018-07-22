@@ -2400,7 +2400,7 @@ Value mintzerocoin(const Array& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "mintzerocoin <amount>\n"
-            "Usage: Enter an amount of Xxx to convert to zSmrtc"
+            "Usage: Enter an amount of Smrtc to convert to zSmrtc"
             + HelpRequiringPassphrase());
 
     int64_t nTime = GetTimeMillis();

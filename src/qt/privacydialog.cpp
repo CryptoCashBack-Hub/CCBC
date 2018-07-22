@@ -451,7 +451,7 @@ void PrivacyDialog::sendzXXX()
 
     CAmount nValueOut = 0;
     for (const CTxOut& txout: wtxNew.vout) {
-        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Xxx, ";
+        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Smrtc, ";
         nValueOut += txout.nValue;
 
         strStats += tr("address: ");
