@@ -120,13 +120,13 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Smrtc: 1 day
         nTargetSpacing = 1 * 60;  // Smrtc: 1 minutes
-        nMaturity = 10;
-        nMasternodeCountDrift = 20;
+        nMaturity = 10; // 10 Conf to mature coins
+        nMasternodeCountDrift = 30; //Was 20
         nMaxMoneyOut = 100000000 * COIN; //100m coins minted
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
-        nModifierUpdateBlock = 999999999;
+        nModifierUpdateBlock = 1; //Was 999999999
         nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
         nZerocoinStartTime = 1521806605; // 2018-01-14T16:04:58
@@ -184,12 +184,12 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         fRequireRPCPassword = true;
-        fMiningRequiresPeers = true;  //Was true
-        fAllowMinDifficultyBlocks = false;
+        fMiningRequiresPeers = false;  //Was true
+        fAllowMinDifficultyBlocks = true; //Was false
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
-        fSkipProofOfWorkCheck = false;
+        fSkipProofOfWorkCheck = false; //Change after PoW has passed on next major update
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
 
