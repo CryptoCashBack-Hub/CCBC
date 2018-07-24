@@ -119,7 +119,7 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Smrtc: 1 day
-        nTargetSpacing = 1 * 60;  // Smrtc: 1 minutes
+        nTargetSpacing = .1 * 60;  // Smrtc: 1 minutes
         nMaturity = 10; // 10 Conf to mature coins
         nMasternodeCountDrift = 30; //Was 20
         nMaxMoneyOut = 100000000 * COIN; //100m coins minted
