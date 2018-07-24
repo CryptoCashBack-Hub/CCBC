@@ -119,7 +119,7 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Smrtc: 1 day
-        nTargetSpacing = .1 * 60;  // Smrtc: 1 minutes
+        nTargetSpacing = .01 * 60;  // Smrtc: 1 minutes
         nMaturity = 10; // 10 Conf to mature coins
         nMasternodeCountDrift = 30; //Was 20
         nMaxMoneyOut = 100000000 * COIN; //100m coins minted
@@ -169,6 +169,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x90c9871c1afc8d3d630e932cfcef903e726515da597597e746ac43a4fe539a20"));
 
 		vSeeds.push_back(CDNSSeedData("139.99.197.135", "139.99.197.135"));
+		vSeeds.push_back(CDNSSeedData("139.99.197.112", "139.99.197.112"));
+		vSeeds.push_back(CDNSSeedData("139.99.196.73", "139.99.196.73"));
 		
         vSeeds.clear();
 		
