@@ -64,7 +64,7 @@ static const Checkpoints::CCheckpointData data = {
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint, was 2000
 };
-
+/*
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
 	(0, uint256("0x24905e16f6f1c28508f4b03395ee8adaf48f7317451f813741060612163022c7"));
@@ -82,6 +82,7 @@ static const Checkpoints::CCheckpointData dataRegtest = {
     1532000758,
     0,
     100};
+    */
 
 libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params() const
 {
@@ -232,11 +233,8 @@ public:
     
 }
 
+/*
 static CMainParams mainParams;
-
-/**
- * Testnet (v3)
- */
 class CTestNetParams : public CMainParams
 {
 public:
@@ -315,10 +313,6 @@ public:
     }
 };
 static CTestNetParams testNetParams;
-
-/**
- * Regression test
- */
 class CRegTestParams : public CTestNetParams
 {
 public:
@@ -418,10 +412,10 @@ CChainParams& Params(CBaseChainParams::Network network)
     switch (network) {
     case CBaseChainParams::MAIN:
         return mainParams;
-    case CBaseChainParams::TESTNET:
-        return testNetParams;
-    case CBaseChainParams::REGTEST:
-        return regTestParams;
+   // case CBaseChainParams::TESTNET:
+      //  return testNetParams;
+   // case CBaseChainParams::REGTEST:
+     //   return regTestParams;
     default:
         assert(false && "Unimplemented network");
         return mainParams;
