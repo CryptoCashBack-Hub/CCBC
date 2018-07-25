@@ -2390,45 +2390,44 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 {
     int64_t ret = 0;
 
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200)
-            return 0;
-    }
+   // if (Params().NetworkID() == CBaseChainParams::TESTNET) {
+    //    if (nHeight < 200)
+     //       return 0;
+   // }
 
     // Changes alot and levels out to seesaw at end.
     if (nHeight == 0) {
 	      ret = blockValue * 0;
     } else if (nHeight > 200 && nHeight <= 25000) {
-    //if (nHeight <= 25000) {
-        ret = blockValue * 0.80; //80% to get new nodes on network on swap until 60k block
+        ret = blockValue / 10 * 8; //80% to get new nodes on network on swap until 60k block
     } else if (nHeight > 25000 && nHeight <= 60000) {
-        ret = blockValue * 0.40; //40% to give new people a chance to stake rewards, will increase every 5k blocks 5000 / 1440 = 3.5 days
+        ret = blockValue / 10 * 4; //40% to give new people a chance to stake rewards, will increase every 5k blocks 5000 / 1440 = 3.5 days
     } else if (nHeight > 60000 && nHeight <= 65000) {
-        ret = blockValue * 0.42; //42% Increase by 2% until it hits 50%
+        ret = blockValue / 10 * 4.2; //42% Increase by 2% until it hits 50%
     } else if (nHeight > 65000 && nHeight <= 70000) {
-        ret = blockValue * 0.44; //44%
+        ret = blockValue / 10 * 4.4; //44%
     } else if (nHeight > 70000 && nHeight <= 75000) {
-        ret = blockValue * 0.46; //46%
+        ret = blockValue / 10 * 4.6; //46%
     } else if (nHeight > 75000 && nHeight <= 80000) {
-        ret = blockValue * 0.48; //48%
+        ret = blockValue / 10 * 4.8; //48%
     } else if (nHeight > 80000 && nHeight <= 85000) {
-        ret = blockValue * 0.50; //50%
+        ret = blockValue / 10 * 5; //50%
     } else if (nHeight > 85000 && nHeight <= 88000) {
-        ret = blockValue * 0.53; //53% Increase by 3% every 3k blocks until 100k block height
+        ret = blockValue / 10 * 5.3; //53% Increase by 3% every 3k blocks until 100k block height
     } else if (nHeight > 88000 && nHeight <= 91000) {
-        ret = blockValue * 0.56; //56%
+        ret = blockValue / 10 * 5.6; //56%
     } else if (nHeight > 91000 && nHeight <= 94000) {
-        ret = blockValue * 0.59; //59%
+        ret = blockValue / 10 * 5.9; //59%
     } else if (nHeight > 94000 && nHeight <= 97000) {
-        ret = blockValue * 0.62; //62%
+        ret = blockValue / 10 * 6.2; //62%
     } else if (nHeight > 97000 && nHeight <= 100000) {
-        ret = blockValue * 0.65; //65%
+        ret = blockValue / 10 * 6.5; //65%
     } else if (nHeight > 100000 && nHeight <= 125000) {
-        ret = blockValue * 0.70; //70% Increase by 5% every 25k blocks until final halving happens, then seesaw comes in.
+        ret = blockValue / 10 * 7; //70% Increase by 5% every 25k blocks until final halving happens, then seesaw comes in.
     } else if (nHeight > 125000 && nHeight <= 150000) {
-        ret = blockValue * 0.75; //75%
+        ret = blockValue / 10 * 7.5; //75%
     } else if (nHeight > 150000 && nHeight <= 175000) {
-        ret = blockValue * 0.80; //80%
+        ret = blockValue / 10 * 8; //80%
     } else {
         return GetSeeSaw(blockValue, nMasternodeCount, nHeight); // Start of seesaw rewards
     }
