@@ -163,8 +163,8 @@ public:
 				
         hashGenesisBlock = genesis.GetHash();
 		
-		//printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        //printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x000001ff9ef61d3c0eb6aa913e441b20b349acf697e52417562a357d2b77ef7b"));
         assert(genesis.hashMerkleRoot == uint256("0x3a173459e03ab562611fd7258b8b045d64448dd76406698b887a38c6a1db4108"));
 
