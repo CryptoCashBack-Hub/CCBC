@@ -276,7 +276,7 @@ int main(int argc, char** argv) {
   StartPhase("approximate_sizes");
   {
     int i;
-    int n = 20000;
+    int n = 5000; //Was 20000
     char keybuf[100];
     char valbuf[100];
     uint64_t sizes[2];
