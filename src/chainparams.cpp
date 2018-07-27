@@ -112,7 +112,7 @@ public:
         pchMessageStart[3] = 0x45;
         vAlertPubKey = ParseHex("047f3dc11e937a81a13c84f3959927ed1cd4de72f3aeac13d398bbe92f0e948254af324d09aeb413ef38af01844b44b5d0b186505f479c02491c3173f5418709ba");
         nDefaultPort = 9887;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // Smrtc starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
@@ -120,9 +120,9 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Smrtc: 1 day
-        nTargetSpacing = .1 * 60;  // Smrtc: 1 minutes
+        nTargetSpacing = 1 * 60;  // Smrtc: 1 minutes
         nMaturity = 10; // 10 Conf to mature coins
-        nMasternodeCountDrift = 30; //Was 20
+        nMasternodeCountDrift = 20; //Was 20
         nMaxMoneyOut = 100000000 * COIN; //100m coins minted
 
         /** Height or Time Based Activations **/
@@ -197,7 +197,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "0479e900c0e83a7a2b087a9d3fcec09d1ff239f696b055987220a9503d25f7d68178e08c076e51431c948b846a81ec5c12e1fed8c324b31deb546d517e9c9b627c";
         strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
-        nStartMasternodePayments = 1532631603; //  07/25/2018 @ 5:45pm (UTC)
+        nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis creation
 
         /** Zerocoin */
         zerocoinModulus = "0xc95577b6dce0049b0a20c779af38079355abadde1a1d80c353f6cb697a7ae5a087bad39caa5798478551d0f9d91e6267716506f32412de1d19d17588765eb9502b85c6a18abdb05791cfd8b734e960281193705eeece210920cc922b3af3ceb178bf12c22eb565d5767fbf19545639be8953c2c38ffad41f3371e4aac750ac2d7bd614b3faabb453081d5d88fdbb803657a980bc93707e4b14233a2358c97763bf28f7c933206071477e8b371f229bc9ce7d6ef0ed7163aa5dfe13bc15f7816348b328fa2c1e69d5c88f7b94cee7829d56d1842d77d7bb8692e9fc7b7db059836500de8d57eb43c345feb58671503b932829112941367996b03871300f25efb5";
