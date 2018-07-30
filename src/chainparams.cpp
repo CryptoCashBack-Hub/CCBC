@@ -56,10 +56,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x17f6e33c1a56088c8d8d9da98e87c77d8cd072dfe005cb99df0334465e959979"));
+    (0, uint256("0x00000bae7ebc879b6f862814502667bf1cc94072a90276a71964118b33127106"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1532631603, // * UNIX timestamp of last checkpoint block
+    1532912845, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint, was 2000
@@ -157,7 +157,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1532631603;
+        genesis.nTime = 1532912845;
         genesis.nBits = 504365040;
         genesis.nNonce = 1205905;
 
@@ -166,8 +166,8 @@ public:
 		
 		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x17f6e33c1a56088c8d8d9da98e87c77d8cd072dfe005cb99df0334465e959979"));
-        assert(genesis.hashMerkleRoot == uint256("0x210d76e67d9e83752ca508ac414122aa320837a9aacb4925d70e65a066cb9abc"));
+        assert(hashGenesisBlock == uint256("0x00000bae7ebc879b6f862814502667bf1cc94072a90276a71964118b33127106"));
+        assert(genesis.hashMerkleRoot == uint256("0x289a0987d8d0785cfd8dcb651b0c27b8466dce1a718f1342fd19d970f52c8184"));
 
 		
 		
@@ -185,12 +185,12 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         fRequireRPCPassword = true;
-        fMiningRequiresPeers = false;  //Was true
-        fAllowMinDifficultyBlocks = true; //Was false
+        fMiningRequiresPeers = true;
+        fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
-        fSkipProofOfWorkCheck = false; //Change after PoW has passed on next major update
+        fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
 
