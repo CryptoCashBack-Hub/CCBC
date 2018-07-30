@@ -2125,10 +2125,10 @@ int64_t GetBlockValue(int nHeight)
 		nSubsidy = GetTreasuryAward(nHeight);
 
 	}else {
-		if (nHeight == 0) {
-			nSubsidy = 4000000 * COIN; //Genesis             4 millions coins for swap
-		}else if (nHeight > 0 && nHeight <= 200) { //POW phase                   200 coins in this phase
-			nSubsidy = 1 * COIN;
+		if (nHeight > 0 && nHeight <= 10) {
+			nSubsidy = 400000 * COIN; //Genesis             4 millions coins for swap
+		}else if (nHeight > 10 && nHeight <= 200) { //POW phase                   200 coins in this phase
+			nSubsidy = 0 * COIN;
 		}else if (nHeight > 200 && nHeight <= 25000) { //Public phase 17.22 days 24,800 coins 
 			nSubsidy = 1 * COIN;
 		}else if (nHeight > 25000 && nHeight <= 50000) { //17.36 days            625,000 coins
