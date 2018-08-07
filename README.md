@@ -1,5 +1,3 @@
-![logo](https://smartcloudcoin.ml/wp-content/themes/smartcloudtheme/images/smartcloud_toplogo.png)
-
 ### Ccbc is a fork of [PIVX](https://github.com/PIVX-Project/PIVX) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
 
 
@@ -37,7 +35,7 @@
 </table>
 
 
-### Masternode Rewards Per Block, 5000 Ccbc Collateral
+### Masternode Rewards Per Block, 5000 CCBC Collateral
 
 <table>
 <tr><th>Block Height</th><th>MN Reward Amount</th><th>PoS Reward Amount</th><th>Duration (Days)</th><th>Development Fee</th></tr>
@@ -58,3 +56,6 @@
 <tr><td>150000-175000 </td><td>80%</td><td>20%</td><td>17.36 Days</td><td>10%</td></tr>
 <tr><td>SeeSaw Rewards from this point on</td></tr>
 </table>
+
+MN Port: 5520
+RPC Port: 15520
