@@ -1,19 +1,19 @@
 [Unit]
-Description=Smrtc's distributed currency daemon
+Description=Ccbc's distributed currency daemon
 After=network.target
 
 [Service]
-User=smrtc
-Group=smrtc
+User=ccbc
+Group=ccbc
 
 Type=forking
-PIDFile=/var/lib/smrtcd/smrtcd.pid
+PIDFile=/var/lib/ccbcd/ccbcd.pid
 
-ExecStart=/usr/bin/smrtcd -daemon -pid=/var/lib/smrtcd/smrtcd.pid \
-          -conf=/etc/smrtc/smrtc.conf -datadir=/var/lib/smrtcd
+ExecStart=/usr/bin/ccbcd -daemon -pid=/var/lib/ccbcd/ccbcd.pid \
+          -conf=/etc/ccbc/ccbc.conf -datadir=/var/lib/ccbcd
 
-ExecStop=-/usr/bin/smrtc-cli -conf=/etc/smrtc/smrtc.conf \
-         -datadir=/var/lib/smrtcd stop
+ExecStop=-/usr/bin/ccbc-cli -conf=/etc/ccbc/ccbc.conf \
+         -datadir=/var/lib/ccbcd stop
 
 Restart=always
 PrivateTmp=true

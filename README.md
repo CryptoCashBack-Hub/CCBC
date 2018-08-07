@@ -1,9 +1,9 @@
 ![logo](https://smartcloudcoin.ml/wp-content/themes/smartcloudtheme/images/smartcloud_toplogo.png)
 
-### Smrtc is a fork of [PIVX](https://github.com/PIVX-Project/PIVX) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
+### Ccbc is a fork of [PIVX](https://github.com/PIVX-Project/PIVX) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
 
 
-# Smrtc Core integration/staging repository
+# Ccbc Core integration/staging repository
 
 
 ### Coin Specs
@@ -11,8 +11,8 @@
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply </td><td>100,000,000 SMRTC</td></tr>
-<tr><td>Premine</td><td>4,000,000 SMRTC</td></tr>
+<tr><td>Max Coin Supply </td><td>100,000,000 CCBC</td></tr>
+<tr><td>Premine</td><td>4,000,000 CCBC</td></tr>
 </table>
 
 
@@ -21,23 +21,23 @@
 <table>
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
-<tr><td>0</td><td>250 SMRTC</td><td>Genesis Block</td><td>0 Days</td></tr>
-<tr><td>1</td><td>4,000,000 SMRTC</td><td>Initial Premine</td><td>0 Days</td></tr>
-<tr><td>2-200</td><td>1 SMRTC</td><td rowspan=1>Closed Mining</td><td>1 Days</td></tr>
+<tr><td>0</td><td>250 CCBC</td><td>Genesis Block</td><td>0 Days</td></tr>
+<tr><td>1</td><td>4,000,000 CCBC</td><td>Initial Premine</td><td>0 Days</td></tr>
+<tr><td>2-200</td><td>1 CCBC</td><td rowspan=1>Closed Mining</td><td>1 Days</td></tr>
 <tr><th colspan=4>PoS / MN Phase</th></tr>
-<tr><td>200-25000</td><td>1 SMRTC</td><td rowspan=1>Coin Swap</td><td>17.22 Days</td></tr>
-<tr><td>25000-50000</td><td>25 SMRTC</td><td rowspan=1>First Increase </td><td>17.36 Days</td></tr>
-<tr><td>50000-75000</td><td>50 SMRTC</td><td rowspan=1>Second Increase </td><td>17.36 Days</td></tr>
-<tr><td>75000-100000</td><td>85 SMRTC</td><td rowspan=1>Final Increase </td><td>17.36 Days</td></tr>
-<tr><td>100000-125000</td><td>75 SMRTC</td><td rowspan=1>First Reduction </td><td>17.36 Days</td></tr>
-<tr><td>125000-168000</td><td>50 SMRTC</td><td rowspan=1>Second Reduction </td><td>30 Days</td></tr>
-<tr><td>168000-297600</td><td>25 SMRTC</td><td rowspan=1>Thrid Reduction </td><td>90 Days</td></tr>
-<tr><td>297600-556800</td><td>10 SMRTC</td><td rowspan=1>Final Reduction </td><td>180 Days</td></tr>
-<tr><td>556800+</td><td>5 SMRTC</td><td rowspan=1>Till Max Supply </td><td>57,026.38 Days</td></tr>
+<tr><td>200-25000</td><td>1 CCBC</td><td rowspan=1>Coin Swap</td><td>17.22 Days</td></tr>
+<tr><td>25000-50000</td><td>25 CCBC</td><td rowspan=1>First Increase </td><td>17.36 Days</td></tr>
+<tr><td>50000-75000</td><td>50 CCBC</td><td rowspan=1>Second Increase </td><td>17.36 Days</td></tr>
+<tr><td>75000-100000</td><td>85 CCBC</td><td rowspan=1>Final Increase </td><td>17.36 Days</td></tr>
+<tr><td>100000-125000</td><td>75 CCBC</td><td rowspan=1>First Reduction </td><td>17.36 Days</td></tr>
+<tr><td>125000-168000</td><td>50 CCBC</td><td rowspan=1>Second Reduction </td><td>30 Days</td></tr>
+<tr><td>168000-297600</td><td>25 CCBC</td><td rowspan=1>Thrid Reduction </td><td>90 Days</td></tr>
+<tr><td>297600-556800</td><td>10 CCBC</td><td rowspan=1>Final Reduction </td><td>180 Days</td></tr>
+<tr><td>556800+</td><td>5 CCBC</td><td rowspan=1>Till Max Supply </td><td>57,026.38 Days</td></tr>
 </table>
 
 
-### Masternode Rewards Per Block, 5000 Smrtc Collateral
+### Masternode Rewards Per Block, 5000 Ccbc Collateral
 
 <table>
 <tr><th>Block Height</th><th>MN Reward Amount</th><th>PoS Reward Amount</th><th>Duration (Days)</th><th>Development Fee</th></tr>

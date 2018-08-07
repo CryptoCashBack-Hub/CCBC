@@ -266,6 +266,6 @@
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>smrtc-core</name>
+    <name>ccbc-core</name>
     </context>
 </TS>

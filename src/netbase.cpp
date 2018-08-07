@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifdef HAVE_CONFIG_H
-#include "config/smrtc-config.h"
+#include "config/ccbc-config.h"
 #endif
 
 #include "netbase.h"

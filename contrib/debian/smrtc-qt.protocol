@@ -1,6 +1,6 @@
 [Protocol]
-exec=smrtc-qt '%u'
-protocol=smrtc
+exec=ccbc-qt '%u'
+protocol=ccbc
 input=none
 output=none
 helper=true

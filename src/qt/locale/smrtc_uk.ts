@@ -62,12 +62,12 @@
         <translation>Адреса отримання</translation>
     </message>
     <message>
-        <source>These are your Smrtc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Це ваші Smrtc-адреси для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
+        <source>These are your Ccbc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Це ваші Ccbc-адреси для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
     </message>
     <message>
-        <source>These are your Smrtc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Це ваші Smrtc адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
+        <source>These are your Ccbc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Це ваші Ccbc адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Підтвердження шифрування гаманця</translation>
     </message>
     <message>
-        <source>Smrtc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
-        <translation>Smrtc зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші SMRTC'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
+        <source>Ccbc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
+        <translation>Ccbc зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші CCBC'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ви впевнені, що хочете зашифрувати Ваш гаманець?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
-        <translation>Попередження: Якщо після шифрування гаманця Ви &lt;b&gt;загубите кодове слово, то ви втратите всі Ваші SMRTC'и&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CCBC&lt;/b&gt;!</source>
+        <translation>Попередження: Якщо після шифрування гаманця Ви &lt;b&gt;загубите кодове слово, то ви втратите всі Ваші CCBC'и&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -370,6 +370,6 @@
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>smrtc-core</name>
+    <name>ccbc-core</name>
     </context>
 </TS>

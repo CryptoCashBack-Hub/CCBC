@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: smrtcd.service
-Upstart: smrtcd.conf
-OpenRC:  smrtcd.openrc
-         smrtcd.openrcconf
-CentOS:  smrtcd.init
+SystemD: ccbcd.service
+Upstart: ccbcd.conf
+OpenRC:  ccbcd.openrc
+         ccbcd.openrcconf
+CentOS:  ccbcd.init
 
 have been made available to assist packagers in creating node packages here.
 

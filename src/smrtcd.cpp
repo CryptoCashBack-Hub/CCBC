@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017 The Smrtc developers
+// Copyright (c) 2017 The Ccbc developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,8 +25,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Smrtc (http://www.smrtc.io),
- * which enables instant payments to anyone, anywhere in the world. Smrtc uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Ccbc (http://www.ccbc.io),
+ * which enables instant payments to anyone, anywhere in the world. Ccbc uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -65,18 +65,18 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/smrtc.conf are parsed in qt/smrtc.cpp's main()
+    // If Qt is used, parameters/ccbc.conf are parsed in qt/ccbc.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
     if (mapArgs.count("-?") || mapArgs.count("-help") || mapArgs.count("-version")) {
-        std::string strUsage = _("Smrtc Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Ccbc Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
 
         if (mapArgs.count("-version")) {
             strUsage += LicenseInfo();
         } else {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  smrtcd [options]                     " + _("Start Smrtc Core Daemon") + "\n";
+                        "  ccbcd [options]                     " + _("Start Ccbc Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -112,17 +112,17 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "smrtc:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "ccbc:"))
                 fCommandLine = true;
 
         if (fCommandLine) {
-            fprintf(stderr, "Error: There is no RPC client functionality in smrtcd anymore. Use the smrtc-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in ccbcd anymore. Use the ccbc-cli utility instead.\n");
             exit(1);
         }
 #ifndef WIN32
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon) {
-            fprintf(stdout, "Smrtc server starting\n");
+            fprintf(stdout, "Ccbc server starting\n");
 
             // Daemonize
             pid_t pid = fork();
@@ -175,7 +175,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect smrtcd signal handlers
+    // Connect ccbcd signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);

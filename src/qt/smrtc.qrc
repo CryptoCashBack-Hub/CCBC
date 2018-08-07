@@ -38,12 +38,12 @@
         <file alias="tx_input">res/icons/tx_input.png</file>
         <file alias="tx_output">res/icons/tx_output.png</file>
         <file alias="tx_inout">res/icons/tx_inout.png</file>
-        <file alias="unit_smrtc">res/icons/unit_smrtc.png</file>
-        <file alias="unit_msmrtc">res/icons/unit_msmrtc.png</file>
-        <file alias="unit_usmrtc">res/icons/unit_usmrtc.png</file>
-        <file alias="unit_tsmrtc">res/icons/unit_tsmrtc.png</file>
-        <file alias="unit_tmsmrtc">res/icons/unit_tmsmrtc.png</file>
-        <file alias="unit_tusmrtc">res/icons/unit_tusmrtc.png</file>
+        <file alias="unit_ccbc">res/icons/unit_ccbc.png</file>
+        <file alias="unit_mccbc">res/icons/unit_mccbc.png</file>
+        <file alias="unit_uccbc">res/icons/unit_uccbc.png</file>
+        <file alias="unit_tccbc">res/icons/unit_tccbc.png</file>
+        <file alias="unit_tmccbc">res/icons/unit_tmccbc.png</file>
+        <file alias="unit_tuccbc">res/icons/unit_tuccbc.png</file>
         <file alias="lock_closed">res/icons/lock_closed.png</file>
         <file alias="lock_open">res/icons/lock_open.png</file>
         <file alias="key">res/icons/key.png</file>
@@ -59,7 +59,7 @@
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-        <file alias="smrtc_logo_horizontal">res/images/smrtc_logo_horizontal.png</file>
+        <file alias="ccbc_logo_horizontal">res/images/ccbc_logo_horizontal.png</file>
         <file alias="downArrow">res/images/downArrow.png</file>
         <file alias="downArrow_small">res/images/downArrow_small.png</file>
         <file alias="upArrow_small">res/images/upArrow_small.png</file>

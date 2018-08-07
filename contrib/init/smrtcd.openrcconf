@@ -1,25 +1,25 @@
-# /etc/conf.d/smrtcd: config file for /etc/init.d/smrtcd
+# /etc/conf.d/ccbcd: config file for /etc/init.d/ccbcd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/smrtc/smrtc.conf"
+#BITCOIND_CONFIGFILE="/etc/ccbc/ccbc.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/smrtcd"
+#BITCOIND_PIDDIR="/var/run/ccbcd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/smrtcd.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ccbcd.pid"
 
-# Where to write smrtcd data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/smrtcd"
+# Where to write ccbcd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ccbcd"
 
-# User and group to own smrtcd process
-#BITCOIND_USER="smrtc"
-#BITCOIND_GROUP="smrtc"
+# User and group to own ccbcd process
+#BITCOIND_USER="ccbc"
+#BITCOIND_GROUP="ccbc"
 
-# Path to smrtcd executable
-#BITCOIND_BIN="/usr/bin/smrtcd"
+# Path to ccbcd executable
+#BITCOIND_BIN="/usr/bin/ccbcd"
 
-# Nice value to run smrtcd under
+# Nice value to run ccbcd under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)

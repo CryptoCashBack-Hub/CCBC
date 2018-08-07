@@ -1,21 +1,21 @@
 
 Debian
 ====================
-This directory contains files used to package smrtcd/smrtc-qt
-for Debian-based Linux systems. If you compile smrtcd/smrtc-qt yourself, there are some useful files here.
+This directory contains files used to package ccbcd/ccbc-qt
+for Debian-based Linux systems. If you compile ccbcd/ccbc-qt yourself, there are some useful files here.
 
-## smrtc: URI support ##
+## ccbc: URI support ##
 
 
-smrtc-qt.desktop  (Gnome / Open Desktop)
+ccbc-qt.desktop  (Gnome / Open Desktop)
 To install:
 
-	sudo desktop-file-install smrtc-qt.desktop
+	sudo desktop-file-install ccbc-qt.desktop
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your smrtcqt binary to `/usr/bin`
-and the `../../share/pixmaps/smrtc128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your ccbcqt binary to `/usr/bin`
+and the `../../share/pixmaps/ccbc128.png` to `/usr/share/pixmaps`
 
-smrtc-qt.protocol (KDE)
+ccbc-qt.protocol (KDE)
 

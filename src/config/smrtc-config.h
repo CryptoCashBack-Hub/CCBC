@@ -1,9 +1,9 @@
-/* src/config/smrtc-config.h.  Generated from smrtc-config.h.in by configure.  */
-/* src/config/smrtc-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/ccbc-config.h.  Generated from ccbc-config.h.in by configure.  */
+/* src/config/ccbc-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef SMRTC_CONFIG_H
+#ifndef CCBC_CONFIG_H
 
-#define SMRTC_CONFIG_H
+#define CCBC_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -268,16 +268,16 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "www.smrtc.org"
+#define PACKAGE_BUGREPORT "www.ccbc.org"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Smrtc Core"
+#define PACKAGE_NAME "Ccbc Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Smrtc Core 1.0.0"
+#define PACKAGE_STRING "Ccbc Core 1.0.0"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "smrtc"
+#define PACKAGE_TARNAME "ccbc"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""
@@ -340,4 +340,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //SMRTC_CONFIG_H
+#endif //CCBC_CONFIG_H

@@ -1,2 +1,2 @@
-usr/local/bin/smrtcd usr/bin
-usr/local/bin/smrtc-cli usr/bin
+usr/local/bin/ccbcd usr/bin
+usr/local/bin/ccbc-cli usr/bin

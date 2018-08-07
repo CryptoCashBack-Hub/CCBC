@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both smrtcd and smrtc-qt, to make it harder for attackers to
+ * for both ccbcd and ccbc-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Smrtc Core");
+const std::string CLIENT_NAME("Ccbc Core");
 
 /**
  * Client version number

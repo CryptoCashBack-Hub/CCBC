@@ -62,12 +62,12 @@
         <translation>Alıcı Adres</translation>
     </message>
     <message>
-        <source>These are your Smrtc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödemeleri göndermek için olan Smrtc adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
+        <source>These are your Ccbc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödemeleri göndermek için olan Ccbc adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
     </message>
     <message>
-        <source>These are your Smrtc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için olan Smrtc adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
+        <source>These are your Ccbc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödemeleri almak için olan Ccbc adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,15 +176,15 @@
         <translation>cüzdan şifrelemesini onayla</translation>
     </message>
     <message>
-        <source>Smrtc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
-        <translation>Smrtc şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, SMRTC'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
+        <source>Ccbc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
+        <translation>Ccbc şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, CCBC'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Cüzdanınızı şifrelemek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CCBC&lt;/b&gt;!</source>
         <translation>Dikkat! Eğer cüzdanınızı şifrelerseniz ve şifrenizi unutursanız &lt;b&gt;Tüm Pıvlerinizi kaybedersiniz&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -242,8 +242,8 @@
         <translation>&amp;BIP 38 şifrele</translation>
     </message>
     <message>
-        <source>Enter a Smrtc Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>BIP 38'i kullanarak şifrelemek istediğiniz bir Smrtc Adresi girin. Orta kutuya bir parola girin. Şifreli özel anahtarı hesaplamak için şifreleme tuşuna basın.
+        <source>Enter a Ccbc Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>BIP 38'i kullanarak şifrelemek istediğiniz bir Ccbc Adresi girin. Orta kutuya bir parola girin. Şifreli özel anahtarı hesaplamak için şifreleme tuşuna basın.
 </translation>
     </message>
     <message>
@@ -251,8 +251,8 @@
         <translation>adres</translation>
     </message>
     <message>
-        <source>The Smrtc address to sign the message with</source>
-        <translation>Ile mesaj imzalamak için Smrtc adresi
+        <source>The Ccbc address to sign the message with</source>
+        <translation>Ile mesaj imzalamak için Ccbc adresi
 </translation>
     </message>
     <message>
@@ -289,8 +289,8 @@
 </translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Smrtc address</source>
-        <translation>Bu Smrtc adresinin sahibi olduğunuzu kanıtlamak için mesajı imzala
+        <source>Sign the message to prove you own this Ccbc address</source>
+        <translation>Bu Ccbc adresinin sahibi olduğunuzu kanıtlamak için mesajı imzala
 </translation>
     </message>
     <message>
@@ -316,12 +316,12 @@
         <translation>BIP 38 şifreli özel anahtarını girin. Orta kutuya şifreyi  girin. Özel anahtarı hesaplamak için Anahtarın Çözülmesini tıklayın. Anahtar çözüldükten sonra 'Alma Adresi'ni tıklamak, bu özel anahtarı cüzdana ekleyecektir.</translation>
     </message>
     <message>
-        <source>The Smrtc address the message was signed with</source>
-        <translation>Mesajın imzalandığı Smrtc adresi</translation>
+        <source>The Ccbc address the message was signed with</source>
+        <translation>Mesajın imzalandığı Ccbc adresi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Smrtc address</source>
-        <translation>Belirtilen Smrtc adresi ile imzalanmış olduğundan emin olmak için iletiyi doğrulayın</translation>
+        <source>Verify the message to ensure it was signed with the specified Ccbc address</source>
+        <translation>Belirtilen Ccbc adresi ile imzalanmış olduğundan emin olmak için iletiyi doğrulayın</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -613,16 +613,16 @@
         <translation>Sekme tablosu</translation>
     </message>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc CORE</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc CORE</translation>
     </message>
     <message>
-        <source>Send coins to a Smrtc address</source>
-        <translation>Koinleri Smrtc adresine gönder</translation>
+        <source>Send coins to a Ccbc address</source>
+        <translation>Koinleri Ccbc adresine gönder</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and smrtc: URIs)</source>
-        <translation>Ödeme talep etme (QR kodları ve smrtc üretir: URI'ler)</translation>
+        <source>Request payments (generates QR codes and ccbc: URIs)</source>
+        <translation>Ödeme talep etme (QR kodları ve ccbc üretir: URI'ler)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -637,24 +637,24 @@
         <translation>Masternodları ara</translation>
     </message>
     <message>
-        <source>&amp;About Smrtc Core</source>
+        <source>&amp;About Ccbc Core</source>
         <translation>Pıvx core Hakkında</translation>
     </message>
     <message>
-        <source>Show information about Smrtc Core</source>
+        <source>Show information about Ccbc Core</source>
         <translation>Pıvx Core hakkında bilgi göster</translation>
     </message>
     <message>
-        <source>Modify configuration options for Smrtc</source>
-        <translation>Smrtc için yapılandırma seçeneklerini değiştirin</translation>
+        <source>Modify configuration options for Ccbc</source>
+        <translation>Ccbc için yapılandırma seçeneklerini değiştirin</translation>
     </message>
     <message>
-        <source>Sign messages with your Smrtc addresses to prove you own them</source>
-        <translation>Sahip olduğunuzu kanıtlamak için mesajlarınızı Smrtc adresleriyle imzalayın</translation>
+        <source>Sign messages with your Ccbc addresses to prove you own them</source>
+        <translation>Sahip olduğunuzu kanıtlamak için mesajlarınızı Ccbc adresleriyle imzalayın</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Smrtc addresses</source>
-        <translation>Belirtilen Smrtc adresleriyle imzalanmış olduklarından emin olmak için iletileri doğrulayın</translation>
+        <source>Verify messages to ensure they were signed with specified Ccbc addresses</source>
+        <translation>Belirtilen Ccbc adresleriyle imzalanmış olduklarından emin olmak için iletileri doğrulayın</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -686,8 +686,8 @@
         <translation>Açık Masternode yapılandırma dosyası</translation>
     </message>
     <message>
-        <source>Open a Smrtc: URI or payment request</source>
-        <translation>Bir Smrtc: URI veya ödeme isteği açın</translation>
+        <source>Open a Ccbc: URI or payment request</source>
+        <translation>Bir Ccbc: URI veya ödeme isteği açın</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -698,12 +698,12 @@
         <translation>Kaşif penceresini engelle</translation>
     </message>
     <message>
-        <source>Show the Smrtc Core help message to get a list with possible Smrtc command-line options</source>
-        <translation>Olası Smrtc komut satırı seçeneklerine sahip bir liste almak için Smrtc Core yardım mesajını gösterin</translation>
+        <source>Show the Ccbc Core help message to get a list with possible Ccbc command-line options</source>
+        <translation>Olası Ccbc komut satırı seçeneklerine sahip bir liste almak için Ccbc Core yardım mesajını gösterin</translation>
     </message>
     <message>
-        <source>Smrtc Core client</source>
-        <translation>Smrtc Core istemci</translation>
+        <source>Ccbc Core client</source>
+        <translation>Ccbc Core istemci</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -834,8 +834,8 @@ Adres: %4</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (smrtc.conf).</source>
-        <translation>Tüm işlemler gösterilmez. Tüm işlemleri görmek için yapılandırma dosyasında txindex = 1 ayarlamanız gerekir (smrtc.conf).
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ccbc.conf).</source>
+        <translation>Tüm işlemler gösterilmez. Tüm işlemleri görmek için yapılandırma dosyasında txindex = 1 ayarlamanız gerekir (ccbc.conf).
 </translation>
     </message>
 </context>
@@ -1121,8 +1121,8 @@ Adres: %4</translation>
         <translation>versiyon</translation>
     </message>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc CORE</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc CORE</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -1144,16 +1144,16 @@ Adres: %4</translation>
         <translation>Hoşgeldiniz</translation>
     </message>
     <message>
-        <source>Welcome to Smrtc Core.</source>
-        <translation>Smrtc Core'a hoşgeldiniz.</translation>
+        <source>Welcome to Ccbc Core.</source>
+        <translation>Ccbc Core'a hoşgeldiniz.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
         <translation>Varsayılan veri dosyasını kullanınız</translation>
     </message>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc CORE</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc CORE</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1508,8 +1508,8 @@ Adres: %4</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Smrtc address to sign the message with</source>
-        <translation>Ile mesaj imzalamak için Smrtc adresi
+        <source>The Ccbc address to sign the message with</source>
+        <translation>Ile mesaj imzalamak için Ccbc adresi
 </translation>
     </message>
     <message>
@@ -1538,17 +1538,17 @@ Adres: %4</translation>
 </translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Smrtc address</source>
-        <translation>Bu Smrtc adresinin sahibi olduğunuzu kanıtlamak için mesajı imzala
+        <source>Sign the message to prove you own this Ccbc address</source>
+        <translation>Bu Ccbc adresinin sahibi olduğunuzu kanıtlamak için mesajı imzala
 </translation>
     </message>
     <message>
-        <source>The Smrtc address the message was signed with</source>
-        <translation>Mesajın imzalandığı Smrtc adresi</translation>
+        <source>The Ccbc address the message was signed with</source>
+        <translation>Mesajın imzalandığı Ccbc adresi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Smrtc address</source>
-        <translation>Belirtilen Smrtc adresi ile imzalanmış olduğundan emin olmak için iletiyi doğrulayın</translation>
+        <source>Verify the message to ensure it was signed with the specified Ccbc address</source>
+        <translation>Belirtilen Ccbc adresi ile imzalanmış olduğundan emin olmak için iletiyi doğrulayın</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1587,8 +1587,8 @@ Adres: %4</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc CORE</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc CORE</translation>
     </message>
     </context>
 <context>
@@ -1694,7 +1694,7 @@ Adres: %4</translation>
     </message>
     </context>
 <context>
-    <name>smrtc-core</name>
+    <name>ccbc-core</name>
     <message>
         <source>Error</source>
         <translation>hata</translation>

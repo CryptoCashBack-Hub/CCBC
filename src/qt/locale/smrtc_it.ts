@@ -62,12 +62,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your Smrtc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi Smrtc per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your Ccbc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi Ccbc per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your Smrtc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi Smrtc per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your Ccbc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi Ccbc per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
-        <source>Smrtc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
-        <translation>Smrtc verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi SMRTC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>Ccbc will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XXXs from being stolen by malware infecting your computer.</source>
+        <translation>Ccbc verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi CCBC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Confermi di voler crittografare il portafoglio?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMRTC&lt;/b&gt;!</source>
-        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI SMRTC&lt;7b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CCBC&lt;/b&gt;!</source>
+        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI CCBC&lt;7b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Criptato</translation>
     </message>
     <message>
-        <source>Enter a Smrtc Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Inserisci un indirizzo Smrtc che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
+        <source>Enter a Ccbc Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Inserisci un indirizzo Ccbc che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Indirizzo:</translation>
     </message>
     <message>
-        <source>The Smrtc address to sign the message with</source>
-        <translation>L'indirizzo Smrtc per firmare il messaggio con</translation>
+        <source>The Ccbc address to sign the message with</source>
+        <translation>L'indirizzo Ccbc per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Smrtc address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Smrtc</translation>
+        <source>Sign the message to prove you own this Ccbc address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Ccbc</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Immettere la chiave privata codificata BIP 38. Inserire la passphrase nella casella centrale. Fare clic su Decripta Chiave per calcolare la chiave privata. Dopo che la chiave viene decrittata, cliccando su "Importa indirizzo" verrà aggiunta questa chiave privata al portafoglio.</translation>
     </message>
     <message>
-        <source>The Smrtc address the message was signed with</source>
-        <translation>L'indirizzo Smrtc con cui è stato firmato il messaggio</translation>
+        <source>The Ccbc address the message was signed with</source>
+        <translation>L'indirizzo Ccbc con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Smrtc address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Smrtc specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified Ccbc address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Ccbc specificato </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -590,16 +590,16 @@
         <translation>Schede degli strumenti</translation>
     </message>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc Core</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc Core</translation>
     </message>
     <message>
-        <source>Send coins to a Smrtc address</source>
-        <translation>Invia monete all' indirizzo Smrtc</translation>
+        <source>Send coins to a Ccbc address</source>
+        <translation>Invia monete all' indirizzo Ccbc</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and smrtc: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e smrtc: URIs)</translation>
+        <source>Request payments (generates QR codes and ccbc: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e ccbc: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -610,24 +610,24 @@
         <translation>Esplora i masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Smrtc Core</source>
-        <translation>&amp;Informazioni Smrtc Core</translation>
+        <source>&amp;About Ccbc Core</source>
+        <translation>&amp;Informazioni Ccbc Core</translation>
     </message>
     <message>
-        <source>Show information about Smrtc Core</source>
-        <translation>Visualizza informazioni su Smrtc Core</translation>
+        <source>Show information about Ccbc Core</source>
+        <translation>Visualizza informazioni su Ccbc Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Smrtc</source>
-        <translation>Modifica le opzioni di configurazione per Smrtc</translation>
+        <source>Modify configuration options for Ccbc</source>
+        <translation>Modifica le opzioni di configurazione per Ccbc</translation>
     </message>
     <message>
-        <source>Sign messages with your Smrtc addresses to prove you own them</source>
-        <translation>Firma i messaggi con i tuoi indirizzi Smrtc per dimostrare di essere il proprietario </translation>
+        <source>Sign messages with your Ccbc addresses to prove you own them</source>
+        <translation>Firma i messaggi con i tuoi indirizzi Ccbc per dimostrare di essere il proprietario </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Smrtc addresses</source>
-        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Smrtc specifici</translation>
+        <source>Verify messages to ensure they were signed with specified Ccbc addresses</source>
+        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Ccbc specifici</translation>
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
@@ -638,16 +638,16 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a Smrtc: URI or payment request</source>
-        <translation>Apri un Smrtc: URI o richiesta di pagamento</translation>
+        <source>Open a Ccbc: URI or payment request</source>
+        <translation>Apri un Ccbc: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
         <translation>Finestra Block Explorer</translation>
     </message>
     <message>
-        <source>Show the Smrtc Core help message to get a list with possible Smrtc command-line options</source>
-        <translation>Mostra il messaggio di aiuto Smrtc Core per ottenere un elenco con le possibili opzioni di riga di comando Smrtc</translation>
+        <source>Show the Ccbc Core help message to get a list with possible Ccbc command-line options</source>
+        <translation>Mostra il messaggio di aiuto Ccbc Core per ottenere un elenco con le possibili opzioni di riga di comando Ccbc</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -753,8 +753,8 @@ MultiSend: %1</translation>
         <translation>Cerca</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (smrtc.conf).</source>
-        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (smrtc.conf)</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ccbc.conf).</source>
+        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (ccbc.conf)</translation>
     </message>
 </context>
 <context>
@@ -888,8 +888,8 @@ MultiSend: %1</translation>
         <translation>versione</translation>
     </message>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc Core</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -915,8 +915,8 @@ MultiSend: %1</translation>
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc Core</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1144,8 +1144,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Smrtc address to sign the message with</source>
-        <translation>L'indirizzo Smrtc per firmare il messaggio con</translation>
+        <source>The Ccbc address to sign the message with</source>
+        <translation>L'indirizzo Ccbc per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1168,16 +1168,16 @@ MultiSend: %1</translation>
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Smrtc address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Smrtc</translation>
+        <source>Sign the message to prove you own this Ccbc address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Ccbc</translation>
     </message>
     <message>
-        <source>The Smrtc address the message was signed with</source>
-        <translation>L'indirizzo Smrtc con cui è stato firmato il messaggio</translation>
+        <source>The Ccbc address the message was signed with</source>
+        <translation>L'indirizzo Ccbc con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Smrtc address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Smrtc specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified Ccbc address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Ccbc specificato </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1215,8 +1215,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Smrtc Core</source>
-        <translation>Smrtc Core</translation>
+        <source>Ccbc Core</source>
+        <translation>Ccbc Core</translation>
     </message>
     </context>
 <context>
@@ -1314,7 +1314,7 @@ MultiSend: %1</translation>
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>smrtc-core</name>
+    <name>ccbc-core</name>
     <message>
         <source>Error</source>
         <translation>Errore</translation>

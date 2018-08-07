@@ -1,8 +1,8 @@
 (note: this is a temporary file, to be added-to by anybody, and moved to release-notes at release time)
 
-Smrtc Core version *version* is now available from:
+Ccbc Core version *version* is now available from:
 
-  <https://github.com/eastcoastcrypto/Smrtc/releases>
+  <https://github.com/eastcoastcrypto/Ccbc/releases>
 
 Please report bugs using the issue tracker at github:
 
@@ -16,12 +16,12 @@ simul autem fortior nobis
 How to Upgrade
 ==============
 
-If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Smrtc-Qt (on Mac) or smrtcd/smrtc-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Ccbc-Qt (on Mac) or ccbcd/ccbc-qt (on Linux).
 
 Compatibility
 ==============
 
-Smrtc Core is extensively tested on multiple operating systems using
+Ccbc Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -29,7 +29,7 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
-Smrtc Core should also work on most other Unix-like systems but is not
+Ccbc Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable Changes

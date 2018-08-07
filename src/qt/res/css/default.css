@@ -848,12 +848,12 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About Smrtc Dialog */
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Smrtc Contents */
+/* About Ccbc Dialog */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Ccbc Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About Smrtc text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About Ccbc text */
 margin-right:10px;
 }
 
@@ -877,7 +877,7 @@ font-weight:normal;
 min-height:30px;
 }
 
-QWidget .QFrame#frame .QLabel#label_5 { /* SMRTC Balances Label */
+QWidget .QFrame#frame .QLabel#label_5 { /* CCBC Balances Label */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 min-width:160px;
 background-color:transparent;
@@ -1014,7 +1014,7 @@ margin-right:5px;
 padding-right:5px;
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalanceText { /* Available zSMRTC Label */
+QWidget .QFrame#frame_4 .QLabel#labelzBalanceText { /* Available zCCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1026,7 +1026,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalance { /* Available zSMRTC Balance */
+QWidget .QFrame#frame_4 .QLabel#labelzBalance { /* Available zCCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1034,7 +1034,7 @@ color:#0184CC;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalanceUnconfirmedText { /* Unconfirmed zSMRTC Label */
+QWidget .QFrame#frame_4 .QLabel#labelzBalanceUnconfirmedText { /* Unconfirmed zCCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1046,7 +1046,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalanceUnconfirmed { /* Unconfirmed zSMRTC Balance */
+QWidget .QFrame#frame_4 .QLabel#labelzBalanceUnconfirmed { /* Unconfirmed zCCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1054,7 +1054,7 @@ color:#0184CC;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalanceMatureText { /* Mature zSMRTC Label */
+QWidget .QFrame#frame_4 .QLabel#labelzBalanceMatureText { /* Mature zCCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1066,7 +1066,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalanceMature { /* Mature zSMRTC Balance */
+QWidget .QFrame#frame_4 .QLabel#labelzBalanceMature { /* Mature zCCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1074,7 +1074,7 @@ color:#0184CC;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalanceImmatureText { /* Immature zSMRTC Label */
+QWidget .QFrame#frame_4 .QLabel#labelzBalanceImmatureText { /* Immature zCCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1086,7 +1086,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_4 .QLabel#labelzBalanceImmature { /* Immature zSMRTC Balance */
+QWidget .QFrame#frame_4 .QLabel#labelzBalanceImmature { /* Immature zCCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1105,7 +1105,7 @@ margin-right:5px;
 padding-right:5px;
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelBalanceTextz { /* Available SMRTC Label */
+QWidget .QFrame#frame_3 .QLabel#labelBalanceTextz { /* Available CCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1117,7 +1117,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelBalancez { /* Available SMRTC Balance */
+QWidget .QFrame#frame_3 .QLabel#labelBalancez { /* Available CCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1125,7 +1125,7 @@ color:#0184CC;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelzBalanceTextz { /* Available zSMRTC Label */
+QWidget .QFrame#frame_3 .QLabel#labelzBalanceTextz { /* Available zCCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1137,7 +1137,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelzBalancez { /* Available zSMRTC Balance */
+QWidget .QFrame#frame_3 .QLabel#labelzBalancez { /* Available zCCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1145,7 +1145,7 @@ color:#0184CC;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelLockedBalanceText { /* Available zSMRTC Label */
+QWidget .QFrame#frame_3 .QLabel#labelLockedBalanceText { /* Available zCCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1157,7 +1157,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelLockedBalance { /* Available zSMRTC Balance */
+QWidget .QFrame#frame_3 .QLabel#labelLockedBalance { /* Available zCCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:normal;
@@ -1165,7 +1165,7 @@ color:#0184CC;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelUnLockedBalanceText { /* Available zSMRTC Label */
+QWidget .QFrame#frame_3 .QLabel#labelUnLockedBalanceText { /* Available zCCBC Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:#0184CC;
@@ -1177,7 +1177,7 @@ font-size:14px;
 /* min-height:35px; */
 }
 
-QWidget .QFrame#frame_3 .QLabel#labelUnLockedBalance { /* Available zSMRTC Balance */
+QWidget .QFrame#frame_3 .QLabel#labelUnLockedBalance { /* Available zCCBC Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:normal;
@@ -1213,7 +1213,7 @@ min-height:100px;
 margin-right:20px;
 margin-left:0;
 margin-top:0;
-background-image: url(':/images/smrtc_logo_horizontal');
+background-image: url(':/images/ccbc_logo_horizontal');
 background-repeat:none;
 }
 

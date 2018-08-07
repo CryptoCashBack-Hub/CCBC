@@ -1,4 +1,4 @@
-Building Smrtc
+Building Ccbc
 
 Use the autogen script to prepare the build environment.
 
@@ -8,6 +8,6 @@ Use the autogen script to prepare the build environment.
 
 Always verify the signatures and checksums.
 
-See doc/build-*.md for instructions on building smrtcd,
+See doc/build-*.md for instructions on building ccbcd,
 the intended-for-services, no-graphical-interface, reference
-implementation of Smrtc.
+implementation of Ccbc.

@@ -2,24 +2,24 @@
 
 # backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/smrtc/.smrtc" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/smrtc/.smrtc"
+if [ -d "/var/lib/ccbc/.ccbc" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/ccbc/.ccbc"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/smrtcd"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/ccbcd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/smrtc/smrtc.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/smrtcd}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/smrtcd.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/ccbc/ccbc.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/ccbcd}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/ccbcd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-smrtc}
-BITCOIND_GROUP=${BITCOIND_GROUP:-smrtc}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/smrtcd}
+BITCOIND_USER=${BITCOIND_USER:-ccbc}
+BITCOIND_GROUP=${BITCOIND_GROUP:-ccbc}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/ccbcd}
 
-name="Smrtc Core Daemon"
-description="Smrtc crypto-currency p2p network daemon"
+name="Ccbc Core Daemon"
+description="Ccbc crypto-currency p2p network daemon"
 
-command="/usr/bin/smrtcd"
+command="/usr/bin/ccbcd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -65,7 +65,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run smrtcd."
+		eerror "ERROR: You must set a secure rpcpassword to run ccbcd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
@@ -78,7 +78,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Smrtc Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Ccbc Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

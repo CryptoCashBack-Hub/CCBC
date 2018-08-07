@@ -130,7 +130,7 @@ Value getgenerate(const Array& params, bool fHelp)
         throw runtime_error(
             "getgenerate\n"
             "\nReturn if the server is set to generate coins or not. The default is false.\n"
-            "It is set with the command line argument -gen (or smrtc.conf setting gen)\n"
+            "It is set with the command line argument -gen (or ccbc.conf setting gen)\n"
             "It can also be set with the setgenerate call.\n"
             "\nResult\n"
             "true|false      (boolean) If the server is set to generate coins or not\n"
@@ -253,7 +253,7 @@ Value getmininginfo(const Array& params, bool fHelp)
             "  \"blocks\": nnn,             (numeric) The current block\n"
             "  \"currentblocksize\": nnn,   (numeric) The last block size\n"
             "  \"currentblocktx\": nnn,     (numeric) The last block transaction\n"
-            "  \"difficulty\": smrtc.xxxxx    (numeric) The current difficulty\n"
+            "  \"difficulty\": ccbc.xxxxx    (numeric) The current difficulty\n"
             "  \"errors\": \"...\"          (string) Current errors\n"
             "  \"generate\": true|false     (boolean) If the generation is on or off (see getgenerate or setgenerate calls)\n"
             "  \"genproclimit\": n          (numeric) The processor limit for generation. -1 if no generation. (see getgenerate or setgenerate calls)\n"
@@ -375,7 +375,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"coinbasevalue\" : n,               (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in duffs)\n"
             "  \"coinbasetxn\" : { ... },           (json object) information for coinbase transaction\n"
             "  \"target\" : \"xxxx\",               (string) The hash target\n"
-            "  \"mintime\" : smrtc,                   (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)\n"
+            "  \"mintime\" : ccbc,                   (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)\n"
             "  \"mutable\" : [                      (array of string) list of ways the block template may be changed \n"
             "     \"value\"                         (string) A way the block template may be changed, e.g. 'time', 'transactions', 'prevblock'\n"
             "     ,...\n"
@@ -384,9 +384,9 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"sigoplimit\" : n,                 (numeric) limit of sigops in blocks\n"
             "  \"sizelimit\" : n,                  (numeric) limit of block size\n"
             "  \"curtime\" : ttt,                  (numeric) current timestamp in seconds since epoch (Jan 1 1970 GMT)\n"
-            "  \"bits\" : \"smrtc\",                 (string) compressed target of next block\n"
+            "  \"bits\" : \"ccbc\",                 (string) compressed target of next block\n"
             "  \"height\" : n                      (numeric) The height of the next block\n"
-            "  \"payee\" : \"smrtc\",                (string) required payee for the next block\n"
+            "  \"payee\" : \"ccbc\",                (string) required payee for the next block\n"
             "  \"payee_amount\" : n,               (numeric) required amount to pay\n"
             "  \"votes\" : [\n                     (array) show vote candidates\n"
             "        { ... }                       (json object) vote candidate\n"
@@ -446,10 +446,10 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Smrtc is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Ccbc is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Smrtc is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Ccbc is downloading blocks...");
 
     static unsigned int nTransactionsUpdatedLast;
 
