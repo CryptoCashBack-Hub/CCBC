@@ -56,10 +56,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0xd5048b9b4f28d090b8793f5343a250018b22b6c54f49444e36b9e175d7e38d2b"));
+    (0, uint256("0000003e5aa6bed9da89b53f49d90f45f9e9dd87547ec0755a7a462ff52e81836"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1533614317, // * UNIX timestamp of last checkpoint block
+    1533749142, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint, was 2000
@@ -110,7 +110,7 @@ public:
         pchMessageStart[1] = 0xba;
         pchMessageStart[2] = 0xc2;
         pchMessageStart[3] = 0x45;
-        vAlertPubKey = ParseHex("047f3dc11e937a81a13c84f3959927ed1cd4de72f3aeac13d398bbe92f0e948254af324d09aeb413ef38af01844b44b5d0b186505f479c02491c3173f5418709ba");
+        vAlertPubKey = ParseHex("0427032f4aea9ade6b709caa6f302c0850e1ecdc9f4cd2619ef28dcd560afcc65bcd7a97bf58523a450a7c8e6e178c9ced2ed5ff96afd8e88284332a87f18af63f");
         nDefaultPort = 5520;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 210000;
@@ -121,7 +121,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Ccbc: 1 day
         nTargetSpacing = 1 * 60;  // Ccbc: 1 minutes
-        nMaturity = 10; // 10 Conf to mature coins
+        nMaturity = 5; // 5 Conf to mature coins
         nMasternodeCountDrift = 20; //Was 20
         nMaxMoneyOut = 100000000 * COIN; //100m coins minted
 
@@ -130,44 +130,34 @@ public:
         nModifierUpdateBlock = 1; //Was 999999999
         nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
-        nZerocoinStartTime = 1533614317; // 07/25/2018 @ 5:45pm (UTC)
+        nZerocoinStartTime = 1533749142;  
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = ~1; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = ~1; //Last valid accumulator checkpoint
         
-        /**
-         * Build the genesis block. Note that the output of the genesis coinbase cannot
-         * be spent as it did not originally exist in the database.
-         *
-         * CBlock(hash=00000ffd590b14, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=e0028e, nTime=1390095618, nBits=1e0ffff0, nNonce=28917698, vtx=1)
-         *   CTransaction(hash=e0028e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-         *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73)
-         *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
-         *   vMerkleTree: e0028e
-         */
-        const char* pszTimestamp = "Genesis of smart cloud, cloud storage for all!";
+        const char* pszTimestamp = "AquilaX Revial Team!";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("045bd0bdce28d24cd108384e178afeb2fc9b2d57407d47c7518b629645008afdfbe4639819892ae12958df1374589857914de1f7b3cfea3f73237e58a3ce6227af") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0431d81512c537c1e8ca5834732355740830cfe266d97ba8af2c0f72828745014f78931b94abd2383aa8ed2f8a1ec633dd902ed01edfe834f20374be4207843b43") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1533614317;
+        genesis.nTime = 1533749142;
         genesis.nBits = 504365040;
-        genesis.nNonce = 42072;
+        genesis.nNonce = 355538;
 
 				
         hashGenesisBlock = genesis.GetHash();
 		
 		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0xd5048b9b4f28d090b8793f5343a250018b22b6c54f49444e36b9e175d7e38d2b"));
-        assert(genesis.hashMerkleRoot == uint256("0xa511a95437d4afb62ca1b8b99b39ff36506a8c6fa07bc06b328b404e9c0f9b6b"));
+        assert(hashGenesisBlock == uint256("0x000003e5aa6bed9da89b53f49d90f45f9e9dd87547ec0755a7a462ff52e81836"));
+        assert(genesis.hashMerkleRoot == uint256("0x0f8eeb0598a78aa990a6cc538262d3e21562987f57a4a98a210f6beba08eee89"));
 
 		
 		
@@ -185,19 +175,19 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         fRequireRPCPassword = true;
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = true;
+        fMineBlocksOnDemand = false;
         fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "0479e900c0e83a7a2b087a9d3fcec09d1ff239f696b055987220a9503d25f7d68178e08c076e51431c948b846a81ec5c12e1fed8c324b31deb546d517e9c9b627c";
+        strSporkKey = "04dbdd4a4cf673eb0f68ba5b0be427676bb792becd858ece5309d27342ff31899e5c4399317dab53455ec304e0851a1581feb20a1bf6d2dc27843f16b16aba7ebe";
         strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
-        nStartMasternodePayments = 1533614317; // 
+        nStartMasternodePayments = 1533749142; 
 
         /** Zerocoin */
         zerocoinModulus = "0xc95577b6dce0049b0a20c779af38079355abadde1a1d80c353f6cb697a7ae5a087bad39caa5798478551d0f9d91e6267716506f32412de1d19d17588765eb9502b85c6a18abdb05791cfd8b734e960281193705eeece210920cc922b3af3ceb178bf12c22eb565d5767fbf19545639be8953c2c38ffad41f3371e4aac750ac2d7bd614b3faabb453081d5d88fdbb803657a980bc93707e4b14233a2358c97763bf28f7c933206071477e8b371f229bc9ce7d6ef0ed7163aa5dfe13bc15f7816348b328fa2c1e69d5c88f7b94cee7829d56d1842d77d7bb8692e9fc7b7db059836500de8d57eb43c345feb58671503b932829112941367996b03871300f25efb5";
