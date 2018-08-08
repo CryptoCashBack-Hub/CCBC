@@ -17,15 +17,15 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "CCBC" 
-			Value "Programmer",			"TFinch" 
-			Value "RevivedBy",			"AquilaX"
-            VALUE "FileDescription",    "ccbcd (OSS daemon/client for Ccbc)"
+	    VALUE "Programmer",		"TFinch" 
+	    VALUE "RevivedBy",		"AquilaX Team"
+            VALUE "FileDescription",    "CCBC (OSS daemon/client for CCBC) In partnership with AquilaX Team"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ccbcd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "ccbcd.exe"
-            VALUE "ProductName",        "ccbcd"
+            VALUE "ProductName",        "CCBC Revival Partnership"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
