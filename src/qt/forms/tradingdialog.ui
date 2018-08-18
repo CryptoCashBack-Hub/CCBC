@@ -442,7 +442,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy SMRTC</string>
+      <string>Buy CCBC</string>
      </property>
      <property name="icon">
       <iconset resource="../smrtc.qrc">
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>SMRTC</string>
+      <string>CCBC</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,7 +1704,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>SMRTC</string>
+      <string>CCBC</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="UnitsInputXXX">
@@ -1751,7 +1751,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell SMRTC</string>
+      <string>Sell CCBC</string>
      </property>
      <property name="icon">
       <iconset resource="../smrtc">
@@ -1777,7 +1777,7 @@
          </font>
         </property>
         <property name="text">
-         <string>SMRTC Available:</string>
+         <string>CCBC Available:</string>
         </property>
        </widget>
       </item>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>SMRTC</string>
+         <string>CCBC</string>
         </property>
        </widget>
       </item>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>SMRTC Balance:</string>
+      <string>CCBC Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>SMRTC Available:</string>
+      <string>CCBC Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,7 +2832,7 @@
       </font>
      </property>
      <property name="text">
-      <string>SMRTC Pending:</string>
+      <string>CCBC Pending:</string>
      </property>
     </widget>
     <widget class="QLabel" name="XXXPendingLabel">
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex SMRTC Deposit Address:</string>
+      <string>Bittrex CCBC Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
