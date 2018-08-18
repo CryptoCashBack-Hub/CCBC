@@ -551,6 +551,7 @@ void BitcoinGUI::createMenuBar()
 	help->addAction(aboutQtAction);
 }
 
+
 void BitcoinGUI::createToolBars()
 {
 	if (walletFrame) {
