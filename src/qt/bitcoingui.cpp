@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The CCBC developers
+// Copyright (c) 2015-2017 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -116,7 +116,7 @@ spinnerFrame(0)
 
 	GUIUtil::restoreWindowGeometry("nWindow", QSize(850, 550), this);
 
-	QString windowTitle = tr("CCBC Core") + " - ";
+	QString windowTitle = tr("Smrtc Core") + " - ";
 #ifdef ENABLE_WALLET
 	/* if compiled with wallet support, -disablewallet can still disable the wallet */
 	enableWallet = !GetBoolArg("-disablewallet", false);
@@ -191,27 +191,23 @@ spinnerFrame(0)
 	unitDisplayControl = new UnitDisplayStatusBarControl();
 	labelStakingIcon = new QLabel();
 	labelEncryptionIcon = new QPushButton();
-	labelEncryptionIcon->setObjectName("labelEncryptionIcon");
 	labelEncryptionIcon->setFlat(true); // Make the button look like a label, but clickable
 	labelEncryptionIcon->setStyleSheet(".QPushButton { background-color: rgba(255, 255, 255, 0);}");
 	labelEncryptionIcon->setMaximumSize(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE);
 	labelConnectionsIcon = new QPushButton();
-	labelConnectionsIcon->setObjectName("labelConnectionsIcon");
 	labelConnectionsIcon->setFlat(true); // Make the button look like a label, but clickable
 	labelConnectionsIcon->setStyleSheet(".QPushButton { background-color: rgba(255, 255, 255, 0);}");
 	labelConnectionsIcon->setMaximumSize(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE);
 	labelBlocksIcon = new QLabel();
-#ifdef ENABLE_WALLET
+
 	if (enableWallet) {
 		frameBlocksLayout->addStretch();
 		frameBlocksLayout->addWidget(unitDisplayControl);
 		frameBlocksLayout->addStretch();
 		frameBlocksLayout->addWidget(labelEncryptionIcon);
-		frameBlocksLayout->addStretch();
-		frameBlocksLayout->addWidget(labelStakingIcon);
-		frameBlocksLayout->addStretch();
 	}
-#endif // ENABLE_WALLET
+	frameBlocksLayout->addStretch();
+	frameBlocksLayout->addWidget(labelStakingIcon);
 	frameBlocksLayout->addStretch();
 	frameBlocksLayout->addWidget(labelConnectionsIcon);
 	frameBlocksLayout->addStretch();
@@ -221,7 +217,6 @@ spinnerFrame(0)
 	// Progress bar and label for blocks download
 	progressBarLabel = new QLabel();
 	progressBarLabel->setVisible(true);
-	progressBarLabel->setObjectName("progressBarLabel");
 	progressBar = new GUIUtil::ProgressBar();
 	progressBar->setAlignment(Qt::AlignCenter);
 	progressBar->setVisible(true);
@@ -294,7 +289,16 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 {
 	QActionGroup* tabGroup = new QActionGroup(this);
 
-	overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
+	QPixmap overviewIconInactive(":/icons/overview");
+	QPixmap overviewIconActive(":icons/overview_active");
+	QIcon overviewIcon(overviewIconInactive);
+
+	overviewIcon.addPixmap(overviewIconActive, QIcon::Selected, QIcon::On);
+	overviewIcon.addPixmap(overviewIconActive, QIcon::Selected, QIcon::Off);
+	overviewIcon.addPixmap(overviewIconActive, QIcon::Active, QIcon::On);
+	overviewIcon.addPixmap(overviewIconActive, QIcon::Active, QIcon::Off);
+
+	overviewAction = new QAction(overviewIcon, tr("&Overview"), this);
 	overviewAction->setStatusTip(tr("Show general overview of wallet"));
 	overviewAction->setToolTip(overviewAction->statusTip());
 	overviewAction->setCheckable(true);
@@ -306,7 +310,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	tabGroup->addAction(overviewAction);
 
 	sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-	sendCoinsAction->setStatusTip(tr("Send coins to a CCBC address"));
+	sendCoinsAction->setStatusTip(tr("Send coins to a Smrtc address"));
 	sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
 	sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -317,7 +321,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	tabGroup->addAction(sendCoinsAction);
 
 	receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
-	receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and ccbc: URIs)"));
+	receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and smrtc: URIs)"));
 	receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
 	receiveCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -339,7 +343,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	tabGroup->addAction(historyAction);
 
 	privacyAction = new QAction(QIcon(":/icons/privacy"), tr("&Privacy"), this);
-	privacyAction->setStatusTip(tr("Privacy Actions for zCCBC"));
+	privacyAction->setStatusTip(tr("Privacy Actions for zSMRTC"));
 	privacyAction->setToolTip(privacyAction->statusTip());
 	privacyAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -385,8 +389,8 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	quitAction->setStatusTip(tr("Quit application"));
 	quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
 	quitAction->setMenuRole(QAction::QuitRole);
-	aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About CCBC Core"), this);
-	aboutAction->setStatusTip(tr("Show information about CCBC Core"));
+	aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About Smrtc Core"), this);
+	aboutAction->setStatusTip(tr("Show information about Smrtc Core"));
 	aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
 	aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -396,7 +400,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	aboutQtAction->setStatusTip(tr("Show information about Qt"));
 	aboutQtAction->setMenuRole(QAction::AboutQtRole);
 	optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-	optionsAction->setStatusTip(tr("Modify configuration options for CCBC"));
+	optionsAction->setStatusTip(tr("Modify configuration options for Smrtc"));
 	optionsAction->setMenuRole(QAction::PreferencesRole);
 	toggleHideAction = new QAction(networkStyle->getAppIcon(), tr("&Show / Hide"), this);
 	toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
@@ -412,9 +416,9 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	unlockWalletAction->setToolTip(tr("Unlock wallet"));
 	lockWalletAction = new QAction(tr("&Lock Wallet"), this);
 	signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-	signMessageAction->setStatusTip(tr("Sign messages with your CCBC addresses to prove you own them"));
+	signMessageAction->setStatusTip(tr("Sign messages with your Smrtc addresses to prove you own them"));
 	verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-	verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified CCBC addresses"));
+	verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Smrtc addresses"));
 	bip38ToolAction = new QAction(QIcon(":/icons/key"), tr("&BIP38 tool"), this);
 	bip38ToolAction->setToolTip(tr("Encrypt and decrypt private keys using a passphrase"));
 	multiSendAction = new QAction(QIcon(":/icons/edit"), tr("&MultiSend"), this);
@@ -451,13 +455,13 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	multisigSignAction->setStatusTip(tr("Sign with a multisignature address"));
 
 	openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open &URI..."), this);
-	openAction->setStatusTip(tr("Open a CCBC: URI or payment request"));
+	openAction->setStatusTip(tr("Open a Smrtc: URI or payment request"));
 	openBlockExplorerAction = new QAction(QIcon(":/icons/explorer"), tr("&Blockchain explorer"), this);
 	openBlockExplorerAction->setStatusTip(tr("Block explorer window"));
 
 	showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
 	showHelpMessageAction->setMenuRole(QAction::NoRole);
-	showHelpMessageAction->setStatusTip(tr("Show the CCBC Core help message to get a list with possible CCBC command-line options"));
+	showHelpMessageAction->setStatusTip(tr("Show the Smrtc Core help message to get a list with possible Smrtc command-line options"));
 
 	connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
 	connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -470,7 +474,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 		connect(encryptWalletAction, SIGNAL(triggered(bool)), walletFrame, SLOT(encryptWallet(bool)));
 		connect(backupWalletAction, SIGNAL(triggered()), walletFrame, SLOT(backupWallet()));
 		connect(changePassphraseAction, SIGNAL(triggered()), walletFrame, SLOT(changePassphrase()));
-		connect(unlockWalletAction, SIGNAL(triggered(bool)), walletFrame, SLOT(unlockWallet(bool)));
+		connect(unlockWalletAction, SIGNAL(triggered()), walletFrame, SLOT(unlockWallet()));
 		connect(lockWalletAction, SIGNAL(triggered()), walletFrame, SLOT(lockWallet()));
 		connect(signMessageAction, SIGNAL(triggered()), this, SLOT(gotoSignMessageTab()));
 		connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
@@ -551,13 +555,7 @@ void BitcoinGUI::createToolBars()
 {
 	if (walletFrame) {
 		QToolBar* toolbar = new QToolBar(tr("Tabs toolbar"));
-		toolbar->setObjectName("Main-Toolbar"); // Name for CSS addressing
-		toolbar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-		//        // Add some empty space at the top of the toolbars
-		//        QAction* spacer = new QAction(this);
-		//        toolbar->addAction(spacer);
-		//        toolbar->widgetForAction(spacer)->setObjectName("ToolbarSpacer");
-
+		toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 		toolbar->addAction(overviewAction);
 		toolbar->addAction(sendCoinsAction);
 		toolbar->addAction(receiveCoinsAction);
@@ -569,8 +567,6 @@ void BitcoinGUI::createToolBars()
 			toolbar->addAction(masternodeAction);
 		}
 		toolbar->setMovable(false); // remove unused icon in upper left corner
-		toolbar->setOrientation(Qt::Vertical);
-		toolbar->setIconSize(QSize(40, 40));
 		overviewAction->setChecked(true);
 
 		/** Create additional container for toolbar and walletFrame and make it the central widget.
@@ -581,7 +577,6 @@ void BitcoinGUI::createToolBars()
 		layout->addWidget(walletFrame);
 		layout->setSpacing(0);
 		layout->setContentsMargins(QMargins());
-		layout->setDirection(QBoxLayout::LeftToRight);
 		QWidget* containerWidget = new QWidget();
 		containerWidget->setLayout(layout);
 		setCentralWidget(containerWidget);
@@ -610,33 +605,12 @@ void BitcoinGUI::setClientModel(ClientModel* clientModel)
 		connect(clientModel, SIGNAL(showProgress(QString, int)), this, SLOT(showProgress(QString, int)));
 
 		rpcConsole->setClientModel(clientModel);
-
-
 #ifdef ENABLE_WALLET
 		if (walletFrame) {
 			walletFrame->setClientModel(clientModel);
 		}
 #endif // ENABLE_WALLET
 		unitDisplayControl->setOptionsModel(clientModel->getOptionsModel());
-	}else {
-		// Disable possibility to show main window via action
-		toggleHideAction->setEnabled(false);
-		if (trayIconMenu) {
-			// Disable context menu on tray icon
-			trayIconMenu->clear();
-		}
-	}
-}
-		/*
-#endif // ENABLE_WALLET
-		unitDisplayControl->setOptionsModel(clientModel->getOptionsModel());
-		connect(clientModel->getOptionsModel(), SIGNAL(zeromintEnableChanged(bool)), this, SLOT(setAutoMintStatus()));
-
-		//Show trayIcon
-		if (trayIcon)
-		{
-			trayIcon->show();
-		}
 	}
 	else {
 		// Disable possibility to show main window via action
@@ -647,7 +621,7 @@ void BitcoinGUI::setClientModel(ClientModel* clientModel)
 		}
 	}
 }
-*/
+
 #ifdef ENABLE_WALLET
 bool BitcoinGUI::addWallet(const QString& name, WalletModel* walletModel)
 {
@@ -702,10 +676,10 @@ void BitcoinGUI::createTrayIcon(const NetworkStyle* networkStyle)
 {
 #ifndef Q_OS_MAC
 	trayIcon = new QSystemTrayIcon(this);
-	QString toolTip = tr("CCBC Core client") + " " + networkStyle->getTitleAddText();
+	QString toolTip = tr("Smrtc Core client") + " " + networkStyle->getTitleAddText();
 	trayIcon->setToolTip(toolTip);
 	trayIcon->setIcon(networkStyle->getAppIcon());
-	trayIcon->hide();
+	trayIcon->show();
 #endif
 
 	notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
@@ -914,7 +888,7 @@ void BitcoinGUI::setNumConnections(int count)
 	}
 	QIcon connectionItem = QIcon(icon).pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE);
 	labelConnectionsIcon->setIcon(connectionItem);
-	labelConnectionsIcon->setToolTip(tr("%n active connection(s) to CCBC network", "", count));
+	labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Smrtc network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count)
@@ -1049,8 +1023,8 @@ void BitcoinGUI::setNumBlocks(int count)
 
 void BitcoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret)
 {
-	QString strTitle = tr("CCBC Core"); // default title
-										// Default to information icon
+	QString strTitle = tr("Smrtc Core"); // default title
+										 // Default to information icon
 	int nMBoxIcon = QMessageBox::Information;
 	int nNotifyIcon = Notificator::Information;
 
@@ -1075,7 +1049,7 @@ void BitcoinGUI::message(const QString& title, const QString& message, unsigned 
 			break;
 		}
 	}
-	// Append title to "CCBC - "
+	// Append title to "Smrtc - "
 	if (!msgType.isEmpty())
 		strTitle += " - " + msgType;
 
@@ -1184,7 +1158,6 @@ bool BitcoinGUI::eventFilter(QObject* object, QEvent* event)
 	return QMainWindow::eventFilter(object, event);
 }
 
-#ifdef ENABLE_WALLET
 void BitcoinGUI::setStakingStatus()
 {
 	if (pwalletMain)
@@ -1202,6 +1175,7 @@ void BitcoinGUI::setStakingStatus()
 	}
 }
 
+#ifdef ENABLE_WALLET
 bool BitcoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
 {
 	// URI has to be valid
@@ -1237,7 +1211,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
 	case WalletModel::UnlockedForAnonymizationOnly:
 		labelEncryptionIcon->show();
 		labelEncryptionIcon->setIcon(QIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
-		labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b> for anonymization and staking only"));
+		labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b> for anonimization and staking only"));
 		encryptWalletAction->setChecked(true);
 		changePassphraseAction->setEnabled(true);
 		unlockWalletAction->setVisible(true);
