@@ -18,8 +18,8 @@ BEGIN
         BEGIN
             VALUE "CompanyName",        "CCBC" 
 	    VALUE "Programmer",		"TFinch" 
-	    VALUE "RevivedBy",		"AquilaX Team"
-            VALUE "FileDescription",    "CCBC (OSS daemon/client for CCBC) In partnership with AquilaX Team"
+	    VALUE "RevivedBy",		"CCBC Team"
+            VALUE "FileDescription",    "CCBC (OSS daemon/client for CCBC) In partnership with CCBCX Team"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ccbcd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
