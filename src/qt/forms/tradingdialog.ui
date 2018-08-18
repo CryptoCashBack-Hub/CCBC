@@ -181,7 +181,7 @@
       <string>Asks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBCSupply">
+    <widget class="QLabel" name="CCBSupply">
      <property name="geometry">
       <rect>
        <x>540</x>
@@ -197,7 +197,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBCDemand">
+    <widget class="QLabel" name="CCBDemand">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -432,7 +432,7 @@
     <attribute name="title">
      <string>Buy</string>
     </attribute>
-    <widget class="QPushButton" name="BuyCCBC">
+    <widget class="QPushButton" name="BuyCCB">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -442,10 +442,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy CCBC</string>
+      <string>Buy CCB</string>
      </property>
      <property name="icon">
-      <iconset resource="../caleonx.qrc">
+      <iconset resource="../cryptocashback.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>CCBC</string>
+      <string>CCB</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,10 +1704,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>CCBC</string>
+      <string>CCB</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UnitsInputCCBC">
+    <widget class="QLineEdit" name="UnitsInputCCB">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1741,7 +1741,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="SellCCBCBTN">
+    <widget class="QPushButton" name="SellCCBBTN">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1751,10 +1751,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell CCBC</string>
+      <string>Sell CCB</string>
      </property>
      <property name="icon">
-      <iconset resource="../caleonx">
+      <iconset resource="../cryptocashback">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -1777,12 +1777,12 @@
          </font>
         </property>
         <property name="text">
-         <string>CCBC Available:</string>
+         <string>CCB Available:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="CCBCAvailableLabel">
+       <widget class="QLabel" name="CCBAvailableLabel">
         <property name="palette">
          <palette>
           <active>
@@ -2213,7 +2213,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelCCBC">
+       <widget class="QLabel" name="labelCCB">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>CCBC</string>
+         <string>CCB</string>
         </property>
        </widget>
       </item>
@@ -2733,7 +2733,7 @@
       <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBCBalanceLabel">
+    <widget class="QLabel" name="CCBBalanceLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>CCBC Balance:</string>
+      <string>CCB Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2784,7 +2784,7 @@
       <string>BTC Balance:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBCAvailableLabel_2">
+    <widget class="QLabel" name="CCBAvailableLabel_2">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>CCBC Available:</string>
+      <string>CCB Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,10 +2832,10 @@
       </font>
      </property>
      <property name="text">
-      <string>CCBC Pending:</string>
+      <string>CCB Pending:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBCPendingLabel">
+    <widget class="QLabel" name="CCBPendingLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex CCBC Deposit Address:</string>
+      <string>Bittrex CCB Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
@@ -2941,10 +2941,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate CALEONX Deposit Address</string>
+      <string>Generate CCB Deposit Address</string>
      </property>
      <property name="icon">
-      <iconset resource="../caleonx.qrc">
+      <iconset resource="../cryptocashback.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3155,7 +3155,7 @@
        <string notr="true">border: 1px solid #61696c;margin-left:4px;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnConvertCaleonx">
+     <widget class="QPushButton" name="btnConvertCCB">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -3206,7 +3206,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../caleonx.qrc">:/icons/transaction_1</pixmap>
+       <pixmap resource="../cryptocashback.qrc">:/icons/transaction_1</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -3253,7 +3253,7 @@
       <string>Update API Keys</string>
      </property>
      <property name="icon">
-      <iconset resource="../caleonx.qrc">
+      <iconset resource="../cryptocashback.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3408,7 +3408,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../caleonx.qrc"/>
+  <include location="../cryptocashback.qrc"/>
  </resources>
  <connections/>
 </ui>
