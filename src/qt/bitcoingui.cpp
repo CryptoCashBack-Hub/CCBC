@@ -190,11 +190,6 @@ spinnerFrame(0)
 	frameBlocksLayout->setSpacing(3);
 	unitDisplayControl = new UnitDisplayStatusBarControl();
 	labelStakingIcon = new QLabel();
-	labelAutoMintIcon = new QPushButton();
-	labelAutoMintIcon->setObjectName("labelAutoMintIcon");
-	labelAutoMintIcon->setFlat(true); // Make the button look like a label, but clickable
-	labelAutoMintIcon->setStyleSheet(".QPushButton { background-color: rgba(255, 255, 255, 0);}");
-	labelAutoMintIcon->setMaximumSize(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE);
 	labelEncryptionIcon = new QPushButton();
 	labelEncryptionIcon->setObjectName("labelEncryptionIcon");
 	labelEncryptionIcon->setFlat(true); // Make the button look like a label, but clickable
@@ -215,7 +210,6 @@ spinnerFrame(0)
 		frameBlocksLayout->addStretch();
 		frameBlocksLayout->addWidget(labelStakingIcon);
 		frameBlocksLayout->addStretch();
-		frameBlocksLayout->addWidget(labelAutoMintIcon);
 	}
 #endif // ENABLE_WALLET
 	frameBlocksLayout->addStretch();
@@ -255,7 +249,6 @@ spinnerFrame(0)
 	connect(showBackupsAction, SIGNAL(triggered()), rpcConsole, SLOT(showBackups()));
 	connect(labelConnectionsIcon, SIGNAL(clicked()), rpcConsole, SLOT(showPeers()));
 	connect(labelEncryptionIcon, SIGNAL(clicked()), walletFrame, SLOT(toggleLockWallet()));
-	connect(labelAutoMintIcon, SIGNAL(clicked()), this, SLOT(optionsClicked()));
 
 	// Get restart command-line parameters and handle restart
 	connect(rpcConsole, SIGNAL(handleRestart(QStringList)), this, SLOT(handleRestart(QStringList)));
@@ -281,11 +274,6 @@ spinnerFrame(0)
 	connect(timerStakingIcon, SIGNAL(timeout()), this, SLOT(setStakingStatus()));
 	timerStakingIcon->start(10000);
 	setStakingStatus();
-
-	QTimer* timerAutoMintIcon = new QTimer(labelAutoMintIcon);
-	connect(timerAutoMintIcon, SIGNAL(timeout()), this, SLOT(setAutoMintStatus()));
-	timerAutoMintIcon->start(10000);
-	setAutoMintStatus();
 }
 
 BitcoinGUI::~BitcoinGUI()
@@ -630,6 +618,18 @@ void BitcoinGUI::setClientModel(ClientModel* clientModel)
 		}
 #endif // ENABLE_WALLET
 		unitDisplayControl->setOptionsModel(clientModel->getOptionsModel());
+	}else {
+		// Disable possibility to show main window via action
+		toggleHideAction->setEnabled(false);
+		if (trayIconMenu) {
+			// Disable context menu on tray icon
+			trayIconMenu->clear();
+		}
+	}
+}
+		/*
+#endif // ENABLE_WALLET
+		unitDisplayControl->setOptionsModel(clientModel->getOptionsModel());
 		connect(clientModel->getOptionsModel(), SIGNAL(zeromintEnableChanged(bool)), this, SLOT(setAutoMintStatus()));
 
 		//Show trayIcon
@@ -647,7 +647,7 @@ void BitcoinGUI::setClientModel(ClientModel* clientModel)
 		}
 	}
 }
-
+*/
 #ifdef ENABLE_WALLET
 bool BitcoinGUI::addWallet(const QString& name, WalletModel* walletModel)
 {
