@@ -181,7 +181,7 @@
       <string>Asks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBSupply">
+    <widget class="QLabel" name="XXXSupply">
      <property name="geometry">
       <rect>
        <x>540</x>
@@ -197,7 +197,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBDemand">
+    <widget class="QLabel" name="XXXDemand">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -432,7 +432,7 @@
     <attribute name="title">
      <string>Buy</string>
     </attribute>
-    <widget class="QPushButton" name="BuyCCB">
+    <widget class="QPushButton" name="BuyXXX">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -442,10 +442,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy CCB</string>
+      <string>Buy SMRTC</string>
      </property>
      <property name="icon">
-      <iconset resource="../cryptocashback.qrc">
+      <iconset resource="../smrtc.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>CCB</string>
+      <string>SMRTC</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,10 +1704,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>CCB</string>
+      <string>SMRTC</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UnitsInputCCB">
+    <widget class="QLineEdit" name="UnitsInputXXX">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1741,7 +1741,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="SellCCBBTN">
+    <widget class="QPushButton" name="SellXXXBTN">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1751,10 +1751,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell CCB</string>
+      <string>Sell SMRTC</string>
      </property>
      <property name="icon">
-      <iconset resource="../cryptocashback">
+      <iconset resource="../smrtc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -1777,12 +1777,12 @@
          </font>
         </property>
         <property name="text">
-         <string>CCB Available:</string>
+         <string>SMRTC Available:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="CCBAvailableLabel">
+       <widget class="QLabel" name="XXXAvailableLabel">
         <property name="palette">
          <palette>
           <active>
@@ -2213,7 +2213,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelCCB">
+       <widget class="QLabel" name="labelXXX">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>CCB</string>
+         <string>SMRTC</string>
         </property>
        </widget>
       </item>
@@ -2733,7 +2733,7 @@
       <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBBalanceLabel">
+    <widget class="QLabel" name="XXXBalanceLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>CCB Balance:</string>
+      <string>SMRTC Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2784,7 +2784,7 @@
       <string>BTC Balance:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBAvailableLabel_2">
+    <widget class="QLabel" name="XXXAvailableLabel_2">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>CCB Available:</string>
+      <string>SMRTC Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,10 +2832,10 @@
       </font>
      </property>
      <property name="text">
-      <string>CCB Pending:</string>
+      <string>SMRTC Pending:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="CCBPendingLabel">
+    <widget class="QLabel" name="XXXPendingLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex CCB Deposit Address:</string>
+      <string>Bittrex SMRTC Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
@@ -2941,10 +2941,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate CCB Deposit Address</string>
+      <string>Generate Smrtc Deposit Address</string>
      </property>
      <property name="icon">
-      <iconset resource="../cryptocashback.qrc">
+      <iconset resource="../smrtc.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3155,7 +3155,7 @@
        <string notr="true">border: 1px solid #61696c;margin-left:4px;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnConvertCCB">
+     <widget class="QPushButton" name="btnConvertSmrtc">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -3206,7 +3206,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../cryptocashback.qrc">:/icons/transaction_1</pixmap>
+       <pixmap resource="../smrtc.qrc">:/icons/transaction_1</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -3253,7 +3253,7 @@
       <string>Update API Keys</string>
      </property>
      <property name="icon">
-      <iconset resource="../cryptocashback.qrc">
+      <iconset resource="../smrtc.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3408,7 +3408,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../cryptocashback.qrc"/>
+  <include location="../smrtc.qrc"/>
  </resources>
  <connections/>
 </ui>
