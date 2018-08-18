@@ -259,7 +259,7 @@ QT_TRANSLATE_NOOP("ccbc-core", "Connect to a node to retrieve peer addresses, an
 QT_TRANSLATE_NOOP("ccbc-core", "Connection options:"),
 QT_TRANSLATE_NOOP("ccbc-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
 QT_TRANSLATE_NOOP("ccbc-core", "Copyright (C) 2014-%i The Dash Core Developers"),
-QT_TRANSLATE_NOOP("ccbc-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
+QT_TRANSLATE_NOOP("ccbc-core", "Copyright (C) 2015-%i The CCBC Core Developers"),
 QT_TRANSLATE_NOOP("ccbc-core", "Copyright (C) 2017-%i The Ccbc Core Developers"),
 QT_TRANSLATE_NOOP("ccbc-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("ccbc-core", "Could not parse -rpcbind value %s as network address"),

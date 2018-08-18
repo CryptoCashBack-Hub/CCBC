@@ -3,7 +3,7 @@
  *
  * @brief      Functions for converting to/from Zerocoin Denominations to other values library.
  *
- * @copyright  Copyright 2017 PIVX Developers
+ * @copyright  Copyright 2017 CCBC Developers
  * @license    This project is released under the MIT license.
  **/
 
