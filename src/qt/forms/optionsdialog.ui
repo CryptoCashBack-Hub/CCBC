@@ -30,10 +30,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start Ccbc after logging in to the system.</string>
+          <string>Automatically start CALEONX after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start Ccbc on system login</string>
+          <string>&amp;Start CALEONX on system login</string>
          </property>
         </widget>
        </item>
@@ -131,21 +131,34 @@
         </spacer>
        </item>
        <item>
+        <widget class="QCheckBox" name="checkBoxZeromintEnable">
+         <property name="toolTip">
+          <string>Enable automatic minting of PIV units to zCALEONX</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Enable zCALEONX Automint</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <widget class="QLabel" name="percentage_label">
            <property name="toolTip">
-            <string>Percentage of incoming CCBC which get automatically converted to zCCBC via Zerocoin Protocol (min: 10%)</string>
+            <string>Percentage of incoming PIV which get automatically converted to zCALEONX via Zerocoin Protocol (min: 10%)</string>
            </property>
            <property name="text">
-            <string>Percentage of autominted zCCBC</string>
+            <string>Percentage of autominted zCALEONX</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QSpinBox" name="zeromintPercentage">
            <property name="minimum">
-            <number>10</number>
+            <number>1</number>
            </property>
            <property name="maximum">
             <number>100</number>
@@ -168,10 +181,10 @@
             </size>
            </property>
            <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough CCBC for this denomination is available</string>
+            <string>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</string>
            </property>
            <property name="text">
-            <string>Preferred Automint zCCBC Denomination</string>
+            <string>Preferred Automint zCALEONX Denomination</string>
            </property>
           </widget>
          </item>
@@ -184,7 +197,7 @@
             </size>
            </property>
            <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough CCBC for this denomination is available</string>
+            <string>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</string>
            </property>
            <property name="maxVisibleItems">
             <number>9</number>
@@ -203,6 +216,27 @@
        <string>W&amp;allet</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_Wallet">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2_Wallet">
+         <item>
+          <widget class="QLabel" name="labelStakeSplitThresholdText">
+           <property name="text">
+            <string>Stake split threshold:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBoxStakeSplitThreshold">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>999999</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
        <item>
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
@@ -265,7 +299,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Ccbc client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the CALEONX client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -285,7 +319,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the Ccbc network through a SOCKS5 proxy.</string>
+          <string>Connect to the CALEONX network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -451,7 +485,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting Ccbc.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting CALEONX.</string>
            </property>
           </widget>
          </item>
@@ -473,7 +507,7 @@
          </property>
          <property name="text">
           <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ccbc-project/ccbc-project-translations</string>
+https://www.transifex.com/caleonx-project/caleonx-project-translations</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -544,6 +578,19 @@ https://www.transifex.com/ccbc-project/ccbc-project-translations</string>
           <widget class="QValueComboBox" name="digits"/>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBoxHideZeroBalances">
+         <property name="toolTip">
+          <string>Hide empty balances</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Hide empty balances</string>
+         </property>
+        </widget>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3_Display">
