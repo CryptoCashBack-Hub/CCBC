@@ -33,7 +33,7 @@ color:#333;
     }
 
 QMenu {
-    background-color: E5E6EA;
+    background-color: #fab43b;
 }
 
 QMenu::item {
@@ -46,7 +46,7 @@ color:#333;
 }
 
 QToolBar {
-    background-color: qlineargradient(y1:0, y2: 1, stop: 0 #fab43b, stop: 0.75 #fab43b, stop: 0.99 #ffffff, stop: 1 #ffffff);
+    background-color: qlineargradient(y1:0, y2: 1, stop: 0 #fab43b, stop: 0.75 #fab43b, stop: 0.99 #333, stop: 1 #333);
     border: 0px solid #fff;
     padding: 1;
     margin: 0;
@@ -77,7 +77,7 @@ QToolBar {
         /****************************************************************************************/
 
         QToolBar > QToolButton:checked {
-            background-color: qlineargradient(x1:0, x2: 1, stop: 0 #fff, stop: 0.07 #fff, stop: 0.0701 #372f44, stop: 1 #372f44);
+            background-color: qlineargradient(x1:0, x2: 1, stop: 0 #333, stop: 0.07 #333, stop: 0.0701 #372f44, stop: 1 #372f44);
             color: #ffffff;
             font-weight: bold;
         }
@@ -85,7 +85,7 @@ QToolBar {
 
         /* QToolBar > QToolButton:hover:!selected { */
         QToolBar > QToolButton:hover {
-            background-color: qlineargradient(x1:0, x2: 1, stop: 0 #ffffff, stop: 0.07 #ffffff, stop: 0.0701 #372f44, stop: 1 #372f44);
+            background-color: qlineargradient(x1:0, x2: 1, stop: 0 #333, stop: 0.07 #333, stop: 0.0701 #372f44, stop: 1 #372f44);
             color: #fff;
         }
 
