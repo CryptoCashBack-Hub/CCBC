@@ -93,7 +93,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXXSyncStatus">
                  <property name="toolTip">
-                  <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Smrtc network after a connection is established, but this process has not completed yet.</string>
+                  <string>The displayed information may be out of date. Your wallet automatically synchronizes with the CCBC network after a connection is established, but this process has not completed yet.</string>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QLabel { color: red; }</string>
@@ -145,7 +145,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Enter an amount of Smrtc to convert (mint) to zSmrtc</string>
+                  <string>Enter an amount of CCBC to convert (mint) to zSmrtc</string>
                  </property>
                  <property name="text">
                   <string>Convert CCBC to zCCBC</string>
@@ -178,7 +178,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXXAmountText">
                  <property name="toolTip">
-                  <string>Available Balance are coins (Smrtc) which are confirmed and not locked or Masternode collaterals.</string>
+                  <string>Available Balance are coins (CCBC) which are confirmed and not locked or Masternode collaterals.</string>
                  </property>
                  <property name="text">
                   <string>Available Balance:</string>
@@ -191,7 +191,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXXAmountValue">
                  <property name="toolTip">
-                  <string>Enter an amount of Smrtc to convert to zSmrtc</string>
+                  <string>Enter an amount of CCBC to convert to zSmrtc</string>
                  </property>
                  <property name="text">
                   <string>0.000 000 00 CCBC</string>
@@ -695,7 +695,7 @@ zCCBC are mature when they have more than 20 confirmations AND more than 1 mints
                     </size>
                    </property>
                    <property name="toolTip">
-                    <string>The Smrtc address to send the payment to. Creates local payment to yourself when empty.</string>
+                    <string>The CCBC address to send the payment to. Creates local payment to yourself when empty.</string>
                    </property>
                   </widget>
                  </item>

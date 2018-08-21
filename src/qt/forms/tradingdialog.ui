@@ -2941,7 +2941,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate Smrtc Deposit Address</string>
+      <string>Generate CCBC Deposit Address</string>
      </property>
      <property name="icon">
       <iconset resource="../smrtc.qrc">
