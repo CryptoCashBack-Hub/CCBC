@@ -237,6 +237,7 @@ public:
     std::string GetRequiredPaymentsString(int nBlockHeight);
     void FillBlockPayee(CMutableTransaction& txNew, CAmount nFees, bool fProofOfStake);
 	void FillTreasuryBlockPayee(CMutableTransaction& txNew, CAmount nFees, bool fProofOfStake);
+    void FillReviveBlockPayee(CMutableTransaction& txNew, CAmount nFees, bool fProofOfStake);
 
     void CheckOrphanVotes();
     void Clear()

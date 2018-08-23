@@ -99,6 +99,7 @@ public:
     CMainParams()
     {
         networkID = CBaseChainParams::MAIN;
+        vReviveRewardAddress = ""; //Fill in address once wallet generated for AQX Revive Team
         vTreasuryRewardAddress = ""; //Fill in address once wallet generated
         strNetworkID = "main";
         /**
@@ -219,6 +220,18 @@ public:
     CScript script = GetScriptForDestination(address.Get());
     return script;
     
+}
+
+	 std::string CChainParams::GetReviveRewardAddressAtHeight(int nHeight) const
+{
+    return vReviveRewardAddress;
+}
+CScript CChainParams::GetReviveRewardScriptAtHeight(int nHeight) const
+{
+    CBitcoinAddress address(GetReviveRewardAddressAtHeight(nHeight).c_str());
+    assert(address.IsValid());
+    CScript script = GetScriptForDestination(address.Get());
+    return script;
 }
 
 

@@ -299,6 +299,46 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
     return true;
 }
 
+    //check if it's valid revive block
+if (IsReviveBlock(nBlockHeight)) {
+    CScript revivePayee = Params().GetReviveRewardScriptAtHeight(nBlockHeight);
+    CAmount reviveAmount = GetReviveAward(nBlockHeight);
+
+    bool bFound = false;
+
+    BOOST_FOREACH (CTxOut out, txNew.vout) {
+        if (out.nValue == reviveAmount) {
+            bFound = true; //correct revive payment has been found
+            break;
+        }
+    }
+
+    if (!bFound) {
+        LogPrint("masternode", "Invalid revive payment detected %s\n", txNew.ToString().c_str());
+        if (IsSporkActive(SPORK_18_REVIVE_PAYMENT_ENFORCEMENT))
+            return false;
+        else {
+            LogPrint("masternode", "SPORK_18_REVIVE_PAYMENT_ENFORCEMENT is not enabled, accept anyway\n");
+            return true;
+        }
+    } else {
+        LogPrint("masternode", "Valid revive payment detected %s\n", txNew.ToString().c_str());
+        return true;
+    }
+
+} else {
+    //check for masternode payee
+    if (masternodePayments.IsTransactionValid(txNew, nBlockHeight))
+        return true;
+    LogPrint("masternode", "Invalid mn payment detected %s\n", txNew.ToString().c_str());
+
+    if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+        return false;
+    LogPrint("masternode", "Masternode payment enforcement is disabled, accepting block\n");
+}
+return true;
+}
+
 void FillBlockPayee(CMutableTransaction& txNew, int64_t nFees, bool fProofOfStake)
 {
     CBlockIndex* pindexPrev = chainActive.Tip();
@@ -310,7 +350,9 @@ void FillBlockPayee(CMutableTransaction& txNew, int64_t nFees, bool fProofOfStak
     } else if (IsTreasuryBlock(pindexPrev->nHeight)) {
         //LogPrintf("FillBlockPayee(): It's time for treasury payment! Block %d\n",pindexPrev->nHeight + 1);
         budget.FillTreasuryBlockPayee(txNew, nFees, fProofOfStake);
-
+    } else if (IsReviveBlock(pindexPrev->nHeight)) {
+        //LogPrintf("FillBlockPayee(): It's time for revive payment! Block %d\n",pindexPrev->nHeight + 1);
+        budget.FillReviveBlockPayee(txNew, nFees, fProofOfStake);
     } else {
         masternodePayments.FillBlockPayee(txNew, nFees, fProofOfStake);
     }

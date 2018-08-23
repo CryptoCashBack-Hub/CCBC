@@ -119,9 +119,11 @@ public:
     int Zerocoin_AccumulatorStartHeight() const { return nAccumulatorStartHeight; }
 
 	std::string vTreasuryRewardAddress;
-    
-        std::string GetTreasuryRewardAddressAtHeight(int height) const;
+    std::string vReviveRewardAddress;
+    std::string GetTreasuryRewardAddressAtHeight(int height) const;
     CScript GetTreasuryRewardScriptAtHeight(int height) const;
+    std::string GetReviveRewardAddressAtHeight(int height) const;
+    CScript GetReviveRewardScriptAtHeight(int height) const;
 
 protected:
     CChainParams() {}
