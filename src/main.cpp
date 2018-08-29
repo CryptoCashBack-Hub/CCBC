@@ -2128,7 +2128,7 @@ int64_t GetBlockValue(int nHeight)
             nSubsidy = GetReviveAward(nHeight);
 
         } else {
-            if (nHeight == 0) {
+            if (nHeight < 1 && nHeight > 0) {
                 nSubsidy = 0 * COIN; //Genesis             
             } else if (nHeight < 10 && nHeight > 1) { //Premine 4 millions coins for swap
                 nSubsidy = 40000 * COIN;
@@ -2414,7 +2414,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     if (nHeight == 0) {
         ret = blockValue * 0;
     } else if (nHeight < 25000 && nHeight > 200) {
-        ret = blockValue / 10 * 4; //40% to get new nodes on network on swap until 60k block
+        ret = blockValue / 10 * 4; //0% to get new nodes on network on swap until 60k block
     } else if (nHeight < 60000 && nHeight > 25000) {
         ret = blockValue / 10 * 4; //40% to give new people a chance to stake rewards, will increase every 5k blocks 5000 / 1440 = 3.5 days
     } else if (nHeight < 65000 && nHeight > 60000) {
