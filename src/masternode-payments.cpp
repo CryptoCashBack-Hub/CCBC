@@ -297,7 +297,7 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
     }
 
     return true;
-}
+
 
     //check if it's valid revive block
 if (IsReviveBlock(nBlockHeight)) {
@@ -337,7 +337,8 @@ if (IsReviveBlock(nBlockHeight)) {
     LogPrint("masternode", "Masternode payment enforcement is disabled, accepting block\n");
 }
 return true;
-}
+  }
+ 
 
 void FillBlockPayee(CMutableTransaction& txNew, int64_t nFees, bool fProofOfStake)
 {
