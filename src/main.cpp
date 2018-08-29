@@ -2157,11 +2157,11 @@ int64_t GetBlockValue(int nHeight)
                 nSubsidy = Params().MaxMoneyOut() - nMoneySupply;
 
             if (nMoneySupply >= Params().MaxMoneyOut())
-                nSubsidy = 0;
+                nSubsidy = 5; //Needs to be 0 at the end
         }
         return nSubsidy;
     }
-}
+
 
 
 CAmount GetSeeSaw(const CAmount& blockValue, int nMasternodeCount, int nHeight)
