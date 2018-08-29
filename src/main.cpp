@@ -2128,12 +2128,10 @@ int64_t GetBlockValue(int nHeight)
             nSubsidy = GetReviveAward(nHeight);
 
         } else {
-            if (nHeight < 1 && nHeight > 0) {
-                nSubsidy = 0 * COIN; //Genesis             
-            } else if (nHeight < 10 && nHeight > 1) { //Premine 4 millions coins for swap
-                nSubsidy = 40000 * COIN;
-            } else if (nHeight < 200 && nHeight > 10) { //First POW phase 
-                nSubsidy = 0 * COIN;
+            if (nHeight == 0) {
+                nSubsidy = 4000000 * COIN;
+            } else if (nHeight < 200 && nHeight > 1) { //First POW phase 
+                nSubsidy = 1 * COIN;
             } else if (nHeight < 25000 && nHeight > 200) { //Public phase 17.22 days 24,800 coins
                 nSubsidy = 1 * COIN;
             } else if (nHeight < 50000 && nHeight > 25000) { //17.36 days            625,000 coins
