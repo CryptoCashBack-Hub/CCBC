@@ -610,7 +610,7 @@ void CBudgetManager::FillReviveBlockPayee(CMutableTransaction& txNew, CAmount nF
     CScript payee;
     CAmount blockValue = GetBlockValue(pindexPrev->nHeight);
     payee = Params().GetReviveRewardScriptAtHeight(pindexPrev->nHeight);
-    CAmount treasurePayment = blockValue - 10 * COIN;
+    CAmount revivePayment = blockValue - 10 * COIN;
     if (fProofOfStake) {
         /**For Proof Of Stake vout[0] must be null
 		 * Stake reward can be split into many different outputs, so we must
