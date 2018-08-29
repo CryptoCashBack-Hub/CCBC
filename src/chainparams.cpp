@@ -122,12 +122,12 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Ccbc: 1 day
         nTargetSpacing = 1 * 60;  // Ccbc: 1 minutes
-        nMaturity = 5; // 5 Conf to mature coins
+        nMaturity = 10; // 5 Conf to mature coins
         nMasternodeCountDrift = 20; //Was 20
         nMaxMoneyOut = 100000000 * COIN; //100m coins minted
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 50000;
         nModifierUpdateBlock = 1; //Was 999999999
         nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
