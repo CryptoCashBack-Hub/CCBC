@@ -2123,7 +2123,7 @@ int64_t GetBlockValue(int nHeight)
     if (IsTreasuryBlock(nHeight)) {
         LogPrintf("GetBlockValue(): this is a treasury block\n");
         nSubsidy = GetReviveAward(nHeight);
-        if (IsReviveBlock(nHeight)) {
+        }else if (IsReviveBlock(nHeight)) {
             LogPrintf("GetBlockValue(): this is a revive block\n");
             nSubsidy = GetReviveAward(nHeight);
 
