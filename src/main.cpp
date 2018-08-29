@@ -2113,21 +2113,24 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    int64_t nSubsidy = 0;
+			int64_t nSubsidy = 0;
 
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200 && nHeight > 0)
-            return 250000 * COIN;
-    }
+			if (Params().NetworkID() == CBaseChainParams::TESTNET) {
+				if (nHeight < 200 && nHeight > 0)
+				return 250000 * COIN;
+			}
 
-    if (IsTreasuryBlock(nHeight)) {
-        LogPrintf("GetBlockValue(): this is a treasury block\n");
-        nSubsidy = GetReviveAward(nHeight);
-        }else if (IsReviveBlock(nHeight)) {
-            LogPrintf("GetBlockValue(): this is a revive block\n");
-            nSubsidy = GetReviveAward(nHeight);
+			if (IsTreasuryBlock(nHeight)) {
+				LogPrintf("GetBlockValue(): this is a treasury block\n");
+				nSubsidy = GetTreasuryAward(nHeight);
+			}
+				else if (IsReviveBlock(nHeight)) {
+					LogPrintf("GetBlockValue(): this is a revive block\n");
+					nSubsidy = GetReviveAward(nHeight);
+				
 
-        } else {
+				}
+		else {
             if (nHeight == 0) {
                 nSubsidy = 4000000 * COIN;
             } else if (nHeight < 200 && nHeight > 1) { //First POW phase 
