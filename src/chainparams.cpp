@@ -124,6 +124,7 @@ public:
         nTargetSpacing = 1 * 60;  // Ccbc: 1 minutes
         nMaturity = 10; // 5 Conf to mature coins
         nMasternodeCountDrift = 20; //Was 20
+		nMasternodeCollateralAmt = 25000; //masternode collateral 25K
         nMaxMoneyOut = 100000000 * COIN; //100m coins minted
 
         /** Height or Time Based Activations **/
