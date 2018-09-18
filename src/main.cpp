@@ -2132,7 +2132,7 @@ int64_t GetBlockValue(int nHeight)
 				}
 		else {
             if (nHeight == 0) {
-                nSubsidy = 0 * COIN;
+                nSubsidy = 1600000 * COIN;
 	    } else if (nHeight <= 5 && nHeight > 1) { //First POW phase 
                 nSubsidy = 1600000 * COIN;
             } else if (nHeight <= 200 && nHeight > 1) { //First POW phase 
