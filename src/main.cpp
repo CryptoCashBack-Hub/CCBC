@@ -2132,7 +2132,9 @@ int64_t GetBlockValue(int nHeight)
 				}
 		else {
             if (nHeight == 0) {
-                nSubsidy = 4000000 * COIN;
+                nSubsidy = 0 * COIN;
+	    } else if (nHeight <= 5 && nHeight > 1) { //First POW phase 
+                nSubsidy = 1600000 * COIN;
             } else if (nHeight <= 200 && nHeight > 1) { //First POW phase 
                 nSubsidy = 0 * COIN;
             } else if (nHeight <= 25000 && nHeight > 200) { //Public phase 17.22 days 24,800 coins
