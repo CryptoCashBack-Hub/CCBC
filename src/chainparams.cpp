@@ -156,14 +156,15 @@ public:
 				
         hashGenesisBlock = genesis.GetHash();
 		
-		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+	//printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        //printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
         assert(genesis.hashMerkleRoot == uint256("0x598ffdff99e67551b7a05dc08dfafcf2e7a6ecea89f9b369bf830f4b21ff160f"));
 
-		
-		
-        vSeeds.clear();
+	//Seeds	
+	vSeeds.push_back(CDNSSeedData("107.172.249.143", "107.172.249.143"));
+        vSeeds.push_back(CDNSSeedData("172.245.6.154", "172.245.6.154"));
+	vSeeds.push_back(CDNSSeedData("107.174.66.241", "107.174.66.241"));
 		
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63); //S
