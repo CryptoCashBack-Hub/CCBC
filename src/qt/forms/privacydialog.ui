@@ -145,7 +145,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Enter an amount of CCBC to convert (mint) to zSmrtc</string>
+                  <string>Enter an amount of CCBC to convert (mint) to zCcbc</string>
                  </property>
                  <property name="text">
                   <string>Convert CCBC to zCCBC</string>
@@ -191,7 +191,7 @@
                <item>
                 <widget class="QLabel" name="labelzXXXAmountValue">
                  <property name="toolTip">
-                  <string>Enter an amount of CCBC to convert to zSmrtc</string>
+                  <string>Enter an amount of CCBC to convert to zCcbc</string>
                  </property>
                  <property name="text">
                   <string>0.000 000 00 CCBC</string>
@@ -223,7 +223,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Reset Zerocoin (zSmrtc) Wallet DB. Deletes transactions that did not make it into the blockchain.</string>
+                  <string>Reset Zerocoin (zCcbc) Wallet DB. Deletes transactions that did not make it into the blockchain.</string>
                  </property>
                  <property name="text">
                   <string>Reset</string>
@@ -476,14 +476,14 @@
                <item>
                 <widget class="QPushButton" name="pushButtonZXxxControl">
                  <property name="text">
-                  <string>zSmrtc Control</string>
+                  <string>zCcbc Control</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QLabel" name="labelzXxxSelected">
                  <property name="text">
-                  <string>zSmrtc Selected:</string>
+                  <string>zCcbc Selected:</string>
                  </property>
                 </widget>
                </item>
@@ -607,7 +607,7 @@ zCCBC are mature when they have more than 20 confirmations AND more than 1 mints
                <item>
                 <widget class="QLabel" name="labelSecurityLevel">
                  <property name="toolTip">
-                  <string>Security Level for Zerocoin (zSmrtc) Transactions. More is better, but needs more time and resources.</string>
+                  <string>Security Level for Zerocoin (zCcbc) Transactions. More is better, but needs more time and resources.</string>
                  </property>
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
@@ -895,7 +895,7 @@ zCCBC are mature when they have more than 20 confirmations AND more than 1 mints
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>Information about the available zSmrtc funds.</string>
+                  <string>Information about the available zCcbc funds.</string>
                  </property>
                  <property name="text">
                   <string>zCCBC Stats:</string>
