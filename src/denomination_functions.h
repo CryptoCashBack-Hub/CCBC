@@ -6,7 +6,7 @@
  * @copyright  Copyright 2017 CCBC Developers
  * @license    This project is released under the MIT license.
  **/
-// Copyright (c) 2015-2017 The CCBC developers
+// Copyright (c) 2015-2017 The PIVX developers
 
 #include "reverse_iterate.h"
 #include "util.h"
