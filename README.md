@@ -10,7 +10,7 @@
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
 <tr><td>Max Coin Supply </td><td>100,000,000 CCBC</td></tr>
-<tr><td>Premine</td><td>4,000,000 CCBC</td></tr>
+<tr><td>Premine</td><td>8,000,000 CCBC</td></tr>
 </table>
 
 
