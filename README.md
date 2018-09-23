@@ -35,7 +35,7 @@
 </table>
 
 
-### Masternode Rewards Per Block, 5000 CCBC Collateral
+### Masternode Rewards Per Block, 25000 CCBC Collateral
 
 <table>
 <tr><th>Block Height</th><th>MN Reward Amount</th><th>PoS Reward Amount</th><th>Duration (Days)</th><th>Development Fee</th></tr>
