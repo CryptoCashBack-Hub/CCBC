@@ -20,7 +20,7 @@
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>0</td><td>250 CCBC</td><td>Genesis Block</td><td>0 Days</td></tr>
-<tr><td>1</td><td>4,000,000 CCBC</td><td>Initial Premine</td><td>0 Days</td></tr>
+<tr><td>1</td><td>8,000,000 CCBC</td><td>Initial Premine</td><td>0 Days</td></tr>
 <tr><td>2-200</td><td>1 CCBC</td><td rowspan=1>Closed Mining</td><td>1 Days</td></tr>
 <tr><th colspan=4>PoS / MN Phase</th></tr>
 <tr><td>200-25000</td><td>1 CCBC</td><td rowspan=1>Coin Swap</td><td>17.22 Days</td></tr>
