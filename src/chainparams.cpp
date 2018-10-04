@@ -325,6 +325,7 @@ public:
     }
 };
 static CTestNetParams testNetParams;
+
 class CRegTestParams : public CTestNetParams
 {
 public:
@@ -373,9 +374,6 @@ public:
     }
 };
 static CRegTestParams regTestParams;
-
-
- * Unit test
 
 class CUnitTestParams : public CMainParams, public CModifiableParams
 {
