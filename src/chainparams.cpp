@@ -6,13 +6,13 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "libzerocoin/Params.h"
+#include "base58.h"
 #include "chainparams.h"
+#include "libzerocoin/Params.h"
+#include "net.h" a
 #include "random.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "net.h"
-#include "base58.h"
 
 #include <assert.h>
 
@@ -56,33 +56,37 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
+	(0, uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"))
+	(20000, uint256("0xf2dbd4586c79205061e26ea20afbac71e1fa3b0a0fd9352af33152543682602f"));
+
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1534438799, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
+    1538584639, // * UNIX timestamp of last checkpoint block
+    40804,      // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint, was 2000
 };
-/*
+
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-	(0, uint256("0x24905e16f6f1c28508f4b03395ee8adaf48f7317451f813741060612163022c7"));
+	(0, uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1532000758,
+    1534438799,
     0,
-    250}; //Was 250
+    250
+};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-	(0, uint256("0x24905e16f6f1c28508f4b03395ee8adaf48f7317451f813741060612163022c7"));
+	(0, uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1532000758,
+    1534438799,
     0,
-    100};
-    */
+    100
+};
+    
 
 libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params() const
 {
@@ -99,7 +103,7 @@ public:
     CMainParams()
     {
         networkID = CBaseChainParams::MAIN;
-        vReviveRewardAddress = "SgMdQaxB7woK4dtudTCWcVizCYhBjzcfuv"; //Fill in address once wallet generated for AQX Revive Team
+        vReviveRewardAddress = "SgMdQaxB7woK4dtudTCWcVizCYhBjzcfuv";   //Fill in address once wallet generated for AQX Revive Team
         vTreasuryRewardAddress = "SdkfmdG4b3uUt6cFZhXvbyPyAVM6GGmxr9"; //Fill in address once wallet generated
         strNetworkID = "main";
         /**
@@ -120,24 +124,24 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Ccbc: 1 day
-        nTargetSpacing = 1 * 60;  // Ccbc: 1 minutes
-        nMaturity = 10; // 5 Conf to mature coins
-        nMasternodeCountDrift = 20; //Was 20
-		nMasternodeCollateralAmt = 25000; //masternode collateral 25K
-        nMaxMoneyOut = 100000000 * COIN; //100m coins minted
+        nTargetTimespan = 1 * 60;         // Ccbc: 1 day
+        nTargetSpacing = 1 * 60;          // Ccbc: 1 minutes
+        nMaturity = 10;                   // 5 Conf to mature coins
+        nMasternodeCountDrift = 20;       //Was 20
+        nMasternodeCollateralAmt = 25000; //masternode collateral 25K
+        nMaxMoneyOut = 100000000 * COIN;  //100m coins minted
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
         nModifierUpdateBlock = 1; //Was 999999999
         nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
-        nZerocoinStartTime = 1534438799;  
-        nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
+        nZerocoinStartTime = 1534438799;
+        nBlockEnforceSerialRange = 1;       //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = ~1; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = ~1; //Last valid accumulator checkpoint
-        
+        nBlockFirstFraudulent = ~1;         //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = ~1;      //Last valid accumulator checkpoint
+
         const char* pszTimestamp = "National Suicide Prevention Hotline 1-800-273-8255";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
@@ -153,26 +157,26 @@ public:
         genesis.nBits = 504365040;
         genesis.nNonce = 647688;
 
-				
+
         hashGenesisBlock = genesis.GetHash();
-		
-	//printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+
+        //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         //printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
         assert(genesis.hashMerkleRoot == uint256("0x598ffdff99e67551b7a05dc08dfafcf2e7a6ecea89f9b369bf830f4b21ff160f"));
 
-	//Teams Seeder
-	vSeeds.push_back(CDNSSeedData("seeder.ccbcoin.club", "seeder.ccbcoin.club"));
-	//Seeds	Community Nodes
+        //Teams Seeder
+        vSeeds.push_back(CDNSSeedData("seeder.ccbcoin.club", "seeder.ccbcoin.club"));
+        //Seeds	Community Nodes
         vSeeds.push_back(CDNSSeedData("144.202.16.251", "144.202.16.251"));
-	vSeeds.push_back(CDNSSeedData("104.238.159.161", "104.238.159.161"));
-	vSeeds.push_back(CDNSSeedData("178.128.116.146", "178.128.116.146"));
-	vSeeds.push_back(CDNSSeedData("95.179.199.170", "95.179.199.170"));
-	vSeeds.push_back(CDNSSeedData("158.69.143.106", "158.69.143.106"));
-	
-	//IPV6 Nodes
-	vSeeds.push_back(CDNSSeedData("[2001:19f0:5:6c99:3b12::1]", "[2001:19f0:5:6c99:3b12::1]"));
-	
+        vSeeds.push_back(CDNSSeedData("104.238.159.161", "104.238.159.161"));
+        vSeeds.push_back(CDNSSeedData("178.128.116.146", "178.128.116.146"));
+        vSeeds.push_back(CDNSSeedData("95.179.199.170", "95.179.199.170"));
+        vSeeds.push_back(CDNSSeedData("158.69.143.106", "158.69.143.106"));
+
+        //IPV6 Nodes
+        vSeeds.push_back(CDNSSeedData("[2001:19f0:5:6c99:3b12::1]", "[2001:19f0:5:6c99:3b12::1]"));
+
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63); //S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 68); //C
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
@@ -196,16 +200,16 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "030262a2a0679d01ab026d375c42b0a4122477123631b870e09665526c322c8899";
         strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
-        nStartMasternodePayments = 1534438799; 
+        nStartMasternodePayments = 1534438799;
 
         /** Zerocoin */
         zerocoinModulus = "0xc95577b6dce0049b0a20c779af38079355abadde1a1d80c353f6cb697a7ae5a087bad39caa5798478551d0f9d91e6267716506f32412de1d19d17588765eb9502b85c6a18abdb05791cfd8b734e960281193705eeece210920cc922b3af3ceb178bf12c22eb565d5767fbf19545639be8953c2c38ffad41f3371e4aac750ac2d7bd614b3faabb453081d5d88fdbb803657a980bc93707e4b14233a2358c97763bf28f7c933206071477e8b371f229bc9ce7d6ef0ed7163aa5dfe13bc15f7816348b328fa2c1e69d5c88f7b94cee7829d56d1842d77d7bb8692e9fc7b7db059836500de8d57eb43c345feb58671503b932829112941367996b03871300f25efb5";
         nMaxZerocoinSpendsPerTransaction = 7; // Assume about 20kb each
-        nMinZerocoinMintFee = 1 * ZCENT; //high fee required for zerocoin mints
-        nMintRequiredConfirmations = 20; //the maximum amount of confirmations until accumulated in 19
+        nMinZerocoinMintFee = 1 * ZCENT;      //high fee required for zerocoin mints
+        nMintRequiredConfirmations = 20;      //the maximum amount of confirmations until accumulated in 19
         nRequiredAccumulation = 1;
-        nDefaultSecurityLevel = 100; //full security level for accumulators
-        nZerocoinHeaderVersion = 4; //Block headers must be this version once zerocoin is active
+        nDefaultSecurityLevel = 100;   //full security level for accumulators
+        nZerocoinHeaderVersion = 4;    //Block headers must be this version once zerocoin is active
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
     }
 
@@ -215,22 +219,20 @@ public:
     }
 };
 
- std::string CChainParams::GetTreasuryRewardAddressAtHeight(int nHeight) const
+std::string CChainParams::GetTreasuryRewardAddressAtHeight(int nHeight) const
 {
     return vTreasuryRewardAddress;
-    
 }
 
-     CScript CChainParams::GetTreasuryRewardScriptAtHeight(int nHeight) const
+CScript CChainParams::GetTreasuryRewardScriptAtHeight(int nHeight) const
 {
     CBitcoinAddress address(GetTreasuryRewardAddressAtHeight(nHeight).c_str());
     assert(address.IsValid());
     CScript script = GetScriptForDestination(address.Get());
     return script;
-    
 }
 
-	 std::string CChainParams::GetReviveRewardAddressAtHeight(int nHeight) const
+std::string CChainParams::GetReviveRewardAddressAtHeight(int nHeight) const
 {
     return vReviveRewardAddress;
 }
@@ -244,7 +246,7 @@ CScript CChainParams::GetReviveRewardScriptAtHeight(int nHeight) const
 
 
 static CMainParams mainParams;
-/*
+
 class CTestNetParams : public CMainParams
 {
 public:
@@ -252,38 +254,38 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0xbf;
-        pchMessageStart[1] = 0x0c;
-        pchMessageStart[2] = 0x6b;
-        pchMessageStart[3] = 0xbd;
-        vAlertPubKey = ParseHex("047f3dc11e937a81a13c84f3959927ed1cd4de72f3aeac13d398bbe92f0e948254af324d09aeb413ef38af01844b44b5d0b186505f479c02491c3173f5418709ba");
-        nDefaultPort = 15520;
-        nEnforceBlockUpgradeMajority = 51;
-        nRejectBlockOutdatedMajority = 75;
-        nToCheckBlockUpgradeMajority = 100;
+        pchMessageStart[0] = 0x1d;
+        pchMessageStart[1] = 0xba;
+        pchMessageStart[2] = 0xc2;
+        pchMessageStart[3] = 0x45;
+        vAlertPubKey = ParseHex("0427032f4aea9ade6b709caa6f302c0850e1ecdc9f4cd2619ef28dcd560afcc65bcd7a97bf58523a450a7c8e6e178c9ced2ed5ff96afd8e88284332a87f18af63f");
+        nDefaultPort = 15521;
+        nEnforceBlockUpgradeMajority = 750;
+        nRejectBlockOutdatedMajority = 950;
+        nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Ccbc: 1 day
         nTargetSpacing = 1 * 60;  // Ccbc: 1 minute
         nLastPOWBlock = 200;
-        nMaturity = 15;
+        nMaturity = 10;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
-        nMaxMoneyOut = 43199500 * COIN;
-        nZerocoinStartHeight = 201576;
-        nZerocoinStartTime = 1501776000;
+        nMaxMoneyOut = 100000000 * COIN;
+        nZerocoinStartHeight = 201;
+        nZerocoinStartTime = 1534438799;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 9891737; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = 9891730; //Last valid accumulator checkpoint
         
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1532000758;
-        genesis.nNonce = 1532538;
+        genesis.nTime = 1534438799;
+        genesis.nNonce = 647688;
 
 	    hashGenesisBlock = genesis.GetHash();
         //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x24905e16f6f1c28508f4b03395ee8adaf48f7317451f813741060612163022c7"));
-		assert(genesis.hashMerkleRoot == uint256("0x90c9871c1afc8d3d630e932cfcef903e726515da597597e746ac43a4fe539a20"));
+            assert(hashGenesisBlock == uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
+            assert(genesis.hashMerkleRoot == uint256("0x598ffdff99e67551b7a05dc08dfafcf2e7a6ecea89f9b369bf830f4b21ff160f"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -311,9 +313,9 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04a01abe03f4ae3f90be6af7c7c2f12800ce4372ec89f4ae45a01431678868a3955c1557d311516bd377941dfc3c8c7f3c339af348ea9238c717679c83628d52e7";
-        strObfuscationPoolDummyAddress = "xp87cG8UEQgzs1Bk67Yk884C7pnQfAeo7q";
-        nStartMasternodePayments = 1532000758; //07/19/2018 @ 11:45am (UTC)
+        strSporkKey = "030262a2a0679d01ab026d375c42b0a4122477123631b870e09665526c322c8899";
+        strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
+        nStartMasternodePayments = 1534438799;
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet
     }
@@ -323,6 +325,7 @@ public:
     }
 };
 static CTestNetParams testNetParams;
+
 class CRegTestParams : public CTestNetParams
 {
 public:
@@ -331,28 +334,28 @@ public:
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
         strNetworkID = "regtest";
-        pchMessageStart[0] = 0x69;
-        pchMessageStart[1] = 0xcf;
-        pchMessageStart[2] = 0x7e;
-        pchMessageStart[3] = 0xac;
+        pchMessageStart[0] = 0x1d;
+        pchMessageStart[1] = 0xba;
+        pchMessageStart[2] = 0xc2;
+        pchMessageStart[3] = 0x45;
         nSubsidyHalvingInterval = 150;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Ccbc: 1 day
+        nTargetTimespan = 1 * 60; // Ccbc: 1 day
         nTargetSpacing = 1 * 60;        // Ccbc: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1532000758;
+        genesis.nTime = 1534438799;
         genesis.nBits = 504365040;
-        genesis.nNonce = 1532538;
+        genesis.nNonce = 647688;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 19883;
+        nDefaultPort = 15222;
         //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         //printf("%s\n", hashGenesisBlock.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x24905e16f6f1c28508f4b03395ee8adaf48f7317451f813741060612163022c7"));
-		assert(genesis.hashMerkleRoot == uint256("0x90c9871c1afc8d3d630e932cfcef903e726515da597597e746ac43a4fe539a20"));
+        assert(hashGenesisBlock == uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
+        assert(genesis.hashMerkleRoot == uint256("0x598ffdff99e67551b7a05dc08dfafcf2e7a6ecea89f9b369bf830f4b21ff160f"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
@@ -372,9 +375,6 @@ public:
 };
 static CRegTestParams regTestParams;
 
-/**
- * Unit test
- */
 class CUnitTestParams : public CMainParams, public CModifiableParams
 {
 public:
@@ -422,10 +422,10 @@ CChainParams& Params(CBaseChainParams::Network network)
     switch (network) {
     case CBaseChainParams::MAIN:
         return mainParams;
-   // case CBaseChainParams::TESTNET:
-      //  return testNetParams;
-   // case CBaseChainParams::REGTEST:
-     //   return regTestParams;
+         case CBaseChainParams::TESTNET:
+          return testNetParams;
+         case CBaseChainParams::REGTEST:
+           return regTestParams;
     default:
         assert(false && "Unimplemented network");
         return mainParams;

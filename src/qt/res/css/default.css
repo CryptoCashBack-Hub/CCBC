@@ -29,7 +29,7 @@ color:#333;
 }
 
     QMenuBar::item:selected {
-        background-color: #f2f0f0;
+        background-color: #cec7c7;
     }
 
 QMenu {
@@ -41,7 +41,7 @@ color:#333;
 }
 
 QMenu::item:selected {
-background-color:#f2f0f0;
+background-color:#cec7c7;
 color:#333;
 }
 
@@ -136,7 +136,7 @@ background-color:#dedbe5;
 /*This is the word highligt sction*/
 /**********************************/
 QWidget {
-    selection-background-color: #f2f0f0; /* Other highlight colors 7e98b0 f2f0f0 */
+    selection-background-color: #cec7c7; /* Other highlight colors 7e98b0 f2f0f0 */
     selection-color: fff;
     outline: 0; /* Remove Annoying Focus Rectangle */
 }
@@ -422,7 +422,7 @@ background:#F8F6F6;
 
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical, QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { /* Define Arrow Button Dimensions */
 background-color:#F8F6F6;
-border: 1px solid #f2f0f0;
+border: 1px solid #cec7c7;
 width:16px;
 height:16px;
 }
@@ -505,7 +505,7 @@ border: 1px solid #d7d7d7;
 }
 
 QDialog .QTabWidget QTabBar::tab {
-background-color:#f2f0f0;
+background-color:#cec7c7;
 color:#333;
 padding-left:10px;
 padding-right:10px;
