@@ -46,7 +46,7 @@ public:
 
     void setModel(WalletModel* model);
     void showOutOfSyncWarning(bool fShow);
-    void setZXxxControlLabels(int64_t nAmount, int nQuantity);
+    void setZCcbcControlLabels(int64_t nAmount, int nQuantity);
 
 public slots:
     void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, 
@@ -76,7 +76,7 @@ private:
 
     int nDisplayUnit;
     bool updateLabel(const QString& address);
-    void sendzXXX();
+    void sendzCCBC();
 
 private slots:
     void on_payTo_textChanged(const QString& address);
@@ -96,11 +96,11 @@ private slots:
 //    void coinControlClipboardLowOutput();
 //    void coinControlClipboardChange();
 
-    void on_pushButtonMintzXXX_clicked();
+    void on_pushButtonMintzCCBC_clicked();
     void on_pushButtonMintReset_clicked();
     void on_pushButtonSpentReset_clicked();
-    void on_pushButtonSpendzXXX_clicked();
-    void on_pushButtonZXxxControl_clicked();
+    void on_pushButtonSpendzCCBC_clicked();
+    void on_pushButtonZCcbcControl_clicked();
     void on_pasteButton_clicked();
     void updateDisplayUnit();
 };
