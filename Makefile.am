@@ -220,9 +220,8 @@ EXTRA_DIST = $(top_srcdir)/share/genbuild.sh qa/pull-tester/rpc-tests.sh qa/pull
 EXTRA_DIST += \
     src/crypto/md_helper.c \
     src/crypto/haval_helper.c \
-    src/crypto/hamsi_helper.c \
-    src/test/bignum.h
-
+    src/crypto/hamsi_helper.c 
+    
 CLEANFILES = $(OSX_DMG) $(BITCOIN_WIN_INSTALLER)
 
 .INTERMEDIATE: $(COVERAGE_INFO)
