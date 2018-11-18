@@ -26,6 +26,8 @@ RUN deps="alpine-sdk curl autoconf automake libtool boost-dev openssl-dev libeve
     apk del $deps && \
     rm -r /opt/db/docs /var/cache/apk/* /wallet /db-$DB_VERSION
 
+VOLUME ["/home/wallet/.ccbc"]
+
 EXPOSE 5520/tcp
 
 USER wallet
