@@ -4,10 +4,8 @@ LABEL   maintainer="Aviator" \
 
 ENV DB_VERSION=4.8.30.NC
 
-ADD . ./wallet
-
-RUN deps="alpine-sdk curl autoconf automake libtool boost-dev openssl-dev libevent-dev" && \
-    apk add -U $deps dumb-init boost boost-program_options libevent libssl1.0 && \
+RUN deps="alpine-sdk curl autoconf automake libtool boost-dev openssl-dev libevent-dev git" && \
+    apk add --no-cache -U $deps dumb-init boost boost-program_options libevent libssl1.0 && \
     curl -L http://download.oracle.com/berkeley-db/db-$DB_VERSION.tar.gz \
     | tar zx && \
     cd /db-$DB_VERSION/build_unix && \
@@ -17,11 +15,17 @@ RUN deps="alpine-sdk curl autoconf automake libtool boost-dev openssl-dev libeve
       --disable-shared \
       --with-pic && \
     make install && \
+    mkdir /wallet &&\
     cd /wallet && \
+    git clone https://github.com/CryptoCashBack-Hub/CCBC.git . &&\   
     ./autogen.sh && \
     ./configure LDFLAGS=-L/opt/db/lib CPPFLAGS=-I/opt/db/include \
       && \
     make install && \
+    strip /usr/local/bin/ccbcd &&\
+    strip /usr/local/bin/ccbc-cli &&\
+    rm /usr/local/bin/ccbc-tx &&\
+    rm /usr/local/bin/test_ccbc &&\
     adduser -D wallet && \
     apk del $deps && \
     rm -r /opt/db/docs /var/cache/apk/* /wallet /db-$DB_VERSION
