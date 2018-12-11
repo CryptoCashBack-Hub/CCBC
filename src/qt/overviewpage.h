@@ -72,11 +72,11 @@ private slots:
     void handleTransactionClicked(const QModelIndex& index);
     void updateAlerts(const QString& warnings);
     void updateWatchOnlyLabels(bool showWatchOnly);
-    void pushButton_Website();
-    void pushButton_Discord();
-    void pushButton_Github();
-    void pushButton_Twitter();
-    void pushButton_Explorer();
+    //void pushButton_Website();
+    //void pushButton_Discord();
+    //void pushButton_Github();
+    //void pushButton_Twitter();
+    //void pushButton_Explorer();
     void updateMasternodeInfo();
     void updatBlockChainInfo();
 };
