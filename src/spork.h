@@ -21,13 +21,13 @@ using namespace std;
 using namespace boost;
 
 /*
-    Don't ever reuse these IDs for other sporks
-    - This would result in old clients getting confused about which spork is for what
+Don't ever reuse these IDs for other sporks
+- This would result in old clients getting confused about which spork is for what
 
-    Sporks 11,12, and 16 to be removed with 1st zerocoin release
+Sporks 11,12, and 16 to be removed with 1st zerocoin release
 */
 #define SPORK_START 10001
-#define SPORK_END 10018
+#define SPORK_END 10019
 
 #define SPORK_2_SWIFTTX 10001
 #define SPORK_3_SWIFTTX_BLOCK_FILTERING 10002
@@ -44,6 +44,7 @@ using namespace boost;
 #define SPORK_16_ZEROCOIN_MAINTENANCE_MODE 10015
 #define SPORK_17_TREASURY_PAYMENT_ENFORCEMENT 10016
 #define SPORK_18_REVIVE_PAYMENT_ENFORCEMENT 10017
+#define SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3 10018
 
 #define SPORK_2_SWIFTTX_DEFAULT 978307200                         //ON 01/01/2001 @ 12:00am (UTC)
 #define SPORK_3_SWIFTTX_BLOCK_FILTERING_DEFAULT 1424217600        //ON 02/18/2015 @ 12:00am (UTC)
@@ -55,10 +56,11 @@ using namespace boost;
 #define SPORK_11_LOCK_INVALID_UTXO_DEFAULT 4070908800             //OFF 01/01/2099 @ 12:00am (UTC)
 #define SPORK_13_ENABLE_SUPERBLOCKS_DEFAULT 4070908800            //OFF 01/01/2099 @ 12:00am (UTC)
 #define SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT 4070908800      //OFF 01/01/2099 @ 12:00am (UTC)
-#define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT 4070908800    //OFF 01/01/2099 @ 12:00am (UTC)
+#define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT 4070908800    //This was turned on by TFinch
 #define SPORK_16_ZEROCOIN_MAINTENANCE_MODE_DEFAULT 4070908800     //OFF 01/01/2099 @ 12:00am (UTC)
 #define SPORK_17_TREASURY_PAYMENT_ENFORCEMENT_DEFAULT 4070908800  //OFF 01/01/2099 @ 12:00am (UTC)
-#define SPORK_18_REVIVE_PAYMENT_ENFORCEMENT_DEFAULT 4070908800    //OFF 01/01/2099 @ 12:00am (UTC)
+#define SPORK_18_REVIVE_PAYMENT_ENFORCEMENT_DEFAULT 4070908800    //OFF This will be turned on if Admin in AQX is not active on 1/1/2019
+#define SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3_DEFAULT 4070908800    //OFF 01/01/2099 @ 12:00am (UTC)
 
 class CSporkMessage;
 class CSporkManager;
@@ -81,48 +83,48 @@ void ReprocessBlocks(int nBlocks);
 class CSporkMessage
 {
 public:
-    std::vector<unsigned char> vchSig;
-    int nSporkID;
-    int64_t nValue;
-    int64_t nTimeSigned;
+	std::vector<unsigned char> vchSig;
+	int nSporkID;
+	int64_t nValue;
+	int64_t nTimeSigned;
 
-    uint256 GetHash()
-    {
-        uint256 n = XEVAN(BEGIN(nSporkID), END(nTimeSigned));
-        return n;
-    }
+	uint256 GetHash()
+	{
+		uint256 n = XEVAN(BEGIN(nSporkID), END(nTimeSigned));
+		return n;
+	}
 
-    ADD_SERIALIZE_METHODS;
+	ADD_SERIALIZE_METHODS;
 
-    template <typename Stream, typename Operation>
-    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
-    {
-        READWRITE(nSporkID);
-        READWRITE(nValue);
-        READWRITE(nTimeSigned);
-        READWRITE(vchSig);
-    }
+	template <typename Stream, typename Operation>
+	inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
+	{
+		READWRITE(nSporkID);
+		READWRITE(nValue);
+		READWRITE(nTimeSigned);
+		READWRITE(vchSig);
+	}
 };
 
 
 class CSporkManager
 {
 private:
-    std::vector<unsigned char> vchSig;
-    std::string strMasterPrivKey;
+	std::vector<unsigned char> vchSig;
+	std::string strMasterPrivKey;
 
 public:
-    CSporkManager()
-    {
-    }
+	CSporkManager()
+	{
+	}
 
-    std::string GetSporkNameByID(int id);
-    int GetSporkIDByName(std::string strName);
-    bool UpdateSpork(int nSporkID, int64_t nValue);
-    bool SetPrivKey(std::string strPrivKey);
-    bool CheckSignature(CSporkMessage& spork);
-    bool Sign(CSporkMessage& spork);
-    void Relay(CSporkMessage& msg);
+	std::string GetSporkNameByID(int id);
+	int GetSporkIDByName(std::string strName);
+	bool UpdateSpork(int nSporkID, int64_t nValue);
+	bool SetPrivKey(std::string strPrivKey);
+	bool CheckSignature(CSporkMessage& spork);
+	bool Sign(CSporkMessage& spork);
+	void Relay(CSporkMessage& msg);
 };
 
 #endif
