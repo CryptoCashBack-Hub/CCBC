@@ -2143,43 +2143,32 @@ int64_t GetBlockValue(int nHeight)
 		nSubsidy = GetReviveAward(nHeight);
 	}
 
-	else {
-		if (nHeight == 0) {
-			nSubsidy = 1600000 * COIN;
-		}
-		else if (nHeight <= 5 && nHeight > 1) { //First POW phase
-			nSubsidy = 1600000 * COIN;
-		}
-		else if (nHeight <= 200 && nHeight > 1) { //First POW phase
-			nSubsidy = 0 * COIN;
-		}
-		else if (nHeight <= 25000 && nHeight > 200) { //Public phase 17.22 days 24,800 coins
-			nSubsidy = 1 * COIN;
-		}
-		else if (nHeight <= 50000 && nHeight > 25000) { //17.36 days            625,000 coins
-			nSubsidy = 25 * COIN;
-		}
-		else if (nHeight <= 75000 && nHeight > 50000) { //17.36 days            1,250,000 coins
-			nSubsidy = 50 * COIN;
-		}
-		else if (nHeight <= 100000 && nHeight > 75000) { //17.36 days           2,125,000 coins
-			nSubsidy = 85 * COIN;
-		}
-		else if (nHeight <= 125000 && nHeight > 100000) { //17.36 days          1,875,000 coins
-			nSubsidy = 75 * COIN;
-		}
-		else if (nHeight <= 168000 && nHeight > 125000) { //30 days             2,150,000 coins
-			nSubsidy = 50 * COIN;
-		}
-		else if (nHeight <= 297600 && nHeight > 168000) { //90 days             3,240,000 coins
-			nSubsidy = 25 * COIN;
-		}
-		else if (nHeight <= 556800 && nHeight > 297600) { //180 days            2,592,000 coins
-			nSubsidy = 10 * COIN;
-		}
-		else if (nHeight > 556800) { //Till max supply           Total coins used 17,882,000
-			nSubsidy = 5 * COIN;        //57,026.38 days will max supply is reached
-		}
+    else {
+            if (nHeight == 0) {
+                nSubsidy = 1600000 * COIN;
+            } else if (nHeight <= 5 && nHeight > 1) { //First POW phase
+                nSubsidy = 1600000 * COIN;
+            } else if (nHeight <= 200 && nHeight > 1) { //First POW phase
+                nSubsidy = 0 * COIN;
+            } else if (nHeight <= 25000 && nHeight > 200) { //Public phase 17.22 days 24,800 coins
+                nSubsidy = 1 * COIN;
+            } else if (nHeight <= 50000 && nHeight > 25000) { //17.36 days            625,000 coins
+                nSubsidy = 25 * COIN;
+            } else if (nHeight <= 75000 && nHeight > 50000) { //17.36 days            1,250,000 coins
+                nSubsidy = 50 * COIN;
+            } else if (nHeight <= 100000 && nHeight > 75000) { //17.36 days           2,125,000 coins
+                nSubsidy = 85 * COIN;
+            } else if (nHeight <= 125000 && nHeight > 100000) { //17.36 days          1,875,000 coins
+                nSubsidy = 75 * COIN;
+            } else if (nHeight <= 168000 && nHeight > 125000) { //30 days             2,150,000 coins
+                nSubsidy = 50 * COIN;
+            } else if (nHeight <= 297600 && nHeight > 168000) { //90 days             3,240,000 coins
+                nSubsidy = 25 * COIN;
+            } else if (nHeight <= 556800 && nHeight > 297600) { //180 days            2,592,000 coins
+                nSubsidy = 10 * COIN;
+            } else if (nHeight > 556800) { //Till max supply           Total coins used 17,882,000
+                nSubsidy = 5 * COIN;        //57,026.38 days will max supply is reached
+            }
 
 		int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
 		if (nMoneySupply + nSubsidy >= Params().MaxMoneyOut())
@@ -2586,7 +2575,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 		ret = blockValue / 10 * 9; //90%
 	}
 	else if (nHeight > 175000) {
-		return GetSeeSaw(blockValue, nMasternodeCount, nHeight); // Start of seesaw rewards
+        ret = blockValue / 10 * 9; //90%
 	}
 
 	return ret;

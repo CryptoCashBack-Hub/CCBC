@@ -444,7 +444,7 @@ void OverviewPage::updateMasternodeInfo()
 			ui->roi->setText(mn1 == 0 ? "-" : QString::number(roi6, 'f', 0).append("  CCBC"));
 			ui->roi_1->setText(mn1 == 0 ? " " : QString::number(25000 / roi6, 'f', 1).append(" days"));
 		}
-		else if (chainActive.Height() <= 175000 && chainActive.Height() > 150000) { //90%
+		else if (chainActive.Height() > 150000) { //90%
 
 			ui->roi->setText(mn1 == 0 ? "-" : QString::number(roi7, 'f', 0).append("  CCBC"));
 			ui->roi_1->setText(mn1 == 0 ? " " : QString::number(25000 / roi7, 'f', 1).append(" days"));
