@@ -1,4 +1,4 @@
-### Ccbc is a fork of [CCBC](https://github.com/CCBC-Project/CCBC) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
+### CCBC is a fork of [PIVX](https://github.com/PIVX-Project/PIVX) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
 
 
 # Ccbc Core integration/staging repository
