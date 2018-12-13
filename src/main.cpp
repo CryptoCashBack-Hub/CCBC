@@ -2528,57 +2528,40 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 	// Changes alot and levels out to seesaw at end.
 	if (nHeight == 0) {
 		ret = blockValue * 0;
-	}
-	else if (nHeight <= 25000 && nHeight > 200) {
+	}else if (nHeight <= 25000 && nHeight > 200) {
 		ret = blockValue / 10 * 6; //60%
-	}
-	else if (nHeight <= 60000 && nHeight > 25000) {
+	}else if (nHeight <= 60000 && nHeight > 25000) {
 		ret = blockValue / 10 * 6; //60%
-	}
-	else if (nHeight <= 65000 && nHeight > 60000) {
+	}else if (nHeight <= 65000 && nHeight > 60000) {
 		ret = blockValue / 10 * 6.5; //65%
-	}
-	else if (nHeight <= 70000 && nHeight > 65000) {
+	}else if (nHeight <= 70000 && nHeight > 65000) {
 		ret = blockValue / 10 * 6.6; //66%
-	}
-	else if (nHeight <= 75000 && nHeight > 70000) {
+	}else if (nHeight <= 75000 && nHeight > 70000) {
 		ret = blockValue / 10 * 6.7; //67%
-	}
-	else if (nHeight <= 80000 && nHeight > 75000) {
+	}else if (nHeight <= 80000 && nHeight > 75000) {
 		ret = blockValue / 10 * 6.8; //68%
-	}
-	else if (nHeight <= 85000 && nHeight > 80000) {
+	}else if (nHeight <= 85000 && nHeight > 80000) {
 		ret = blockValue / 10 * 6.9; //69%
-	}
-	else if (nHeight <= 88000 && nHeight > 85000) {
+	}else if (nHeight <= 88000 && nHeight > 85000) {
 		ret = blockValue / 10 * 7; //70%
-	}
-	else if (nHeight <= 91000 && nHeight > 88000) {
+	}else if (nHeight <= 91000 && nHeight > 88000) {
 		ret = blockValue / 10 * 7.2; //72%
-	}
-	else if (nHeight <= 94000 && nHeight > 91000) {
+	}else if (nHeight <= 94000 && nHeight > 91000) {
 		ret = blockValue / 10 * 7.4; //74%
-	}
-	else if (nHeight <= 97000 && nHeight > 94000) {
+	}else if (nHeight <= 97000 && nHeight > 94000) {
 		ret = blockValue / 10 * 7.6; //76%
-	}
-	else if (nHeight <= 100000 && nHeight > 97000) {
+	}else if (nHeight <= 100000 && nHeight > 97000) {
 		ret = blockValue / 10 * 7.8; //78%
-	}
-	else if (nHeight <= 125000 && nHeight > 100000) {
+	}else if (nHeight <= 125000 && nHeight > 100000) {
 		ret = blockValue / 10 * 8; //80%
-	}
-	else if (nHeight <= 150000 && nHeight > 125000) {
+	}else if (nHeight <= 150000 && nHeight > 125000) {
 		ret = blockValue / 10 * 8.5; //85%
-	}
-	else if (nHeight <= 175000 && nHeight > 150000) {
+	}else if (nHeight <= 175000 && nHeight > 150000) {
 		ret = blockValue / 10 * 9; //90%
-	}
-	else if (nHeight > 175000) {
+	}else if (nHeight > 175000) {
         ret = blockValue / 10 * 9; //90%
 	}
-
-	return ret;
+		return ret;
 }
 
 //Treasury blocks start from 60,000 and then each block after
