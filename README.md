@@ -54,8 +54,8 @@
 <tr><td>94000-97000 </td><td>76%</td><td>24%</td><td>2.08 Days</td><td>10%</td></tr>
 <tr><td>97000-100000 </td><td>78%</td><td>22%</td><td>2.08 Days</td><td>10%</td></tr>
 <tr><td>100000-125000 </td><td>80%</td><td>20%</td><td>17.36 Days</td><td>10%</td></tr>
-<tr><td>125000-150000 </td><td>85%</td><td>15%</td><td>17.36 Days</td><td>10%</td></tr>
-<tr><td>150000-End Supply </td><td>90%</td><td>10%</td><td>17.36 Days</td><td>10%</td></tr>
+<tr><td>125000-150000 </td><td>85%</td><td>15%</td><td>17.36 Days</td><td>5%</td></tr>
+<tr><td>150000-End Supply </td><td>90%</td><td>10%</td><td>17.36 Days</td><td>5%</td></tr>
 </table>
 
 MN Port: 5520
