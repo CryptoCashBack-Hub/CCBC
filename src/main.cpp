@@ -2179,6 +2179,7 @@ int64_t GetBlockValue(int nHeight)
 	return nSubsidy;
 }
 
+/*
 CAmount GetSeeSaw(const CAmount& blockValue, int nMasternodeCount, int nHeight)
 {
 	//if a mn count is inserted into the function we are looking for a specific result for a masternode count
@@ -2515,6 +2516,7 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nMasternodeCount, int nHeight)
 	}
 	return ret;
 }
+*/
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
