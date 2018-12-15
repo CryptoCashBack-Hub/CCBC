@@ -21,7 +21,7 @@ class WalletModel;
 
 namespace Ui
 {
-class PrivacyDialog;
+	class PrivacyDialog;
 }
 
 QT_BEGIN_NAMESPACE
@@ -31,78 +31,79 @@ QT_END_NAMESPACE
 /** Dialog for requesting payment of bitcoins */
 class PrivacyDialog : public QDialog
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    enum ColumnWidths {
-        DATE_COLUMN_WIDTH = 130,
-        LABEL_COLUMN_WIDTH = 120,
-        AMOUNT_MINIMUM_COLUMN_WIDTH = 160,
-        MINIMUM_COLUMN_WIDTH = 130
-    };
+	enum ColumnWidths {
+		DATE_COLUMN_WIDTH = 130,
+		LABEL_COLUMN_WIDTH = 120,
+		AMOUNT_MINIMUM_COLUMN_WIDTH = 160,
+		MINIMUM_COLUMN_WIDTH = 130
+	};
 
-    explicit PrivacyDialog(QWidget* parent = 0);
-    ~PrivacyDialog();
+	explicit PrivacyDialog(QWidget* parent = 0);
+	~PrivacyDialog();
 
-    void setModel(WalletModel* model);
-    void showOutOfSyncWarning(bool fShow);
-    void setZCcbcControlLabels(int64_t nAmount, int nQuantity);
+	void setModel(WalletModel* model);
+	void showOutOfSyncWarning(bool fShow);
+	void setZCcbcControlLabels(int64_t nAmount, int nQuantity);
 
-public slots:
-    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, 
-                    const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
-                    const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
+	public slots:
+	void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
+		const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
+		const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
+
 protected:
-    virtual void keyPressEvent(QKeyEvent* event);
+	virtual void keyPressEvent(QKeyEvent* event);
 
 private:
-    Ui::PrivacyDialog* ui;
-    QTimer* timer;
-    GUIUtil::TableViewLastColumnResizingFixer* columnResizingFixer;
-    WalletModel* walletModel;
-    QMenu* contextMenu;
-    CAmount currentBalance;
-    CAmount currentUnconfirmedBalance;
-    CAmount currentImmatureBalance;
-    CAmount currentZerocoinBalance;
-    CAmount currentUnconfirmedZerocoinBalance;
-    CAmount currentImmatureZerocoinBalance;
-    CAmount currentWatchOnlyBalance;
-    CAmount currentWatchUnconfBalance;
-    CAmount currentWatchImmatureBalance;
-    
-    int nSecurityLevel = 0;
-    bool fMinimizeChange = false;
+	Ui::PrivacyDialog* ui;
+	QTimer* timer;
+	GUIUtil::TableViewLastColumnResizingFixer* columnResizingFixer;
+	WalletModel* walletModel;
+	QMenu* contextMenu;
+	CAmount currentBalance;
+	CAmount currentUnconfirmedBalance;
+	CAmount currentImmatureBalance;
+	CAmount currentZerocoinBalance;
+	CAmount currentUnconfirmedZerocoinBalance;
+	CAmount currentImmatureZerocoinBalance;
+	CAmount currentWatchOnlyBalance;
+	CAmount currentWatchUnconfBalance;
+	CAmount currentWatchImmatureBalance;
 
-    int nDisplayUnit;
-    bool updateLabel(const QString& address);
-    void sendzCCBC();
+	int nSecurityLevel = 0;
+	bool fMinimizeChange = false;
 
-private slots:
-    void on_payTo_textChanged(const QString& address);
-    void on_addressBookButton_clicked();
-//    void coinControlFeatureChanged(bool);
-    void coinControlButtonClicked();
-//    void coinControlChangeChecked(int);
-//    void coinControlChangeEdited(const QString&);
-    void coinControlUpdateLabels();
+	int nDisplayUnit;
+	bool updateLabel(const QString& address);
+	void sendzCCBC();
 
-    void coinControlClipboardQuantity();
-    void coinControlClipboardAmount();
-//    void coinControlClipboardFee();
-//    void coinControlClipboardAfterFee();
-//    void coinControlClipboardBytes();
-//    void coinControlClipboardPriority();
-//    void coinControlClipboardLowOutput();
-//    void coinControlClipboardChange();
+	private slots:
+	void on_payTo_textChanged(const QString& address);
+	void on_addressBookButton_clicked();
+	//    void coinControlFeatureChanged(bool);
+	void coinControlButtonClicked();
+	//    void coinControlChangeChecked(int);
+	//    void coinControlChangeEdited(const QString&);
+	void coinControlUpdateLabels();
 
-    void on_pushButtonMintzCCBC_clicked();
-    void on_pushButtonMintReset_clicked();
-    void on_pushButtonSpentReset_clicked();
-    void on_pushButtonSpendzCCBC_clicked();
-    void on_pushButtonZCcbcControl_clicked();
-    void on_pasteButton_clicked();
-    void updateDisplayUnit();
+	void coinControlClipboardQuantity();
+	void coinControlClipboardAmount();
+	//    void coinControlClipboardFee();
+	//    void coinControlClipboardAfterFee();
+	//    void coinControlClipboardBytes();
+	//    void coinControlClipboardPriority();
+	//    void coinControlClipboardLowOutput();
+	//    void coinControlClipboardChange();
+
+	void on_pushButtonMintzCCBC_clicked();
+	void on_pushButtonMintReset_clicked();
+	void on_pushButtonSpentReset_clicked();
+	void on_pushButtonSpendzCCBC_clicked();
+	void on_pushButtonZCcbcControl_clicked();
+	void on_pasteButton_clicked();
+	void updateDisplayUnit();
 };
 
 #endif // BITCOIN_QT_PRIVACYDIALOG_H
