@@ -2735,31 +2735,6 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QLabel" name="labelCoinControlChangeLabel">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="margin">
-      <number>3</number>
-     </property>
-    </widget>
-   </item>
    <item row="4" column="0" colspan="3">
     <widget class="Line" name="line_2">
      <property name="maximumSize">
@@ -2774,7 +2749,6 @@
     </widget>
    </item>
   </layout>
-  <zorder>labelCoinControlChangeLabel</zorder>
   <zorder>zCCBCLabel</zorder>
   <zorder>line_2</zorder>
   <zorder>dummyHideWidget</zorder>
