@@ -676,7 +676,7 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
 	ui->labelzBalanceMature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, matureZerocoinBalance, false, BitcoinUnits::separatorAlways));
 
 	// Display global supply
-	ui->labelZsupplyAmount->setText(QString::number(chainActive.Tip()->GetZerocoinSupply() / COIN) + QString(" <b>zPIV </b> "));
+	ui->labelZsupplyAmount->setText(QString::number(chainActive.Tip()->GetZerocoinSupply() / COIN) + QString(" <b>zCCBC </b> "));
 
 	for (auto denom : libzerocoin::zerocoinDenomList) {
 		int64_t nSupply = chainActive.Tip()->mapZerocoinSupply.at(denom);

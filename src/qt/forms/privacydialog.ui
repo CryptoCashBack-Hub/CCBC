@@ -874,14 +874,14 @@
             <widget class="QLabel" name="label_AutoMintStatus">
              <property name="toolTip">
               <string>
-                                      Show the current status of automatic zPIV minting.
+                                      Show the current status of automatic zCCBC minting.
 
                                       To change the status (restart required):
-                                      - enable: add 'enablezeromint=1' to pivx.conf
-                                      - disable: add 'enablezeromint=0' to pivx.conf
+                                      - enable: add 'enablezeromint=1' to ccbc.conf
+                                      - disable: add 'enablezeromint=0' to ccbc.conf
 
                                       To change the percentage (no restart required):
-                                      - menu Settings-&gt;Options-&gt;Percentage of autominted zPIV
+                                      - menu Settings-&gt;Options-&gt;Percentage of autominted zCCBC
 
                                     </string>
              </property>
@@ -1010,7 +1010,7 @@
               </font>
              </property>
              <property name="toolTip">
-              <string>Total Balance including unconfirmed and immature zPIV</string>
+              <string>Total Balance including unconfirmed and immature zCCBC</string>
              </property>
              <property name="text">
               <string>Total Zerocoin  Balance:</string>
@@ -1048,7 +1048,7 @@
               </font>
              </property>
              <property name="toolTip">
-              <string>Total Balance including unconfirmed and immature zPIV</string>
+              <string>Total Balance including unconfirmed and immature zCCBC</string>
              </property>
              <property name="text">
               <string>0 zCCBC</string>
