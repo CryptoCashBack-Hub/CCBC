@@ -73,7 +73,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 12, copyrightTextDash);
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 24, copyrightTextCCBCX);
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 36, copyrightTextCcbc);
-    pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 45, copyrightDisclaimer;
+    pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 45, copyrightDisclaimer);
 
     // draw additional text if special network
     if (!titleAddText.isEmpty()) {
