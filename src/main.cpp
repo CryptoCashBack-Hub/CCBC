@@ -6806,11 +6806,11 @@ int ActiveProtocol()
 	// SPORK_15 will be used after SPORK_14 is used and commented out from being turned off.
 	// SPORK_15 has been turned on and will be commented out to prevent from being turned off. 
 	// Approved by TFinch 11/29/2018
-	/*
+	
 	if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
 	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-	*/
+	
 
 	// SPORK_19 will be used after SPORK_15 is used and commented out from being turned off.
 	// This will be turned on after first of the year to enforce me spork privkey!
