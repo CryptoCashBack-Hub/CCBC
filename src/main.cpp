@@ -2574,6 +2574,7 @@ int nTreasuryBlockStep = 1440;
 bool IsTreasuryBlock(int nHeight)
 {
 	//This is put in for when dev fee is turned off.
+    /*
 	if (nHeight < nStartTreasuryBlock)
 		return false;
 	else if (IsSporkActive(SPORK_17_TREASURY_PAYMENT_ENFORCEMENT))
@@ -2581,16 +2582,16 @@ bool IsTreasuryBlock(int nHeight)
 	else if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0)
 		return true;
 	else
-		return false;
+		return false;*/
 
-	/*
+	
 	if (nHeight < nStartTreasuryBlock)
 	return false;
 	else if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0)
 	return true;
 	else
 	return false;
-	*/
+	
 }
 
 int64_t GetTreasuryAward(int nHeight)
@@ -2635,7 +2636,7 @@ bool IsReviveBlock(int nHeight)
 	// Old fee for AQX before admin gave up on project
 	// CCBC will not pay for revival fee since CCBC dev did all work
 	// And AQX team didnt help like promised.
-
+    /*
 	if (nHeight < nStartReviveBlock)
 		return false;
 	else if (IsSporkActive(SPORK_18_REVIVE_PAYMENT_ENFORCEMENT))
@@ -2643,16 +2644,16 @@ bool IsReviveBlock(int nHeight)
 	else if ((nHeight - nStartReviveBlock) % nReviveBlockStep == 0)
 		return true;
 	else
-		return false;
+		return false;*/
 
-	/*
+	
 	if (nHeight < nStartReviveBlock)
 	return false;
 	else if ((nHeight - nStartReviveBlock) % nReviveBlockStep == 0)
 	return true;
 	else
 	return false;
-	*/
+	
 }
 
 int64_t GetReviveAward(int nHeight)
