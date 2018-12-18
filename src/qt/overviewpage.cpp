@@ -312,11 +312,11 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelWatchImmature->setVisible(showWatchOnlyImmature && showWatchOnly); // show watch-only immature balance
 
     // CCBC Locked
-    //bool showCCBCLocked = settingShowAllBalances || nLockedBalance != 0;
-    //bool showWatchOnlyCCBCLocked = showCCBCLocked || nWatchOnlyLockedBalance != 0;
-    //ui->labelLockedBalanceText->setVisible(showCCBCLocked || showWatchOnlyCCBCLocked);
-    //ui->labelLockedBalance->setVisible(showCCBCLocked || showWatchOnlyCCBCLocked);
-    //ui->labelWatchLocked->setVisible(showWatchOnlyCCBCLocked && showWatchOnly);
+    bool showCCBCLocked = settingShowAllBalances || nLockedBalance != 0;
+    bool showWatchOnlyCCBCLocked = showCCBCLocked || nWatchOnlyLockedBalance != 0;
+    ui->labelLockedBalanceText->setVisible(showCCBCLocked || showWatchOnlyCCBCLocked);
+    ui->labelLockedBalance->setVisible(showCCBCLocked || showWatchOnlyCCBCLocked);
+    ui->labelWatchLocked->setVisible(showWatchOnlyCCBCLocked && showWatchOnly);
 
     // zCCBC
     //bool showzCCBCAvailable = settingShowAllBalances || zerocoinBalance != matureZerocoinBalance;
