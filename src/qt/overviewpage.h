@@ -38,8 +38,7 @@ public:
     void showOutOfSyncWarning(bool fShow);
 
 public slots:
-    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, 
-                    //const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
+    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
                     const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
 
 signals:
@@ -55,15 +54,11 @@ private:
     CAmount currentBalance;
     CAmount currentUnconfirmedBalance;
     CAmount currentImmatureBalance;
-    //CAmount currentZerocoinBalance;
-    //CAmount currentUnconfirmedZerocoinBalance;
-    //CAmount currentimmatureZerocoinBalance;
     CAmount currentWatchOnlyBalance;
     CAmount currentWatchUnconfBalance;
     CAmount currentWatchImmatureBalance;
     int nDisplayUnit;
-    //void getPercentage(CAmount nTotalBalance, CAmount nZerocoinBalance, QString& sCCBCPercentage, QString& szCCBCPercentage);
-
+    
     TxViewDelegate* txdelegate;
     TransactionFilterProxy* filter;
 
