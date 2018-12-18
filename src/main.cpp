@@ -184,7 +184,7 @@ set<CBlockIndex*> setDirtyBlockIndex;
 
 /** Dirty block file entries. */
 set<int> setDirtyFileInfo;
-} // anon namespace
+} // namespace
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -212,7 +212,7 @@ struct CMainSignals {
     boost::signals2::signal<void(const CBlock&, const CValidationState&)> BlockChecked;
 } g_signals;
 
-} // anon namespace
+} // namespace
 
 void RegisterValidationInterface(CValidationInterface* pwalletIn)
 {
@@ -545,7 +545,7 @@ void FindNextBlocksToDownload(NodeId nodeid, unsigned int count, std::vector<CBl
     }
 }
 
-} // anon namespace
+} // namespace
 
 bool GetNodeStateStats(NodeId nodeid, CNodeStateStats& stats)
 {
@@ -6602,14 +6602,23 @@ int ActiveProtocol()
     // SPORK_14 will remove early wallet adopters of protocol 70002 where max supply didnt have cap and
     // seesaw masternode amount was set to 5k instead of 25k collateral
     /*
-        if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
-            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-        return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-*/
+	if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
+	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
+	*/
 
     // SPORK_15 will be used after SPORK_14 is used and commented out from being turned off.
+    // SPORK_15 has been turned on and will be commented out to prevent from being turned off.
+    // Approved by TFinch 11/29/2018
+    /*
+	if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
+	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
+	*/
 
-    if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
+    // SPORK_19 will be used after SPORK_15 is used and commented out from being turned off.
+    // This will be turned on after first of the year to enforce me spork privkey!
+    if (IsSporkActive(SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3))
         return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
