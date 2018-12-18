@@ -2538,7 +2538,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../ccbc.qrc">
                  <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
                </property>
                <property name="shortcut">
@@ -2555,7 +2555,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../ccbc.qrc">
                  <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
                </property>
                <property name="shortcut">
@@ -2774,6 +2774,8 @@
     </widget>
    </item>
   </layout>
+  <zorder>zCCBCLabel</zorder>
+  <zorder>line_2</zorder>
   <zorder>labelCoinControlChangeLabel</zorder>
   <zorder>dummyHideWidget</zorder>
   <zorder>WarningLabel</zorder>
@@ -2787,7 +2789,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../smrtc.qrc"/>
+  <include location="../ccbc.qrc"/>
  </resources>
  <connections/>
 </ui>
