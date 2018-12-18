@@ -2440,10 +2440,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         ret = blockValue / 10 * 8.5; //85%
     } else if (nHeight <= 175000 && nHeight > 150000) {
         ret = blockValue / 10 * 9; //90%
-    } else {
-        return GetSeeSaw(blockValue, nMasternodeCount, nHeight); // Start of seesaw rewards
+    } else if (nHeight > 175000) {
+        ret = blockValue / 10 * 9; //90%
     }
-
     return ret;
 }
 
