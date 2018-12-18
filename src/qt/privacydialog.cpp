@@ -666,9 +666,9 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
 
 	//ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
 
-	ui->labelzAvailableAmount->setText(QString::number(zerocoinBalance / COIN) + QString(" zCCBC "));
-	ui->labelzAvailableAmount_2->setText(QString::number(matureZerocoinBalance / COIN) + QString(" zCCBC "));
-	ui->labelzCCBCAmountValue->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance - nLockedBalance, false, BitcoinUnits::separatorAlways));
+	//ui->labelzAvailableAmount->setText(QString::number(zerocoinBalance / COIN) + QString(" zCCBC "));
+	//ui->labelzAvailableAmount_2->setText(QString::number(matureZerocoinBalance / COIN) + QString(" zCCBC "));
+	//ui->labelzCCBCAmountValue->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance - nLockedBalance, false, BitcoinUnits::separatorAlways));
 
 	if (pwalletMain) {
 		nLockedBalance = pwalletMain->GetLockedCoins();
