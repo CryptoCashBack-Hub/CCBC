@@ -1245,6 +1245,8 @@ public:
         return nCredit;
     }
 
+    CAmount GetLockedWatchOnlyCredit() const;
+
     CAmount GetChange() const
     {
         if (fChangeCached)
