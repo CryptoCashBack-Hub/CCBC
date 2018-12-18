@@ -435,11 +435,11 @@ void OverviewPage::updateAlerts(const QString& warnings)
     this->ui->labelAlerts->setText(warnings);
 }
 
-void OverviewPage::hideOrphans(bool fHide)
-{
-    if (filter)
-        filter->setHideOrphans(fHide);
-}
+//void OverviewPage::hideOrphans(bool fHide)
+//{
+  //  if (filter)
+  //      filter->setHideOrphans(fHide);
+//}
 
 //All credit goes to the ESB team for developing this. https://github.com/BlockchainFor/ESBC2
 void OverviewPage::updateMasternodeInfo()
