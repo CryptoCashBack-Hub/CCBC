@@ -154,13 +154,13 @@ filter(0)
 	ui->labelTransactionsStatus->setText("(" + tr("out of sync") + ")");
 
 	//information block update
-	timerinfo_mn = new QTimer(this);
-	connect(timerinfo_mn, SIGNAL(timeout()), this, SLOT(updateMasternodeInfo()));
-	timerinfo_mn->start(1000);
+	//timerinfo_mn = new QTimer(this);
+	//connect(timerinfo_mn, SIGNAL(timeout()), this, SLOT(updateMasternodeInfo()));
+	//timerinfo_mn->start(1000);
 
-	timerinfo_blockchain = new QTimer(this);
-	connect(timerinfo_blockchain, SIGNAL(timeout()), this, SLOT(updatBlockChainInfo()));
-	timerinfo_blockchain->start(1000); //30sec
+	//timerinfo_blockchain = new QTimer(this);
+	//connect(timerinfo_blockchain, SIGNAL(timeout()), this, SLOT(updatBlockChainInfo()));
+	//timerinfo_blockchain->start(1000); //30sec
 
 									   // start with displaying the "out of sync" warnings
 	showOutOfSyncWarning(true);
