@@ -207,7 +207,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 	const CAmount& watchUnconfBalance,
 	const CAmount& watchImmatureBalance)
 {
-	currentBalance = balance;
+    currentBalance = balance - immatureBalance;
 	currentUnconfirmedBalance = unconfirmedBalance;
 	currentImmatureBalance = immatureBalance;
 	//currentZerocoinBalance = zerocoinBalance;
@@ -218,18 +218,18 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 	currentWatchImmatureBalance = watchImmatureBalance;
 
 	// CCBC labels
-	ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance, false, BitcoinUnits::separatorAlways));
+	ui->labelBalance->setText(BitcoinUnits::floorHtmlWithoutUnit(nDisplayUnit, currentBalance, false, BitcoinUnits::separatorNever));
 	//ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorAlways));
-	ui->labelTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance + unconfirmedBalance, false, BitcoinUnits::separatorAlways));
+        ui->labelTotal->setText(BitcoinUnits::floorHtmlWithoutUnit(nDisplayUnit, currentBalance + unconfirmedBalance + immatureBalance, false, BitcoinUnits::separatorNever));
 
 	// Watchonly labels
 	ui->labelWatchAvailable->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchOnlyBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelWatchPending->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchUnconfBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelWatchImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchImmatureBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, BitcoinUnits::separatorAlways));
-
+        CAmount nTotalBalance = balance + unconfirmedBalance;
 
 	//zCCBC labels
 	/*
