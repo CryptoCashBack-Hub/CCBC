@@ -6,7 +6,6 @@
 #define BITCOIN_QT_OVERVIEWPAGE_H
 
 #include "amount.h"
-#include "main.h"
 
 #include <QWidget>
 
@@ -38,28 +37,28 @@ public:
     void showOutOfSyncWarning(bool fShow);
 
 public slots:
-    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
-                    const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
-    //void hideOrphans(bool fHide);
+    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance, const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
 
 signals:
     void transactionClicked(const QModelIndex& index);
 
 private:
     QTimer* timer;
-    QTimer* timerinfo_mn;
-    QTimer* timerinfo_blockchain;
     Ui::OverviewPage* ui;
     ClientModel* clientModel;
     WalletModel* walletModel;
     CAmount currentBalance;
     CAmount currentUnconfirmedBalance;
     CAmount currentImmatureBalance;
+    CAmount currentZerocoinBalance;
+    CAmount currentUnconfirmedZerocoinBalance;
+    CAmount currentimmatureZerocoinBalance;
     CAmount currentWatchOnlyBalance;
     CAmount currentWatchUnconfBalance;
     CAmount currentWatchImmatureBalance;
     int nDisplayUnit;
-    
+    void getPercentage(CAmount nTotalBalance, CAmount nZerocoinBalance, QString& sCCBCPercentage, QString& szCCBCPercentage);
+
     TxViewDelegate* txdelegate;
     TransactionFilterProxy* filter;
 
@@ -68,13 +67,6 @@ private slots:
     void handleTransactionClicked(const QModelIndex& index);
     void updateAlerts(const QString& warnings);
     void updateWatchOnlyLabels(bool showWatchOnly);
-    //void pushButton_Website();
-    //void pushButton_Discord();
-    //void pushButton_Github();
-    //void pushButton_Twitter();
-    //void pushButton_Explorer();
-    void updateMasternodeInfo();
-    void updatBlockChainInfo();
 };
 
 #endif // BITCOIN_QT_OVERVIEWPAGE_H
