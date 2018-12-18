@@ -336,39 +336,19 @@ void OverviewPage::setWalletModel(WalletModel* model)
 
 		// Keep up to date with wallet
 		setBalance(model->getBalance(), model->getUnconfirmedBalance(), model->getImmatureBalance(),
-			//setBalance(model->getBalance(), model->getUnconfirmedBalance(), model->getImmatureBalance(),
-			//model->getZerocoinBalance(), model->getUnconfirmedZerocoinBalance(), model->getImmatureZerocoinBalance(),
-			model->getWatchBalance(), model->getWatchUnconfirmedBalance(), model->getWatchImmatureBalance());
-		//connect(model, SIGNAL(balanceChanged(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)), this,
-		//SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
+				   model->getWatchBalance(), model->getWatchUnconfirmedBalance(), model->getWatchImmatureBalance());
 		connect(model, SIGNAL(balanceChanged(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)), this,
-			SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
+					   SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
 
 
 		connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
 
 		updateWatchOnlyLabels(model->haveWatchOnly());
-		//connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
+		connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
 	}
 
 	// update the display unit, to not use the default ("CCBC")
 	updateDisplayUnit();
-}
-
-void OverviewPage::updateDisplayUnit()
-{
-	if (walletModel && walletModel->getOptionsModel()) {
-		nDisplayUnit = walletModel->getOptionsModel()->getDisplayUnit();
-		if (currentBalance != -1)
-			//setBalance(currentBalance, currentUnconfirmedBalance, currentImmatureBalance, currentZerocoinBalance, currentUnconfirmedZerocoinBalance, currentimmatureZerocoinBalance,
-			setBalance(currentBalance, currentUnconfirmedBalance, currentImmatureBalance,
-				currentWatchOnlyBalance, currentWatchUnconfBalance, currentWatchImmatureBalance);
-
-		// Update txdelegate->unit with the current unit
-		txdelegate->unit = nDisplayUnit;
-
-		ui->listTransactions->update();
-	}
 }
 
 //All credit goes to the ESB team for developing this. https://github.com/BlockchainFor/ESBC2
@@ -479,6 +459,20 @@ void OverviewPage::updatBlockChainInfo()
 		ui->label_CurrentBlockReward_value->setText(QString::number(BlockRewardesbcoin, 'f', 1));
 
 		ui->label_Supply_value->setText(QString::number(chainActive.Tip()->nMoneySupply / COIN).append(" CCBC"));
+	}
+}
+
+void OverviewPage::updateDisplayUnit()
+{
+	if (walletModel && walletModel->getOptionsModel()) {
+		nDisplayUnit = walletModel->getOptionsModel()->getDisplayUnit();
+		if (currentBalance != -1)
+			setBalance(currentBalance, currentUnconfirmedBalance, currentImmatureBalance, currentWatchOnlyBalance, currentWatchUnconfBalance, currentWatchImmatureBalance);
+
+		// Update txdelegate->unit with the current unit
+		txdelegate->unit = nDisplayUnit;
+
+		ui->listTransactions->update();
 	}
 }
 
