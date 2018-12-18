@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The CCBCX developers
 // Copyright (c) 2018 The CCBC developers
 // Distributed under the MIT/X11 software license, see the accompanyingF
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -115,20 +115,20 @@ public:
 #include "overviewpage.moc"
 
 OverviewPage::OverviewPage(QWidget* parent) : QWidget(parent),
-ui(new Ui::OverviewPage),
-clientModel(0),
-walletModel(0),
-currentBalance(-1),
-currentUnconfirmedBalance(-1),
-currentImmatureBalance(-1),
-//currentZerocoinBalance(-1),
-//currentUnconfirmedZerocoinBalance(-1),
-//currentimmatureZerocoinBalance(-1),
-currentWatchOnlyBalance(-1),
-currentWatchUnconfBalance(-1),
-currentWatchImmatureBalance(-1),
-txdelegate(new TxViewDelegate()),
-filter(0)
+                                              ui(new Ui::OverviewPage),
+                                              clientModel(0),
+                                              walletModel(0),
+                                              currentBalance(-1),
+                                              currentUnconfirmedBalance(-1),
+                                              currentImmatureBalance(-1),
+                                              //currentZerocoinBalance(-1),
+                                              //currentUnconfirmedZerocoinBalance(-1),
+                                              //currentimmatureZerocoinBalance(-1),
+                                              currentWatchOnlyBalance(-1),
+                                              currentWatchUnconfBalance(-1),
+                                              currentWatchImmatureBalance(-1),
+                                              txdelegate(new TxViewDelegate()),
+                                              filter(0)
 {
 	nDisplayUnit = 0; // just make sure it's not unitialized
 	ui->setupUi(this);
@@ -177,45 +177,168 @@ OverviewPage::~OverviewPage()
 	delete ui;
 }
 
-void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
+/*
+void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sCCBCPercentage, QString& szCCBCPercentage)
+{
+    int nPrecision = 2;
+    double dzPercentage = 0.0;
+
+    if (nZerocoinBalance <= 0) {
+        dzPercentage = 0.0;
+    } else {
+        if (nUnlockedBalance <= 0) {
+            dzPercentage = 100.0;
+        } else {
+            dzPercentage = 100.0 * (double)(nZerocoinBalance / (double)(nZerocoinBalance + nUnlockedBalance));
+        }
+    }
+
+    double dPercentage = 100.0 - dzPercentage;
+
+    szCCBCPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
+    sCCBCPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
+}
+*/
+
+void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, 
+	//const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance, 
 	const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance)
 {
-    //currentBalance = balance;
-    currentBalance = balance - immatureBalance;
-	currentUnconfirmedBalance = unconfirmedBalance;
-	currentImmatureBalance = immatureBalance;
-	currentWatchOnlyBalance = watchOnlyBalance;
-	currentWatchUnconfBalance = watchUnconfBalance;
-	currentWatchImmatureBalance = watchImmatureBalance;
+    currentBalance = balance;
+    currentUnconfirmedBalance = unconfirmedBalance;
+    currentImmatureBalance = immatureBalance;
+    //currentZerocoinBalance = zerocoinBalance;
+    //currentUnconfirmedZerocoinBalance = unconfirmedZerocoinBalance;
+    //currentimmatureZerocoinBalance = immatureZerocoinBalance;
+    currentWatchOnlyBalance = watchOnlyBalance;
+    currentWatchUnconfBalance = watchUnconfBalance;
+    currentWatchImmatureBalance = watchImmatureBalance;
 
-    // CCBC labels
-        //ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance, false, BitcoinUnits::separatorAlways));
-        ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, currentBalance, false, BitcoinUnits::separatorAlways));
-        ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, currentUnconfirmedBalance, false, BitcoinUnits::separatorAlways));
-        ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, currentImmatureBalance, false, BitcoinUnits::separatorAlways));
-        ui->labelTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, currentBalance + currentUnconfirmedBalance + currentImmatureBalance, false, BitcoinUnits::separatorAlways));
+	CAmount nLockedBalance = 0;
+    CAmount nWatchOnlyLockedBalance = 0;
+    if (pwalletMain) {
+        nLockedBalance = pwalletMain->GetLockedCoins();
+        nWatchOnlyLockedBalance = pwalletMain->GetLockedWatchOnlyBalance();
+    }
 
-        // Watchonly labels
-        //ui->labelWatchAvailable->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchOnlyBalance, false, BitcoinUnits::separatorAlways));
-        //ui->labelWatchPending->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchUnconfBalance, false, BitcoinUnits::separatorAlways));
-        //ui->labelWatchImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchImmatureBalance, false, BitcoinUnits::separatorAlways));
-        //ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, BitcoinUnits::separatorAlways));
+	    // CCBC Balance
+    CAmount nTotalBalance = balance + unconfirmedBalance;
+    CAmount ccbcAvailableBalance = balance - immatureBalance - nLockedBalance;
+    CAmount nUnlockedBalance = nTotalBalance - nLockedBalance;
 
-	//only show immature (newly mined) balance if it's non-zero, so as not to complicate things
-	//for the non-mining users
-	bool showImmature = immatureBalance != 0;
-	bool showWatchOnlyImmature = watchImmatureBalance != 0;
+	    // CCBC Watch-Only Balance
+    CAmount nTotalWatchBalance = watchOnlyBalance + watchUnconfBalance;
+    CAmount nAvailableWatchBalance = watchOnlyBalance - watchImmatureBalance - nWatchOnlyLockedBalance;
 
-	// for symmetry reasons also show immature label when the watch-only one is shown
-	ui->labelImmature->setVisible(showImmature || showWatchOnlyImmature);
-	ui->labelImmatureText->setVisible(showImmature || showWatchOnlyImmature);
-	//ui->labelWatchImmature->setVisible(showWatchOnlyImmature); // show watch-only immature balance
+    // zCCBC Balance
+    //CAmount matureZerocoinBalance = zerocoinBalance - unconfirmedZerocoinBalance - immatureZerocoinBalance;
 
-	static int cachedTxLocks = 0;
+    // Percentages
+    //QString szPercentage = "";
+    //QString sPercentage = "";
+    //getPercentage(nUnlockedBalance, zerocoinBalance, sPercentage, szPercentage);
+    // Combined balances
+    //CAmount availableTotalBalance = ccbcAvailableBalance + matureZerocoinBalance;
+    //CAmount sumTotalBalance = nTotalBalance + zerocoinBalance;
 
-	if (cachedTxLocks != nCompleteTXLocks) {
-		cachedTxLocks = nCompleteTXLocks;
-		ui->listTransactions->update();
+// CCBC labels
+    ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, ccbcAvailableBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelLockedBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nLockedBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nTotalBalance, false, BitcoinUnits::separatorAlways));
+
+    // Watchonly labels
+    /ui->labelWatchAvailable->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nAvailableWatchBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelWatchPending->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchUnconfBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelWatchImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchImmatureBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelWatchLocked->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nWatchOnlyLockedBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nTotalWatchBalance, false, BitcoinUnits::separatorAlways));
+
+    // zCCBC labels
+    //ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
+    //ui->labelzBalanceUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedZerocoinBalance, false, BitcoinUnits::separatorAlways));
+    //ui->labelzBalanceMature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, matureZerocoinBalance, false, BitcoinUnits::separatorAlways));
+    //ui->labelzBalanceImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureZerocoinBalance, false, BitcoinUnits::separatorAlways));
+
+    // Combined labels
+    //ui->labelBalancez->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, availableTotalBalance, false, BitcoinUnits::separatorAlways));
+    //ui->labelTotalz->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, sumTotalBalance, false, BitcoinUnits::separatorAlways));
+
+    // Percentage labels
+    //ui->labelCCBCPercent->setText(sPercentage);
+    //ui->labelzCCBCPercent->setText(szPercentage);
+
+ // Adjust bubble-help according to AutoMint settings
+    QString automintHelp = tr("Current percentage of zCCBC.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
+    bool fEnableZeromint = GetBoolArg("-enablezeromint", true);
+    int nZeromintPercentage = GetArg("-zeromintpercentage", 10);
+    if (fEnableZeromint) {
+        automintHelp += tr("AutoMint is currently enabled and set to ") + QString::number(nZeromintPercentage) + "%.\n";
+        automintHelp += tr("To disable AutoMint add 'enablezeromint=0' in ccbc.conf.");
+    } else {
+        automintHelp += tr("AutoMint is currently disabled.\nTo enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in ccbc.conf");
+    }
+
+    // Only show most balances if they are non-zero for the sake of simplicity
+    QSettings settings;
+    bool settingShowAllBalances = !settings.value("fHideZeroBalances").toBool();
+
+    //bool showSumAvailable = settingShowAllBalances || sumTotalBalance != availableTotalBalance;
+    //ui->labelBalanceTextz->setVisible(showSumAvailable);
+    //ui->labelBalancez->setVisible(showSumAvailable);
+
+    bool showWatchOnly = nTotalWatchBalance != 0;
+
+    // CCBC Available
+    bool showCCBCAvailable = settingShowAllBalances || ccbcAvailableBalance != nTotalBalance;
+    bool showWatchOnlyCCBCAvailable = showCCBCAvailable || nAvailableWatchBalance != nTotalWatchBalance;
+    ui->labelBalanceText->setVisible(showCCBCAvailable || showWatchOnlyCCBCAvailable);
+    ui->labelBalance->setVisible(showCCBCAvailable || showWatchOnlyCCBCAvailable);
+    ui->labelWatchAvailable->setVisible(showWatchOnlyCCBCAvailable && showWatchOnly);
+
+    // CCBC Pending
+    bool showCCBCPending = settingShowAllBalances || unconfirmedBalance != 0;
+    bool showWatchOnlyCCBCPending = showCCBCPending || watchUnconfBalance != 0;
+    ui->labelPendingText->setVisible(showCCBCPending || showWatchOnlyCCBCPending);
+    ui->labelUnconfirmed->setVisible(showCCBCPending || showWatchOnlyCCBCPending);
+    ui->labelWatchPending->setVisible(showWatchOnlyCCBCPending && showWatchOnly);
+
+    // CCBC Immature
+    bool showCCBCImmature = settingShowAllBalances || immatureBalance != 0;
+    bool showWatchOnlyImmature = showCCBCImmature || watchImmatureBalance != 0;
+    ui->labelImmatureText->setVisible(showCCBCImmature || showWatchOnlyImmature);
+    ui->labelImmature->setVisible(showCCBCImmature || showWatchOnlyImmature);    // for symmetry reasons also show immature label when the watch-only one is shown
+    ui->labelWatchImmature->setVisible(showWatchOnlyImmature && showWatchOnly); // show watch-only immature balance
+
+    // CCBC Locked
+    //bool showCCBCLocked = settingShowAllBalances || nLockedBalance != 0;
+    //bool showWatchOnlyCCBCLocked = showCCBCLocked || nWatchOnlyLockedBalance != 0;
+    //ui->labelLockedBalanceText->setVisible(showCCBCLocked || showWatchOnlyCCBCLocked);
+    //ui->labelLockedBalance->setVisible(showCCBCLocked || showWatchOnlyCCBCLocked);
+    //ui->labelWatchLocked->setVisible(showWatchOnlyCCBCLocked && showWatchOnly);
+
+    // zCCBC
+    //bool showzCCBCAvailable = settingShowAllBalances || zerocoinBalance != matureZerocoinBalance;
+    //bool showzCCBCUnconfirmed = settingShowAllBalances || unconfirmedZerocoinBalance != 0;
+    //bool showzCCBCImmature = settingShowAllBalances || immatureZerocoinBalance != 0;
+    //ui->labelzBalanceMature->setVisible(showzCCBCAvailable);
+    //ui->labelzBalanceMatureText->setVisible(showzCCBCAvailable);
+    //ui->labelzBalanceUnconfirmed->setVisible(showzCCBCUnconfirmed);
+    //ui->labelzBalanceUnconfirmedText->setVisible(showzCCBCUnconfirmed);
+    //ui->labelzBalanceImmature->setVisible(showzCCBCImmature);
+    //ui->labelzBalanceImmatureText->setVisible(showzCCBCImmature);
+
+    // Percent split
+    //bool showPercentages = !(zerocoinBalance == 0 && nTotalBalance == 0);
+    //ui->labelCCBCPercent->setVisible(showPercentages);
+    //ui->labelzCCBCPercent->setVisible(showPercentages);
+
+    static int cachedTxLocks = 0;
+
+    if (cachedTxLocks != nCompleteTXLocks) {
+        cachedTxLocks = nCompleteTXLocks;
+        ui->listTransactions->update();
 	}
 }
 
@@ -223,12 +346,12 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 
 void OverviewPage::updateWatchOnlyLabels(bool showWatchOnly)
 {
-	//ui->labelSpendable->setVisible(showWatchOnly);      // show spendable label (only when watch-only is active)
-	//ui->labelWatchonly->setVisible(showWatchOnly);      // show watch-only label
-	//ui->lineWatchBalance->setVisible(showWatchOnly);    // show watch-only balance separator line
-	//ui->labelWatchAvailable->setVisible(showWatchOnly); // show watch-only available balance
-	//ui->labelWatchPending->setVisible(showWatchOnly);   // show watch-only pending balance
-	//ui->labelWatchTotal->setVisible(showWatchOnly);     // show watch-only total balance
+	ui->labelSpendable->setVisible(showWatchOnly);      // show spendable label (only when watch-only is active)
+	ui->labelWatchonly->setVisible(showWatchOnly);      // show watch-only label
+	ui->lineWatchBalance->setVisible(showWatchOnly);    // show watch-only balance separator line
+	ui->labelWatchAvailable->setVisible(showWatchOnly); // show watch-only available balance
+	ui->labelWatchPending->setVisible(showWatchOnly);   // show watch-only pending balance
+	ui->labelWatchTotal->setVisible(showWatchOnly);     // show watch-only total balance
 
 	if (!showWatchOnly) {
 		//ui->labelWatchImmature->hide();
@@ -267,21 +390,27 @@ void OverviewPage::setWalletModel(WalletModel* model)
         ui->listTransactions->setModel(filter);
         ui->listTransactions->setModelColumn(TransactionTableModel::ToAddress);
 
- //----------
         // Keep up to date with wallet
         setBalance(model->getBalance(), model->getUnconfirmedBalance(), model->getImmatureBalance(),
+            //model->getZerocoinBalance(), model->getUnconfirmedZerocoinBalance(), model->getImmatureZerocoinBalance(),
             model->getWatchBalance(), model->getWatchUnconfirmedBalance(), model->getWatchImmatureBalance());
-        connect(model, SIGNAL(balanceChanged(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)), this, SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
+        connect(model, SIGNAL(balanceChanged(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)), this,
+            SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
 
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
-
+        //connect(model->getOptionsModel(), SIGNAL(hideZeroBalancesChanged(bool)), this, SLOT(updateDisplayUnit()));
+        connect(model->getOptionsModel(), SIGNAL(hideOrphansChanged(bool)), this, SLOT(hideOrphans(bool)));
 
         updateWatchOnlyLabels(model->haveWatchOnly());
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("CCBC")
+    // update the display unit, to not use the default ("PIV")
     updateDisplayUnit();
+
+    // Hide orphans
+    QSettings settings;
+    hideOrphans(settings.value("fHideOrphans", false).toBool());
 }
 
 void OverviewPage::updateDisplayUnit()
@@ -302,8 +431,14 @@ void OverviewPage::updateDisplayUnit()
 
 void OverviewPage::updateAlerts(const QString& warnings)
 {
-    //this->ui->labelAlerts->setVisible(!warnings.isEmpty());
-    //this->ui->labelAlerts->setText(warnings);
+    this->ui->labelAlerts->setVisible(!warnings.isEmpty());
+    this->ui->labelAlerts->setText(warnings);
+}
+
+void OverviewPage::hideOrphans(bool fHide)
+{
+    if (filter)
+        filter->setHideOrphans(fHide);
 }
 
 //All credit goes to the ESB team for developing this. https://github.com/BlockchainFor/ESBC2
@@ -334,12 +469,10 @@ void OverviewPage::updateMasternodeInfo()
 		}
 		totalmn = mn1 + mn2 + mn3 + mn4;
 		ui->labelMnTotal_Value->setText(QString::number(totalmn));
-		//ui->graphMN->setMaximum(totalmn);
-		//ui->graphMN->setValue(mn1);
-
 
 		// TODO: need a read actual 24h blockcount from chain
 		int BlockCount24h = 1440;
+
 		// update ROI
 		double BlockReward = GetBlockValue(chainActive.Height());
 		double roi1 = (0.72 * BlockReward * BlockCount24h) / mn1 / COIN;
@@ -416,8 +549,6 @@ void OverviewPage::updatBlockChainInfo()
 		ui->label_Supply_value->setText(QString::number(chainActive.Tip()->nMoneySupply / COIN).append(" CCBC"));
 	}
 }
-
-
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
