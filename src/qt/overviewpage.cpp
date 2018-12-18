@@ -207,7 +207,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 	const CAmount& watchUnconfBalance,
 	const CAmount& watchImmatureBalance)
 {
-    currentBalance = balance - immatureBalance;
+    currentBalance = balance;
 	currentUnconfirmedBalance = unconfirmedBalance;
 	currentImmatureBalance = immatureBalance;
 	//currentZerocoinBalance = zerocoinBalance;
@@ -218,7 +218,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 	currentWatchImmatureBalance = watchImmatureBalance;
 
 	// CCBC labels
-	ui->labelBalance->setText(BitcoinUnits::floorHtmlWithoutUnit(nDisplayUnit, currentBalance, false, BitcoinUnits::separatorNever));
+        ui->labelBalance->setText(BitcoinUnits::floorHtmlWithoutUnit(nDisplayUnit, balance - immatureBalance, false, BitcoinUnits::separatorNever));
 	//ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorAlways));
@@ -229,7 +229,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 	ui->labelWatchPending->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchUnconfBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelWatchImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchImmatureBalance, false, BitcoinUnits::separatorAlways));
 	ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, BitcoinUnits::separatorAlways));
-        CAmount nTotalBalance = balance + unconfirmedBalance;
+        //CAmount nTotalBalance = balance + unconfirmedBalance;
 
 	//zCCBC labels
 	/*
