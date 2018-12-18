@@ -1246,6 +1246,7 @@ public:
     }
 
     CAmount GetLockedWatchOnlyCredit() const;
+	{}
 
     CAmount GetChange() const
     {
