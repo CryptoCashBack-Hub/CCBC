@@ -55,9 +55,9 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-boost::assign::map_list_of
+    boost::assign::map_list_of
 
-(0, uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
+    (0, uint256("0xa9f081734c579a25872ce366d5520482755d26ff3db73fbe7bdd4e973bc0e173"));
 
 static const Checkpoints::CCheckpointData data = {
 	&mapCheckpoints,
@@ -157,6 +157,9 @@ public:
 		genesis.nBits = 504365040;
 		genesis.nNonce = 647688;
 
+		nEnforceNewSporkKey = 1546300800; //!> Sporks signed after (GMT): Tuesday, Jan 1, 2018 12:00:00 AM GMT must use the new spork key
+        nRejectOldSporkKey = 1548979200;  //!> Fully reject old spork key after (GMT): Friday, Feb 1, 2018 12:00:00 AM
+
 
 		hashGenesisBlock = genesis.GetHash();
 
@@ -198,8 +201,10 @@ public:
 		fHeadersFirstSyncingActive = false;
 
 		nPoolMaxTransactions = 3;
-		//strSporkKey = "030262a2a0679d01ab026d375c42b0a4122477123631b870e09665526c322c8899";
-		strSporkKey = "0257aa5bdba5b2458ac8acb5eb80277cee5c69e21a55299b5d7ac506c49d958984";
+
+        strSporkKey = "0257aa5bdba5b2458ac8acb5eb80277cee5c69e21a55299b5d7ac506c49d958984";
+        strSporkKeyOld = "030262a2a0679d01ab026d375c42b0a4122477123631b870e09665526c322c8899";
+
 		strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
 		nStartMasternodePayments = 1534438799;
 
