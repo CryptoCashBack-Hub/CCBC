@@ -94,6 +94,7 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
                         return;
                     }
                 }
+
 		if (!sporkManager.CheckSignature(spork)) {
 			LogPrintf("spork - invalid signature\n");
 			Misbehaving(pfrom->GetId(), 100);
@@ -318,7 +319,7 @@ std::string CSporkManager::GetSporkNameByID(int id)
 	if (id == SPORK_16_ZEROCOIN_MAINTENANCE_MODE) return "SPORK_16_ZEROCOIN_MAINTENANCE_MODE";
 	if (id == SPORK_17_TREASURY_PAYMENT_ENFORCEMENT) return "SPORK_17_TREASURY_PAYMENT_ENFORCEMENT";
 	if (id == SPORK_18_REVIVE_PAYMENT_ENFORCEMENT) return "SPORK_18_REVIVE_PAYMENT_ENFORCEMENT";
-	if (id == SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3) return "SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3";
+	if (id == SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3) return "SPORK_16_NEW_PROTOCOL_ENFORCEMENT_3";
 
 	return "Unknown";
 }

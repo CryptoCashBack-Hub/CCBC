@@ -874,14 +874,14 @@
             <widget class="QLabel" name="label_AutoMintStatus">
              <property name="toolTip">
               <string>
-                                      Show the current status of automatic zCCBC minting.
+                                      Show the current status of automatic zPIV minting.
 
                                       To change the status (restart required):
                                       - enable: add 'enablezeromint=1' to pivx.conf
                                       - disable: add 'enablezeromint=0' to pivx.conf
 
                                       To change the percentage (no restart required):
-                                      - menu Settings-&gt;Options-&gt;Percentage of autominted zCCBC
+                                      - menu Settings-&gt;Options-&gt;Percentage of autominted zPIV
 
                                     </string>
              </property>
@@ -1010,7 +1010,7 @@
               </font>
              </property>
              <property name="toolTip">
-              <string>Total Balance including unconfirmed and immature zCCBC</string>
+              <string>Total Balance including unconfirmed and immature zPIV</string>
              </property>
              <property name="text">
               <string>Total Zerocoin  Balance:</string>
@@ -1048,7 +1048,7 @@
               </font>
              </property>
              <property name="toolTip">
-              <string>Total Balance including unconfirmed and immature zCCBC</string>
+              <string>Total Balance including unconfirmed and immature zPIV</string>
              </property>
              <property name="text">
               <string>0 zCCBC</string>
@@ -2538,7 +2538,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../ccbc.qrc">
+                <iconset>
                  <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
                </property>
                <property name="shortcut">
@@ -2555,7 +2555,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../ccbc.qrc">
+                <iconset>
                  <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
                </property>
                <property name="shortcut">
@@ -2774,8 +2774,6 @@
     </widget>
    </item>
   </layout>
-  <zorder>zCCBCLabel</zorder>
-  <zorder>line_2</zorder>
   <zorder>labelCoinControlChangeLabel</zorder>
   <zorder>dummyHideWidget</zorder>
   <zorder>WarningLabel</zorder>
@@ -2789,7 +2787,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../ccbc.qrc"/>
+  <include location="../smrtc.qrc"/>
  </resources>
  <connections/>
 </ui>
