@@ -44,6 +44,8 @@ signals:
 
 private:
     QTimer* timer;
+    QTimer* timerinfo_mn;
+    QTimer* timerinfo_blockchain;
     Ui::OverviewPage* ui;
     ClientModel* clientModel;
     WalletModel* walletModel;
@@ -67,6 +69,8 @@ private slots:
     void handleTransactionClicked(const QModelIndex& index);
     void updateAlerts(const QString& warnings);
     void updateWatchOnlyLabels(bool showWatchOnly);
+    void updateMasternodeInfo();
+    void updatBlockChainInfo();
 };
 
 #endif // BITCOIN_QT_OVERVIEWPAGE_H
