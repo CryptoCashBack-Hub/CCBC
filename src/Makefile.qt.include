@@ -49,7 +49,6 @@ QT_FORMS_UI = \
   qt/forms/receivecoinsdialog.ui \
   qt/forms/privacydialog.ui \
   qt/forms/statspage.ui \
-  qt/forms/statspage.ui \
   qt/forms/receiverequestdialog.ui \
   qt/forms/rpcconsole.ui \
   qt/forms/sendcoinsdialog.ui \
