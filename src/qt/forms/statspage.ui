@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PrivacyDialog</class>
- <widget class="QWidget" name="PrivacyDialog">
+ <class>StatsPage</class>
+ <widget class="QWidget" name="StatsPage">
   <property name="enabled">
    <bool>true</bool>
   </property>

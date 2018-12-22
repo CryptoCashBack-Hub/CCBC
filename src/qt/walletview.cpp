@@ -226,6 +226,11 @@ void WalletView::gotoReceiveCoinsPage()
     setCurrentWidget(receiveCoinsPage);
 }
 
+void WalletView::gotoStatsPage()
+{
+    setCurrentWidget(statsPage);
+}
+
 void WalletView::gotoPrivacyPage()
 {
     setCurrentWidget(privacyPage);
