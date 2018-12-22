@@ -48,6 +48,8 @@ QT_FORMS_UI = \
   qt/forms/overviewpage.ui \
   qt/forms/receivecoinsdialog.ui \
   qt/forms/privacydialog.ui \
+  qt/forms/statspage.ui \
+  qt/forms/statspage.ui \
   qt/forms/receiverequestdialog.ui \
   qt/forms/rpcconsole.ui \
   qt/forms/sendcoinsdialog.ui \
@@ -90,6 +92,7 @@ QT_MOC_CPP = \
   qt/moc_qvaluecombobox.cpp \
   qt/moc_receivecoinsdialog.cpp \
   qt/moc_privacydialog.cpp \
+  qt/moc_statspage.cpp \
   qt/moc_receiverequestdialog.cpp \
   qt/moc_recentrequeststablemodel.cpp \
   qt/moc_rpcconsole.cpp \
@@ -167,6 +170,7 @@ BITCOIN_QT_H = \
   qt/qvaluecombobox.h \
   qt/receivecoinsdialog.h \
   qt/privacydialog.h \
+  qt/statspage.h \
   qt/receiverequestdialog.h \
   qt/recentrequeststablemodel.h \
   qt/rpcconsole.h \
@@ -293,6 +297,7 @@ BITCOIN_QT_CPP += \
   qt/paymentserver.cpp \
   qt/receivecoinsdialog.cpp \
   qt/privacydialog.cpp \
+  qt/statspage.cpp \
   qt/receiverequestdialog.cpp \
   qt/recentrequeststablemodel.cpp \
   qt/sendcoinsdialog.cpp \
