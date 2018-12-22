@@ -22,10 +22,3 @@
 #include <QtWidgets>
 #include <utilmoneystr.h>
 
-StatsPage::StatsPage(QWidget* parent) : QDialog(parent),
-ui(new Ui::StatsPage),
-walletModel(0)
-{
-	nDisplayUnit = 0; // just make sure it's not unitialized
-	ui->setupUi(this);
-}
