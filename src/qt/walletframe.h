@@ -60,8 +60,6 @@ public slots:
     void gotoReceiveCoinsPage();
     /** Switch to privacy page */
     void gotoPrivacyPage();
-    /** Switch to stats page */
-    void gotoStatsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
     /** Switch to explorer page */

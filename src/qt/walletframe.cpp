@@ -146,13 +146,6 @@ void WalletFrame::gotoPrivacyPage()
         i.value()->gotoPrivacyPage();
 }
 
-void WalletFrame::gotoStatsPage()
-{
-    QMap<QString, WalletView*>::const_iterator i;
-    for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
-        i.value()->gotoStatsPage();
-}
-
 void WalletFrame::gotoSendCoinsPage(QString addr)
 {
     QMap<QString, WalletView*>::const_iterator i;

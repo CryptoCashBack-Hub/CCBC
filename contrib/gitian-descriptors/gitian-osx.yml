@@ -1,5 +1,5 @@
 ---
-name: "ccbc-osx-1.1.0.1"
+name: "ccbc-osx-1.0.0.5"
 enable_cache: true
 suites:
 - "trusty"

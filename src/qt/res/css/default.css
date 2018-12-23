@@ -706,7 +706,6 @@ QWidget#AddressBookPage {
     QWidget#AddressBookPage QHeaderView::section { /* Min width for Windows fix */
         min-width: 260px;
     }
-/**************************** Stats Page ********************************************/
 
 /**************************** Privacy Dialog ********************************************/
 
