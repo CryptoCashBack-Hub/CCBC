@@ -18,6 +18,7 @@
 #include "overviewpage.h"
 #include "receivecoinsdialog.h"
 #include "privacydialog.h"
+#include "statspage.h"
 #include "sendcoinsdialog.h"
 #include "signverifymessagedialog.h"
 #include "transactiontablemodel.h"
@@ -72,6 +73,7 @@ WalletView::WalletView(QWidget* parent) : QStackedWidget(parent),
     transactionsPage->setLayout(vbox);
 
     privacyPage = new PrivacyDialog();
+	statsPage = new StatsPage();
     receiveCoinsPage = new ReceiveCoinsDialog();
     sendCoinsPage = new SendCoinsDialog();
 
@@ -222,6 +224,11 @@ void WalletView::gotoMasternodePage()
 void WalletView::gotoReceiveCoinsPage()
 {
     setCurrentWidget(receiveCoinsPage);
+}
+
+void WalletView::gotoStatsPage()
+{
+    setCurrentWidget(statsPage);
 }
 
 void WalletView::gotoPrivacyPage()
