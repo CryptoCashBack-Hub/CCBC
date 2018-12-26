@@ -151,9 +151,9 @@ void MultiSendDialog::on_addButton_clicked()
         CBitcoinAddress address(strAddress);
         std::string userInputLabel = ui->labelAddressLabelEdit->text().toStdString();
         if (!userInputLabel.empty())
-            model->updateAddressBookLabels(address.Get(), userInputLabel, "send");
+            model->updateAddressBook(address.Get(), userInputLabel, "send");
         else
-            model->updateAddressBookLabels(address.Get(), "(no label)", "send");
+            model->updateAddressBook(address.Get(), "(no label)", "send");
     }
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
