@@ -19,5 +19,5 @@ PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %P
 cd depends
 make HOST=x86_64-w64-mingw32
 cd ..
-
+cd scripts
 bash build-win64.sh
