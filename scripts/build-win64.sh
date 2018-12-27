@@ -4,4 +4,4 @@ CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --pref
 make
 cd src
 cd qt
-strip ccbc{.exe}
+strip ccbc{-qt.exe}
