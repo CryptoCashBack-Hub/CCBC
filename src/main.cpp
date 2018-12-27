@@ -4668,10 +4668,8 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
     //if (pblock->IsProofOfStake() && setStakeSeen.count(pblock->GetProofOfStake())/* && !mapOrphanBlocksByPrev.count(hash)*/)
     //    return error("ProcessNewBlock() : duplicate proof-of-stake (%s, %d) for block %s", pblock->GetProofOfStake().first.ToString().c_str(), pblock->GetProofOfStake().second, pblock->GetHash().ToString().c_str());
 
-    // NovaCoin: check proof-of-stake block signature
-    //if (!pblock->CheckBlockSignature())
-       // return error("ProcessNewBlock() : bad proof-of-stake block signature");
-    if (!CheckBlockSignature(*pblock))
+    // Provided from NovaCoin: check proof-of-stake block signature
+    if (!pblock->CheckBlockSignature())
         return error("ProcessNewBlock() : bad proof-of-stake block signature");
 
     if (pblock->GetHash() != Params().HashGenesisBlock() && pfrom != NULL) {
