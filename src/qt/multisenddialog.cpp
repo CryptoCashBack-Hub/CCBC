@@ -130,7 +130,7 @@ void MultiSendDialog::on_addButton_clicked()
         ui->message->setText(tr("Please Enter 1 - 100 for percent."));
         ui->multiSendPercentEdit->setFocus();
         return;
-    }
+    }%%
     std::pair<std::string, int> pMultiSend;
     pMultiSend.first = strAddress;
     pMultiSend.second = nMultiSendPercent;
