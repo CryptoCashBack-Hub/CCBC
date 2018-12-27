@@ -2,16 +2,16 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "multisenddialog.h"
 #include "addressbookpage.h"
 #include "base58.h"
 #include "init.h"
+#include "multisenddialog.h"
 #include "ui_multisenddialog.h"
 #include "walletmodel.h"
 #include <QLineEdit>
 #include <QMessageBox>
-#include <boost/lexical_cast.hpp>
 #include <QStyle>
+#include <boost/lexical_cast.hpp>
 
 using namespace std;
 using namespace boost;
@@ -130,7 +130,7 @@ void MultiSendDialog::on_addButton_clicked()
         ui->message->setText(tr("Please Enter 1 - 100 for percent."));
         ui->multiSendPercentEdit->setFocus();
         return;
-    }%%
+    }
     std::pair<std::string, int> pMultiSend;
     pMultiSend.first = strAddress;
     pMultiSend.second = nMultiSendPercent;
