@@ -44,7 +44,7 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/eastcoastcrypto/Ccbc.git
+        git clone https://github.com/CryptoCashBack-Hub/CCBC.git
         cd Ccbc
 
 2.  Build ccbcd:
