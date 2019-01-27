@@ -47,19 +47,22 @@ Instructions: Homebrew
 
         git clone https://github.com/CryptoCashBack-Hub/CCBC.git
         cd Ccbc
+2.
+        brew uninstall boost
+        brew install boost@1.57
+        brew link boost@1.57 --force
 
-
-2.  Build ccbcd:
+3.  Build ccbcd:
 
         ./autogen.sh
         ./configure --with-gui=qt5
         make
 
-3.  It is also a good idea to build and run the unit tests:
+4.  It is also a good idea to build and run the unit tests:
 
         make check
 
-4.  (Optional) You can also install ccbcd to your path:
+5.  (Optional) You can also install ccbcd to your path:
 
         make install
 
