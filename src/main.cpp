@@ -2966,8 +2966,8 @@ bool DisconnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex
 					// erase the spent input
 					mapStakeSpent.erase(out);
 				}
-        }
-    }
+			}
+		}
 
     // move best block pointer to prevout block
     view.SetBestBlock(pindex->pprev->GetBlockHash());
@@ -2987,7 +2987,10 @@ bool DisconnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex
     } else {
         return fClean;
     }
+	
+	}
 }
+
 
 void static FlushBlockFile(bool fFinalize = false)
 {
