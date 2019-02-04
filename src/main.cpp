@@ -1493,8 +1493,8 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
 				CBitcoinAddress addressSource(source);
 				if (strcmp(addressSource.ToString().c_str(), "SSYdeGF2WzvZqUsQnKLSav3iZVwQtS3u22") == 0) {     //Block Mark That Scamming Douchebag
 					return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-mark");                                
-                		} else if (strcmp(addressSource.ToString().c_str(), "SbUrNmfY8pfDVLNtXsedwLTz1QY481hEBn") == 0) { //CCBC Burn Address
-                     			return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-burn");
+                } else if (strcmp(addressSource.ToString().c_str(), "SbUrNmfY8pfDVLNtXsedwLTz1QY481hEBn") == 0) { //CCBC Burn Address
+                    return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-burn");
 				}
 			}
 		}
