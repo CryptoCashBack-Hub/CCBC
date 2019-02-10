@@ -81,6 +81,7 @@ overviewAction(0),
 historyAction(0),
 masternodeAction(0),
 quitAction(0),
+coininfoAction(0),
 sendCoinsAction(0),
 usedSendingAddressesAction(0),
 usedReceivingAddressesAction(0),
@@ -362,6 +363,17 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 		connect(masternodeAction, SIGNAL(triggered()), this, SLOT(gotoMasternodePage()));
 	}
 
+	coininfoAction = new QAction(QIcon(":/icons/coininfo"), tr("&Coin Info"), this);
+	coininfoAction->setStatusTip(tr("Show Coin Info"));
+	coininfoAction->setToolTip(coininfoAction->statusTip());
+	coininfoAction->setCheckable(true);
+#ifdef Q_OS_MAC
+	coininfoAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_7));
+#else
+	coininfoAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
+#endif
+	tabGroup->addAction(coininfoAction);
+
 	// These showNormalIfMinimized are needed because Send Coins and Receive Coins
 	// can be triggered from the tray menu, and need to show the GUI to be useful.
 	connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
@@ -374,6 +386,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	connect(privacyAction, SIGNAL(triggered()), this, SLOT(gotoPrivacyPage()));
 	connect(historyAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
 	connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
+	connect(coininfoAction, SIGNAL(triggered()), this, SLOT(gotoCoininfoPage()));
 #endif // ENABLE_WALLET
 
 	quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
@@ -562,6 +575,7 @@ void BitcoinGUI::createToolBars()
         if (settings.value("fShowMasternodesTab").toBool()) {
             toolbar->addAction(masternodeAction);
 		}
+		toolbar->addAction(coininfoAction);
 		toolbar->setMovable(false); // remove unused icon in upper left corner
         toolbar->setOrientation(Qt::Vertical);
         toolbar->setIconSize(QSize(40, 40));
@@ -829,6 +843,12 @@ void BitcoinGUI::gotoVerifyMessageTab(QString addr)
 void BitcoinGUI::gotoMultisigCreate()
 {
 	if (walletFrame) walletFrame->gotoMultisigDialog(0);
+}
+
+void BitcoinGUI::gotoCoininfoPage()
+{
+	coininfoAction->setChecked(true);
+	if (walletFrame) walletFrame->gotoCoininfoPage();
 }
 
 void BitcoinGUI::gotoMultisigSpend()

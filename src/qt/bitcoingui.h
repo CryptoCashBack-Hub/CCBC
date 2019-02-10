@@ -119,6 +119,7 @@ private:
     QAction* openRPCConsoleAction;
     QAction* openNetworkAction;
     QAction* openPeersAction;
+	QAction* coininfoAction;
     QAction* openRepairAction;
     QAction* openConfEditorAction;
     QAction* openMNConfEditorAction;
@@ -209,6 +210,8 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to receive coins page */
     void gotoPrivacyPage();
+	/** Switch to Coin Info Page */
+	void gotoCoininfoPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
 

@@ -34,7 +34,8 @@ QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
   qt/forms/askpassphrasedialog.ui \
   qt/forms/bip38tooldialog.ui \
-  qt/forms/coincontroldialog.ui \
+  qt/forms/coincontroldialog.ui \  
+  qt/forms/coininfopage.ui \
   qt/forms/blockexplorer.ui \
   qt/forms/obfuscationconfig.ui \
   qt/forms/editaddressdialog.ui \
@@ -70,6 +71,7 @@ QT_MOC_CPP = \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
   qt/moc_coincontroltreewidget.cpp \
+  qt/moc_coininfopage.cpp \
   qt/moc_csvmodelwriter.cpp \
   qt/moc_obfuscationconfig.cpp \
   qt/moc_editaddressdialog.cpp \
@@ -144,6 +146,7 @@ BITCOIN_QT_H = \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
   qt/coincontroltreewidget.h \
+  qt/coininfopage.h \
   qt/csvmodelwriter.h \
   qt/obfuscationconfig.h \
   qt/editaddressdialog.h \
@@ -218,6 +221,7 @@ RES_ICONS = \
   qt/res/icons/editpaste.png \
   qt/res/icons/explorer.png \
   qt/res/icons/blockexplorer.png \
+  qt/res/icons/coininfo_ccbc.png \
   qt/res/icons/export.png \
   qt/res/icons/eye.png \
   qt/res/icons/eye_minus.png \
@@ -288,6 +292,7 @@ BITCOIN_QT_CPP += \
   qt/blockexplorer.cpp \
   qt/coincontroldialog.cpp \
   qt/coincontroltreewidget.cpp \
+  qt/coininfopage.cpp \
   qt/obfuscationconfig.cpp \
   qt/editaddressdialog.cpp \
   qt/masternodelist.cpp \

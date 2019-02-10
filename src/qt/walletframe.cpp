@@ -167,6 +167,13 @@ void WalletFrame::gotoVerifyMessageTab(QString addr)
         walletView->gotoVerifyMessageTab(addr);
 }
 
+void WalletFrame::gotoCoininfoPage()
+{
+	QMap<QString, WalletView*>::const_iterator i;
+	for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
+		i.value()->gotoCoininfoPage();
+}
+
 void WalletFrame::gotoBip38Tool()
 {
     WalletView* walletView = currentWalletView();

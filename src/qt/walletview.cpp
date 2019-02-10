@@ -12,6 +12,7 @@
 #include "clientmodel.h"
 #include "guiutil.h"
 #include "masternodeconfig.h"
+#include "coininfopage.h"
 #include "multisenddialog.h"
 #include "multisigdialog.h"
 #include "optionsmodel.h"
@@ -116,12 +117,14 @@ verticalLayout_8->addLayout(horizontalLayout_Header);
     transactionsPage->setLayout(vbox);
 
     privacyPage = new PrivacyDialog();
+	coininfoPage = new CoininfoPage();
     receiveCoinsPage = new ReceiveCoinsDialog();
     sendCoinsPage = new SendCoinsDialog();
 
     addWidget(overviewPage);
     addWidget(transactionsPage);
     addWidget(privacyPage);
+	addWidget(coininfoPage);
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
     addWidget(explorerWindow);
@@ -182,6 +185,7 @@ void WalletView::setClientModel(ClientModel* clientModel)
     if (settings.value("fShowMasternodesTab").toBool()) {
         masternodeListPage->setClientModel(clientModel);
     }
+	coininfoPage->setClientModel(clientModel);
 }
 
 void WalletView::setWalletModel(WalletModel* walletModel)
@@ -198,6 +202,7 @@ void WalletView::setWalletModel(WalletModel* walletModel)
     privacyPage->setModel(walletModel);
     receiveCoinsPage->setModel(walletModel);
     sendCoinsPage->setModel(walletModel);
+	coininfoPage->setWalletModel(walletModel);
 
     if (walletModel) {
         // Receive and pass through messages from wallet model
@@ -253,6 +258,11 @@ void WalletView::gotoHistoryPage()
 void WalletView::gotoBlockExplorerPage()
 {
     setCurrentWidget(explorerWindow);
+}
+
+void WalletView::gotoCoininfoPage()
+{
+	setCurrentWidget(coininfoPage);
 }
 
 void WalletView::gotoMasternodePage()

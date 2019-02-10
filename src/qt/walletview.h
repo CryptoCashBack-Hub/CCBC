@@ -17,6 +17,7 @@ class ReceiveCoinsDialog;
 class PrivacyDialog;
 class SendCoinsDialog;
 class SendCoinsRecipient;
+class CoininfoPage;
 class TransactionView;
 class WalletModel;
 class BlockExplorer;
@@ -67,6 +68,7 @@ private:
     SendCoinsDialog* sendCoinsPage;
     BlockExplorer* explorerWindow;
     MasternodeList* masternodeListPage;
+	CoininfoPage* coininfoPage;
 
     TransactionView* transactionView;
 
@@ -84,6 +86,8 @@ public slots:
     void gotoBlockExplorerPage();
     /** Switch to privacy page */
     void gotoPrivacyPage();
+	/** Switch to coin info page */
+	void gotoCoininfoPage();
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
