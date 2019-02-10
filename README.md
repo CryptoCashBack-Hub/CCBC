@@ -72,5 +72,5 @@
 </table>
 
 MN Port: 5520
-RPC Port: 5521
+RPC Port: 15520
 Testnet: 15520
