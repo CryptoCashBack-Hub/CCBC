@@ -3963,12 +3963,15 @@ bool ActivateBestChain(CValidationState& state, CBlock* pblock, bool fAlreadyChe
         boost::this_thread::interruption_point();
 
         bool fInitialDownload;
-        while (true) {
+        /*while (true) {
             TRY_LOCK(cs_main, lockMain);
             if (!lockMain) {
                 MilliSleep(50);
                 continue;
-            }
+            }*/
+
+		    {
+            LOCK(cs_main); // Replaces the former TRY_LOCK loop because busy waiting wastes too much resources
 
             pindexMostWork = FindMostWorkChain();
 
@@ -4640,7 +4643,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
             CCoinsViewCache coins(pcoinsTip);
 
             if (!coins.HaveInputs(block.vtx[1])) {
-				LOCK(cs_mapstake);
+                LOCK(cs_mapstake);
                 // the inputs are spent at the chain tip so we should look at the recently spent outputs
 
                 for (CTxIn in : block.vtx[1].vin) {
@@ -4659,10 +4662,20 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
                 // start at the block we're adding on to
                 CBlockIndex* last = pindexPrev;
 
-                //while that block is not on the main chain
+                CBlock bl;
+                int readBlock = 0;
+                // Go backwards on the forked chain up to the split
                 while (!chainActive.Contains(last) && last != NULL) {
-                    CBlock bl;
-                    ReadBlockFromDisk(bl, last);
+                    if (readBlock == Params().MaxReorganizationDepth()) {
+                        // Remove this chain from disk.
+                        return error("%s: forked chain longer than maximum reorg limit", __func__);
+                    }
+                    if (!ReadBlockFromDisk(bl, last))
+                        // Previous block not on disk
+                        return error("%s: previous block %s not on disk", __func__, last->GetBlockHash().GetHex());
+
+                    // Increase amount of read blocks
+                    readBlock++;
                     // loop through every spent input from said block
                     for (CTransaction t : bl.vtx) {
                         for (CTxIn in : t.vin) {
@@ -4670,8 +4683,8 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
                             for (CTxIn stakeIn : block.vtx[1].vin) {
                                 // if they spend the same input
                                 if (stakeIn.prevout == in.prevout) {
-                                    //reject the block
-                                    return false;
+                                    // reject the block
+                                    return state.DoS(100, error("%s: input already spent on a previous block", __func__));
                                 }
                             }
                         }
@@ -4797,6 +4810,11 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
     // Provided from NovaCoin: check proof-of-stake block signature
     if (!pblock->CheckBlockSignature())
         return error("ProcessNewBlock() : bad proof-of-stake block signature");
+
+	    //fixes crashes that occurs with at least one case of a corrupted
+    if (pblock->GetHash() != Params().HashGenesisBlock() && pblock->hashPrevBlock.IsNull()) {
+        return error("ProcessNewBlock() : Null previous block");
+    }
 
     if (pblock->GetHash() != Params().HashGenesisBlock() && pfrom != NULL) {
         //if we get this far, check if the prev block is our prev block, if not then request sync and return false
@@ -6018,6 +6036,11 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
     else if (pfrom->nVersion == 0) {
         // Must have a version message before anything else
         Misbehaving(pfrom->GetId(), 1);
+        return false;
+    }
+
+    else if (pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand)) {
+        // Instantly disconnect old protocol
         return false;
     }
 
