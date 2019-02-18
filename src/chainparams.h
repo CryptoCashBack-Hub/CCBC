@@ -80,6 +80,7 @@ public:
     CAmount MaxMoneyOut() const { return nMaxMoneyOut; }
     /** The masternode count that we will allow the see-saw reward payments to be off by */
     int MasternodeCountDrift() const { return nMasternodeCountDrift; }
+	CAmount StakeInputMinimal() const { return nStakeInputMinimal; }
     /** Make miner stop after a block is found. In RPC, don't return until nGenProcLimit blocks are generated */
     bool MineBlocksOnDemand() const { return fMineBlocksOnDemand; }
     /** In the future use NetworkIDString() for RPC fields */
@@ -164,7 +165,8 @@ protected:
     int nPOSDGWForkBlock;
     int nEndOfReviveFailSafe;
     int nLastPOWBlock;
-    int nMasternodeCountDrift;
+    int nMasternodeCountDrift
+	CAmount nStakeInputMinimal;
     int nMaturity;
     int nModifierUpdateBlock;
     CAmount nMaxMoneyOut;

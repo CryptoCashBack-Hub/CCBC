@@ -138,6 +138,7 @@ public:
         nMasternodeCountDrift = 20;       // Drift is set to 20
         nMasternodeCollateralAmt = 25000; // Masternode collateral 25K
         nMaxMoneyOut = 100000000 * COIN;  // 100m coins minted
+		nStakeInputMinimal = 10 * COIN;
 
         //** Height or Time Based Activations **/
         nLastPOWBlock = 200;         // The last block for PoW
@@ -295,6 +296,7 @@ public:
         nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 9891737;         //First block that bad serials emerged
         nBlockLastGoodCheckpoint = 9891730;      //Last valid accumulator checkpoint
+		nStakeInputMinimal = 10 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1534438799;

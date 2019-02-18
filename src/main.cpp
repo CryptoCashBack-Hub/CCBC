@@ -60,10 +60,12 @@ using namespace libzerocoin;
  */
 
 CCriticalSection cs_main;
+CCriticalSection cs_mapstake;
 
 BlockMap mapBlockIndex;
+map<COutPoint, int> mapStakeSpent;
 map<uint256, uint256> mapProofOfStake;
-CCriticalSection cs_mapstake;
+
 set<pair<COutPoint, unsigned int> > setStakeSeen;
 
 // maps any spent outputs in the past maxreorgdepth blocks to the height it was spent
@@ -91,6 +93,13 @@ unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
 unsigned int nStakeMinAge = 60 * 60; // 1 Hour
+unsigned int StakeMinAge()
+{
+	if (chainActive.Height() > 250000)
+		return 2 * 60 * 60;
+	return nStakeMinAge;
+}
+
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in duffs) are considered zero fee (for relaying and mining)

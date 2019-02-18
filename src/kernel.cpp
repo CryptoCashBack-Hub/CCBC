@@ -37,7 +37,8 @@ static std::map<int, unsigned int> mapStakeModifierCheckpoints =
 // Get time weight
 int64_t GetWeight(int64_t nIntervalBeginning, int64_t nIntervalEnd)
 {
-    return nIntervalEnd - nIntervalBeginning - nStakeMinAge;
+    //return nIntervalEnd - nIntervalBeginning - nStakeMinAge;
+	return nIntervalEnd - nIntervalBeginning - StakeMinAge();
 }
 
 // Get the last stake modifier and its generation time from a given block
@@ -300,7 +301,8 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock blockFrom, const CTra
     if (nTimeTx < nTimeBlockFrom) // Transaction timestamp violation
         return error("CheckStakeKernelHash() : nTime violation");
 
-    if (nTimeBlockFrom + nStakeMinAge > nTimeTx) // Min age requirement
+    //if (nTimeBlockFrom + nStakeMinAge > nTimeTx) // Min age requirement
+	if (nTimeBlockFrom + StakeMinAge() > nTimeTx) // Min age requirement
         return error("CheckStakeKernelHash() : min age violation - nTimeBlockFrom=%d nStakeMinAge=%d nTimeTx=%d", nTimeBlockFrom, nStakeMinAge, nTimeTx);
 
     //grab difficulty
