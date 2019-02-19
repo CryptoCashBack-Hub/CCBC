@@ -63,7 +63,6 @@ CCriticalSection cs_main;
 CCriticalSection cs_mapstake;
 
 BlockMap mapBlockIndex;
-map<COutPoint, int> mapStakeSpent;
 map<uint256, uint256> mapProofOfStake;
 
 set<pair<COutPoint, unsigned int> > setStakeSeen;
