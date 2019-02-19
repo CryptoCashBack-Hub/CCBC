@@ -95,7 +95,7 @@ bool fAlerts = DEFAULT_ALERTS;
 unsigned int nStakeMinAge = 60 * 60; // 1 Hour
 unsigned int StakeMinAge()
 {
-	if (chainActive.Height() > 250000)
+    if (chainActive.Height() > POS_FIX_HEIGHT)
 		return 2 * 60 * 60;
 	return nStakeMinAge;
 }
@@ -985,8 +985,9 @@ bool GetCoinAge(const CTransaction& tx, const unsigned int nTxTime, uint64_t& nC
         if (prevblock.nTime + nStakeMinAge > nTxTime)
             continue; // only count coins meeting min age requirement
 
-        if (nTxTime < prevblock.nTime) {
-            LogPrintf("GetCoinAge: Timestamp Violation: txtime less than txPrev.nTime");
+        //if (nTxTime < prevblock.nTime) {
+        if (prevblock.nTime + StakeMinAge() > nTxTime)  
+			LogPrintf("GetCoinAge: Timestamp Violation: txtime less than txPrev.nTime");
             return false; // Transaction timestamp violation
         }
 
@@ -1481,7 +1482,8 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
 		}
 	}
 
-
+	// The invalidate code was developed by TFinch and first used
+	// In the Altbet code base all other claims are not true. 
 	int nHeight = chainActive.Height();
 	// Check for duplicate inputs
 	set<COutPoint> vInOutPoints;
@@ -3454,28 +3456,29 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
 
 	if (ActiveProtocol() >= FAKE_STAKE_VERSION) {
-		{
-			LOCK(cs_mapstake);
+        {
+            LOCK(cs_mapstake);
 
-			// add new entries
-			for (const CTransaction tx : block.vtx) {
-				if (tx.IsCoinBase() || tx.IsZerocoinSpend())
-					continue;
-				for (const CTxIn in : tx.vin) {
-					mapStakeSpent.insert(std::make_pair(in.prevout, pindex->nHeight));
-				}
-			}
+            // add new entries
+            for (const CTransaction tx : block.vtx) {
+                if (tx.IsCoinBase())
+                    continue;
+                for (const CTxIn in : tx.vin) {
+                    LogPrint("map", "mapStakeSpent: Insert %s | %u\n", in.prevout.ToString(), pindex->nHeight);
+                    mapStakeSpent.insert(std::make_pair(in.prevout, pindex->nHeight));
+                }
+            }
 
-			// delete old entries
-			for (auto it = mapStakeSpent.begin(); it != mapStakeSpent.end();) {
-				if (it->second < pindex->nHeight - Params().MaxReorganizationDepth()) {
-					it = mapStakeSpent.erase(it);
-				}
-				else {
-					it++;
-				}
-			}
-		}
+            // delete old entries
+            for (auto it = mapStakeSpent.begin(); it != mapStakeSpent.end();) {
+                if (it->second < pindex->nHeight - Params().MaxReorganizationDepth()) {
+                    LogPrint("map", "mapStakeSpent: Erase %s | %u\n", it->first.ToString(), it->second);
+                    it = mapStakeSpent.erase(it);
+                } else {
+                    it++;
+                }
+            }
+        }
 	}
 
     // add this block to the view's block chain
@@ -4357,6 +4360,16 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
         for (unsigned int i = 2; i < block.vtx.size(); i++)
             if (block.vtx[i].IsCoinStake())
                 return state.DoS(100, error("CheckBlock() : more than one coinstake"));
+
+		        CTransaction txPrev;
+        uint256 hashBlockPrev;
+        //check for minimal stake input after fork
+        if (chainActive.Height() > POS_FIX_HEIGHT) {
+            if (!GetTransaction(block.vtx[1].vin[0].prevout.hash, txPrev, hashBlockPrev, true))
+                return state.DoS(100, error("CheckBlock() : stake failed to find vin transaction"));
+            if (txPrev.vout[block.vtx[1].vin[0].prevout.n].nValue < Params().StakeInputMinimal())
+                return state.DoS(100, error("CheckBlock() : stake input below minimum value"));
+        }
     }
 
     // ----------- swiftTX transaction scanning -----------
@@ -6780,9 +6793,11 @@ int ActiveProtocol()
       //  return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
    // return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 
-	    if (IsSporkActive(SPORK_20_REWARD_ADDRESS_ENFORCEMENT) || chainActive.Height() >= Params().REVIVE_DEV_FEE_CHANGE()) 
-			return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-			return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
+	   // if (IsSporkActive(SPORK_20_REWARD_ADDRESS_ENFORCEMENT) || chainActive.Height() >= Params().REVIVE_DEV_FEE_CHANGE()) 
+		//	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+    if (chainActive.Height() >= POS_FIX_HEIGHT)
+        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+		return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
     }
 
 // requires LOCK(cs_vRecvMsg)
