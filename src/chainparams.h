@@ -166,7 +166,7 @@ protected:
     int nPOSDGWForkBlock;
     int nEndOfReviveFailSafe;
     int nLastPOWBlock;
-    int nMasternodeCountDrift
+    int nMasternodeCountDrift;
 	CAmount nStakeInputMinimal;
     int nMaturity;
     int nModifierUpdateBlock;
