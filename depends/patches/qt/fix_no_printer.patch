@@ -1,0 +1,15 @@
+
+y/qtbase/src/plugins/platforms/cocoa/qprintengine_mac_p.h
+@@ -52,6 +52,7 @@
+ //
+
+ #include <QtCore/qglobal.h>
++#include <qpa/qplatformprintdevice.h>
+
+ #ifndef QT_NO_PRINTER
+
+y/qtbase/src/plugins/plugins.pro
+@@ -8,6 +8,3 @@ qtHaveModule(gui) {
+     qtConfig(imageformatplugin): SUBDIRS *= imageformats
+     !android:qtConfig(library): SUBDIRS *= generic
+ }
