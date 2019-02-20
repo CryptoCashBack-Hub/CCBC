@@ -981,10 +981,11 @@ bool GetCoinAge(const CTransaction& tx, const unsigned int nTxTime, uint64_t& nC
         // Read block header
         CBlockHeader prevblock = pindex->GetBlockHeader();
 
-        if (prevblock.nTime + nStakeMinAge > nTxTime)
+       // if (prevblock.nTime + nStakeMinAge > nTxTime)
+            if (prevblock.nTime + StakeMinAge() > nTxTime)
             continue; // only count coins meeting min age requirement
 
-        //if (nTxTime < prevblock.nTime) {
+        if (nTxTime < prevblock.nTime) {
         if (prevblock.nTime + StakeMinAge() > nTxTime)  
 			LogPrintf("GetCoinAge: Timestamp Violation: txtime less than txPrev.nTime");
             return false; // Transaction timestamp violation
