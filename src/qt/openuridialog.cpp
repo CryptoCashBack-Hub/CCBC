@@ -17,8 +17,9 @@ OpenURIDialog::OpenURIDialog(QWidget* parent) : QDialog(parent),
                                                 ui(new Ui::OpenURIDialog)
 {
     ui->setupUi(this);
+#if QT_VERSION >= 0x040700
     ui->uriEdit->setPlaceholderText("ccbc:");
-
+#endif
 }
 
 OpenURIDialog::~OpenURIDialog()
