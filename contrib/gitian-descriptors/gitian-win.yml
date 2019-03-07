@@ -156,7 +156,7 @@ script: |
     make deploy
     make install DESTDIR=${INSTALLPATH}
     rename 's/-setup\.exe$/-setup-unsigned.exe/' *-setup.exe
-    cp -f pivx-*setup*.exe $OUTDIR/
+    cp -f ccbc-*setup*.exe $OUTDIR/
     cd installed
     # mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/ # temporarily disabled for Zerocoin
     # find . -name "lib*.la" -delete            # temporarily disabled for Zerocoin
