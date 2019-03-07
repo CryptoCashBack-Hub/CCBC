@@ -17,6 +17,9 @@
 #include <QMimeData>
 #include <QMouseEvent>
 #include <QPixmap>
+#if QT_VERSION < 0x050000
+#include <QUrl>
+#endif
 
 #if defined(HAVE_CONFIG_H)
 #include "config/ccbc-config.h" /* for USE_QRCODE */
