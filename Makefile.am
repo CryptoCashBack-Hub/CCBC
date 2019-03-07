@@ -36,6 +36,18 @@ OSX_PLIST=$(top_builddir)/share/qt/Info.plist #not installed
 OSX_QT_TRANSLATIONS = da,de,es,hu,ru,uk,zh_CN,zh_TW
 
 DIST_DOCS = $(wildcard doc/*.md) $(wildcard doc/release-notes/*.md)
+DIST_CONTRIB = $(top_srcdir)/contrib/ccbc-cli.bash-completion \
+	       $(top_srcdir)/contrib/ccbc-tx.bash-completion \
+	       $(top_srcdir)/contrib/ccbcd.bash-completion \
+           $(top_srcdir)/contrib/init \
+           $(top_srcdir)/contrib/install_db4.sh
+
+DIST_SHARE = \
+           $(top_srcdir)/share/genbuild.sh \
+           $(top_srcdir)/share/rpcauth
+
+BIN_CHECKS=$(top_srcdir)/contrib/devtools/symbol-check.py \
+           $(top_srcdir)/contrib/devtools/security-check.py
 
 WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/bitcoin.ico \
   $(top_srcdir)/share/pixmaps/nsis-header.bmp \
