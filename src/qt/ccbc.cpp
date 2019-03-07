@@ -571,7 +571,7 @@ int main(int argc, char* argv[])
     QTranslator qtTranslatorBase, qtTranslator, translatorBase, translator;
     initTranslations(qtTranslatorBase, qtTranslator, translatorBase, translator);
     uiInterface.Translate.connect(Translate);
-    
+
     // Show help message immediately after parsing command-line options (for "-lang") and setting locale,
     // but before showing splash screen.
     if (mapArgs.count("-?") || mapArgs.count("-help") || mapArgs.count("-version")) {
