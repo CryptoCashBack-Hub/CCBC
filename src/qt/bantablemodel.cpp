@@ -50,9 +50,10 @@
          banmap_t banMap;
          CNode::GetBanned(banMap);
  
-         cachedBanlist.clear();
+          cachedBanlist.clear();
+ #if QT_VERSION >= 0x040700
          cachedBanlist.reserve(banMap.size());
-
+ #endif
          for (banmap_t::iterator it = banMap.begin(); it != banMap.end(); it++)
          {
              CCombinedBan banEntry;

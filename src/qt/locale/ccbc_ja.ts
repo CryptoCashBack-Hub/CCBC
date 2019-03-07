@@ -871,6 +871,10 @@ Address: %4
         <source>A fatal error occurred. Phore can no longer continue safely and will quit.</source>
         <translation>致命的なエラーが発生しました。Phoreは終了します。</translation>
     </message>
+    <message>
+        <source>High Sierra not supported with this build</source>
+        <translation>High Sierra はこのビルドにおいてサポートされていません</translation>
+    </message>
 </context>
 <context>
     <name>BlockExplorer</name>
