@@ -39,8 +39,7 @@ DIST_DOCS = $(wildcard doc/*.md) $(wildcard doc/release-notes/*.md)
 DIST_CONTRIB = $(top_srcdir)/contrib/ccbc-cli.bash-completion \
 	       $(top_srcdir)/contrib/ccbc-tx.bash-completion \
 	       $(top_srcdir)/contrib/ccbcd.bash-completion \
-           $(top_srcdir)/contrib/init \
-           $(top_srcdir)/contrib/install_db4.sh
+         $(top_srcdir)/contrib/init \
 
 DIST_SHARE = \
            $(top_srcdir)/share/genbuild.sh
