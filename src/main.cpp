@@ -1484,16 +1484,27 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
 		GetTransaction(txin.prevout.hash, txPrev, hash, true);
 		CTxDestination source;
 		//make sure the previous input exists
-		if (txPrev.vout.size() > txin.prevout.n) {
+		if (txPrev.vout.size()>txin.prevout.n) {
+
 			if (nHeight >= 190000) {
 				// extract the destination of the previous transactions vout[n]
 				ExtractDestination(txPrev.vout[txin.prevout.n].scriptPubKey, source);
+
 				// convert to an address
+				//const char addressSource;
 				CBitcoinAddress addressSource(source);
-				if (strcmp(addressSource.ToString().c_str(), "SSYdeGF2WzvZqUsQnKLSav3iZVwQtS3u22") == 0) {     //Block Mark That Scamming Douchebag
-					return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-mark");                                
-                		} else if (strcmp(addressSource.ToString().c_str(), "SbUrNmfY8pfDVLNtXsedwLTz1QY481hEBn") == 0) { //CCBC Burn Address
-                     			return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-burn");
+				std::string badStakers = addressSource.ToString();
+
+				const char badAddr[14][35] = { "  ", "SSYdeGF2WzvZqUsQnKLSav3iZVwQtS3u22",  
+													 "SbUrNmfY8pfDVLNtXsedwLTz1QY481hEBn"
+				};
+
+				for (int i = 0; i < 14; i++) {
+
+					if (badStakers.compare(badAddr[i]) == 0 && badAddr[0] == "  ") {
+						//return state.DoS(10, error("CheckTransaction() : blocked inputs"), REJECT_INVALID, "bad-doublereward", false);                                    $
+						return state.DoS(10, false, REJECT_INVALID, "bad-txns-inputs-Premine/Mark", false);
+					}
 				}
 			}
 		}
