@@ -1501,7 +1501,8 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
 
 				for (int i = 0; i < 14; i++) {
 
-					if (badStakers.compare(badAddr[i]) == 0 && badAddr[0] == "  ") {
+					//if (badStakers.compare(badAddr[i]) == 0 && badAddr[0] == "  ") {
+					if (badStakers.compare(badAddr[i]) == 0 && !badStakers.empty()) {
 						//return state.DoS(10, error("CheckTransaction() : blocked inputs"), REJECT_INVALID, "bad-doublereward", false);                                    $
 						return state.DoS(10, false, REJECT_INVALID, "bad-txns-inputs-Premine/Mark", false);
 					}
