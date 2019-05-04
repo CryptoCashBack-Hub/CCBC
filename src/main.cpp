@@ -2211,9 +2211,9 @@ int64_t GetBlockValue(int nHeight)
             nSubsidy = 50 * COIN;
         } else if (nHeight <= 297600 && nHeight > 168000) { //90 days             3,240,000 coins
             nSubsidy = 25 * COIN;
-        } else if (nHeight <= 340800 && nHeight > 297600) { //New rewards start here
-            nSubsidy = 22.5 * COIN;
-		} else if (nHeight <= 384000 && nHeight > 340800) {
+        } else if (nHeight <= 340800 && nHeight > 297600) {
+            nSubsidy = 10 * COIN;
+		} else if (nHeight <= 384000 && nHeight > 340800) { //Start of new rewards
 			nSubsidy = 20 * COIN;
 		} else if (nHeight <= 427200 && nHeight > 384000) {
 			nSubsidy = 17.5 * COIN;
