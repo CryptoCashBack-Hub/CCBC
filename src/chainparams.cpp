@@ -138,6 +138,7 @@ public:
         nMasternodeCountDrift = 20;       // Drift is set to 20
         nMasternodeCollateralAmt = 25000; // Masternode collateral 25K
         nMaxMoneyOut = 100000000 * COIN;  // 100m coins minted
+		nStakeInputMinimal = 10 * COIN;
 
         //** Height or Time Based Activations **/
         nLastPOWBlock = 200;         // The last block for PoW
@@ -178,13 +179,6 @@ public:
 
         //Teams Seeder
         vSeeds.push_back(CDNSSeedData("seeder.ccbcoin.club", "seeder.ccbcoin.club"));
-        vSeeds.push_back(CDNSSeedData("s01.ccbcoin.club", "s01.ccbcoin.club"));
-        vSeeds.push_back(CDNSSeedData("s02.ccbcoin.club", "s02.ccbcoin.club"));
-        vSeeds.push_back(CDNSSeedData("s03.ccbcoin.club", "s03.ccbcoin.club"));
-        vSeeds.push_back(CDNSSeedData("s04.ccbcoin.club", "s04.ccbcoin.club"));
-        vSeeds.push_back(CDNSSeedData("s05.ccbcoin.club", "s05.ccbcoin.club"));
-        vSeeds.push_back(CDNSSeedData("s06.ccbcoin.club", "s06.ccbcoin.club"));
-        vSeeds.push_back(CDNSSeedData("s07.ccbcoin.club", "s07.ccbcoin.club"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63); //S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 68); //C
@@ -295,6 +289,7 @@ public:
         nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 9891737;         //First block that bad serials emerged
         nBlockLastGoodCheckpoint = 9891730;      //Last valid accumulator checkpoint
+		nStakeInputMinimal = 10 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1534438799;
