@@ -188,12 +188,12 @@ bool IsBlockValueValid(const CBlock& block, CAmount nExpectedValue, CAmount nMin
             nHeight = (*mi).second->nHeight + 1;
     }
 
-	if (IsTreasuryBlock(nHeight)) {
+	if (IsTreasuryBlock(nHeight) && nHeight <= 375000) {
         return true;
 	}
 
-	if (IsReviveBlock(nHeight)) {
-        return true;
+	if (IsReviveBlock(nHeight) && nHeight <= 375000) {
+		return true;
 	}
 
     if (nHeight == 0) {
