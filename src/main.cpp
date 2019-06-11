@@ -2343,7 +2343,6 @@ bool IsReviveBlock(int nHeight)
 	else
 		return false;
 }
-}
 
 int64_t GetReviveAward(int nHeight)
 {
