@@ -14,10 +14,6 @@
  * network protocol versioning
  */
 
-//static const int PROTOCOL_VERSION = 70002; // v1.0.0.1
-//static const int PROTOCOL_VERSION = 70005; // v1.0.0.5
-//static const int PROTOCOL_VERSION = 70007; // v1.1.0.1
-//static const int PROTOCOL_VERSION = 70008; // v1.2.0.0
 static const int PROTOCOL_VERSION = 70009; // v1.2.1.0
 
 //! initial proto version, to be increased after version/verack negotiation
@@ -27,21 +23,9 @@ static const int INIT_PROTO_VERSION = 209;
 static const int GETHEADERS_VERSION = 70000;
 
 // Protocol before enforcement
-//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70001; // v1.0.0.0
-//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70005; // v1.0.0.1
-//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70007; // v1.1.0.1
 static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70008; // v1.2.0.0
-
-// Add a new protocol enforcement for each update
-//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70005; // v1.0.0.5
-//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70007; // v1.1.0.1
-//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70008; // v1.2.0.0
+// Protocol after enforcement
 static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70009; // v1.2.1.0
-
-
-//Testing purpose
-//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70007;
-//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70008;
 
 //! nTime field added to CAddress, starting with this version;
 //! if possible, avoid requesting addresses nodes older than this

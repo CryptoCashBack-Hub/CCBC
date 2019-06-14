@@ -143,6 +143,10 @@ public:
     std::string GetReviveRewardAddressAtHeight(int height) const;
     CScript GetReviveRewardScriptAtHeight(int height) const;
     int REVIVE_DEV_FEE_CHANGE() const { return nEndOfReviveFailSafe; }
+    int StartTreasuryBlock() const { return nStartTreasuryBlock; }
+    int TreasuryBlockStep() const { return nTreasuryBlockStep; }
+    int StartReviveBlock() const { return nStartReviveBlock; }
+    int ReviveBlockStep() const { return nReviveBlockStep; }
 
 protected:
     CChainParams() {}

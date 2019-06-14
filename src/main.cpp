@@ -2182,13 +2182,6 @@ int64_t GetBlockValue(int nHeight)
         if (nHeight <= 200 && nHeight > 0)
             return 250000 * COIN;
     }
-    if (IsTreasuryBlock(nHeight)) {
-        LogPrintf("GetBlockValue(): this is a treasury block\n");
-        nSubsidy = GetTreasuryAward(nHeight);
-    } else if (IsReviveBlock(nHeight)) {
-        LogPrintf("GetBlockValue(): this is a revive block\n");
-        nSubsidy = GetReviveAward(nHeight);
-    }
 
     else {
         if (nHeight == 0) {
@@ -2234,7 +2227,14 @@ int64_t GetBlockValue(int nHeight)
 		} else if (nHeight >= 2889600) {
             nSubsidy = 5 * COIN;
         }
-
+                if (IsTreasuryBlock(nHeight)) {
+                    LogPrintf("GetBlockValue(): this is a treasury block\n");
+                    nSubsidy = GetTreasuryAward(nHeight);
+                } else if (IsReviveBlock(nHeight)) {
+                    LogPrintf("GetBlockValue(): this is a revive block\n");
+                    nSubsidy = GetReviveAward(nHeight);
+                }
+        // Check if we reached the coin max supply.
         int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
         if (nMoneySupply + nSubsidy >= Params().MaxMoneyOut())
             nSubsidy = Params().MaxMoneyOut() - nMoneySupply;
@@ -2248,11 +2248,6 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 {
     int64_t ret = 0;
 
-    // if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-    //    if (nHeight < 200)
-    //       return 0;
-    // }
-    // Changes from 60% to 90% will stay 90% after block 175000
     if (nHeight == 0) {
         ret = blockValue * 0;
     } else if (nHeight <= 25000 && nHeight > 200) {
@@ -2291,13 +2286,10 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     return ret;
 }
 
-//Treasury blocks start from 60,000 and then each block after
-int nStartTreasuryBlock = 60000;
-int nTreasuryBlockStep = 1440;
 //Checks to see if block count above is correct if not then no Treasury
 bool IsTreasuryBlock(int nHeight)
 {
-	if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0 && (IsSporkActive(SPORK_17_TREASURY_PAYMENT_ENFORCEMENT) || !masternodeSync.IsSynced()))
+    if ((nHeight - Params().StartTreasuryBlock()) % Params().TreasuryBlockStep() == 0 && (IsSporkActive(SPORK_17_TREASURY_PAYMENT_ENFORCEMENT) || !masternodeSync.IsSynced()))
 		return true;
 	else
 		return false;
@@ -2328,9 +2320,6 @@ int64_t GetTreasuryAward(int nHeight)
         return 0;
 }
 
-//Revive blocks start from 60,001 and then each block after
-int nStartReviveBlock = 60001;
-int nReviveBlockStep = 1440;
 //Checks to see if block count above is correct if not then no Revive
 bool IsReviveBlock(int nHeight)
 {
@@ -2338,7 +2327,7 @@ bool IsReviveBlock(int nHeight)
     // CCBC will not pay for revival fee since CCBC dev did all work
     // And AQX team didnt help like promised.
 
-	if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0 && (IsSporkActive(SPORK_18_REVIVE_PAYMENT_ENFORCEMENT) || !masternodeSync.IsSynced()))
+	if ((nHeight - Params().StartReviveBlock()) % Params().ReviveBlockStep() == 0 && (IsSporkActive(SPORK_18_REVIVE_PAYMENT_ENFORCEMENT) || !masternodeSync.IsSynced()))
 		return true;
 	else
 		return false;

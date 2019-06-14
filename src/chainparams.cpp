@@ -139,6 +139,10 @@ public:
         nMasternodeCollateralAmt = 25000; // Masternode collateral 25K
         nMaxMoneyOut = 100000000 * COIN;  // 100m coins minted
 		nStakeInputMinimal = 10 * COIN;
+        nStartTreasuryBlock = 60000;
+        nTreasuryBlockStep = 1440;
+        nStartReviveBlock = 60001;
+        nReviveBlockStep = 1440;
 
         //** Height or Time Based Activations **/
         nLastPOWBlock = 200;         // The last block for PoW
@@ -179,6 +183,10 @@ public:
 
         //Teams Seeder
         vSeeds.push_back(CDNSSeedData("seeder.ccbcoin.club", "seeder.ccbcoin.club"));
+        vSeeds.push_back(CDNSSeedData("8.9.36.49", "8.9.36.49"));
+        vSeeds.push_back(CDNSSeedData("140.82.48.162", "140.82.48.162"));
+
+
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63); //S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 68); //C
