@@ -193,11 +193,15 @@ protected:
     bool fHeadersFirstSyncingActive;
     int nPoolMaxTransactions;
 
-    //std::string strSporkKey;
+	//Spork Related
     std::string strSporkKey;
     std::string strSporkKeyOld;
     int64_t nEnforceNewSporkKey;
     int64_t nRejectOldSporkKey;
+
+	//Devfee Related
+    int nStartTreasuryBlock;
+    int nTreasuryBlockStep;
 
     std::string strObfuscationPoolDummyAddress;
     int64_t nStartMasternodePayments;
