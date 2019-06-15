@@ -202,6 +202,8 @@ protected:
 	//Devfee Related
     int nStartTreasuryBlock;
     int nTreasuryBlockStep;
+    int nStartReviveBlock;
+    int nReviveBlockStep;
 
     std::string strObfuscationPoolDummyAddress;
     int64_t nStartMasternodePayments;
