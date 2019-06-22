@@ -6543,10 +6543,12 @@ int ActiveProtocol()
 
 	   // if (IsSporkActive(SPORK_20_REWARD_ADDRESS_ENFORCEMENT) || chainActive.Height() >= Params().REVIVE_DEV_FEE_CHANGE()) 
 		//	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-    if (chainActive.Height() >= POS_FIX_HEIGHT)
-        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	int ActiveProtocol()
+	{
+		if (IsSporkActive(SPORK_1_NEW_PROTOCOL_ENFORCEMENT_3))
+			return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 		return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-    }
+	}
 
 // requires LOCK(cs_vRecvMsg)
 bool ProcessMessages(CNode* pfrom)
