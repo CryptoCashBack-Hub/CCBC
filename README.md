@@ -39,14 +39,23 @@
 <tr><td>2-200</td><td>0 CCBC</td><td rowspan=1>Closed Mining</td><td>1 Days</td></tr>
 <tr><th colspan=4>PoS / MN Phase</th></tr>
 <tr><td>200-25000</td><td>1 CCBC</td><td rowspan=1>Coin Swap</td><td>17.22 Days</td></tr>
-<tr><td>25000-50000</td><td>25 CCBC</td><td rowspan=1>First Increase </td><td>17.36 Days</td></tr>
-<tr><td>50000-75000</td><td>50 CCBC</td><td rowspan=1>Second Increase </td><td>17.36 Days</td></tr>
-<tr><td>75000-100000</td><td>85 CCBC</td><td rowspan=1>Final Increase </td><td>17.36 Days</td></tr>
-<tr><td>100000-125000</td><td>75 CCBC</td><td rowspan=1>First Reduction </td><td>17.36 Days</td></tr>
-<tr><td>125000-168000</td><td>50 CCBC</td><td rowspan=1>Second Reduction </td><td>30 Days</td></tr>
-<tr><td>168000-297600</td><td>25 CCBC</td><td rowspan=1>Thrid Reduction </td><td>90 Days</td></tr>
-<tr><td>297600-556800</td><td>10 CCBC</td><td rowspan=1>Final Reduction </td><td>180 Days</td></tr>
-<tr><td>556800+</td><td>5 CCBC</td><td rowspan=1>Till Max Supply </td><td>57,026.38 Days</td></tr>
+<tr><td>25000-50000</td><td>25 CCBC</td><td rowspan=1>1st Phase </td><td>17.36 Days</td></tr>
+<tr><td>50000-75000</td><td>50 CCBC</td><td rowspan=1>2nd Phase </td><td>17.36 Days</td></tr>
+<tr><td>75000-100000</td><td>85 CCBC</td><td rowspan=1>3rd Phase </td><td>17.36 Days</td></tr>
+<tr><td>100000-125000</td><td>75 CCBC</td><td rowspan=1>4th Phase </td><td>17.36 Days</td></tr>
+<tr><td>125000-168000</td><td>50 CCBC</td><td rowspan=1>5th Phase </td><td>30 Days</td></tr>
+<tr><td>168000-297600</td><td>25 CCBC</td><td rowspan=1>6th Phase </td><td>90 Days</td></tr>
+<tr><td>297600-384000</td><td>10 CCBC</td><td rowspan=1>7th Phase </td><td></td></tr>
+<tr><td>384000-427200</td><td>20 CCBC</td><td rowspan=1>8th Phase </td><td></td></tr>
+<tr><td>427200-556800</td><td>17.5 CCBC</td><td rowspan=1>9th Phase </td><td></td></tr>
+<tr><td>556800-686400</td><td>15 CCBC</td><td rowspan=1>10th Phase </td><td></td></tr>
+<tr><td>686400-816000</td><td>12.5 CCBC</td><td rowspan=1>11th Phase </td><td></td></tr>
+<tr><td>816000-1075200</td><td>10 CCBC</td><td rowspan=1>12th Phase </td><td></td></tr>
+<tr><td>1075200-1334400</td><td>9 CCBC</td><td rowspan=1>13th Phase </td><td></td></tr>
+<tr><td>1334400-1593600</td><td>8 CCBC</td><td rowspan=1>14th Phase </td><td></td></tr>
+<tr><td>1593600-1852800</td><td>7 CCBC</td><td rowspan=1>15th Phase </td><td></td></tr>
+<tr><td>1852800-2889600</td><td>6 CCBC</td><td rowspan=1>16th Phase </td><td></td></tr>
+<tr><td>2889600+</td><td>5 CCBC</td><td rowspan=1>Till Max Supply </td><td>57,026.38 Days</td></tr>
 </table>
 
 
