@@ -6518,34 +6518,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       it was the one which was commented out
 int ActiveProtocol()
 {
-    // SPORK_14 will remove early wallet adopters of protocol 70002 where max supply didnt have cap and
-    // seesaw masternode amount was set to 5k instead of 25k collateral
-    /*
-	if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
-	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-	*/
-
-    // SPORK_15 will be used after SPORK_14 is used and commented out from being turned off.
-    // SPORK_15 has been turned on and will be commented out to prevent from being turned off.
-    // Approved by TFinch 11/29/2018
-    /*
-	if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
-	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-	*/
-
-    // SPORK_19 will be used after SPORK_15 is used and commented out from being turned off.
-    // This will be turned on after first of the year to enforce me spork privkey!
-    //if (IsSporkActive(SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3))
-      //  return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-   // return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-
-	   // if (IsSporkActive(SPORK_20_REWARD_ADDRESS_ENFORCEMENT) || chainActive.Height() >= Params().REVIVE_DEV_FEE_CHANGE()) 
-		//	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 	int ActiveProtocol()
 	{
-		if (IsSporkActive(SPORK_1_NEW_PROTOCOL_ENFORCEMENT_3))
+		if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
 			return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 		return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 	}

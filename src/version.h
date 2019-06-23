@@ -8,6 +8,8 @@
 #ifndef BITCOIN_VERSION_H
 #define BITCOIN_VERSION_H
 
+#define POS_FIX_HEIGHT 250000
+
 /**
  * network protocol versioning
  */

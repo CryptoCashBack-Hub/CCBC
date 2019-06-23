@@ -138,7 +138,7 @@ public:
         nMasternodeCountDrift = 20;       // Drift is set to 20
         nMasternodeCollateralAmt = 25000; // Masternode collateral 25K
         nMaxMoneyOut = 100000000 * COIN;  // 100m coins minted
-		nStakeInputMinimal = 10 * COIN;
+		    nStakeInputMinimal = 10 * COIN;
         nStartTreasuryBlock = 60000;
         nTreasuryBlockStep = 1440;
         nStartReviveBlock = 60001;
