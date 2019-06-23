@@ -8,8 +8,6 @@
 #ifndef BITCOIN_VERSION_H
 #define BITCOIN_VERSION_H
 
-#define POS_FIX_HEIGHT 250000
-
 /**
  * network protocol versioning
  */
@@ -38,7 +36,7 @@ static const int BIP0031_VERSION = 60000;
 static const int MEMPOOL_GD_VERSION = 60002;
 
 // POS fix
-static const int POS_FIX_HEIGHT 70010
+static const int POS_FIX_HEIGHT 70010;
 
 //! "filter*" commands are disabled without NODE_BLOOM after and including this version
 static const int NO_BLOOM_VERSION = 70000;

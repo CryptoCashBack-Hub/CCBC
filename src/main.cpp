@@ -6520,7 +6520,7 @@ int ActiveProtocol()
 {
 	int ActiveProtocol()
 	{
-		if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
+		if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) && ActiveProtocol >= POS_FIX_HEIGHT)
 			return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 		return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 	}
