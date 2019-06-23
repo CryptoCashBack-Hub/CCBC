@@ -185,8 +185,14 @@ public:
         vSeeds.push_back(CDNSSeedData("seeder.ccbcoin.club", "seeder.ccbcoin.club"));
         vSeeds.push_back(CDNSSeedData("8.9.36.49", "8.9.36.49"));
         vSeeds.push_back(CDNSSeedData("140.82.48.162", "140.82.48.162"));
-
-
+		//Community Seeds
+		vSeeds.push_back(CDNSSeedData("155.138.192.15", "155.138.192.15"));
+		vSeeds.push_back(CDNSSeedData("91.92.32.4", "91.92.32.4"));
+		vSeeds.push_back(CDNSSeedData("176.223.131.12", "176.223.131.12"));
+		vSeeds.push_back(CDNSSeedData("91.210.224.60", "91.210.224.60"));
+		vSeeds.push_back(CDNSSeedData("23.95.231.105", "23.95.231.105"));
+		vSeeds.push_back(CDNSSeedData("60.227.50.55", "60.227.50.55"));
+		vSeeds.push_back(CDNSSeedData("217.163.23.224", "217.163.23.224"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63); //S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 68); //C
