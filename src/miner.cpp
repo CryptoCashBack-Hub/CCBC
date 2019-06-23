@@ -507,7 +507,7 @@ bool fGenerateBitcoins = false;
 
 // ***TODO*** that part changed in bitcoin, we are using a mix with old one here for now
 
-void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
+void CCBMiner(CWallet* pwallet, bool fProofOfStake)
 {
     LogPrintf("CCBCMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
@@ -573,7 +573,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
             LogPrintf("CPUMiner : proof-of-stake block found %s \n", pblock->GetHash().ToString().c_str());
 
             if (!pblock->SignBlock(*pwallet)) {
-                LogPrintf("BitcoinMiner(): Signing new block failed \n");
+                LogPrintf("CCBMiner(): Signing new block failed \n");
                 continue;
             }
 
@@ -603,7 +603,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                 if (hash <= hashTarget) {
                     // Found a solution
                     SetThreadPriority(THREAD_PRIORITY_NORMAL);
-                    LogPrintf("BitcoinMiner:\n");
+                    LogPrintf("CCBMiner:\n");
                     LogPrintf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex(), hashTarget.GetHex());
                     ProcessBlockFound(pblock, *pwallet, reservekey);
                     SetThreadPriority(THREAD_PRIORITY_LOWEST);
@@ -666,20 +666,20 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
     }
 }
 
-void static ThreadBitcoinMiner(void* parg)
+void static ThreadCCBMiner(void* parg)
 {
     boost::this_thread::interruption_point();
     CWallet* pwallet = (CWallet*)parg;
     try {
-        BitcoinMiner(pwallet, false);
+        CCBMiner(pwallet, false);
         boost::this_thread::interruption_point();
     } catch (std::exception& e) {
-        LogPrintf("ThreadBitcoinMiner() exception");
+        LogPrintf("ThreadCCBMiner() exception");
     } catch (...) {
-        LogPrintf("ThreadBitcoinMiner() exception");
+        LogPrintf("ThreadCCBMiner() exception");
     }
 
-    LogPrintf("ThreadBitcoinMiner exiting\n");
+    LogPrintf("ThreadCCBMiner exiting\n");
 }
 
 void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads)
@@ -706,7 +706,7 @@ void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads)
 
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++)
-        minerThreads->create_thread(boost::bind(&ThreadBitcoinMiner, pwallet));
+        minerThreads->create_thread(boost::bind(&ThreadCCBMiner, pwallet));
 }
 
 #endif // ENABLE_WALLET

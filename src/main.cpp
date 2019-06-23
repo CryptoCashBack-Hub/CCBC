@@ -2182,13 +2182,6 @@ int64_t GetBlockValue(int nHeight)
         if (nHeight <= 200 && nHeight > 0)
             return 250000 * COIN;
     }
-    if (IsTreasuryBlock(nHeight)) {
-        LogPrintf("GetBlockValue(): this is a treasury block\n");
-        nSubsidy = GetTreasuryAward(nHeight);
-    } else if (IsReviveBlock(nHeight)) {
-        LogPrintf("GetBlockValue(): this is a revive block\n");
-        nSubsidy = GetReviveAward(nHeight);
-    }
 
     else {
         if (nHeight == 0) {
@@ -2211,32 +2204,37 @@ int64_t GetBlockValue(int nHeight)
             nSubsidy = 50 * COIN;
         } else if (nHeight <= 297600 && nHeight > 168000) { //90 days             3,240,000 coins
             nSubsidy = 25 * COIN;
-        } else if (nHeight <= 340800 && nHeight > 297600) {
+        } else if (nHeight <= 384000 && nHeight > 297600) {
             nSubsidy = 10 * COIN;
-		} else if (nHeight <= 384000 && nHeight > 340800) { //Start of new rewards
-			nSubsidy = 20 * COIN;
 		} else if (nHeight <= 427200 && nHeight > 384000) {
+			nSubsidy = 20 * COIN;
+		} else if (nHeight <= 556800 && nHeight > 427200) {//Start of new rewards
 			nSubsidy = 17.5 * COIN;
-		} else if (nHeight <= 556800 && nHeight > 427200) {
-			nSubsidy = 15 * COIN;
 		} else if (nHeight <= 686400 && nHeight > 556800) {
-			nSubsidy = 12.5 * COIN;
+			nSubsidy = 15 * COIN;
 		} else if (nHeight <= 816000 && nHeight > 686400) {
-			nSubsidy = 10 * COIN;
+			nSubsidy = 12.5 * COIN;
 		} else if (nHeight <= 1075200 && nHeight > 816000) {
-			nSubsidy = 9 * COIN;
+			nSubsidy = 10 * COIN;
 		} else if (nHeight <= 1334400 && nHeight > 1075200) {
-			nSubsidy = 8 * COIN;
+			nSubsidy = 9 * COIN;
 		} else if (nHeight <= 1593600 && nHeight > 1334400) {
-			nSubsidy = 7 * COIN;
+			nSubsidy = 8 * COIN;
 		} else if (nHeight <= 1852800 && nHeight > 1593600) {
-			nSubsidy = 6 * COIN;
+			nSubsidy = 7 * COIN;
 		} else if (nHeight <= 2889600 && nHeight > 1852800) {
-			nSubsidy = 5 * COIN;
-    } else if (nHeight >= 2889600) {
+			nSubsidy = 6 * COIN;
+		} else if (nHeight >= 2889600) {
             nSubsidy = 5 * COIN;
         }
-
+                if (IsTreasuryBlock(nHeight)) {
+                    LogPrintf("GetBlockValue(): this is a treasury block\n");
+                    nSubsidy = GetTreasuryAward(nHeight);
+                } else if (IsReviveBlock(nHeight)) {
+                    LogPrintf("GetBlockValue(): this is a revive block\n");
+                    nSubsidy = GetReviveAward(nHeight);
+                }
+        // Check if we reached the coin max supply.
         int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
         if (nMoneySupply + nSubsidy >= Params().MaxMoneyOut())
             nSubsidy = Params().MaxMoneyOut() - nMoneySupply;
@@ -2250,11 +2248,6 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 {
     int64_t ret = 0;
 
-    // if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-    //    if (nHeight < 200)
-    //       return 0;
-    // }
-    // Changes from 60% to 90% will stay 90% after block 175000
     if (nHeight == 0) {
         ret = blockValue * 0;
     } else if (nHeight <= 25000 && nHeight > 200) {
@@ -2293,31 +2286,15 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     return ret;
 }
 
-//Treasury blocks start from 60,000 and then each block after
-int nStartTreasuryBlock = 60000;
-int nTreasuryBlockStep = 1440;
 //Checks to see if block count above is correct if not then no Treasury
 bool IsTreasuryBlock(int nHeight)
 {
-    //This is put in for when dev fee is turned off.
-    if (nHeight < nStartTreasuryBlock)
-        return false;
-    else if (IsSporkActive(SPORK_17_TREASURY_PAYMENT_ENFORCEMENT))
-        return false;
-    else if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0)
-        return true;
-    else
-        return false;
-
-    /*
-	if (nHeight < nStartTreasuryBlock)
-	return false;
-	else if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0)
-	return true;
+    if ((nHeight - Params().StartTreasuryBlock()) % Params().TreasuryBlockStep() == 0 && (IsSporkActive(SPORK_17_TREASURY_PAYMENT_ENFORCEMENT) || !masternodeSync.IsSynced()))
+		return true;
 	else
-	return false;
-	*/
+		return false;
 }
+
 
 int64_t GetTreasuryAward(int nHeight)
 {
@@ -2343,9 +2320,6 @@ int64_t GetTreasuryAward(int nHeight)
         return 0;
 }
 
-//Revive blocks start from 60,001 and then each block after
-int nStartReviveBlock = 60001;
-int nReviveBlockStep = 1440;
 //Checks to see if block count above is correct if not then no Revive
 bool IsReviveBlock(int nHeight)
 {
@@ -2353,23 +2327,10 @@ bool IsReviveBlock(int nHeight)
     // CCBC will not pay for revival fee since CCBC dev did all work
     // And AQX team didnt help like promised.
 
-    if (nHeight < nStartReviveBlock)
-        return false;
-    else if (IsSporkActive(SPORK_18_REVIVE_PAYMENT_ENFORCEMENT))
-        return false;
-    else if ((nHeight - nStartReviveBlock) % nReviveBlockStep == 0)
-        return true;
-    else
-        return false;
-
-    /*
-	if (nHeight < nStartReviveBlock)
-	return false;
-	else if ((nHeight - nStartReviveBlock) % nReviveBlockStep == 0)
-	return true;
+	if ((nHeight - Params().StartReviveBlock()) % Params().ReviveBlockStep() == 0 && (IsSporkActive(SPORK_18_REVIVE_PAYMENT_ENFORCEMENT) || !masternodeSync.IsSynced()))
+		return true;
 	else
-	return false;
-	*/
+		return false;
 }
 
 int64_t GetReviveAward(int nHeight)
@@ -6557,35 +6518,12 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       it was the one which was commented out
 int ActiveProtocol()
 {
-    // SPORK_14 will remove early wallet adopters of protocol 70002 where max supply didnt have cap and
-    // seesaw masternode amount was set to 5k instead of 25k collateral
-    /*
-	if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
-	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-	*/
-
-    // SPORK_15 will be used after SPORK_14 is used and commented out from being turned off.
-    // SPORK_15 has been turned on and will be commented out to prevent from being turned off.
-    // Approved by TFinch 11/29/2018
-    /*
-	if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
-	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-	*/
-
-    // SPORK_19 will be used after SPORK_15 is used and commented out from being turned off.
-    // This will be turned on after first of the year to enforce me spork privkey!
-    //if (IsSporkActive(SPORK_19_NEW_PROTOCOL_ENFORCEMENT_3))
-      //  return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-   // return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-
-	   // if (IsSporkActive(SPORK_20_REWARD_ADDRESS_ENFORCEMENT) || chainActive.Height() >= Params().REVIVE_DEV_FEE_CHANGE()) 
-		//	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-    if (chainActive.Height() >= POS_FIX_HEIGHT)
-        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	int ActiveProtocol()
+	{
+		if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
+			return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 		return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
-    }
+	}
 
 // requires LOCK(cs_vRecvMsg)
 bool ProcessMessages(CNode* pfrom)

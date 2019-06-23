@@ -243,10 +243,11 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 
 bool ActivateBestChain(CValidationState& state, CBlock* pblock = NULL, bool fAlreadyChecked = false);
 CAmount GetBlockValue(int nHeight);
-//Revive and Dev side by side TFinch
+
+//Devfee Related
 bool IsTreasuryBlock(int nHeight);
-bool IsReviveBlock(int nHeight);
 int64_t GetTreasuryAward(int nHeight);
+bool IsReviveBlock(int nHeight);
 int64_t GetReviveAward(int nHeight);
 
 /** Create a new block index entry for a given block hash */
