@@ -6516,11 +6516,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       so we can leave the existing clients untouched (old SPORK will stay on so they don't see even older clients).
 //       Those old clients won't react to the changes of the other (new) SPORK because at the time of their implementation
 //       it was the one which was commented out
-int ActiveProtocol()
-{
 	int ActiveProtocol()
 	{
-		if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) && ActiveProtocol >= POS_FIX_HEIGHT)
+		if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
 			return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 		return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 	}
