@@ -151,7 +151,6 @@ extern bool fLargeWorkForkFound;
 extern bool fLargeWorkInvalidChainFound;
 
 extern unsigned int nStakeMinAge;
-extern unsigned int StakeMinAge();
 extern int64_t nLastCoinStakeSearchInterval;
 extern int64_t nLastCoinStakeSearchTime;
 extern int64_t nReserveBalance;
@@ -243,11 +242,10 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 
 bool ActivateBestChain(CValidationState& state, CBlock* pblock = NULL, bool fAlreadyChecked = false);
 CAmount GetBlockValue(int nHeight);
-
-//Devfee Related
+//Revive and Dev side by side TFinch
 bool IsTreasuryBlock(int nHeight);
-int64_t GetTreasuryAward(int nHeight);
 bool IsReviveBlock(int nHeight);
+int64_t GetTreasuryAward(int nHeight);
 int64_t GetReviveAward(int nHeight);
 
 /** Create a new block index entry for a given block hash */

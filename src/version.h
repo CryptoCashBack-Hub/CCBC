@@ -12,7 +12,11 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 70010; 
+//static const int PROTOCOL_VERSION = 70002; // v1.0.0.1
+//static const int PROTOCOL_VERSION = 70005; // v1.0.0.5
+//static const int PROTOCOL_VERSION = 70007; // v1.1.0.1
+//static const int PROTOCOL_VERSION = 70008; // v1.2.0.0
+static const int PROTOCOL_VERSION = 70009; // v1.2.1.0
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
@@ -21,9 +25,21 @@ static const int INIT_PROTO_VERSION = 209;
 static const int GETHEADERS_VERSION = 70000;
 
 // Protocol before enforcement
+//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70001; // v1.0.0.0
+//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70005; // v1.0.0.1
+//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70007; // v1.1.0.1
 static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70008; // v1.2.0.0
-// Protocol after enforcement
-static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70010; 
+
+// Add a new protocol enforcement for each update
+//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70005; // v1.0.0.5
+//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70007; // v1.1.0.1
+//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70008; // v1.2.0.0
+static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70009; // v1.2.1.0
+
+
+//Testing purpose
+//static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70007;
+//static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70008;
 
 //! nTime field added to CAddress, starting with this version;
 //! if possible, avoid requesting addresses nodes older than this
@@ -35,13 +51,11 @@ static const int BIP0031_VERSION = 60000;
 //! "mempool" command, enhanced "getdata" behavior starts with this version
 static const int MEMPOOL_GD_VERSION = 60002;
 
-//Fixed POS Release
-static const int POS_FIX_HEIGHT = 70010;
-
 //! "filter*" commands are disabled without NODE_BLOOM after and including this version
 static const int NO_BLOOM_VERSION = 70000;
 
 //! In this version, "Fake Stake" vulnerability mitigations were introduced.
 static const int FAKE_STAKE_VERSION = 70008;
+
 
 #endif // BITCOIN_VERSION_H

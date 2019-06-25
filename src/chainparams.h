@@ -80,8 +80,6 @@ public:
     CAmount MaxMoneyOut() const { return nMaxMoneyOut; }
     /** The masternode count that we will allow the see-saw reward payments to be off by */
     int MasternodeCountDrift() const { return nMasternodeCountDrift; }
-	// Stake inputs
-	CAmount StakeInputMinimal() const { return nStakeInputMinimal; }
     /** Make miner stop after a block is found. In RPC, don't return until nGenProcLimit blocks are generated */
     bool MineBlocksOnDemand() const { return fMineBlocksOnDemand; }
     /** In the future use NetworkIDString() for RPC fields */
@@ -143,10 +141,6 @@ public:
     std::string GetReviveRewardAddressAtHeight(int height) const;
     CScript GetReviveRewardScriptAtHeight(int height) const;
     int REVIVE_DEV_FEE_CHANGE() const { return nEndOfReviveFailSafe; }
-    int StartTreasuryBlock() const { return nStartTreasuryBlock; }
-    int TreasuryBlockStep() const { return nTreasuryBlockStep; }
-    int StartReviveBlock() const { return nStartReviveBlock; }
-    int ReviveBlockStep() const { return nReviveBlockStep; }
 
 protected:
     CChainParams() {}
@@ -171,7 +165,6 @@ protected:
     int nEndOfReviveFailSafe;
     int nLastPOWBlock;
     int nMasternodeCountDrift;
-	CAmount nStakeInputMinimal;
     int nMaturity;
     int nModifierUpdateBlock;
     CAmount nMaxMoneyOut;
@@ -193,17 +186,11 @@ protected:
     bool fHeadersFirstSyncingActive;
     int nPoolMaxTransactions;
 
-	//Spork Related
+    //std::string strSporkKey;
     std::string strSporkKey;
     std::string strSporkKeyOld;
     int64_t nEnforceNewSporkKey;
     int64_t nRejectOldSporkKey;
-
-	//Devfee Related
-    int nStartTreasuryBlock;
-    int nTreasuryBlockStep;
-    int nStartReviveBlock;
-    int nReviveBlockStep;
 
     std::string strObfuscationPoolDummyAddress;
     int64_t nStartMasternodePayments;
